@@ -24,6 +24,10 @@ python scripts/build_public_data.py `
 
 脚本只写入 `data/reports/YYYY-MM-DD.json` 和 `data/index.json`。它不复制 Zotero PDF、本地路径、研究画像或通知凭据。
 
+## 当前自动更新链路
+
+本机的 `Codex-Radiation-Research-Daily-Push` 任务每天 08:00 运行文献筛选、复核和微信推送；推送成功后，再把同一份经过脱敏的公开数据提交到本仓库，GitHub Pages 随后自动更新。电脑关机时网页仍可访问，但当天不会生成新的页面数据。
+
 ## GitHub Pages
 
 仓库包含 `.github/workflows/deploy-pages.yml`。在 GitHub 的 **Settings → Pages** 中将 **Source** 设置为 **GitHub Actions**，之后推送到 `main` 就会自动部署。
