@@ -1,0 +1,956 @@
+{
+  "schema_version": 1,
+  "title": "辐射探测论文雷达",
+  "date": "2026-09-13",
+  "published_at": "2026-09-13T06:52:29.667088+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 1132,
+    "screened_count": 105,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 10,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 25,
+      "crossref": 507,
+      "semanticscholar": 0,
+      "openalex": 0,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "Semantic Scholar 返回 HTTP 429，OpenAlex 返回 HTTP 429；本期主要依据 Crossref、Europe PMC 的摘要与 DOI 元数据复核。",
+      "自动元数据初筛没有产生70分以上推荐；以下分数是 Codex 阅读可用摘要/来源证据后的人工复核分，不是自动初筛分。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Pushing the limits of pulse shape discrimination in a large liquid xenon detector",
+      "chinese_title": "推进大型液氙探测器中脉冲形状判别的极限",
+      "journal": "The European Physical Journal C",
+      "publication_date": "2026-09-11",
+      "doi": "10.1140/epjc/s10052-026-16216-8",
+      "url": "https://doi.org/10.1140/epjc/s10052-026-16216-8",
+      "article_type": "研究论文",
+      "recommendation_score": 91,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 94,
+        "novelty": 86,
+        "quality": 90,
+        "methodology": 91,
+        "inspiration": 90
+      },
+      "why_worth_reading": "把光子时间结构、波形判别和电荷-光联合判别接入大型液氙探测器实测数据。",
+      "core_findings": [
+        "论文基于 LZ 标定数据重建单光子到达时间，并优化光子计时尾部分数判别器。",
+        "摘要报告电子反冲泄漏率最低约15%；针对124Xe双电子俘获背景，泄漏率可进一步降至约5%。",
+        "将脉冲形状判别与电荷-光比组成双因素判别后，大闪烁脉冲的假阳性率最多降低约一半，并应用于 WS2024 数据。"
+      ],
+      "term_explanations": [
+        {
+          "term": "液氙探测器",
+          "academic_explanation": "以液态氙为工作介质，利用粒子相互作用产生的闪烁光和电离电荷共同重建事件的辐射探测器。",
+          "plain_explanation": "像一个装满液态氙的透明靶室；粒子经过时同时留下‘闪光’和‘电荷脚印’。"
+        },
+        {
+          "term": "脉冲形状判别（PSD）",
+          "academic_explanation": "利用闪烁脉冲随时间的形状差异区分不同粒子或本底事件的信号处理方法。",
+          "plain_explanation": "不只看闪光有多亮，还看它是怎样亮起来、怎样变暗的，以此辨认事件类型。"
+        },
+        {
+          "term": "电荷-光比",
+          "academic_explanation": "事件中收集到的电离电荷信号与闪烁光信号之比，用于区分电子反冲等背景与目标事件。",
+          "plain_explanation": "把同一次事件留下的‘电荷量’除以‘光量’，像用两个刻度交叉验明信号身份。"
+        },
+        {
+          "term": "电子反冲",
+          "academic_explanation": "入射辐射与电子相互作用后形成的能量沉积类型，在暗物质等实验中常作为背景类别。",
+          "plain_explanation": "这是电子被撞动后留下的闪烁事件；它可能伪装成目标信号，所以需要被筛掉。"
+        },
+        {
+          "term": "光子计时尾部分数判别器",
+          "academic_explanation": "根据闪烁光子到达时间分布的尾部比例构造的判别量，用于量化脉冲衰减时间结构。",
+          "plain_explanation": "专门统计‘晚到的光子’占多少，用脉冲后半段的拖尾来区分事件。"
+        },
+        {
+          "term": "双因素判别（TFD）",
+          "academic_explanation": "同时组合两个互补的事件特征进行分类；本文指 PSD 与电荷-光比的联合判别。",
+          "plain_explanation": "给每个事件设置两道门：波形要对，电荷和光的比例也要对，误放行就会更少。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可把单光子时间分布、积分电荷和总光量作为同一套标定实验的并行观测量。"
+        ],
+        "methods": [
+          "借鉴‘单光子到达时间重建+尾部分数+联合判别’的分层分析流程。"
+        ],
+        "key_entities_mechanisms": [
+          "重点关注闪烁衰减时间、电子反冲背景与光电探测器时间响应之间的耦合。"
+        ],
+        "target_system": [
+          "可迁移到液体闪烁体、塑料闪烁体及中子/伽马脉冲形状判别系统。"
+        ],
+        "future_direction": [
+          "研究温度、光收集不均匀性和低光子数条件下联合判别性能的稳定边界。"
+        ],
+        "paper_potential": [
+          "若能在自有探测器上给出独立标定集、交叉验证集和误判率曲线，具有较清晰的方法学论文潜力。"
+        ],
+        "limitations_validation": [
+          "摘要层面尚不能判断不同能区、漂移时间和系统学不确定度下的稳健性，需阅读全文核实。"
+        ]
+      },
+      "top3_reason": "这是本期最贴近‘探测器信号如何被可靠区分’的实测工作，方法可直接迁移到其他闪烁探测器。",
+      "tags": [
+        "液氙探测器",
+        "脉冲形状判别",
+        "信号读出",
+        "本底抑制"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": []
+    },
+    {
+      "title": "Characterization of a compact EJ315 deuterated liquid scintillator using quasi-monoenergetic neutrons",
+      "chinese_title": "利用准单能中子表征紧凑型 EJ315 氘化液体闪烁体",
+      "journal": "Journal of Instrumentation",
+      "publication_date": "2026-09-10",
+      "doi": "10.1088/1748-0221/21/09/p09018",
+      "url": "https://doi.org/10.1088/1748-0221/21/09/p09018",
+      "article_type": "研究论文",
+      "recommendation_score": 92,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 96,
+        "novelty": 88,
+        "quality": 84,
+        "methodology": 92,
+        "inspiration": 92
+      },
+      "why_worth_reading": "把中子标定、Geant4响应建模、能谱展开和脉冲形状判别放在同一套紧凑探测器比较中。",
+      "core_findings": [
+        "研究比较了相同尺寸的氘化 EJ315 与普通含氢 EJ301 液体闪烁体，使用约1–10 MeV准单能中子测量光输出。",
+        "由反冲氘核/质子能量得到的光输出关系被用于 Geant4 响应矩阵模拟，并据此展开实测脉冲高度分布。",
+        "展开得到的中子能谱与飞行时间法结果符合良好；论文还比较了两种闪烁体的脉冲形状判别和中子探测效率。"
+      ],
+      "term_explanations": [
+        {
+          "term": "氘化液体闪烁体",
+          "academic_explanation": "以含氘溶剂为工作介质的液体闪烁体；中子与氘核相互作用产生的反冲信号可用于中子能量测量。",
+          "plain_explanation": "把普通闪烁液里的部分氢换成氘，让中子撞上后留下更适合分析的能量线索。"
+        },
+        {
+          "term": "准单能中子",
+          "academic_explanation": "能量集中在较窄范围、但仍具有有限能宽的中子束，用于探测器能量响应标定。",
+          "plain_explanation": "不是只有一个精确能量，而是一小段很窄的‘中子颜色’，适合逐段校准探测器。"
+        },
+        {
+          "term": "Geant4",
+          "academic_explanation": "用于模拟粒子输运、相互作用及探测器响应的蒙特卡洛工具包，可生成能量响应矩阵。",
+          "plain_explanation": "在电脑里反复‘投放’粒子，统计它们在探测器里留下什么信号。"
+        },
+        {
+          "term": "响应矩阵",
+          "academic_explanation": "描述真实入射能量经过探测器后映射为各测量道或脉冲高度的概率关系。",
+          "plain_explanation": "一张‘输入能量—输出读数’的对照表，而且每个输入可能对应一片输出分布。"
+        },
+        {
+          "term": "能谱展开",
+          "academic_explanation": "利用探测器响应关系，从测得的脉冲高度分布反推出入射粒子能量谱的逆问题方法。",
+          "plain_explanation": "已知探测器会怎样‘把声音混响’，再把混响倒推回原来的声音。"
+        },
+        {
+          "term": "飞行时间法",
+          "academic_explanation": "根据粒子从源到探测器的传播时间推算其速度和能量的测量方法。",
+          "plain_explanation": "像测短跑运动员跑多快：路程已知，计时后就能估出粒子能量。"
+        },
+        {
+          "term": "脉冲形状判别",
+          "academic_explanation": "通过比较闪烁脉冲的时间波形，区分中子、伽马等不同事件类型的算法。",
+          "plain_explanation": "看信号曲线的外形，而不只看峰值，借此判断是哪类粒子造成的闪光。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "相同尺寸的 EJ315/EJ301 对照设计适合拆分材料差异与几何差异对性能的影响。"
+        ],
+        "methods": [
+          "可借鉴‘准单能标定—响应矩阵—能谱展开—飞行时间交叉验证’的完整链条。"
+        ],
+        "key_entities_mechanisms": [
+          "关注反冲氘核/质子产生的光输出差异及其对中子能谱重建的影响。"
+        ],
+        "target_system": [
+          "可迁移到小型中子谱仪、混合场监测和便携式液体闪烁探测器。"
+        ],
+        "future_direction": [
+          "可进一步研究温度、几何尺寸、光学耦合和低统计量下展开结果的偏差。"
+        ],
+        "paper_potential": [
+          "若补充统一的效率、分辨率和不确定度预算，可形成较完整的中子探测器标定论文框架。"
+        ],
+        "limitations_validation": [
+          "目前主要依据摘要；不同中子能区的响应矩阵条件、展开正则化和比较数据细节需阅读全文核实。"
+        ]
+      },
+      "top3_reason": "它把材料、实验标定、蒙特卡洛响应和能谱反演连成闭环，对中子探测研究的可操作性很强。",
+      "tags": [
+        "中子探测",
+        "液体闪烁体",
+        "Geant4",
+        "能谱展开"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实响应矩阵构建、展开正则化及效率不确定度。"
+      ]
+    },
+    {
+      "title": "Internal validation and performance characterization of a p-type HPGe detector for gamma-ray spectroscopy",
+      "chinese_title": "用于伽马能谱学的 p 型高纯锗探测器内部验证与性能表征",
+      "journal": "Journal of Instrumentation",
+      "publication_date": "2026-09-10",
+      "doi": "10.1088/1748-0221/21/09/t09002",
+      "url": "https://doi.org/10.1088/1748-0221/21/09/t09002",
+      "article_type": "技术研究论文",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 94,
+        "novelty": 72,
+        "quality": 84,
+        "methodology": 90,
+        "inspiration": 89
+      },
+      "why_worth_reading": "给出从漏电流平台、偏压选择到能量分辨率、效率和最低可探测活度的完整性能基线。",
+      "core_findings": [
+        "摘要报告漏电流在1500 V以上稳定于约4–5×10^-11 A，据此选择1800 V作为工作偏压，并将其解释为完全耗尽的迹象。",
+        "使用241Am、57Co、137Cs和60Co标准源进行能量刻度；122 keV与1332 keV处的 FWHM 分别为0.88 keV和1.78 keV。",
+        "论文同时评价探测效率和最低可探测活度，为定量放射性核素分析建立性能基线。"
+      ],
+      "term_explanations": [
+        {
+          "term": "p型高纯锗（HPGe）",
+          "academic_explanation": "以高纯度锗为耗尽区、以空穴为主要载流子参与信号形成的半导体辐射探测器，适合高分辨率伽马能谱测量。",
+          "plain_explanation": "用极纯的锗做‘能量尺’，粒子留下的电荷越精细，伽马峰的位置和宽度就越容易分开。"
+        },
+        {
+          "term": "漏电流",
+          "academic_explanation": "探测器未受辐射信号时仍存在的本底电流；其大小和稳定性会影响噪声、偏压工作区间与谱峰质量。",
+          "plain_explanation": "就像水管在没有用水时仍有细小渗流；渗流越稳定，真正的信号越容易被看见。"
+        },
+        {
+          "term": "完全耗尽",
+          "academic_explanation": "反向偏压使半导体有效体积形成足够宽的耗尽区，入射辐射产生的电荷可以在该区域内被收集。",
+          "plain_explanation": "把探测器内部的‘可工作的空白区’全部打开，粒子在里面产生的电荷才不会被漏掉。"
+        },
+        {
+          "term": "能量分辨率（FWHM）",
+          "academic_explanation": "谱峰半高全宽，表示相同能量事件形成的峰有多宽；数值越小，区分相近能量的能力通常越强。",
+          "plain_explanation": "看一座山峰有多胖；峰越瘦，越能分辨两座挨得很近的山。"
+        },
+        {
+          "term": "探测效率",
+          "academic_explanation": "入射粒子在指定条件下被探测器记录的比例，通常需结合几何、能量和本征响应定义。",
+          "plain_explanation": "一百个粒子来到门口，最终有多少个被系统成功登记。"
+        },
+        {
+          "term": "最低可探测活度",
+          "academic_explanation": "在给定测量时间、背景和判据下，能够与背景可靠区分的最低放射性活度。",
+          "plain_explanation": "背景噪声中，最少要有多强的放射性，仪器才敢说‘我确实测到了’。"
+        },
+        {
+          "term": "能量刻度",
+          "academic_explanation": "使用已知能量的标准核素峰建立道址或数字幅度与实际能量之间的映射关系。",
+          "plain_explanation": "先拿刻度已知的标准尺校准仪器，之后未知峰的位置才有实际能量含义。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可采用‘漏电流—偏压—谱峰—效率—最低可探测活度’的阶梯式验收表。"
+        ],
+        "methods": [
+          "借鉴多标准源刻度和跨能区 FWHM 评价，避免只报单一能量点性能。"
+        ],
+        "key_entities_mechanisms": [
+          "重点考察漏电流平台、完全耗尽状态与能量分辨率之间的可重复关系。"
+        ],
+        "target_system": [
+          "可迁移到 HPGe、硅漂移探测器及其他需要能谱定量的半导体系统。"
+        ],
+        "future_direction": [
+          "可研究温度、长期偏压和辐照老化对漏电流及最低可探测活度的影响。"
+        ],
+        "paper_potential": [
+          "完整的性能基线和长期稳定性数据适合支撑探测器研制或实验平台论文。"
+        ],
+        "limitations_validation": [
+          "摘要没有给出几何效率校准、背景谱、统计误差和长期稳定性细节，需阅读全文核实。"
+        ]
+      },
+      "top3_reason": "这是最适合作为探测器性能验收与标定模板的一篇，指标链条完整且与实际实验直接相关。",
+      "tags": [
+        "HPGe",
+        "伽马能谱",
+        "探测器标定",
+        "能量分辨率"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实效率定义、背景扣除及最低可探测活度计算方法。"
+      ]
+    },
+    {
+      "title": "Methods for analysing data from in-situ ground-based and UAS-borne scintillation gamma spectrometry",
+      "chinese_title": "地面原位与无人机载闪烁伽马能谱数据分析方法",
+      "journal": "Acta Polytechnica",
+      "publication_date": "2026-09-08",
+      "doi": "10.14311/ap.2026.66.0421",
+      "url": "https://doi.org/10.14311/ap.2026.66.0421",
+      "article_type": "方法研究论文",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 91,
+        "novelty": 80,
+        "quality": 81,
+        "methodology": 90,
+        "inspiration": 90
+      },
+      "why_worth_reading": "将地面和无人机载伽马能谱统一到包含高度、含水量和设备差异的 Python 分析链。",
+      "core_findings": [
+        "论文针对地面或无人机载测得的能谱，估算光子场剂量学量以及137Cs表层活度和 K、U、Th 浓度。",
+        "方法使用蒙特卡洛模拟的闪烁探测系统响应矩阵和能谱展开，并让响应函数显式考虑土壤含水量与离地高度。",
+        "作者将方法实现为统一的 Python 工作流，并配套建立无人机辐射测量参考场地，用于测试从采集到评价的完整链条。"
+      ],
+      "term_explanations": [
+        {
+          "term": "原位伽马能谱",
+          "academic_explanation": "在被监测环境现场直接测量伽马射线能量分布，并据此反演放射性核素或剂量相关量。",
+          "plain_explanation": "不把样品全搬回实验室，而是在现场听不同能量的‘伽马声音’，判断地面有什么放射性。"
+        },
+        {
+          "term": "无人机载（UAS-borne）",
+          "academic_explanation": "由无人机系统搭载探测器进行空中辐射测量；飞行高度、速度和姿态会影响几何响应。",
+          "plain_explanation": "让探测器乘无人机飞过目标区域，但必须知道它离地多高、飞得多快。"
+        },
+        {
+          "term": "响应矩阵",
+          "academic_explanation": "描述入射辐射能量和探测器实测道址/脉冲分布之间关系的矩阵，是能谱反演的基础。",
+          "plain_explanation": "把‘真实能量’翻译成‘仪器读数’的一本字典。"
+        },
+        {
+          "term": "蒙特卡洛模拟",
+          "academic_explanation": "通过大量随机抽样模拟粒子输运和相互作用，估计复杂几何与材料条件下的统计响应。",
+          "plain_explanation": "在电脑里重复做很多次随机实验，用总体结果逼近真实探测过程。"
+        },
+        {
+          "term": "能谱展开",
+          "academic_explanation": "从受探测器响应展宽和混合影响的测量谱，反推出更接近入射场的能量分布。",
+          "plain_explanation": "把仪器造成的‘模糊滤镜’尽量去掉，恢复原来的能量组成。"
+        },
+        {
+          "term": "剂量学量",
+          "academic_explanation": "用于描述辐射场对物质或人体潜在作用的可测或可计算物理量，例如剂量率等。",
+          "plain_explanation": "把‘辐射有多强’换算成可以比较、记录和用于安全判断的数字。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可同时设置地面固定点、不同高度飞行线和参考场地，检验几何变化是否被响应模型吸收。"
+        ],
+        "methods": [
+          "值得借鉴设备专属响应矩阵、含水量修正和从采集到评价的 Python 自动化流程。"
+        ],
+        "key_entities_mechanisms": [
+          "关键机制是土壤含水量、离地高度和探测器几何共同改变能谱响应。"
+        ],
+        "target_system": [
+          "可延伸到便携式闪烁体、车载巡测和复杂地形辐射源定位。"
+        ],
+        "future_direction": [
+          "可研究低计数率条件下的空间反演、飞行路径优化和在线质量控制。"
+        ],
+        "paper_potential": [
+          "若结合实测交叉标定和公开数据集，可形成具有复现价值的探测数据处理论文。"
+        ],
+        "limitations_validation": [
+          "摘要未说明展开算法的正则化、参考场地不确定度及飞行数据的统计覆盖，需阅读全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "伽马能谱",
+        "无人机载探测",
+        "蒙特卡洛",
+        "数据分析"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实 Python 工作流、参考场地和响应修正的可复现细节。"
+      ]
+    },
+    {
+      "title": "Secondary Standardization of Neutron Fluence Fields at the Argonaut Reactor - IEN: Assessment of Calibration and Irradiation Metrological Capacity for Samples and Instruments",
+      "chinese_title": "Argonaut 反应堆中子注量场的次级标准化：样品与仪器标定、辐照计量能力评估",
+      "journal": "Brazilian Journal of Radiation Sciences",
+      "publication_date": "2026-09-11",
+      "doi": "10.15392/2319-0612.2026.3068",
+      "url": "https://doi.org/10.15392/2319-0612.2026.3068",
+      "article_type": "计量与标定研究论文",
+      "recommendation_score": 86,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 91,
+        "novelty": 82,
+        "quality": 78,
+        "methodology": 87,
+        "inspiration": 86
+      },
+      "why_worth_reading": "聚焦复杂反应堆场中的中子谱和注量标定，是中子探测器验证的基础设施型工作。",
+      "core_findings": [
+        "研究使用 Bonner 球谱仪测量 Argonaut 反应堆侧向通道不同位置的中子谱，测量距离覆盖100–250 cm。",
+        "不同球径的计数变化提示场中包含约0.1 eV至6 MeV的宽能区中子，部分球径对吸收能区的响应表现不同。",
+        "作者将结果定位为中子剂量标定和计算模型验证的基础，并计划用精密长计数器补充 Bonner 球测量。"
+      ],
+      "term_explanations": [
+        {
+          "term": "中子注量",
+          "academic_explanation": "单位面积上穿过的中子数，是描述中子场强度和仪器辐照条件的基本物理量。",
+          "plain_explanation": "想象一扇门，统计每一平方米门面上穿过了多少个中子。"
+        },
+        {
+          "term": "次级标准化",
+          "academic_explanation": "通过与更高等级标准或可溯源测量建立关系，使工作场的量值能够用于实际标定和比较。",
+          "plain_explanation": "把实验现场的‘工作尺’和国家/参考标准对齐，之后测出来的数才有统一尺度。"
+        },
+        {
+          "term": "Bonner球谱仪",
+          "academic_explanation": "由不同直径聚乙烯慢化球和中心中子探测器组成，通过多球计数反演宽能区中子谱。",
+          "plain_explanation": "给同一个小探测器套上大小不同的‘保护球’，比较各自计数来猜中子的能量组成。"
+        },
+        {
+          "term": "中子谱",
+          "academic_explanation": "中子通量或注量随能量的分布，反映中子场由慢中子到快中子的组成。",
+          "plain_explanation": "不是只问‘有多少中子’，还要知道这些中子分别有多快。"
+        },
+        {
+          "term": "中子计量学",
+          "academic_explanation": "研究中子相关量的测量、校准、溯源和不确定度评价的计量学分支。",
+          "plain_explanation": "专门研究怎样把中子测得准、不同实验室测得能对得上。"
+        },
+        {
+          "term": "精密长计数器",
+          "academic_explanation": "用于中子注量测量的高稳定性计数器，可作为谱仪测量的补充或参考设备。",
+          "plain_explanation": "一种专门数中子的稳定‘计数尺’，用来给另一套测量结果作交叉检查。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可借鉴多位置、多球径和距离扫描设计，把源强变化与能谱变化区分开。"
+        ],
+        "methods": [
+          "将 Bonner 球谱仪、独立计数器和计算模型组合，可构建可追溯的中子探测器标定链。"
+        ],
+        "key_entities_mechanisms": [
+          "重点关注慢化球直径、散射环境和距离对中子谱反演的影响。"
+        ],
+        "target_system": [
+          "可延伸到中子探测器、辐照损伤实验和反应堆/加速器混合场监测。"
+        ],
+        "future_direction": [
+          "可研究复杂屏蔽和非均匀场中的注量重建及不确定度传播。"
+        ],
+        "paper_potential": [
+          "如果补充可溯源标准、谱反演算法和模型—实验残差，可形成扎实的计量方法论文。"
+        ],
+        "limitations_validation": [
+          "摘要提到的精密长计数器尚属后续工作，球谱反演和场均匀性细节需阅读全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "中子探测",
+        "中子注量",
+        "Bonner球",
+        "计量标定"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实中子谱反演、场均匀性和量值溯源链。"
+      ]
+    },
+    {
+      "title": "Mn(II)‐Based Hybrid Halide Transparent Scintillator Coating for High‐Resolution and High‐Temperature X‐Ray Imaging",
+      "chinese_title": "用于高分辨率和高温 X 射线成像的 Mn(II) 基杂化卤化物透明闪烁涂层",
+      "journal": "Laser & Photonics Reviews",
+      "publication_date": "2026-09-08",
+      "doi": "10.1002/lpor.71880",
+      "url": "https://doi.org/10.1002/lpor.71880",
+      "article_type": "材料与器件研究论文",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 88,
+        "novelty": 91,
+        "quality": 84,
+        "methodology": 84,
+        "inspiration": 88
+      },
+      "why_worth_reading": "用透明复合涂层兼顾闪烁效率、空间分辨率和高温稳定性，直指 X 射线成像中的材料—器件矛盾。",
+      "core_findings": [
+        "论文合成四种零维锰基杂化卤化物；摘要报告其光致发光量子产率为87%–97%。",
+        "材料被分散进 PTES 硅氧烷网络制成透明复合涂层，C3@PTES 透过率约70%。",
+        "作为 X 射线闪烁屏时，涂层空间分辨率达到16.6 lp/mm，C3@PTES达到20.0 lp/mm，并报告连续照射、开关循环和高温条件下的稳定性。"
+      ],
+      "term_explanations": [
+        {
+          "term": "杂化卤化物",
+          "academic_explanation": "同时包含有机组分与金属卤化物无机组分的材料体系，可通过结构和组分调控发光与辐射响应。",
+          "plain_explanation": "把有机分子和金属—卤素骨架组合在一起，像把两类材料的优点装进同一个闪烁层。"
+        },
+        {
+          "term": "零维（0D）",
+          "academic_explanation": "晶体结构中发光无机单元在空间上彼此隔离，电子或激子主要局限在局部单元内。",
+          "plain_explanation": "发光单元像一颗颗互相隔开的‘小灯泡’，不容易把能量到处串走。"
+        },
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收高能辐射后产生可见或近可见光的材料，光信号可进一步由光电器件读出。",
+          "plain_explanation": "把看不见的 X 射线或伽马射线转换成相机能看到的光。"
+        },
+        {
+          "term": "光致发光量子产率",
+          "academic_explanation": "材料吸收光子后产生发光光子的比例，用于表征光激发发光效率，不等同于完整的辐射成像效率。",
+          "plain_explanation": "打进去一批光子，最后有多少能变成光跑出来；这是发光效率的一把尺。"
+        },
+        {
+          "term": "溶胶-凝胶",
+          "academic_explanation": "由溶液中的前驱体逐步形成网络状凝胶，再经处理得到固体复合材料的制备过程。",
+          "plain_explanation": "先像调制均匀的液体，再让它慢慢结成包住发光颗粒的透明网。"
+        },
+        {
+          "term": "空间分辨率（lp/mm）",
+          "academic_explanation": "成像系统区分细密明暗线对的能力，单位每毫米可分辨的线对数越高，细节能力通常越强。",
+          "plain_explanation": "看一毫米里还能不能分清一黑一白的细线；能分清得越密，图像越锐。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可同步报告透过率、光致发光、X射线辐射发光、空间分辨率和热循环稳定性，避免只看单一指标。"
+        ],
+        "methods": [
+          "借鉴溶胶-凝胶网络中的分子级均匀分散策略，评估透明度与光散射的共同影响。"
+        ],
+        "key_entities_mechanisms": [
+          "可围绕 Mn(II) 发光中心间距、激子限域和辐射复合建立结构—性能关联。"
+        ],
+        "target_system": [
+          "可迁移到透明 X 射线闪烁屏、柔性成像器和高温原位探测窗口。"
+        ],
+        "future_direction": [
+          "可研究涂层厚度、光学耦合和长期辐照后分辨率保持率。"
+        ],
+        "paper_potential": [
+          "材料设计和成像器件验证结合紧密，适合发展为材料—器件协同的探测论文。"
+        ],
+        "limitations_validation": [
+          "摘要未给出剂量率、涂层厚度及热循环次数等边界条件，需阅读全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "X射线探测",
+        "闪烁涂层",
+        "透明成像",
+        "高温稳定性"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实高温稳定性、辐照剂量和成像分辨率测试条件。"
+      ]
+    },
+    {
+      "title": "Halogen Tailoring Enables Large-Area Mn-Based Halide Single-Crystal Films with Enhanced Radioluminescence and High-Resolution X-ray Imaging",
+      "chinese_title": "卤素调控实现大面积锰基卤化物单晶薄膜的增强辐射发光与高分辨率 X 射线成像",
+      "journal": "Inorganic Chemistry",
+      "publication_date": "2026-09-12",
+      "doi": "10.1021/acs.inorgchem.6c02724",
+      "url": "https://doi.org/10.1021/acs.inorgchem.6c02724",
+      "article_type": "材料与器件研究论文",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 88,
+        "novelty": 91,
+        "quality": 84,
+        "methodology": 83,
+        "inspiration": 88
+      },
+      "why_worth_reading": "同时处理辐射发光效率和成像分辨率这对常见矛盾，并把卤素调控延伸到大面积单晶薄膜制备。",
+      "core_findings": [
+        "摘要报告通过 Cl/Br/I 卤素调控，光致发光量子产率由32.68%提高到96.74%，优化材料的光输出达到73%–243% LYSO。",
+        "密闭空间限域溶液生长方法制备了高质量、大面积、透明的单晶薄膜，摘要报告最高空间分辨率31.2 lp/mm。",
+        "DFT 计算将价带顶主要归因于 Mn 3d 与卤素 p 轨道，并把 [MnX4]2− 四面体中的 Mn2+ 描述为激子受体和辐射中心。"
+      ],
+      "term_explanations": [
+        {
+          "term": "卤素调控",
+          "academic_explanation": "改变氯、溴、碘等卤素组分或比例，以调节晶体能带、缺陷、发光和辐射响应。",
+          "plain_explanation": "像给材料更换不同‘配方的卤素零件’，让它的发光颜色和效率发生可控变化。"
+        },
+        {
+          "term": "单晶薄膜",
+          "academic_explanation": "在薄膜形态下保持较连续晶格取向和低晶界的晶体层，有利于减少散射和缺陷影响。",
+          "plain_explanation": "不是许多小晶粒拼成的砂纸，而是一整片晶格更连贯的薄层。"
+        },
+        {
+          "term": "辐射发光",
+          "academic_explanation": "材料直接吸收 X 射线等电离辐射并发光的过程，是闪烁成像的信号来源之一。",
+          "plain_explanation": "不用普通灯光照它，X 射线自己就能把材料‘点亮’。"
+        },
+        {
+          "term": "密度泛函理论（DFT）",
+          "academic_explanation": "基于电子密度计算材料基态电子结构、能带和轨道贡献的量子化学/凝聚态理论方法。",
+          "plain_explanation": "用量子力学计算电子在材料里怎么分布，从而解释为什么它会发光。"
+        },
+        {
+          "term": "价带顶",
+          "academic_explanation": "价带中能量最高的电子态边缘，其组成会影响载流子跃迁和材料的光电性质。",
+          "plain_explanation": "可以把它看成‘已占据电子楼层的最高一层’，它的构成会影响电子往上跳的方式。"
+        },
+        {
+          "term": "激子受体",
+          "academic_explanation": "能够接收电子—空穴束缚对（激子）能量并参与后续辐射复合的局部中心。",
+          "plain_explanation": "像一个接住激发能量的‘中转站’，接到后再把能量变成光。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可把卤素比例、晶体尺寸、薄膜透明度、光输出和线对分辨率做成同一组对照矩阵。"
+        ],
+        "methods": [
+          "借鉴空间限域生长与 DFT 轨道分析联用，从工艺和电子结构两端解释性能变化。"
+        ],
+        "key_entities_mechanisms": [
+          "关注 [MnX4]2− 局部结构、激子能量转移和光散射对成像清晰度的共同作用。"
+        ],
+        "target_system": [
+          "可延伸到大面积 X 射线闪烁屏、安检成像和高分辨率辐射成像。"
+        ],
+        "future_direction": [
+          "可研究大面积薄膜厚度均匀性、柔性基底兼容性和长期辐照稳定性。"
+        ],
+        "paper_potential": [
+          "材料—生长—辐射成像三者闭环，具备形成高质量器件论文的结构。"
+        ],
+        "limitations_validation": [
+          "摘要中的光输出百分比和31.2 lp/mm需结合参照样品、厚度和测试能谱阅读全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "X射线成像",
+        "单晶薄膜",
+        "卤素调控",
+        "辐射发光"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实 LYSO 对比基准、DFT 模型和成像测试边界条件。"
+      ]
+    },
+    {
+      "title": "Halogen‐Regulated Luminescent Silver(I) Halide Complexes and the Gel Scintillation Screen for X‐Ray Imaging",
+      "chinese_title": "卤素调控的发光银(I)卤化物配合物及其用于 X 射线成像的凝胶闪烁屏",
+      "journal": "Advanced Functional Materials",
+      "publication_date": "2026-09-12",
+      "doi": "10.1002/adfm.78388",
+      "url": "https://doi.org/10.1002/adfm.78388",
+      "article_type": "材料与器件研究论文",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 88,
+        "novelty": 90,
+        "quality": 85,
+        "methodology": 84,
+        "inspiration": 88
+      },
+      "why_worth_reading": "从银卤化物的吸湿与聚集猝灭问题出发，落到透明凝胶闪烁屏和低剂量高分辨率成像。",
+      "core_findings": [
+        "论文设计单核五配位银(I)卤化物配合物，通过卤素替换调节宽带发光；氯配合物的 PLQY 摘要报告为76%。",
+        "氯配合物被报道具有较高闪烁光产额26631 photons/MeV和304.67 nGy air s^-1 的检出限。",
+        "透明 Ag-Cl 复合凝胶闪烁屏实现20.2 lp/mm X 射线成像空间分辨率；摘要将其归因于更刚性的配位环境、受抑制的非辐射衰减及有利的自旋—轨道耦合。"
+      ],
+      "term_explanations": [
+        {
+          "term": "银(I)卤化物配合物",
+          "academic_explanation": "以一价银离子和卤素配体构成、并由有机配体稳定的配位化合物，可通过局部配位结构调节发光。",
+          "plain_explanation": "让银离子和卤素按特定几何方式‘组装’，再用有机分子把这个发光单元固定住。"
+        },
+        {
+          "term": "热激活延迟荧光（TADF）",
+          "academic_explanation": "激发态通过热能在不同自旋态间转换，再返回基态发光的过程，可提高部分材料的发光利用率。",
+          "plain_explanation": "有些激发能量不会立刻发光，而是绕一小段路后被热能‘叫回来’继续发光。"
+        },
+        {
+          "term": "光致发光量子产率（PLQY）",
+          "academic_explanation": "材料吸收光激发后产生发光光子的比例，用于评价光激发发光效率。",
+          "plain_explanation": "给材料一批光，能有多少份能量最终变成光返回来。"
+        },
+        {
+          "term": "非辐射衰减",
+          "academic_explanation": "激发能量不以光子形式释放，而通过晶格振动、热等途径耗散的过程，会降低发光效率。",
+          "plain_explanation": "本来可以变成光的能量，悄悄变成了热或振动，等于把亮度浪费掉。"
+        },
+        {
+          "term": "自旋—轨道耦合",
+          "academic_explanation": "电子自旋与其轨道运动之间的相互作用，会影响能级、跃迁选择规则和含重元素材料的发光过程。",
+          "plain_explanation": "电子自身的‘旋转’和它绕原子运动会互相牵制，从而改变哪些发光通道容易发生。"
+        },
+        {
+          "term": "闪烁光产额",
+          "academic_explanation": "单位沉积能量产生的闪烁光子数，常用 photons/MeV 表示，是辐射能量转换效率指标。",
+          "plain_explanation": "粒子每交出一份能量，材料能吐出多少个光子。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可把吸湿性、配位结构、光产额、检出限和成像分辨率作为材料到器件的连续评价链。"
+        ],
+        "methods": [
+          "借鉴卤素替换与透明凝胶成膜协同设计，比较不同配位环境下的发光和稳定性。"
+        ],
+        "key_entities_mechanisms": [
+          "重点关注 Ag–Ag 聚集、激发态弛豫和非辐射衰减对闪烁效率的影响。"
+        ],
+        "target_system": [
+          "可迁移到柔性、透明和低剂量 X 射线成像探测器。"
+        ],
+        "future_direction": [
+          "可研究凝胶屏厚度、封装阻湿、辐照老化和大面积均匀性。"
+        ],
+        "paper_potential": [
+          "若能同时给出湿热寿命和重复成像数据，材料机制与工程应用之间的论文说服力会更强。"
+        ],
+        "limitations_validation": [
+          "摘要未披露长期吸湿、重复剂量和成像噪声的统计细节，需阅读全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "X射线探测",
+        "银卤化物",
+        "凝胶闪烁屏",
+        "低剂量成像"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实检出限单位、成像剂量和凝胶长期稳定性。"
+      ]
+    },
+    {
+      "title": "Phase-Controlled Crystal Growth of Cs3Cu2I5 Scintillators via the Solution Method for γ-ray Detection.",
+      "chinese_title": "面向伽马射线探测的溶液法相调控 Cs3Cu2I5 闪烁体晶体生长",
+      "journal": "ACS Applied Materials & Interfaces",
+      "publication_date": "2026-09-09",
+      "doi": "10.1021/acsami.6c09525",
+      "url": "https://doi.org/10.1021/acsami.6c09525",
+      "article_type": "材料与器件研究论文",
+      "recommendation_score": 88,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 91,
+        "novelty": 87,
+        "quality": 84,
+        "methodology": 88,
+        "inspiration": 88
+      },
+      "why_worth_reading": "解决 Cs3Cu2I5 溶液生长中二次相难以避免的问题，并报告了伽马能谱能量分辨率。",
+      "core_findings": [
+        "研究使用恒温溶剂蒸发结晶制备厘米级 Cs3Cu2I5 单晶，目标是抑制生长中不可避免的 CsCu2I3 二次相。",
+        "摘要将相演化与生长过程中 I-/Cu+ 浓度比下降联系起来，并通过前驱体抗氧化处理和原料化学计量协同调控获得长期相稳定生长。",
+        "所得晶体在137Cs和241Am伽马辐照下的能量分辨率分别为5.38%和13.30%。"
+      ],
+      "term_explanations": [
+        {
+          "term": "零维铜卤化物钙钛矿",
+          "academic_explanation": "以铜—卤素发光单元彼此隔离为结构特征的低维卤化物材料，具有较强局域激发和闪烁发光潜力。",
+          "plain_explanation": "发光的铜—卤素小单元彼此分开，像许多独立小灯泡组成的晶体。"
+        },
+        {
+          "term": "二次相",
+          "academic_explanation": "目标晶相之外，在合成过程中同时生成的另一种晶体相；它可能带来缺陷、杂质能级和性能不稳定。",
+          "plain_explanation": "本来想长出一种晶体，却混进了另一种‘杂晶’，会让探测性能打折。"
+        },
+        {
+          "term": "恒温溶剂蒸发结晶",
+          "academic_explanation": "在恒定温度下缓慢移除溶剂，使溶液逐步过饱和并形成晶体的溶液生长方法。",
+          "plain_explanation": "让溶剂在稳定温度下慢慢蒸发，给晶体足够时间有序长大。"
+        },
+        {
+          "term": "前驱体工程",
+          "academic_explanation": "通过调整反应前驱物的纯度、配比、化学状态或预处理，控制成核、相演化和缺陷形成。",
+          "plain_explanation": "在晶体开始生长前先把‘原材料队伍’配好，减少后面长错晶体的机会。"
+        },
+        {
+          "term": "化学计量",
+          "academic_explanation": "反应物或元素之间按特定摩尔比例组成的关系；偏离目标比例可能改变晶相和缺陷。",
+          "plain_explanation": "像做配方时精确称量每种原料，比例稍变，最后长出的晶体可能就不同。"
+        },
+        {
+          "term": "能量分辨率",
+          "academic_explanation": "探测器区分相近入射能量的能力，常由能谱峰宽相对于峰位的比例表示，数值越小通常越好。",
+          "plain_explanation": "看仪器能不能把能量很接近的两条伽马线分开。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可用相组成、晶体尺寸、缺陷密度和不同核素能量分辨率组成材料生长的闭环评价。"
+        ],
+        "methods": [
+          "借鉴前驱体抗氧化处理与化学计量协同调控，并追踪生长过程中的相演化。"
+        ],
+        "key_entities_mechanisms": [
+          "核心机制是 I-/Cu+ 浓度比变化与 CsCu2I3 二次相形成之间的关联。"
+        ],
+        "target_system": [
+          "可延伸到伽马谱仪、便携式核素识别器和低成本闪烁晶体探测器。"
+        ],
+        "future_direction": [
+          "可研究厘米级晶体的批次一致性、封装光学耦合和长期辐照稳定性。"
+        ],
+        "paper_potential": [
+          "相控制机制与实际伽马探测性能同时呈现，具备从合成工艺走向器件验证的论文潜力。"
+        ],
+        "limitations_validation": [
+          "摘要没有给出能谱统计计数、峰拟合方式和晶体内部均匀性，需阅读全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "伽马探测",
+        "铜卤化物",
+        "闪烁晶体",
+        "晶体生长"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实晶相表征、能量分辨率统计和长期相稳定性测试。"
+      ]
+    },
+    {
+      "title": "Strong Hydrogen Bond Interaction Induced Dimensional Evolution in Aromatic Diammonium-Based Perovskite/Perovskitoid for Achieving High-Performance X-ray Detection",
+      "chinese_title": "强氢键相互作用诱导芳香二铵基钙钛矿/类钙钛矿维度演化及高性能 X 射线探测",
+      "journal": "ACS Energy Letters",
+      "publication_date": "2026-09-10",
+      "doi": "10.1021/acsenergylett.6c01440",
+      "url": "https://doi.org/10.1021/acsenergylett.6c01440",
+      "article_type": "材料与器件研究论文",
+      "recommendation_score": 88,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 89,
+        "quality": 85,
+        "methodology": 84,
+        "inspiration": 89
+      },
+      "why_worth_reading": "把有机阳离子氢键排列、晶体维度和离子迁移稳定性联系起来，直接落到低剂量 X 射线成像。",
+      "core_findings": [
+        "作者比较四种芳香二胺配体，观察到从非钙钛矿、1D 类钙钛矿到2D钙钛矿的维度演化。",
+        "摘要认为强氢键相互作用改变了 APD2+ 阳离子的排列，削弱阳离子—π相互作用，并提升晶化质量、晶格刚性和离子迁移活化能。",
+        "(APD)PbI4 单晶探测器报告灵敏度8375 μC Gy^-1 cm^-2、良好工作稳定性，并在1.33 μGy s^-1 下实现 X 射线成像。"
+      ],
+      "term_explanations": [
+        {
+          "term": "二维钙钛矿",
+          "academic_explanation": "无机钙钛矿层被有机间隔阳离子分隔、在两个方向形成连续结构的低维材料，常用于调节稳定性和输运。",
+          "plain_explanation": "像一层层薄饼，中间夹着有机分子；电荷主要在薄层里活动。"
+        },
+        {
+          "term": "类钙钛矿（perovskitoid）",
+          "academic_explanation": "具有部分钙钛矿结构特征但连接方式或维度不同的材料，不能简单等同于标准钙钛矿。",
+          "plain_explanation": "结构上像钙钛矿的近亲，但骨架连接方式并不完全一样。"
+        },
+        {
+          "term": "芳香二铵阳离子",
+          "academic_explanation": "含芳香环并带有两个铵基正电荷的有机离子，可作为无机层之间的结构调节和电荷补偿组分。",
+          "plain_explanation": "一端有芳香环、两处带正电的‘双连接分子’，用来撑开并排列无机晶层。"
+        },
+        {
+          "term": "维度演化",
+          "academic_explanation": "材料结构从零维/一维到二维等不同连接维度发生转变，通常伴随晶体组成和性质变化。",
+          "plain_explanation": "通过换分子配体，让晶体骨架从点状、线状逐步变成层状。"
+        },
+        {
+          "term": "氢键相互作用",
+          "academic_explanation": "含氢供体与电负性原子之间的定向非共价相互作用，可影响分子排列、晶格稳定性和缺陷行为。",
+          "plain_explanation": "分子之间有一种有方向的‘弱拉手’，但数量多时能把晶体排列得更稳。"
+        },
+        {
+          "term": "离子迁移活化能",
+          "academic_explanation": "离子在晶格中移动需要跨越的能量势垒；数值较高通常意味着离子迁移更不易发生。",
+          "plain_explanation": "离子要在晶体里‘换位置’需要爬过多高的坡，坡越高越不容易乱跑。"
+        },
+        {
+          "term": "探测灵敏度",
+          "academic_explanation": "单位入射辐射剂量产生的可测电荷或信号响应，常用于比较 X 射线探测器的响应能力。",
+          "plain_explanation": "同样一小份 X 射线，仪器能产生多明显的电信号。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可设计配体结构—晶体维度—离子迁移—探测稳定性的系列对照，而非只比较最终灵敏度。"
+        ],
+        "methods": [
+          "借鉴单晶结构解析、能量势垒评价与低剂量成像联合验证的路线。"
+        ],
+        "key_entities_mechanisms": [
+          "重点关注氢键、阳离子—π作用和晶格刚性对离子迁移与电荷收集的耦合。"
+        ],
+        "target_system": [
+          "可延伸到钙钛矿单晶 X 射线探测器及柔性辐射成像器件。"
+        ],
+        "future_direction": [
+          "可研究湿热、连续偏压和长时间辐照下的结构—性能衰减。"
+        ],
+        "paper_potential": [
+          "若能将分子设计原则推广到一组可复现配体，具有机制导向的材料探测论文潜力。"
+        ],
+        "limitations_validation": [
+          "摘要未说明灵敏度的线性范围、噪声和重复性，需阅读全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "X射线探测",
+        "钙钛矿",
+        "单晶探测器",
+        "离子迁移"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实灵敏度计算、低剂量成像对照和稳定性统计。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "建立‘材料/探测器响应—信号波形—能谱反演—质量控制’一体化验证平台：用准单能中子或标准伽马源产生可追溯数据，同时记录光子时间、脉冲高度和多通道健康状态。",
+    "围绕低剂量、高分辨率闪烁成像，比较透明复合涂层、单晶薄膜和低维卤化物晶体的厚度—光散射—光产额—分辨率权衡，并加入温度与辐照老化测试。",
+    "将设备专属蒙特卡洛响应矩阵与异常检测结合：先自动剔除坏道/漂移通道，再进行能谱展开和核素识别，使用独立标准源与飞行时间或第二种谱仪交叉验证。"
+  ]
+}
