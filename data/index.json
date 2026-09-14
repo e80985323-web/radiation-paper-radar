@@ -2,9 +2,16 @@
   "schema_version": 1,
   "title": "辐射探测论文雷达",
   "description": "面向辐射探测、闪烁体、能谱、成像与信号读出的精选科研文献雷达。",
-  "updated_at": "2026-09-13T06:52:29.667088+00:00",
-  "latest_date": "2026-09-13",
+  "updated_at": "2026-09-14T12:46:38.862800+00:00",
+  "latest_date": "2026-09-14",
   "reports": [
+    {
+      "date": "2026-09-14",
+      "path": "reports/2026-09-14.json",
+      "article_count": 7,
+      "top_score": 89,
+      "window": "最近7天（因近24小时高分候选不足5篇而扩大；学术接口仅提供日级日期）"
+    },
     {
       "date": "2026-09-13",
       "path": "reports/2026-09-13.json",

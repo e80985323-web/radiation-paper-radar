@@ -1,0 +1,591 @@
+{
+  "schema_version": 1,
+  "title": "辐射探测论文雷达",
+  "date": "2026-09-14",
+  "published_at": "2026-09-14T12:46:38.862800+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（因近24小时高分候选不足5篇而扩大；学术接口仅提供日级日期）",
+    "retrieved_count": 1950,
+    "screened_count": 227,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 7,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 114,
+      "crossref": 483,
+      "semanticscholar": 0,
+      "openalex": 753,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "Semantic Scholar 返回 HTTP 429；其余来源继续工作。",
+      "自动元数据初筛没有产生70分以上推荐；本期逐篇阅读 review_queue.json 与 ranked_*.json 中的摘要和 DOI 元数据后重新评分。",
+      "9篇已推送论文仅有出版信息更新，未作为新论文重复推荐；预印本均明确标注未正式同行评议。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Three-dimensional recoil-electron reconstruction using combined optical imaging and waveform readout for electron-tracking Compton cameras",
+      "chinese_title": "面向电子跟踪康普顿相机的光学成像与波形读出联合三维反冲电子重建",
+      "journal": "Progress of Theoretical and Experimental Physics",
+      "publication_date": "2026-09-11",
+      "doi": "10.1093/ptep/ptag171",
+      "url": "https://doi.org/10.1093/ptep/ptag171",
+      "article_type": "研究论文",
+      "recommendation_score": 89,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 94,
+        "novelty": 88,
+        "quality": 84,
+        "methodology": 84,
+        "inspiration": 86
+      },
+      "why_worth_reading": "用二维光学图像和一维波形替代全三维读出，在控制数据量的同时改善伽马成像轨迹重建。",
+      "core_findings": [
+        "研究以氩基气体时间投影室为对象，联合二维光学图像、一维波形与深度学习推断三维反冲电子方向。",
+        "Geant4 与 MAGBOLTZ 生成的伪实验数据中，40–50 keV 电子方向角分辨率约44°，较既有条带读出改善约1.3倍。",
+        "5–50 keV 范围内电子径迹起点分辨率也得到改善；结论目前受模拟与伪实验数据边界约束。"
+      ],
+      "term_explanations": [
+        {
+          "term": "电子跟踪康普顿相机",
+          "academic_explanation": "同时重建康普顿散射光子与反冲电子运动学信息的伽马成像系统，可缩小入射方向的不确定区域。",
+          "plain_explanation": "不只看伽马在哪里散射，还追踪被撞出的电子，像多拿到一条指向来源的线索。"
+        },
+        {
+          "term": "气体时间投影室",
+          "academic_explanation": "通过漂移电子的到达位置和时间重建气体中带电粒子三维径迹的探测器。",
+          "plain_explanation": "粒子在气体里画出轨迹，电荷慢慢漂到读出端，位置和时间共同还原这条线。"
+        },
+        {
+          "term": "角分辨率",
+          "academic_explanation": "成像系统区分相近入射方向的能力；本文用于量化反冲电子方向重建误差。",
+          "plain_explanation": "像方向尺的精细程度，数值越小通常越能分清两个接近的方向。"
+        },
+        {
+          "term": "波形读出",
+          "academic_explanation": "记录探测器电信号随时间变化的采集方式，可提供纵向漂移与时间结构信息。",
+          "plain_explanation": "不只记一个峰值，而是把信号从出现到消失的整段曲线录下来。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "以同一批事件比较全三维、二维图像加一维波形和条带读出，量化性能—数据量权衡。"
+        ],
+        "methods": [
+          "将横向光学图像与纵向波形进行特征融合，并保留独立测试集。"
+        ],
+        "key_entities_mechanisms": [
+          "反冲电子方向、径迹起点与扩散共同决定康普顿成像点扩散函数。"
+        ],
+        "target_system": [
+          "气体康普顿相机和大面积伽马成像器。"
+        ],
+        "future_direction": [
+          "用真实标定源验证域偏移、低能阈值和事件堆积。"
+        ],
+        "paper_potential": [
+          "若完成真实束流交叉验证，可形成读出架构与重建算法闭环。"
+        ],
+        "limitations_validation": [
+          "当前关键性能来自模拟伪实验数据，真实光学噪声和增益漂移需验证。"
+        ]
+      },
+      "top3_reason": "读出压缩、轨迹重建和伽马成像直接连成一条可迁移的方法路线。",
+      "tags": [
+        "伽马成像",
+        "康普顿相机",
+        "波形读出",
+        "深度学习"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需用真实探测器数据复核角分辨率和起点分辨率。"
+      ]
+    },
+    {
+      "title": "Achieving Centimeter‐Sized Mn‐Based Hybrid Metal Halides with Anisotropic Emission, Scintillation, and Anti‐Thermal‐Quenching Photoluminescence for Linearly Polarized UV Light, X‐Ray, and Temperature Sensing",
+      "chinese_title": "兼具各向异性发光、闪烁和反热猝灭的厘米级锰基杂化金属卤化物：用于线偏振紫外、X射线与温度传感",
+      "journal": "Advanced Functional Materials",
+      "publication_date": "2026-09-09",
+      "doi": "10.1002/adfm.78159",
+      "url": "https://doi.org/10.1002/adfm.78159",
+      "article_type": "材料与器件研究论文",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 91,
+        "novelty": 90,
+        "quality": 85,
+        "methodology": 77,
+        "inspiration": 84
+      },
+      "why_worth_reading": "同一厘米级晶体兼顾X射线闪烁成像与宽温区发光稳定，为多场耦合探测材料提供设计样例。",
+      "core_findings": [
+        "作者制备厘米级零维锰基杂化卤化物，并报告偏振相关发光、X射线闪烁和反热猝灭。",
+        "摘要报告光致发光量子产率94.6%、闪烁光产额27000 photons/MeV、检出限2.19 µGy/s及空间分辨率11.1 lp/mm。",
+        "20–260 K范围内发光增强至1.73倍；1% Sb3+掺杂还用于比率型温度传感。"
+      ],
+      "term_explanations": [
+        {
+          "term": "零维杂化金属卤化物",
+          "academic_explanation": "金属卤化物发光单元在晶体中彼此隔离并由有机组分分隔的材料，激发态通常较局域。",
+          "plain_explanation": "许多互不连通的无机发光小岛被有机分子隔开。"
+        },
+        {
+          "term": "反热猝灭",
+          "academic_explanation": "材料发光强度在特定升温区间不降反升的现象，需与热激活吸收或结构调整等过程关联验证。",
+          "plain_explanation": "多数材料越热越暗，它却在一定温区越热越亮。"
+        },
+        {
+          "term": "闪烁光产额",
+          "academic_explanation": "单位沉积能量产生的闪烁光子数，是评价辐射能量向可见光转换效率的指标。",
+          "plain_explanation": "X射线每交出一份能量，材料能吐出多少个光子。"
+        },
+        {
+          "term": "空间分辨率",
+          "academic_explanation": "成像系统区分相邻细节的能力，线对每毫米越高通常表示可分辨结构越细。",
+          "plain_explanation": "看闪烁屏能不能把靠得很近的两条线分开。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "在同一器件上联测温度、偏振、剂量响应和成像线对，拆分多场交叉敏感。"
+        ],
+        "methods": [
+          "结合晶体取向分析、温变光谱与X射线成像。"
+        ],
+        "key_entities_mechanisms": [
+          "有机阳离子排列、Mn2+局域环境与非辐射跃迁。"
+        ],
+        "target_system": [
+          "宽温区X射线成像与多功能辐射传感。"
+        ],
+        "future_direction": [
+          "测试室温以上、连续辐照和湿热环境稳定性。"
+        ],
+        "paper_potential": [
+          "若补足器件长期稳定性，可形成多场探测材料路线。"
+        ],
+        "limitations_validation": [
+          "摘要指标需核实样品厚度、剂量定义、统计误差和成像条件。"
+        ]
+      },
+      "top3_reason": "材料结构、温度稳定性和X射线成像指标结合紧密。",
+      "tags": [
+        "X射线探测",
+        "闪烁体",
+        "锰基卤化物",
+        "温度稳定性"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实检出限、线对分辨率及热循环条件。"
+      ]
+    },
+    {
+      "title": "Development of Ultrafast and Radiation-Hard GAGG for the Next-Generation of High-Energy Physics Calorimeters",
+      "chinese_title": "面向下一代高能物理量能器的超快抗辐照 GAGG 开发",
+      "journal": "arXiv",
+      "publication_date": "2026-09-09",
+      "doi": "10.48550/arxiv.2609.10116",
+      "url": "https://doi.org/10.48550/arxiv.2609.10116",
+      "article_type": "预印本（未正式同行评议）",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 94,
+        "novelty": 86,
+        "quality": 74,
+        "methodology": 86,
+        "inspiration": 84
+      },
+      "why_worth_reading": "通过共掺杂把GAGG有效衰减时间压至纳秒级，并用高能束流和高剂量质子辐照检验实际量能器适用性。",
+      "core_findings": [
+        "研究利用二价离子共掺杂调控GAGG闪烁动力学，有效衰减时间最低达到5.5 ns，同时保持数千 photons/MeV光产额。",
+        "120 GeV pion束流下的时间分辨率达到与先进LYSO:Ce,Ca相当的水平。",
+        "经1 MGy质子辐照后材料保留大部分光学透过率；该结论来自预印本，尚未正式同行评议。"
+      ],
+      "term_explanations": [
+        {
+          "term": "GAGG",
+          "academic_explanation": "铈掺杂钆铝镓石榴石闪烁晶体，兼具较高光产额、密度和抗辐照潜力。",
+          "plain_explanation": "一种把高能粒子沉积能量快速变成光的致密晶体。"
+        },
+        {
+          "term": "量能器",
+          "academic_explanation": "通过吸收粒子并测量其产生的闪烁、电离或簇射信号来估计粒子能量的探测器。",
+          "plain_explanation": "让粒子把能量交出来，再根据产生的光或电信号称出它有多大能量。"
+        },
+        {
+          "term": "衰减时间",
+          "academic_explanation": "闪烁发光强度随时间下降的特征时间，影响高计数率下的脉冲堆积与定时能力。",
+          "plain_explanation": "一次闪光拖尾多久；尾巴越短，下一次事件越不容易叠上来。"
+        },
+        {
+          "term": "抗辐照性",
+          "academic_explanation": "材料在累积电离或粒子辐照后维持透过率、光产额等性能的能力。",
+          "plain_explanation": "长期挨高剂量轰击后还能不能正常发光和透光。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "按配方进行实验室伽马、束流定时和累积剂量辐照三级评价。"
+        ],
+        "methods": [
+          "用共掺杂调节快慢发光分量并同步测量光产额。"
+        ],
+        "key_entities_mechanisms": [
+          "共掺杂俘获中心与Ce发光动力学的关系需进一步核实。"
+        ],
+        "target_system": [
+          "高计数率高能物理量能器与快定时探测器。"
+        ],
+        "future_direction": [
+          "评价大尺寸晶体均匀性、恢复过程和中子损伤。"
+        ],
+        "paper_potential": [
+          "材料配方—束流性能—辐照耐久性构成完整器件证据链。"
+        ],
+        "limitations_validation": [
+          "预印本；摘要未给出全部样品、系统时间抖动及辐照后光产额。"
+        ]
+      },
+      "top3_reason": "同时覆盖速度、光产额、束流定时和辐照耐久性，是快闪烁体较完整的评价范式。",
+      "tags": [
+        "GAGG",
+        "量能器",
+        "快定时",
+        "抗辐照"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "预印本，需核实共掺杂配方、时间分辨率拆分和辐照后完整性能。"
+      ]
+    },
+    {
+      "title": "Self‐Trapped Exciton Regulation in a Copper–Iodide Hybrid for Flexible X‐Ray Scintillation Imaging and Optical Encryption",
+      "chinese_title": "铜碘杂化物中自陷激子调控用于柔性X射线闪烁成像与光学加密",
+      "journal": "Advanced Functional Materials",
+      "publication_date": "2026-09-10",
+      "doi": "10.1002/adfm.78232",
+      "url": "https://doi.org/10.1002/adfm.78232",
+      "article_type": "材料与器件研究论文",
+      "recommendation_score": 85,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 86,
+        "quality": 84,
+        "methodology": 72,
+        "inspiration": 81
+      },
+      "why_worth_reading": "将双自陷激子发光机制落实到大面积柔性闪烁膜，并给出X射线检出限和成像分辨率。",
+      "core_findings": [
+        "铜(I)碘化物杂化闪烁体表现出激发依赖双发射与可逆热致变色，摘要将其归于两种竞争性自陷激子构型。",
+        "摘要报告估算光产额34353 photons/MeV、检出限371 nGy_air/s。",
+        "晶体嵌入SEBS形成大面积柔性闪烁膜，X射线成像空间分辨率为14.25 lp/mm。"
+      ],
+      "term_explanations": [
+        {
+          "term": "自陷激子",
+          "academic_explanation": "电子—空穴对与晶格强耦合后引起局部畸变并被束缚的激发态，可产生宽带发光。",
+          "plain_explanation": "激发能量把周围晶格压出一个小坑，自己也被困在坑里，随后以发光释放能量。"
+        },
+        {
+          "term": "辐射发光",
+          "academic_explanation": "材料吸收电离辐射后产生的光发射，是闪烁探测的信号来源。",
+          "plain_explanation": "X射线把材料点亮，探测器再把这束光拍下来。"
+        },
+        {
+          "term": "柔性闪烁膜",
+          "academic_explanation": "将闪烁材料分散或复合在可弯曲基体中形成的辐射转换屏。",
+          "plain_explanation": "像能弯的发光胶片，把X射线变成可见光。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "比较晶体粉末和复合膜的光产额、散射、厚度与线对分辨率。"
+        ],
+        "methods": [
+          "温变和激发依赖光谱联合结构分析识别双发光态。"
+        ],
+        "key_entities_mechanisms": [
+          "局域晶格畸变、Cu···Cu作用和两类自陷激子布居。"
+        ],
+        "target_system": [
+          "柔性低剂量X射线成像屏。"
+        ],
+        "future_direction": [
+          "评估弯折循环、剂量累积与像素串扰。"
+        ],
+        "paper_potential": [
+          "机制与柔性器件验证结合，适合形成材料—成像闭环。"
+        ],
+        "limitations_validation": [
+          "光产额为估算值；需核实基准、膜厚和成像调制传递性能。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "X射线成像",
+        "柔性闪烁膜",
+        "自陷激子",
+        "铜碘化物"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实光产额估算、检出限和柔性耐久性。"
+      ]
+    },
+    {
+      "title": "Readout electronics for SUBMET",
+      "chinese_title": "SUBMET实验的读出电子学",
+      "journal": "arXiv",
+      "publication_date": "2026-09-08",
+      "doi": "10.48550/arxiv.2609.08427",
+      "url": "https://doi.org/10.48550/arxiv.2609.08427",
+      "article_type": "预印本（未正式同行评议）",
+      "recommendation_score": 83,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 91,
+        "novelty": 76,
+        "quality": 73,
+        "methodology": 82,
+        "inspiration": 79
+      },
+      "why_worth_reading": "围绕极低光子数信号给出高速波形、单光电子、跨板定时与吞吐量一体化读出设计。",
+      "core_findings": [
+        "SUBMET读出面向最多数个闪烁光子的微电荷粒子信号，采用PMT单光电子探测与高速波形数字化。",
+        "DRS4通道级联后以820.5 MHz连续采样4096点，形成约5 µs有效窗口以覆盖8个质子束团。",
+        "标定后同芯片通道、同板和跨板定时差分别控制在1、2和8 ns内，前端RMS噪声低于0.4 mV；论文为未正式同行评议预印本。"
+      ],
+      "term_explanations": [
+        {
+          "term": "单光电子探测",
+          "academic_explanation": "能够识别光电探测器由单个入射光子触发的基本电荷脉冲，是极低光量测量的基础。",
+          "plain_explanation": "灵敏到一次只来一个光子，也能看到它留下的小脉冲。"
+        },
+        {
+          "term": "波形数字化",
+          "academic_explanation": "按固定采样率把模拟电压随时间的变化转换为数字样本，用于幅度、时间和形状分析。",
+          "plain_explanation": "把连续电信号切成密集的数字快照，保留整条曲线。"
+        },
+        {
+          "term": "RMS噪声",
+          "academic_explanation": "用均方根表征基线电压随机波动的大小，决定低幅信号的可见程度。",
+          "plain_explanation": "没有事件时基线自己抖多厉害；抖得越小，微弱信号越容易露出来。"
+        },
+        {
+          "term": "符合时间窗",
+          "academic_explanation": "判断多个通道信号是否属于同一事件所允许的时间差范围。",
+          "plain_explanation": "几路信号只有在规定的短时间内一起出现，才算同一件事。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "分层测试单通道噪声、芯片内、板内和跨板同步。"
+        ],
+        "methods": [
+          "通道级联扩展采样窗，并对时间非均匀性做逐通道标定。"
+        ],
+        "key_entities_mechanisms": [
+          "PMT单光电子脉冲、DRS4采样单元和基线偏置。"
+        ],
+        "target_system": [
+          "低光子数闪烁探测和多通道符合读出。"
+        ],
+        "future_direction": [
+          "测量温漂、长时稳定性、死时间和误触发率。"
+        ],
+        "paper_potential": [
+          "若公开完整标定与束流数据，可成为低阈值DAQ参考实现。"
+        ],
+        "limitations_validation": [
+          "预印本；跨板同步和吞吐率需在长期束流运行中验证。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "读出电子学",
+        "单光电子",
+        "高速采样",
+        "低阈值探测"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "预印本，需核实长期运行、死时间和触发效率。"
+      ]
+    },
+    {
+      "title": "Scintillation characteristics of plastic scintillators using 9,9-dimethylfluorene as a host material",
+      "chinese_title": "以9,9-二甲基芴为主体材料的塑料闪烁体闪烁特性",
+      "journal": "Journal of Luminescence",
+      "publication_date": "2026-09-09",
+      "doi": "10.1016/j.jlumin.2026.122156",
+      "url": "https://doi.org/10.1016/j.jlumin.2026.122156",
+      "article_type": "材料研究论文",
+      "recommendation_score": 81,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 88,
+        "novelty": 75,
+        "quality": 82,
+        "methodology": 72,
+        "inspiration": 74
+      },
+      "why_worth_reading": "用可直接配方化的主体分子调节塑料闪烁体光产额，并给出宽浓度梯度和商用品对照。",
+      "core_findings": [
+        "研究在聚苯乙烯主体中加入9,9-二甲基芴，浓度覆盖0–40 wt%，目标是利用更小的HOMO–LUMO能隙提高光产额。",
+        "30 wt%添加量下，仅含DPO和含DPO/POPOP样品的光产额分别较无添加对照提高约27%和34%。",
+        "优化配方光产额达到12600 photons/MeV，约为商用EJ-212标称值的1.3倍。"
+      ],
+      "term_explanations": [
+        {
+          "term": "塑料闪烁体",
+          "academic_explanation": "由有机聚合物主体与荧光分子组成、将电离辐射能量转换为光信号的固体探测材料。",
+          "plain_explanation": "把能被辐射点亮的有机分子做进塑料里，得到轻便、快速的探测材料。"
+        },
+        {
+          "term": "HOMO–LUMO能隙",
+          "academic_explanation": "分子最高占据轨道与最低未占据轨道之间的能量差，影响激发与能量转移过程。",
+          "plain_explanation": "电子从已占据位置跳到空位置要跨过的台阶高度。"
+        },
+        {
+          "term": "波长移位剂",
+          "academic_explanation": "吸收主体或初级荧光体发出的光并在更适合传输或探测的波段再发射的组分。",
+          "plain_explanation": "先接住一种颜色的光，再换成更容易传出去和被光电器件看见的颜色。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "采用主体比例、初级荧光体和波长移位剂的析因配方矩阵。"
+        ],
+        "methods": [
+          "除光产额外同步测衰减时间、透过率和辐照老化。"
+        ],
+        "key_entities_mechanisms": [
+          "主体能级、DPO到POPOP能量转移及自吸收。"
+        ],
+        "target_system": [
+          "快中子/伽马监测和大面积塑料闪烁探测。"
+        ],
+        "future_direction": [
+          "验证脉冲形状、机械性能和批量尺度均匀性。"
+        ],
+        "paper_potential": [
+          "配方—光物理—探测性能的系统映射具有应用论文潜力。"
+        ],
+        "limitations_validation": [
+          "摘要未给出能量分辨率、衰减时间及粒子鉴别性能。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "塑料闪烁体",
+        "光产额",
+        "有机闪烁",
+        "材料配方"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实光产额测量基准与时间响应。"
+      ]
+    },
+    {
+      "title": "Experimental tests of proton range verification with Compton cameras at proton therapy centers",
+      "chinese_title": "质子治疗中心利用康普顿相机验证质子射程的实验测试",
+      "journal": "Radiation Physics and Chemistry",
+      "publication_date": "2026-09-10",
+      "doi": "10.1016/j.radphyschem.2026.114447",
+      "url": "https://doi.org/10.1016/j.radphyschem.2026.114447",
+      "article_type": "研究论文",
+      "recommendation_score": 80,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 88,
+        "novelty": 72,
+        "quality": 80,
+        "methodology": 76,
+        "inspiration": 72
+      },
+      "why_worth_reading": "在多个质子治疗设施逐级加压测试单体LaBr3:Ce康普顿相机，把提示伽马成像推进到临床近场条件。",
+      "core_findings": [
+        "MACACOp原型采用单体LaBr3:Ce晶体与SiPM阵列，通过提示伽马成像验证质子射程。",
+        "受控条件下，距靶200 mm时可分辨8 nA质子束造成的石墨靶1 mm位移。",
+        "约1.5 ns时间分辨率用于本底抑制；后续FALCON原型在更具挑战的加速器条件下提高效率并重建束斑。"
+      ],
+      "term_explanations": [
+        {
+          "term": "提示伽马",
+          "academic_explanation": "质子与组织或靶核发生核反应后几乎即时发射的伽马射线，其空间分布可用于间接估计质子射程。",
+          "plain_explanation": "质子沿途撞击原子核时立刻发出的伽马‘路标’，能提示它停在了哪里。"
+        },
+        {
+          "term": "康普顿相机",
+          "academic_explanation": "利用光子在多个探测层中的康普顿散射能量与位置重建入射方向的伽马成像器。",
+          "plain_explanation": "根据伽马先撞哪里、再到哪里以及两次留下多少能量，反推它来自哪个方向。"
+        },
+        {
+          "term": "SiPM阵列",
+          "academic_explanation": "由多个硅光电倍增器像素组成的光传感阵列，可读取闪烁光的位置、强度和时间。",
+          "plain_explanation": "一块由许多极灵敏小光传感器拼成的电子眼。"
+        },
+        {
+          "term": "时间分辨率",
+          "academic_explanation": "系统区分时间上相近事件的能力，影响符合选择和随机本底抑制。",
+          "plain_explanation": "仪器的秒表有多精细，越精细越能排除不在同一时刻的杂信号。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "从可控靶位移到真实治疗束流分阶段增加复杂度，并保持同一性能指标。"
+        ],
+        "methods": [
+          "联合位置、能量和纳秒定时做康普顿重建与本底筛选。"
+        ],
+        "key_entities_mechanisms": [
+          "提示伽马空间分布与质子射程变化的对应关系。"
+        ],
+        "target_system": [
+          "质子治疗在线射程监测。"
+        ],
+        "future_direction": [
+          "开展组织等效体模、患者运动和临床剂量率验证。"
+        ],
+        "paper_potential": [
+          "多中心一致性与原型迭代可支撑转化型探测论文。"
+        ],
+        "limitations_validation": [
+          "摘要未充分说明重建统计量、不同束流条件和系统误差。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "康普顿相机",
+        "提示伽马",
+        "质子治疗",
+        "射程验证"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文核实1 mm位移判据、统计显著性和复杂条件性能。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "构建‘二维光学图像+一维波形’低数据量伽马成像原型，以标准点源和真实气体探测器数据对比全三维读出，检验角分辨率、吞吐量和域偏移。",
+    "建立快闪烁体统一评价矩阵：同步测光产额、衰减时间、单光电子读出、束流定时和累积辐照后恢复，避免单指标优化掩盖系统代价。",
+    "针对柔性和宽温区X射线闪烁屏，设计厚度—散射—温度—剂量四因素实验，并以MTF、检出限和循环稳定性作为共同终点。"
+  ]
+}
