@@ -282,7 +282,11 @@ function renderArticles() {
 function renderIdeas() {
   const ideas = state.report?.research_ideas || [];
   elements.ideasSection.hidden = ideas.length === 0;
-  elements.ideasList.innerHTML = ideas.map((idea, index) => `<div class="idea"><span class="idea-number">0${index + 1}</span>${escapeHtml(idea)}</div>`).join("");
+  elements.ideasList.innerHTML = ideas.map((idea) => `
+    <article class="idea">
+      <span class="idea-label">可检验方向</span>
+      <p>${escapeHtml(idea)}</p>
+    </article>`).join("");
 }
 
 function renderReportChrome() {
