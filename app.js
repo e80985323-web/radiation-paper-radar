@@ -7,7 +7,6 @@ const state = {
 };
 
 const elements = {
-  latestDate: document.querySelector("#latest-date"),
   dateSelect: document.querySelector("#date-select"),
   searchInput: document.querySelector("#search-input"),
   tagFilters: document.querySelector("#tag-filters"),
@@ -178,7 +177,6 @@ function renderFeaturedArticle(article) {
   elements.featuredPaper.innerHTML = `
     <article class="featured-card">
       <div class="featured-copy">
-        <div class="featured-kicker">今日焦点 · TOP SIGNAL</div>
         <h3>${escapeHtml(title)}</h3>
         <p class="featured-summary">${escapeHtml(summary)}</p>
         <div class="featured-meta"><span>${escapeHtml(journal)}</span><span>${escapeHtml(date)}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
@@ -186,21 +184,20 @@ function renderFeaturedArticle(article) {
       </div>
       <div class="featured-visual" aria-hidden="true">
         <div class="detector-graphic"><span class="detector-core"></span><span class="detector-node node-a"></span><span class="detector-node node-b"></span><span class="detector-node node-c"></span></div>
-        <span class="visual-label">RADIATION / SIGNAL ${String(score).padStart(2, "0")}</span>
       </div>
     </article>`;
 }
 
-function renderPaperCard(article, index) {
+function renderPaperCard(article) {
   const score = Number(article.recommendation_score) || 0;
   const href = safeHref(article.url);
   const title = article.chinese_title || article.title || "未命名论文";
   const englishTitle = article.title && article.title !== title ? article.title : "";
-  const topBadge = article.top3_reason ? `<span class="top-badge">TOP 3</span>` : "";
+  const topBadge = article.top3_reason ? `<span class="top-badge">重点推荐</span>` : "";
   const findings = (article.core_findings || []).slice(0, 3);
   return `
     <article class="paper-card">
-      <div class="paper-topline"><span class="paper-rank">SIGNAL ${String(index + 2).padStart(2, "0")}</span><span class="score">${escapeHtml(score)} 分</span></div>
+      <div class="paper-topline"><span class="score">${escapeHtml(score)} 分</span></div>
       <h3>${escapeHtml(title)}</h3>
       ${englishTitle ? `<div class="paper-title-en">${escapeHtml(englishTitle)}</div>` : ""}
       <div class="paper-meta"><span>${escapeHtml(article.journal || "期刊待核实")}</span><span>${escapeHtml(article.publication_date || "日期待核实")}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
@@ -228,7 +225,6 @@ function renderIdeas() {
 
 function renderReportChrome() {
   const date = state.report?.date || state.selectedDate;
-  elements.latestDate.textContent = date ? `${formatDate(date)} · ${state.report?.articles?.length || 0} 篇精选` : "暂无日报";
   elements.updatedAt.textContent = state.report?.published_at ? `更新于 ${new Date(state.report.published_at).toLocaleString("zh-CN")}` : "—";
   document.title = date ? `${formatDate(date)} · 辐射探测论文雷达` : "辐射探测论文雷达";
 }
