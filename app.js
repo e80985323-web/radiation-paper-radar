@@ -44,7 +44,14 @@ function safeHref(value) {
 function openPaperLink(href) {
   const target = safeHref(href);
   if (target === "#") return;
-  window.location.assign(target);
+  const link = document.createElement("a");
+  link.href = target;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.hidden = true;
+  document.body.append(link);
+  link.click();
+  link.remove();
 }
 
 function bindCardNavigation(container) {
