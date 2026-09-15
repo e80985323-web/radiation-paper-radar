@@ -42,7 +42,7 @@ function safeHref(value) {
 function openPaperLink(href) {
   const target = safeHref(href);
   if (target === "#") return;
-  window.open(target, "_blank", "noopener,noreferrer");
+  window.location.assign(target);
 }
 
 function bindCardNavigation(container) {
