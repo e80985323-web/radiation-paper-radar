@@ -96,7 +96,7 @@ function renderTagFilters() {
   };
   elements.topicCurrent.textContent = state.activeTag;
   elements.tagFilters.innerHTML = tags.map((tag) => buttonMarkup(tag, "tag-filter")).join("");
-  elements.tagPreview.innerHTML = tags.slice(1, 4).map((tag) => buttonMarkup(tag, "topic-preview-filter")).join("");
+  elements.tagPreview.innerHTML = tags.slice(1, 6).map((tag) => buttonMarkup(tag, "topic-preview-filter")).join("");
   elements.tagFilters.querySelectorAll("[data-tag]").forEach((button) => button.addEventListener("click", selectTag));
   elements.tagPreview.querySelectorAll("[data-tag]").forEach((button) => button.addEventListener("click", selectTag));
 }
