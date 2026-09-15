@@ -131,7 +131,7 @@ a { color: inherit; }
   font-size: clamp(50px, 7.4vw, 88px);
   font-weight: 650;
   line-height: .99;
-  letter-spacing: -.07em;
+  letter-spacing: .02em;
 }
 .hero h1 em { color: var(--accent); font-style: normal; }
 .hero-line { display: inline; }
