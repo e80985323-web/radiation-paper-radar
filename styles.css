@@ -303,13 +303,6 @@ a { color: inherit; }
 .provenance-notes summary { padding-top: 13px; color: var(--blue); font-size: var(--ios-footnote); cursor: pointer; }
 .provenance-notes ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: var(--ios-footnote); line-height: 1.65; }
 
-/* Vertical rhythm for the compact appendix markup used by older reports. */
-.appendix-summary { display: grid; gap: 14px; margin: 0; color: var(--subtle); font-size: var(--ios-subheadline); line-height: 1.55; }
-.appendix-summary span { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; align-items: baseline; min-width: 0; }
-.appendix-summary span + span::before { display: none; content: none; }
-.appendix-summary b { color: var(--muted); font-weight: 600; }
-.appendix-detail { max-width: 980px; margin: 20px 0 0; padding-top: 16px; border-top: 1px solid rgba(210, 210, 215, .72); color: var(--subtle); font-size: var(--ios-footnote); line-height: 1.7; }
-
 .featured-paper { margin: 24px 0 48px; }
 .featured-card {
   display: grid;
@@ -493,8 +486,6 @@ a { color: inherit; }
   .provenance-item { padding: 15px 12px 15px 0; }
   .provenance-item + .provenance-item { padding-left: 12px; }
   .provenance-item:nth-child(odd) { border-left: 0; padding-left: 0; }
-  .appendix-summary { gap: 16px; }
-  .appendix-summary span { grid-template-columns: 120px minmax(0, 1fr); gap: 10px; }
   .ideas-section { margin-top: 78px; }
   .ideas-heading { margin-bottom: 36px; }
   .ideas-heading h2 { font-size: 42px; }
@@ -508,4 +499,15 @@ a { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .001ms !important; }
+}
+
+/* Vertical rhythm for the compact appendix markup used by older reports. */
+.appendix-summary { display: grid; gap: 14px; margin: 0; color: var(--subtle); font-size: var(--ios-subheadline); line-height: 1.55; }
+.appendix-summary span { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; align-items: baseline; min-width: 0; }
+.appendix-summary span + span::before { display: none; content: none; }
+.appendix-summary b { color: var(--muted); font-weight: 600; }
+.appendix-detail { max-width: 980px; margin: 20px 0 0; padding-top: 16px; border-top: 1px solid rgba(210, 210, 215, .72); color: var(--subtle); font-size: var(--ios-footnote); line-height: 1.7; }
+@media (max-width: 720px) {
+  .appendix-summary { gap: 16px; }
+  .appendix-summary span { grid-template-columns: 120px minmax(0, 1fr); gap: 10px; }
 }
