@@ -14,7 +14,7 @@ const elements = {
   tagFilters: document.querySelector("#tag-filters"),
   tagPreview: document.querySelector("#tag-preview"),
   resetButton: document.querySelector("#reset-button"),
-  reportStats: document.querySelector("#report-stats"),
+  appendixStats: document.querySelector("#appendix-stats"),
   featuredPaper: document.querySelector("#featured-paper"),
   resultCount: document.querySelector("#result-count"),
   paperGrid: document.querySelector("#paper-grid"),
@@ -113,21 +113,22 @@ function summarizeWindow(windowText) {
   return text;
 }
 
-function renderStats() {
+function renderAppendix() {
   const metadata = reportMetadata();
   const articles = state.report?.articles || [];
   const topScore = Math.max(...articles.map((item) => Number(item.recommendation_score) || 0), 0);
   const windowText = metadata.window || "";
   const windowSummary = summarizeWindow(windowText);
   const stats = [
-    ["最终精选", `${articles.length} 篇`, "accent"],
-    ["最高推荐分", `${topScore} / 100`, "accent"],
-    ["候选筛选", `${metadata.screened_count ?? "—"} 篇`, ""],
-    ["本期检索范围", windowSummary, "", windowText],
+    ["最终精选", `${articles.length} 篇`],
+    ["最高推荐分", `${topScore} / 100`],
+    ["候选筛选", `${metadata.screened_count ?? "—"} 篇`],
+    ["本期检索范围", windowSummary],
   ];
-  elements.reportStats.innerHTML = stats.map(([label, value, tone, detail]) => (
-    `<div class="stat"><div class="stat-label"><span>${escapeHtml(label)}</span>${detail && detail !== value ? `<button class="stat-info" type="button" aria-label="查看完整检索范围说明" title="${escapeHtml(detail)}"><span aria-hidden="true">i</span><span class="stat-tooltip" role="tooltip">${escapeHtml(detail)}</span></button>` : ""}</div><div class="stat-value ${tone}">${escapeHtml(value)}</div></div>`
-  )).join("");
+  elements.appendixStats.innerHTML = `
+    <p class="appendix-summary">${stats.map(([label, value]) => `<span><b>${escapeHtml(label)}</b> ${escapeHtml(value)}</span>`).join("")}</p>
+    ${windowText && windowText !== windowSummary ? `<p class="appendix-detail">完整说明：${escapeHtml(windowText)}</p>` : ""}
+  `;
 }
 
 function searchableText(article) {
@@ -251,7 +252,7 @@ function renderReportChrome() {
 function renderAll() {
   clearError();
   renderReportChrome();
-  renderStats();
+  renderAppendix();
   renderTagFilters();
   renderArticles();
   renderIdeas();
