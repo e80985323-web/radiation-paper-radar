@@ -188,7 +188,7 @@ a { color: inherit; }
 .topic-menu summary:hover, .topic-menu[open] summary { border-color: var(--ink); color: var(--ink); }
 .topic-chevron { color: var(--subtle); font-size: 13px; line-height: 1; transition: transform .2s ease; }
 .topic-menu[open] .topic-chevron { transform: rotate(180deg); }
-.tag-preview { display: flex; align-items: center; gap: 4px; min-width: 0; overflow: hidden; }
+.tag-preview { display: flex; align-items: center; flex: 1 1 auto; gap: 4px; min-width: 0; overflow: hidden; }
 .topic-preview-filter {
   flex: 0 0 auto;
   padding: 9px 12px;
@@ -395,9 +395,10 @@ a { color: inherit; }
   .hero h1 em { display: block; }
   .hero-line { display: block; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 0; margin-top: 0; }
-  .topic-nav { gap: 12px; padding: 12px 0; }
+  .topic-nav { align-items: flex-start; flex-direction: column; gap: 12px; padding: 12px 0; }
   .tag-preview { display: none; }
   .tag-filters { grid-template-columns: 1fr; min-width: 220px; max-width: calc(100vw - 32px); }
+  .topic-nav .filter-controls { width: 100%; }
   .dashboard { width: 100%; max-width: 100%; min-width: 0; padding-top: 48px; }
   .filter-bar { align-items: stretch; flex-direction: column; gap: 18px; }
   .section-title h2 { font-size: 28px; }
