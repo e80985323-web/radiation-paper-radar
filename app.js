@@ -419,6 +419,12 @@ elements.resetButton.addEventListener("click", () => {
   renderTagFilters();
   renderArticles();
 });
+document.addEventListener("click", (event) => {
+  if (!elements.topicMenu.open) return;
+  if (event.target instanceof Node && !elements.topicMenu.contains(event.target)) {
+    elements.topicMenu.open = false;
+  }
+});
 
 bindCardNavigation(elements.featuredPaper);
 bindCardNavigation(elements.paperGrid);
