@@ -178,7 +178,7 @@ function renderList(items, className = "") {
   return `<ul class="${className}">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
 }
 
-function renderDetails(article) {
+function renderDetailContent(article) {
   const terms = article.term_explanations || [];
   const inspiration = article.research_inspiration || {};
   const hasInspiration = Object.keys(inspiration).length > 0;
@@ -200,7 +200,27 @@ function renderDetails(article) {
     <h4>研究启发</h4>
     ${Object.entries(inspiration).map(([key, values]) => `<p><strong>${escapeHtml(inspirationLabels[key] || key)}</strong></p>${renderList(values)}`).join("")}
   ` : "";
-  return `<details class="details"><summary>展开术语解释与研究启发</summary><div class="details-content">${termMarkup}${inspirationMarkup}</div></details>`;
+  return `${termMarkup}${inspirationMarkup}`;
+}
+
+function renderDetails(article) {
+  const content = renderDetailContent(article);
+  if (!content) return "";
+  return `<details class="details"><summary>展开术语解释与研究启发</summary><div class="details-content">${content}</div></details>`;
+}
+
+function renderFeaturedDetails(article) {
+  const findings = (article.core_findings || []).slice(0, 3);
+  const content = renderDetailContent(article);
+  if (!findings.length && !content) return "";
+  return `
+    <details class="featured-details">
+      <summary>展开摘要要点、术语解释与研究启发</summary>
+      <div class="featured-details-content">
+        ${findings.length ? `<section class="featured-detail-group"><h4>摘要要点</h4>${renderList(findings, "featured-finding-list")}</section>` : ""}
+        ${content}
+      </div>
+    </details>`;
 }
 
 function renderFeaturedArticle(article) {
@@ -221,6 +241,7 @@ function renderFeaturedArticle(article) {
       <div class="featured-copy">
         <h3>${escapeHtml(title)}</h3>
         <p class="featured-summary">${escapeHtml(summary)}</p>
+        ${renderFeaturedDetails(article)}
         <div class="featured-meta"><span>${escapeHtml(journal)}</span><span>${escapeHtml(date)}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
         <div class="featured-bottom"><span class="featured-score">推荐 ${escapeHtml(score)} 分</span><a class="featured-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">阅读原文 <span aria-hidden="true">↗</span></a></div>
       </div>
