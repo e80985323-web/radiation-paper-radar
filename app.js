@@ -284,7 +284,6 @@ function renderIdeas() {
   elements.ideasSection.hidden = ideas.length === 0;
   elements.ideasList.innerHTML = ideas.map((idea) => `
     <article class="idea">
-      <span class="idea-label">可检验方向</span>
       <p>${escapeHtml(idea)}</p>
     </article>`).join("");
 }
