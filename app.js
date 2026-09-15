@@ -15,8 +15,10 @@ const elements = {
   tagPreview: document.querySelector("#tag-preview"),
   resetButton: document.querySelector("#reset-button"),
   appendixStats: document.querySelector("#appendix-stats"),
+  historyList: document.querySelector("#history-list"),
   featuredPaper: document.querySelector("#featured-paper"),
   resultCount: document.querySelector("#result-count"),
+  reportStatus: document.querySelector("#report-status"),
   paperGrid: document.querySelector("#paper-grid"),
   emptyState: document.querySelector("#empty-state"),
   ideasSection: document.querySelector("#ideas-section"),
@@ -90,7 +92,7 @@ function reportEntries() {
 function setupDateSelect() {
   const reports = reportEntries();
   elements.dateSelect.innerHTML = reports.map((item) => (
-    `<option value="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))} · ${escapeHtml(item.article_count)} 篇</option>`
+    `<option value="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))} · ${escapeHtml(item.article_count)}</option>`
   )).join("");
   state.selectedDate = state.index?.latest_date || reports[0]?.date || null;
   elements.dateSelect.value = state.selectedDate || "";
@@ -127,6 +129,31 @@ function reportMetadata() {
   return state.report?.metadata || {};
 }
 
+function sourceSummary(metadata) {
+  const labels = {
+    crossref: "Crossref",
+    europepmc: "Europe PMC",
+    semanticscholar: "Semantic Scholar",
+    openalex: "OpenAlex",
+    biorxiv: "bioRxiv",
+  };
+  return Object.entries(metadata.source_counts || {})
+    .filter(([, count]) => Number(count) > 0)
+    .map(([name, count]) => `${labels[name] || name} ${count}`)
+    .join(" · ") || "—";
+}
+
+function evidenceStatus(article) {
+  const needsVerification = Array.isArray(article.needs_verification) ? article.needs_verification : [];
+  if (needsVerification.length) {
+    return `<span class="evidence-status needs-review" title="仍需核实：${escapeHtml(needsVerification.join("；"))}">待核实</span>`;
+  }
+  if (article.score_status === "evidence_reviewed") {
+    return `<span class="evidence-status reviewed" title="摘要、DOI 与可靠来源已复核">已复核</span>`;
+  }
+  return `<span class="evidence-status" title="当前内容主要依据公开摘要">摘要依据</span>`;
+}
+
 function summarizeWindow(windowText) {
   const text = String(windowText || "");
   if (!text) return "—";
@@ -141,15 +168,23 @@ function renderAppendix() {
   const topScore = Math.max(...articles.map((item) => Number(item.recommendation_score) || 0), 0);
   const windowText = metadata.window || "";
   const windowSummary = summarizeWindow(windowText);
+  const pendingCount = articles.filter((article) => Array.isArray(article.needs_verification) && article.needs_verification.length > 0).length;
+  const reviewedLabel = pendingCount ? `${articles.length - pendingCount} 已复核 · ${pendingCount} 待核实` : "本期均已复核";
+  const candidatePath = [metadata.retrieved_count, metadata.screened_count, articles.length]
+    .map((value) => value ?? "—")
+    .join(" → ");
   const stats = [
-    ["最终精选", `${articles.length} 篇`],
-    ["最高推荐分", `${topScore} / 100`],
-    ["候选筛选", `${metadata.screened_count ?? "—"} 篇`],
-    ["本期检索范围", windowSummary],
+    ["数据状态", reviewedLabel],
+    ["候选路径", candidatePath],
+    ["最高分", `${topScore} / 100`],
+    ["检索窗口", windowSummary],
+    ["来源", sourceSummary(metadata)],
   ];
+  const warnings = Array.isArray(metadata.warnings) ? metadata.warnings : [];
   elements.appendixStats.innerHTML = `
-    <p class="appendix-summary">${stats.map(([label, value]) => `<span><b>${escapeHtml(label)}</b> ${escapeHtml(value)}</span>`).join("")}</p>
-    ${windowText && windowText !== windowSummary ? `<p class="appendix-detail">完整说明：${escapeHtml(windowText)}</p>` : ""}
+    <div class="provenance-grid">${stats.map(([label, value]) => `<div class="provenance-item"><span class="provenance-label">${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`).join("")}</div>
+    <p class="provenance-note">评分用于阅读排序；具体数值与结论请以原文为准。每张卡片均保留 DOI / 原文入口。</p>
+    ${warnings.length ? `<details class="provenance-notes"><summary>查看本期检索说明</summary>${renderList(warnings)}</details>` : ""}
   `;
 }
 
@@ -203,10 +238,12 @@ function renderDetailContent(article) {
   return `${termMarkup}${inspirationMarkup}`;
 }
 
-function renderDetails(article) {
+function renderDetails(article, extraFindings = [], englishTitle = "") {
   const content = renderDetailContent(article);
-  if (!content) return "";
-  return `<details class="details"><summary>展开术语解释与研究启发</summary><div class="details-content">${content}</div></details>`;
+  const findingsMarkup = extraFindings.length ? `<h4>更多摘要要点</h4>${renderList(extraFindings)}` : "";
+  const englishMarkup = englishTitle ? `<h4>英文题名</h4><p class="paper-title-en">${escapeHtml(englishTitle)}</p>` : "";
+  if (!content && !findingsMarkup && !englishMarkup) return "";
+  return `<details class="details"><summary>展开完整解读</summary><div class="details-content">${findingsMarkup}${englishMarkup}${content}</div></details>`;
 }
 
 function renderFeaturedDetails(article) {
@@ -243,7 +280,7 @@ function renderFeaturedArticle(article) {
         <p class="featured-summary">${escapeHtml(summary)}</p>
         ${renderFeaturedDetails(article)}
         <div class="featured-meta"><span>${escapeHtml(journal)}</span><span>${escapeHtml(date)}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
-        <div class="featured-bottom"><span class="featured-score">推荐 ${escapeHtml(score)} 分</span><a class="featured-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">阅读原文 <span aria-hidden="true">↗</span></a></div>
+        <div class="featured-bottom"><span class="featured-score">推荐 ${escapeHtml(score)} 分</span>${evidenceStatus(article)}<a class="featured-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">阅读原文 <span aria-hidden="true">↗</span></a></div>
       </div>
       <div class="featured-visual" aria-hidden="true">
         <div class="detector-graphic"><span class="detector-core"></span><span class="detector-node node-a"></span><span class="detector-node node-b"></span><span class="detector-node node-c"></span></div>
@@ -257,17 +294,20 @@ function renderPaperCard(article) {
   const title = article.chinese_title || article.title || "未命名论文";
   const englishTitle = article.title && article.title !== title ? article.title : "";
   const topBadge = article.top3_reason ? `<span class="top-badge">重点推荐</span>` : "";
-  const findings = (article.core_findings || []).slice(0, 3);
+  const findings = (article.core_findings || []).slice(0, 2);
+  const extraFindings = (article.core_findings || []).slice(2);
+  const tags = article.tags || [];
+  const visibleTags = tags.slice(0, 3);
+  const extraTagCount = Math.max(tags.length - visibleTags.length, 0);
   return `
     <article class="paper-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
       <h3>${escapeHtml(title)}</h3>
-      ${englishTitle ? `<div class="paper-title-en">${escapeHtml(englishTitle)}</div>` : ""}
       <div class="paper-meta"><span>${escapeHtml(article.journal || "期刊待核实")}</span><span>${escapeHtml(article.publication_date || "日期待核实")}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
-      <div class="tag-row">${(article.tags || []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
+      ${tags.length ? `<div class="tag-row">${visibleTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}${extraTagCount ? `<span class="tag-more">+${extraTagCount}</span>` : ""}</div>` : ""}
       ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
       ${renderList(findings, "finding-list")}
-      ${renderDetails(article)}
-      <div class="paper-footer"><div class="paper-footer-leading"><span class="score">${escapeHtml(score)} 分</span>${topBadge}</div><a class="paper-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">打开 DOI / 原文 ↗</a></div>
+      ${renderDetails(article, extraFindings, englishTitle)}
+      <div class="paper-footer"><div class="paper-footer-leading"><span class="score">${escapeHtml(score)} 分</span>${topBadge}${evidenceStatus(article)}</div><a class="paper-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">打开 DOI / 原文 ↗</a></div>
     </article>`;
 }
 
@@ -277,6 +317,19 @@ function renderArticles() {
   elements.emptyState.hidden = articles.length > 0;
   renderFeaturedArticle(articles[0]);
   elements.paperGrid.innerHTML = articles.slice(1).map(renderPaperCard).join("");
+}
+
+function renderHistory() {
+  const reports = reportEntries();
+  elements.historyList.innerHTML = reports.length ? reports.map((item) => {
+    const active = item.date === state.selectedDate;
+    return `
+      <button class="history-row${active ? " active" : ""}" type="button" data-history-date="${escapeHtml(item.date)}" aria-pressed="${active}">
+        <span class="history-date"><strong>${escapeHtml(formatDate(item.date))}</strong><small>${escapeHtml(item.date)}</small></span>
+        <span class="history-stats"><b>${escapeHtml(item.article_count)}</b><span>精选</span><span>最高 ${escapeHtml(item.top_score ?? "—")}</span></span>
+        <span class="history-action">${active ? "当前日报" : "查看"}<span aria-hidden="true">→</span></span>
+      </button>`;
+  }).join("") : `<p class="history-empty">暂无历史日报。</p>`;
 }
 
 function renderIdeas() {
@@ -289,8 +342,11 @@ function renderIdeas() {
 }
 
 function renderReportChrome() {
-  const date = state.report?.date || state.selectedDate;
   elements.updatedAt.textContent = state.report?.published_at ? `更新于 ${new Date(state.report.published_at).toLocaleString("zh-CN")}` : "—";
+  const articles = state.report?.articles || [];
+  const pendingCount = articles.filter((article) => Array.isArray(article.needs_verification) && article.needs_verification.length > 0).length;
+  elements.reportStatus.textContent = pendingCount ? `${pendingCount} 篇待核实` : "摘要与来源已复核";
+  elements.reportStatus.classList.toggle("needs-review", pendingCount > 0);
   document.title = "Research Paper Daily";
 }
 
@@ -300,6 +356,7 @@ function renderAll() {
   renderAppendix();
   renderTagFilters();
   renderArticles();
+  renderHistory();
   renderIdeas();
 }
 
@@ -308,6 +365,8 @@ async function loadReport(date) {
   if (!entry) throw new Error(`找不到 ${date} 的日报`);
   state.selectedDate = date;
   state.report = await fetchJson(`data/${entry.path}`);
+  state.query = "";
+  elements.searchInput.value = "";
   state.activeTag = "全部";
   renderAll();
 }
@@ -327,6 +386,16 @@ async function start() {
 }
 
 elements.dateSelect.addEventListener("change", () => loadReport(elements.dateSelect.value).catch((error) => showError(`日报读取失败：${error.message}`)));
+elements.historyList.addEventListener("click", (event) => {
+  const target = event.target instanceof Element ? event.target.closest("[data-history-date]") : null;
+  if (!target) return;
+  const date = target.dataset.historyDate;
+  if (!date || date === state.selectedDate) return;
+  elements.dateSelect.value = date;
+  loadReport(date)
+    .then(() => document.querySelector("#papers")?.scrollIntoView({ behavior: "smooth", block: "start" }))
+    .catch((error) => showError(`日报读取失败：${error.message}`));
+});
 elements.searchInput.addEventListener("input", (event) => {
   state.query = event.target.value || "";
   renderArticles();

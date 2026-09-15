@@ -7,7 +7,7 @@
     <meta name="description" content="Research Paper Daily：每日精选辐射探测、闪烁体、能谱、成像与读出相关科研论文。">
     <title>Research Paper Daily</title>
     <link rel="icon" type="image/svg+xml" href="./detector-icon.svg?v=detector-icon-20260915-2">
-    <link rel="stylesheet" href="./styles.css?v=ideas-spacing-20260915">
+    <link rel="stylesheet" href="./styles.css?v=reading-archive-trust-20260915">
   </head>
   <body>
     <div class="site-shell">
@@ -35,6 +35,8 @@
             <div class="section-title">
               <h2>精选论文</h2>
               <span id="result-count" class="result-count">—</span>
+              <span id="report-status" class="report-status">—</span>
+              <a class="history-jump" href="#history">历史日报</a>
             </div>
             <div class="filter-controls">
               <label class="search-box" for="search-input">
@@ -55,6 +57,17 @@
           <div id="paper-grid" class="paper-grid"></div>
           <div id="empty-state" class="empty-state" hidden>当前筛选条件下没有匹配论文。</div>
 
+          <section id="history" class="history-section" aria-labelledby="history-title">
+            <div class="section-heading history-heading">
+              <div>
+                <p class="section-kicker">ARCHIVE</p>
+                <h2 id="history-title">历史日报</h2>
+              </div>
+              <span>按日期回看已发布内容</span>
+            </div>
+            <div id="history-list" class="history-list"></div>
+          </section>
+
           <section id="ideas-section" class="ideas-section" hidden>
             <div class="ideas-heading">
               <h2>可检验的研究思路</h2>
@@ -64,7 +77,10 @@
 
           <section id="appendix" class="appendix-section" aria-labelledby="appendix-title">
             <div class="appendix-heading">
-              <h2 id="appendix-title">附录</h2>
+              <div>
+                <p class="section-kicker">PROVENANCE</p>
+                <h2 id="appendix-title">来源与复核</h2>
+              </div>
               <span>本期检索摘要</span>
             </div>
             <div id="appendix-stats" class="appendix-stats"></div>
@@ -77,6 +93,6 @@
         </section>
       </main>
     </div>
-    <script type="module" src="./app.js?v=ideas-spacing-20260915"></script>
+    <script type="module" src="./app.js?v=reading-archive-trust-20260915"></script>
   </body>
 </html>
