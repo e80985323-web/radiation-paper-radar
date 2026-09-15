@@ -279,6 +279,7 @@ function renderFeaturedArticle(article) {
   const summary = article.why_worth_reading || article.core_findings?.[0] || "暂无摘要说明。";
   const journal = article.journal || "期刊待核实";
   const date = article.publication_date || "日期待核实";
+  const tags = article.tags || [];
   elements.featuredPaper.hidden = false;
   elements.featuredPaper.innerHTML = `
     <article class="featured-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
@@ -288,6 +289,7 @@ function renderFeaturedArticle(article) {
       <div class="featured-copy">
         <h3>${escapeHtml(title)}</h3>
         <p class="featured-summary">${escapeHtml(summary)}</p>
+        ${tags.length ? `<div class="tag-row featured-tag-row">${tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>` : ""}
         <div class="featured-meta"><span>${escapeHtml(journal)}</span><span>${escapeHtml(date)}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
         <div class="featured-bottom"><span class="featured-score">TOP1 ${escapeHtml(score)} 分</span>${evidenceStatus(article)}<a class="featured-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">阅读原文 <span aria-hidden="true">↗</span></a></div>
       </div>
@@ -304,8 +306,6 @@ function renderPaperCard(article) {
   const findings = (article.core_findings || []).slice(0, 2);
   const extraFindings = (article.core_findings || []).slice(2);
   const tags = article.tags || [];
-  const visibleTags = tags.slice(0, 3);
-  const extraTagCount = Math.max(tags.length - visibleTags.length, 0);
   return `
     <div class="paper-entry">
       <div class="paper-entry-heading">
@@ -314,7 +314,7 @@ function renderPaperCard(article) {
       </div>
       <article class="paper-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
         <div class="paper-meta"><span>${escapeHtml(article.journal || "期刊待核实")}</span><span>${escapeHtml(article.publication_date || "日期待核实")}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
-        ${tags.length ? `<div class="tag-row">${visibleTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}${extraTagCount ? `<span class="tag-more">+${extraTagCount}</span>` : ""}</div>` : ""}
+        ${tags.length ? `<div class="tag-row">${tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>` : ""}
         ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
         ${renderList(findings, "finding-list")}
         ${renderDetails(article, extraFindings, englishTitle)}
