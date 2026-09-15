@@ -231,7 +231,7 @@ function renderPaperCard(article) {
 
 function renderArticles() {
   const articles = filteredArticles();
-  elements.resultCount.textContent = `${articles.length} / ${state.report?.articles?.length || 0} 篇`;
+  elements.resultCount.textContent = String(state.report?.articles?.length || 0);
   elements.emptyState.hidden = articles.length > 0;
   renderFeaturedArticle(articles[0]);
   elements.paperGrid.innerHTML = articles.slice(1).map(renderPaperCard).join("");
