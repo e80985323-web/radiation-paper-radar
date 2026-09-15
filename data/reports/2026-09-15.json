@@ -1,0 +1,519 @@
+{
+  "schema_version": 1,
+  "title": "辐射探测论文雷达",
+  "date": "2026-09-15",
+  "published_at": "2026-09-15T07:51:33.628103+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（因近24小时高分候选不足5篇而扩大；学术接口仅提供日级日期）",
+    "retrieved_count": 576,
+    "screened_count": 57,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 6,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 88,
+      "crossref": 488,
+      "semanticscholar": 0,
+      "openalex": 0,
+      "biorxiv": 0
+    },
+    "warnings": [
+      "Semantic Scholar 与 OpenAlex 返回 HTTP 429，bioRxiv 返回内容解析错误；Europe PMC 和 Crossref 继续工作。",
+      "自动元数据初筛没有产生70分以上推荐；本期人工逐篇复核 review_queue.json 与 ranked_*.json 的摘要、DOI 和可靠来源后重新评分。",
+      "7篇历史论文仅有出版信息更新，未作为新论文重复推荐。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Room‐Temperature Precipitation of Highly Stable Sb 3+ Doped Cs 3 LuCl 6 Microcrystals for Flexible X‐ray Imaging",
+      "chinese_title": "室温沉淀制备高稳定性 Sb³⁺ 掺杂 Cs₃LuCl₆ 微晶用于柔性 X 射线成像",
+      "journal": "Laser & Photonics Reviews",
+      "publication_date": "2026-09-14",
+      "doi": "10.1002/lpor.71909",
+      "url": "https://doi.org/10.1002/lpor.71909",
+      "article_type": "研究论文",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 94,
+        "novelty": 88,
+        "quality": 84,
+        "methodology": 82,
+        "inspiration": 84
+      },
+      "why_worth_reading": "兼顾无铅闪烁材料、可规模化室温合成、光产额、检出限、辐照稳定性与柔性成像，指标链较完整。",
+      "core_findings": [
+        "摘要报告以室温沉淀法制备 Sb³⁺ 掺杂 Cs₃LuCl₆ 微晶，0.7% 掺杂样品的光致发光量子产率为97.4%。",
+        "摘要给出的 X 射线光产额为26318 photons/MeV，检出限为437 nGy/s；这些数值仍受测试条件影响。",
+        "循环辐照1小时后，辐射发光强度为初始值的115%，支持短时辐照稳定性，但不能替代长期老化试验。",
+        "微晶/聚二甲基硅氧烷柔性膜实现10.8 lp/mm空间分辨率，显示材料到成像屏的器件化可行性。"
+      ],
+      "term_explanations": [
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射能量并以可见或近可见光子释放的材料，可通过光电器件转化为测量信号。",
+          "plain_explanation": "像把看不见的X射线撞击翻译成相机能看见的闪光。"
+        },
+        {
+          "term": "光产额",
+          "academic_explanation": "闪烁体单位沉积能量产生的光子数，常以 photons/MeV 表示，是信号统计与能量分辨的重要因素。",
+          "plain_explanation": "同样一份辐射能量，材料能点亮多少颗“光子灯泡”。"
+        },
+        {
+          "term": "检出限",
+          "academic_explanation": "在规定统计置信度和测量条件下，可与背景噪声可靠区分的最低剂量率或信号水平。",
+          "plain_explanation": "仪器能从底噪里认出的最轻微辐射，不等于任何条件下都能测到。"
+        },
+        {
+          "term": "空间分辨率",
+          "academic_explanation": "成像系统区分相邻细节的能力；线对每毫米越高通常表示可分辨结构越细。",
+          "plain_explanation": "像尺子的刻度密度，数值越高，越能把挨得很近的细节分开。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "在同一批次样品上联合测量光产额、MTF/线对分辨率、剂量率线性和循环辐照稳定性。"
+        ],
+        "methods": [
+          "将室温沉淀、柔性聚合物封装和标准分辨率卡成像组成材料—器件闭环。"
+        ],
+        "key_entities_mechanisms": [
+          "关注 [SbCl₆]³⁻ 局域单元对自陷激子发光的调控；机制证据需结合时间分辨光谱进一步验证。"
+        ],
+        "target_system": [
+          "可迁移到柔性、便携式 X 射线闪烁屏与大面积间接探测器。"
+        ],
+        "future_direction": [
+          "比较温度、湿度、累计剂量与弯折循环对光产额和成像分辨率的耦合影响。"
+        ],
+        "paper_potential": [
+          "若补足长期可靠性及同条件基准材料比较，可形成材料—器件—成像的高水平系统研究。"
+        ],
+        "limitations_validation": [
+          "摘要的115%辐照后强度可能涉及激活或测量漂移；需长期剂量、恢复过程和独立重复验证。"
+        ]
+      },
+      "top3_reason": "材料性能、稳定性与柔性成像验证贯通，和闪烁体及X射线成像方向高度一致。",
+      "tags": [
+        "闪烁体",
+        "X射线探测",
+        "柔性成像",
+        "辐照稳定性"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": []
+    },
+    {
+      "title": "Feasibility study of glass microchannel plate-based X-ray scintillator screens",
+      "chinese_title": "基于玻璃微通道板的 X 射线闪烁屏可行性研究",
+      "journal": "Journal of Instrumentation",
+      "publication_date": "2026-09-14",
+      "doi": "10.1088/1748-0221/21/09/p09024",
+      "url": "https://doi.org/10.1088/1748-0221/21/09/p09024",
+      "article_type": "研究论文",
+      "recommendation_score": 86,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 95,
+        "novelty": 84,
+        "quality": 80,
+        "methodology": 84,
+        "inspiration": 84
+      },
+      "why_worth_reading": "用银镀层抑制微孔间闪烁光串扰，并以实验和模拟共同分析厚度—MTF关系，直指高分辨X射线探测。",
+      "core_findings": [
+        "研究以21 μm孔径、25 μm节距、500 μm厚的玻璃微通道板作为高分辨闪烁屏模板。",
+        "在孔壁沉积50 μm深银层用于抑制通道间闪烁光串扰，实验与模拟均显示空间分辨率得到改善。",
+        "研究分析闪烁体厚度对调制传递函数的影响，表明结构尺寸和光学隔离需协同优化。",
+        "模拟预测将银层覆盖深度延伸至500 μm可进一步改善MTF，但该全深度方案尚需实验确认。"
+      ],
+      "term_explanations": [
+        {
+          "term": "微通道板",
+          "academic_explanation": "含规则微米级孔阵列的板状结构，本研究将孔道作为闪烁材料的空间隔离模板。",
+          "plain_explanation": "像由许多细吸管组成的蜂窝，把每个位置产生的光尽量关在自己的小格里。"
+        },
+        {
+          "term": "光学串扰",
+          "academic_explanation": "一个探测单元产生的光进入相邻单元并形成非本征响应，会使点扩散并降低空间分辨率。",
+          "plain_explanation": "一个像素的光漏到邻居家，让原本清楚的亮点变糊。"
+        },
+        {
+          "term": "调制传递函数",
+          "academic_explanation": "描述成像系统在不同空间频率下保持物体对比度能力的函数，常用于定量评价分辨性能。",
+          "plain_explanation": "检查相机面对由粗到细的条纹时，还能保留多少黑白反差。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "制作不同银层深度和闪烁层厚度的二维矩阵样品，以同一X射线条件测MTF、效率和余辉。"
+        ],
+        "methods": [
+          "将微结构制备、边缘/线对成像与光子输运模拟联合反演串扰来源。"
+        ],
+        "key_entities_mechanisms": [
+          "核心机制是银层对孔间横向光传播的抑制及厚度对吸收效率—展宽的权衡。"
+        ],
+        "target_system": [
+          "适合高分辨间接式X射线成像屏和微结构化闪烁体探测器。"
+        ],
+        "future_direction": [
+          "量化银层反射、吸收和工艺不均匀性对探测效率与MTF的共同影响。"
+        ],
+        "paper_potential": [
+          "补充绝对探测效率、噪声功率谱和标准闪烁屏对照后，可形成完整成像质量论文。"
+        ],
+        "limitations_validation": [
+          "全深度银层改进目前来自模拟；需验证制备可行性、均匀性及是否牺牲光收集效率。"
+        ]
+      },
+      "top3_reason": "实验与模拟直接回答微结构闪烁屏的串扰和空间分辨率问题，方法可迁移性强。",
+      "tags": [
+        "X射线成像",
+        "微通道板",
+        "闪烁屏",
+        "MTF",
+        "光学串扰"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": []
+    },
+    {
+      "title": "Equal-Proportion Organic–Inorganic-Mixed Cation Perovskite Single Crystalline Heterojunctions Enable High-Performance X-ray Detection",
+      "chinese_title": "等比例有机–无机混合阳离子钙钛矿单晶异质结实现高性能 X 射线探测",
+      "journal": "ACS Applied Materials & Interfaces",
+      "publication_date": "2026-09-15",
+      "doi": "10.1021/acsami.6c14882",
+      "url": "https://doi.org/10.1021/acsami.6c14882",
+      "article_type": "研究论文",
+      "recommendation_score": 85,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 94,
+        "novelty": 85,
+        "quality": 86,
+        "methodology": 80,
+        "inspiration": 82
+      },
+      "why_worth_reading": "以混合阳离子单晶异质结同时压低离子迁移、漏电流和基线漂移，并给出灵敏度、检出限及160天稳定性。",
+      "core_findings": [
+        "研究在 CsPbBr₃ 单晶基底上外延生长 FA₀.₅Cs₀.₅PbBr₃ 薄膜，构建单晶异质结。",
+        "相较 CsPbBr₃ 单晶，异质结呈现整流效应并具有0.556 eV离子迁移活化能，伴随漏电流和基线漂移降低。",
+        "摘要报告在120 keV X射线下灵敏度为235161 μC Gyair⁻¹ cm⁻²，检出限为83.61 nGyair s⁻¹。",
+        "未封装器件保持160天稳定性，但摘要未给出跨器件离散性与完整环境条件。"
+      ],
+      "term_explanations": [
+        {
+          "term": "钙钛矿单晶异质结",
+          "academic_explanation": "由组成不同的钙钛矿单晶区域形成的界面结构，可利用能带和界面电场调控载流子输运。",
+          "plain_explanation": "把两种性质略不同的晶体紧密接在一起，让界面像单向交通规则一样管理电荷。"
+        },
+        {
+          "term": "离子迁移活化能",
+          "academic_explanation": "晶格离子或空位发生迁移需跨越的能垒；较高能垒通常意味着工作条件下离子漂移更困难。",
+          "plain_explanation": "离子要翻过的一座能量山，山越高，越不容易在电场下乱跑。"
+        },
+        {
+          "term": "基线漂移",
+          "academic_explanation": "无目标信号时输出基准随时间改变的现象，会影响弱信号判定和定量稳定性。",
+          "plain_explanation": "秤上没放东西，零点却慢慢移动，久了会把小信号称错。"
+        },
+        {
+          "term": "灵敏度",
+          "academic_explanation": "探测器输出变化与入射剂量或剂量率变化之比，必须结合辐射能量、偏压和几何条件比较。",
+          "plain_explanation": "同样增加一点X射线，仪器的读数能增加多少；不同测试条件不能直接横比。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "以同尺寸同偏压的单晶和异质结为对照，联合测暗电流、漂移、能量依赖、剂量线性及长期稳定性。"
+        ],
+        "methods": [
+          "采用温度依赖电学测量提取离子迁移活化能，并用长时间基线监测连接材料机制与探测性能。"
+        ],
+        "key_entities_mechanisms": [
+          "混合阳离子界面、离子迁移、表面缺陷钝化与内建电场是关键对象；各自贡献需解耦。"
+        ],
+        "target_system": [
+          "可扩展至低剂量直接转换型X射线探测器和像素阵列。"
+        ],
+        "future_direction": [
+          "研究像素化后界面均匀性、迟滞和电荷共享对能谱与成像的影响。"
+        ],
+        "paper_potential": [
+          "若增加阵列成像、统计重复和商业半导体对照，可提升系统层面的说服力。"
+        ],
+        "limitations_validation": [
+          "超高灵敏度依赖具体偏压、能量和剂量定义；需查原文统一单位并进行独立器件复现。"
+        ]
+      },
+      "top3_reason": "直接覆盖半导体X射线探测、漏电/漂移抑制和长期稳定性，器件指标完整。",
+      "tags": [
+        "半导体探测器",
+        "X射线探测",
+        "钙钛矿",
+        "异质结",
+        "基线稳定性"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "跨器件重复性、偏压和灵敏度换算条件需查阅全文。"
+      ]
+    },
+    {
+      "title": "In-Flight Self-Calibration of the STIX Grid Transmission.",
+      "chinese_title": "STIX 栅格透射率的在轨自标定",
+      "journal": "Solar Physics",
+      "publication_date": "2026-09-10",
+      "doi": "10.1007/s11207-026-02739-6",
+      "url": "https://doi.org/10.1007/s11207-026-02739-6",
+      "article_type": "研究论文",
+      "recommendation_score": 83,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 82,
+        "quality": 86,
+        "methodology": 84,
+        "inspiration": 78
+      },
+      "why_worth_reading": "利用在轨全照明像素修正地面光学测量遗漏的栅格缺陷，是辐射成像仪自标定与系统误差传播的典型案例。",
+      "core_findings": [
+        "STIX通过成对钨栅格调制太阳耀斑X射线；本文针对20 keV以下栅格透射率建立在轨自标定。",
+        "方法以粗耀斑定位器中完全照明像素作为总通量监视器，避免仅依赖发射前光学测量。",
+        "新标定透射率低于地面模型，摘要将差异归因于钨层缺陷减小有效狭缝宽度。",
+        "采用新标定后，各子准直器在8–20 keV导出的光子谱一致到约2%；拟合温度基本不变而发射量增加约13%。"
+      ],
+      "term_explanations": [
+        {
+          "term": "在轨自标定",
+          "academic_explanation": "仪器投入运行后利用自身观测通道和可约束参考量估计响应参数，以修正地面标定与真实状态差异。",
+          "plain_explanation": "设备上天后用自己不同部件互相对表，重新校准实际工作状态。"
+        },
+        {
+          "term": "栅格透射率",
+          "academic_explanation": "入射辐射通过调制栅格后保留下来的比例，受狭缝几何、材料吸收和制造缺陷影响。",
+          "plain_explanation": "X射线穿过百叶窗后还能剩多少，缝隙稍有误差就会改变读数。"
+        },
+        {
+          "term": "子准直器",
+          "academic_explanation": "STIX中由特定栅格对及探测单元构成的独立调制通道，对不同空间尺度的源结构敏感。",
+          "plain_explanation": "像一组分工不同的小观察窗，每个窗口负责一种细节尺度。"
+        },
+        {
+          "term": "发射量",
+          "academic_explanation": "热等离子体诊断中电子密度平方对体积的积分，影响热辐射谱的归一化强度。",
+          "plain_explanation": "可粗略理解为参与发光的高温等离子体“密度规模”，不是单纯温度。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "为多通道辐射成像仪预留全照明或冗余参考通道，以运行数据反推响应变化。"
+        ],
+        "methods": [
+          "通过通道间谱一致性检验标定，并将几何透射误差传播到温度和强度类物理参数。"
+        ],
+        "key_entities_mechanisms": [
+          "钨层制造缺陷、有效狭缝宽度和能量相关透射率共同决定系统偏差。"
+        ],
+        "target_system": [
+          "可迁移到编码孔径、准直栅格和多模块X/伽马成像系统。"
+        ],
+        "future_direction": [
+          "建立随时间和温度更新的层级标定模型，区分制造误差、污染与辐照老化。"
+        ],
+        "paper_potential": [
+          "将自标定与不确定度量化、源重建偏差联合，可形成通用在役标定框架。"
+        ],
+        "limitations_validation": [
+          "方法依赖参考像素和源照明假设；低于8 keV及高于20 keV的适用性需另行验证。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "X射线成像",
+        "在轨标定",
+        "栅格调制",
+        "响应校正"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": []
+    },
+    {
+      "title": "Development of an advanced gamma-charged particle coincidence technique for accelerator-based nuclear experiments in Vietnam",
+      "chinese_title": "面向加速器核实验的先进伽马–带电粒子符合测量技术开发",
+      "journal": "Communications in Physics",
+      "publication_date": "2026-09-15",
+      "doi": "10.15625/0868-3166/24399",
+      "url": "https://doi.org/10.15625/0868-3166/24399",
+      "article_type": "研究论文",
+      "recommendation_score": 81,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 92,
+        "novelty": 78,
+        "quality": 72,
+        "methodology": 84,
+        "inspiration": 76
+      },
+      "why_worth_reading": "LaBr₃:Ce与硅PIN二极管组成符合系统，以明确束流反应验证6 ns时间门和约20.6倍峰背比提升。",
+      "core_findings": [
+        "系统将 LaBr₃:Ce 闪烁体与硅PIN二极管结合，并采用VME数据采集关联瞬发伽马与带电粒子。",
+        "以3.2 MeV质子轰击富集¹¹B靶进行调试，在约6 ns瞬发符合时间窗下分离¹¹B(p,p₁γ₁)¹¹B道。",
+        "时间符合门将峰背比从单谱的0.95提高到19.6，摘要报告改善因子约20.6。",
+        "结果直接支持符合测量抑制非相关背景和增强反应道选择性，但目前验证集中于单一反应与束流条件。"
+      ],
+      "term_explanations": [
+        {
+          "term": "符合测量",
+          "academic_explanation": "要求两个或多个探测通道的事件在规定时间关系内同时出现，用于识别共同物理过程并抑制随机背景。",
+          "plain_explanation": "只有两只探测器在很短时间内同时“点头”，才把事件算作同一次反应。"
+        },
+        {
+          "term": "峰背比",
+          "academic_explanation": "能谱特征峰强度相对邻近连续背景的比值，用于描述目标信号从背景中突出的程度。",
+          "plain_explanation": "像在人群噪声中听一个口令，峰背比越高，口令越容易辨认。"
+        },
+        {
+          "term": "时间门",
+          "academic_explanation": "数据分析或触发中接受事件的有限时间区间，宽度影响真符合效率与随机符合污染。",
+          "plain_explanation": "只在一扇几纳秒宽的小时间窗口里收事件，太宽会收进巧合噪声，太窄会漏信号。"
+        },
+        {
+          "term": "硅PIN二极管",
+          "academic_explanation": "含本征层的半导体二极管，带电粒子沉积能量产生电子—空穴对并形成可读电荷脉冲。",
+          "plain_explanation": "带电粒子穿过硅片时留下电荷脚印，电路把脚印读成脉冲。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "扫描时间门宽、探测器距离和阈值，联合报告真符合效率、随机符合率及峰背比。"
+        ],
+        "methods": [
+          "采用双通道时间差谱选择反应道，并保留单谱作为背景抑制的基线对照。"
+        ],
+        "key_entities_mechanisms": [
+          "LaBr₃:Ce快定时、硅PIN带电粒子标记及VME同步读出共同形成反应道选择。"
+        ],
+        "target_system": [
+          "可用于中子产生反应、核结构实验及伽马—粒子联合鉴别系统。"
+        ],
+        "future_direction": [
+          "在多靶、多束流能量和高计数率下验证死时间、时间漂移与随机符合模型。"
+        ],
+        "paper_potential": [
+          "若扩展到多通道阵列并给出效率标定和不确定度预算，可形成通用符合谱学平台。"
+        ],
+        "limitations_validation": [
+          "期刊与系统性能仍需结合全文核查；单一¹¹B反应不能证明所有实验条件下均有同等改善。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "伽马探测",
+        "带电粒子探测",
+        "符合测量",
+        "LaBr3:Ce",
+        "硅探测器"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需由全文核实效率标定、死时间修正及误差预算。"
+      ]
+    },
+    {
+      "title": "Multipurpose particle detector for fixed-target experiments based on plastic scintillators and SiPMs (time resolution)",
+      "chinese_title": "基于塑料闪烁体与 SiPM 的固定靶实验多用途粒子探测器：时间分辨",
+      "journal": "EPJ Web of Conferences",
+      "publication_date": "2026-09-15",
+      "doi": "10.1051/epjconf/202638603007",
+      "url": "https://doi.org/10.1051/epjconf/202638603007",
+      "article_type": "会议论文",
+      "recommendation_score": 75,
+      "score_status": "evidence_reviewed",
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 68,
+        "quality": 66,
+        "methodology": 72,
+        "inspiration": 72
+      },
+      "why_worth_reading": "给出双端SiPM塑闪模块及多通道调理/数字化链的初步时间性能，适合紧凑、低功耗和磁场环境读出设计参考。",
+      "core_findings": [
+        "概念采用矩形塑料闪烁条和双端SiPM光学读出，以改善光收集并支持时间与触发测量。",
+        "读出链包括多通道信号调理和数字化，可提取幅度与时间信息并设置稳定触发阈值。",
+        "当前仅报告验证原型的初步时间分辨研究，摘要称响应可复现且工作裕量足以建立稳定阈值。",
+        "SiPM热稳定性只在设计层面讨论，尚未在原型中表征，因此对实际宽温性能不能下结论。"
+      ],
+      "term_explanations": [
+        {
+          "term": "塑料闪烁体",
+          "academic_explanation": "以有机聚合物为基体的闪烁材料，通常响应快、易制成大面积结构，但能量分辨率相对有限。",
+          "plain_explanation": "一种能把粒子撞击迅速变成微弱闪光、又容易做成长条或大板的塑料。"
+        },
+        {
+          "term": "硅光电倍增器（SiPM）",
+          "academic_explanation": "由大量盖革模式雪崩微单元并联构成的固态光传感器，可对弱闪烁光进行高增益探测。",
+          "plain_explanation": "一块由许多微小光子计数格组成的芯片，能把很弱的闪光放大成电信号。"
+        },
+        {
+          "term": "时间分辨",
+          "academic_explanation": "探测系统区分相近事件到达时刻的能力，通常用时间差分布宽度表征。",
+          "plain_explanation": "像秒表能分清两次几乎同时到达的粒子，刻度越细，定时越准。"
+        },
+        {
+          "term": "暗计数",
+          "academic_explanation": "无入射光时SiPM因热载流子等产生的自发脉冲，会抬高触发背景并造成随机事件。",
+          "plain_explanation": "没有光时传感器也会偶尔自己响，像安静房间里的误报。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "以单端和双端读出对照，扫描阈值、温度、位置及偏压，测时间分辨、效率和暗计数触发率。"
+        ],
+        "methods": [
+          "双端时间平均可削弱击中位置引起的传播时间偏差，并能用时间差估计纵向位置。"
+        ],
+        "key_entities_mechanisms": [
+          "光传输损失、SiPM增益温漂、暗计数和前端带宽共同限制时间性能。"
+        ],
+        "target_system": [
+          "适用于固定靶触发、飞行时间辅助探测和受磁场/空间限制的模块化系统。"
+        ],
+        "future_direction": [
+          "加入自动偏压温补和波形级时间提取，比较恒比定时与前沿判别。"
+        ],
+        "paper_potential": [
+          "完成束流测试、绝对效率、位置均匀性和宽温验证后，系统论文价值会显著提高。"
+        ],
+        "limitations_validation": [
+          "摘要未给出具体时间分辨数值，且热稳定性未实测；当前结论仅适用于初步原型。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "塑料闪烁体",
+        "SiPM",
+        "时间分辨",
+        "读出电子学",
+        "固定靶实验"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "具体时间分辨数值和测试束流/源条件需查阅全文。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "建立微结构闪烁屏的厚度—隔光层深度二维实验，联合MTF、绝对探测效率和光学串扰，并用光子输运模型解释最优区间。",
+    "把SiPM双端塑闪模块与伽马–带电粒子符合框架结合，系统扫描温度、时间门与计数率，检验峰背比提升和真符合效率之间的权衡。",
+    "为像素化X射线探测器设计运行中自标定通道，对比钙钛矿器件基线漂移与参考通道响应，评估材料漂移如何传播到谱和图像。"
+  ]
+}
