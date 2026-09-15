@@ -9,6 +9,8 @@ const state = {
 const elements = {
   dateSelect: document.querySelector("#date-select"),
   searchInput: document.querySelector("#search-input"),
+  topicMenu: document.querySelector("#topic-menu"),
+  topicCurrent: document.querySelector("#topic-current"),
   tagFilters: document.querySelector("#tag-filters"),
   resetButton: document.querySelector("#reset-button"),
   reportStats: document.querySelector("#report-stats"),
@@ -80,14 +82,17 @@ function allTags() {
 }
 
 function renderTagFilters() {
+  elements.topicCurrent.textContent = state.activeTag;
   elements.tagFilters.innerHTML = allTags().map((tag) => (
     `<button class="tag-filter ${tag === state.activeTag ? "active" : ""}" type="button" data-tag="${escapeHtml(tag)}" aria-pressed="${tag === state.activeTag}">${escapeHtml(tag)}</button>`
   )).join("");
   elements.tagFilters.querySelectorAll("[data-tag]").forEach((button) => {
     button.addEventListener("click", () => {
       state.activeTag = button.dataset.tag || "全部";
+      elements.topicMenu.open = false;
       renderTagFilters();
       renderArticles();
+      document.querySelector("#papers")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 }
