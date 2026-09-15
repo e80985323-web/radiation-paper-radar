@@ -342,7 +342,6 @@ function renderPaperCard(article) {
   const findings = (article.core_findings || []).slice(0, 3);
   return `
     <article class="paper-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
-      <div class="paper-topline"><span class="score">${escapeHtml(score)} 分</span></div>
       <div class="paper-card-intro">
         <div class="paper-card-copy">
           <h3>${escapeHtml(title)}</h3>
@@ -355,7 +354,7 @@ function renderPaperCard(article) {
       ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
       ${renderList(findings, "finding-list")}
       ${renderDetails(article)}
-      <div class="paper-footer">${topBadge}<a class="paper-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">打开 DOI / 原文 ↗</a></div>
+      <div class="paper-footer"><div class="paper-footer-leading"><span class="score">${escapeHtml(score)} 分</span>${topBadge}</div><a class="paper-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">打开 DOI / 原文 ↗</a></div>
     </article>`;
 }
 

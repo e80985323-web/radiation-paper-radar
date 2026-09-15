@@ -386,6 +386,7 @@ a { color: inherit; }
 .finding-list { margin: 15px 0 0; padding: 0 0 0 18px; color: var(--muted); font-size: var(--ios-subheadline); line-height: 1.7; }
 .finding-list li + li { margin-top: 6px; }
 .paper-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 20px; }
+.paper-footer-leading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; min-width: 0; }
 .top-badge { color: var(--accent); font-size: var(--ios-caption-1); font-weight: 650; letter-spacing: .04em; }
 .details { margin-top: 15px; border-top: 1px solid #e5e5e7; }
 .details summary { padding: 12px 0 0; color: var(--blue); font-size: var(--ios-subheadline); cursor: pointer; }
