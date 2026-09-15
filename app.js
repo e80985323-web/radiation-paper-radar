@@ -300,15 +300,20 @@ function renderPaperCard(article) {
   const visibleTags = tags.slice(0, 3);
   const extraTagCount = Math.max(tags.length - visibleTags.length, 0);
   return `
-    <article class="paper-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
-      <h3>${escapeHtml(title)}</h3>
-      <div class="paper-meta"><span>${escapeHtml(article.journal || "期刊待核实")}</span><span>${escapeHtml(article.publication_date || "日期待核实")}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
-      ${tags.length ? `<div class="tag-row">${visibleTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}${extraTagCount ? `<span class="tag-more">+${extraTagCount}</span>` : ""}</div>` : ""}
-      ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
-      ${renderList(findings, "finding-list")}
-      ${renderDetails(article, extraFindings, englishTitle)}
-      <div class="paper-footer"><div class="paper-footer-leading"><span class="score">${escapeHtml(score)} 分</span>${topBadge}${evidenceStatus(article)}</div><a class="paper-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">打开 DOI / 原文 ↗</a></div>
-    </article>`;
+    <div class="paper-entry">
+      <div class="paper-entry-heading">
+        <h3 class="paper-entry-title">${escapeHtml(title)}</h3>
+        <a class="paper-entry-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">打开 DOI / 原文 <span aria-hidden="true">↗</span></a>
+      </div>
+      <article class="paper-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
+        <div class="paper-meta"><span>${escapeHtml(article.journal || "期刊待核实")}</span><span>${escapeHtml(article.publication_date || "日期待核实")}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
+        ${tags.length ? `<div class="tag-row">${visibleTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}${extraTagCount ? `<span class="tag-more">+${extraTagCount}</span>` : ""}</div>` : ""}
+        ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
+        ${renderList(findings, "finding-list")}
+        ${renderDetails(article, extraFindings, englishTitle)}
+        <div class="paper-footer"><div class="paper-footer-leading"><span class="score">${escapeHtml(score)} 分</span>${topBadge}${evidenceStatus(article)}</div></div>
+      </article>
+    </div>`;
 }
 
 function renderArticles() {
