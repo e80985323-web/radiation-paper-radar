@@ -373,7 +373,7 @@ a { color: inherit; }
   align-items: baseline;
   justify-content: space-between;
   gap: 24px;
-  margin: 0 0 18px;
+  margin: 0 0 44px;
 }
 .paper-entry-title {
   min-width: 0;
@@ -530,7 +530,7 @@ a { color: inherit; }
   .ideas-section { margin-top: 78px; }
   .ideas-heading { margin-bottom: 36px; }
   .ideas-list { grid-template-columns: 1fr; row-gap: 36px; }
-  .paper-entry-heading { align-items: flex-start; flex-direction: column; gap: 9px; margin-bottom: 14px; }
+  .paper-entry-heading { align-items: flex-start; flex-direction: column; gap: 9px; margin-bottom: 24px; }
   .paper-entry-title { font-size: 28px; line-height: 1.28; }
   .paper-entry-link { font-size: 16px; }
   .paper-card { padding: 22px 20px 20px; border-radius: 22px; }
