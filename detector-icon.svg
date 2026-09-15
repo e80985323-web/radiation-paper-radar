@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Research Paper Daily</title>
+  <desc id="desc">Radiation detector orbit graphic</desc>
+  <defs>
+    <radialGradient id="background" cx="50%" cy="49%" r="70%">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".24" stop-color="#fff8f1"/>
+      <stop offset=".68" stop-color="#ffdcbf"/>
+      <stop offset="1" stop-color="#f4c198"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft-shadow" x="-80%" y="-80%" width="260%" height="260%">
+      <feDropShadow dx="0" dy="15" stdDeviation="18" flood-color="#a04e0d" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#background)"/>
+  <g fill="none" stroke="#e85d04" stroke-width="1.5">
+    <circle cx="256" cy="256" r="218" stroke-opacity=".25"/>
+    <circle cx="256" cy="256" r="153" stroke-opacity=".42"/>
+  </g>
+  <g filter="url(#soft-shadow)">
+    <circle cx="256" cy="256" r="105" fill="#fff" fill-opacity=".5" stroke="#e85d04" stroke-opacity=".63" stroke-width="1.5"/>
+    <circle cx="256" cy="256" r="75" fill="none" stroke="#e85d04" stroke-opacity=".53" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <circle cx="256" cy="256" r="40" fill="#fff" fill-opacity=".63" stroke="#e85d04" stroke-opacity=".63" stroke-width="1.5"/>
+  </g>
+  <circle cx="256" cy="256" r="24" fill="#e85d04" fill-opacity=".14"/>
+  <circle cx="256" cy="256" r="16" fill="#e85d04" filter="url(#glow)"/>
+  <g fill="#e85d04" stroke="#fff" stroke-width="4">
+    <circle cx="256" cy="181" r="10"/>
+    <circle cx="345" cy="315" r="10"/>
+    <circle cx="201" cy="354" r="10"/>
+  </g>
+  <g fill="none" stroke="#e85d04" stroke-opacity=".18" stroke-width="8">
+    <circle cx="256" cy="181" r="18"/>
+    <circle cx="345" cy="315" r="18"/>
+    <circle cx="201" cy="354" r="18"/>
+  </g>
+</svg>
