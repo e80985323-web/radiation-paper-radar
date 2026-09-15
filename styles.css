@@ -1,8 +1,8 @@
 :root {
   color-scheme: light;
-  --page: #f5f5f7;
-  --surface: #ffffff;
-  --surface-strong: #fafaf9;
+  --page: #ffffff;
+  --surface: #f5f5f7;
+  --surface-strong: #ffffff;
   --ink: #1d1d1f;
   --muted: #6e6e73;
   --subtle: #86868b;
@@ -260,7 +260,7 @@ a { color: inherit; }
   border-radius: 15px;
   outline: none;
   color: var(--ink);
-  background: var(--surface);
+  background: #fff;
   font-size: var(--ios-body);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .64);
   transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
@@ -352,7 +352,7 @@ a { color: inherit; }
   min-height: 360px;
   place-items: center;
   overflow: hidden;
-  background: linear-gradient(180deg, #fff 0%, #fff9f3 100%);
+  background: var(--surface);
 }
 .featured-visual::before, .featured-visual::after { position: absolute; border: 1px solid rgba(232, 93, 4, .15); border-radius: 50%; content: ""; }
 .featured-visual::before { width: 350px; height: 350px; }
@@ -407,7 +407,7 @@ a { color: inherit; }
 }
 .paper-card[data-paper-href], .featured-card[data-paper-href] { cursor: pointer; }
 .paper-card[data-paper-href]:focus-visible, .featured-card[data-paper-href]:focus-visible { outline: 2px solid rgba(0, 122, 255, .28); outline-offset: 5px; }
-.paper-card:hover { border-color: #b8b8be; background: #fff; }
+.paper-card:hover { border-color: #b8b8be; background: var(--surface); }
 .score { display: inline-flex; align-items: center; gap: 6px; padding: 0; color: var(--accent); font-size: var(--ios-footnote); font-weight: 700; }
 .score::before { width: 5px; height: 5px; border-radius: 50%; background: currentColor; content: ""; }
 .paper-card > .paper-meta,
