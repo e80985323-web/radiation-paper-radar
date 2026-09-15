@@ -13,6 +13,7 @@ const elements = {
   tagFilters: document.querySelector("#tag-filters"),
   resetButton: document.querySelector("#reset-button"),
   reportStats: document.querySelector("#report-stats"),
+  featuredPaper: document.querySelector("#featured-paper"),
   resultCount: document.querySelector("#result-count"),
   paperGrid: document.querySelector("#paper-grid"),
   emptyState: document.querySelector("#empty-state"),
@@ -81,7 +82,7 @@ function allTags() {
 
 function renderTagFilters() {
   elements.tagFilters.innerHTML = allTags().map((tag) => (
-    `<button class="tag-filter ${tag === state.activeTag ? "active" : ""}" type="button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`
+    `<button class="tag-filter ${tag === state.activeTag ? "active" : ""}" type="button" data-tag="${escapeHtml(tag)}" aria-pressed="${tag === state.activeTag}">${escapeHtml(tag)}</button>`
   )).join("");
   elements.tagFilters.querySelectorAll("[data-tag]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -161,30 +162,62 @@ function renderDetails(article) {
   return `<details class="details"><summary>展开术语解释与研究启发</summary><div class="details-content">${termMarkup}${inspirationMarkup}</div></details>`;
 }
 
+function renderFeaturedArticle(article) {
+  if (!article) {
+    elements.featuredPaper.hidden = true;
+    elements.featuredPaper.innerHTML = "";
+    return;
+  }
+  const score = Number(article.recommendation_score) || 0;
+  const href = safeHref(article.url);
+  const title = article.chinese_title || article.title || "未命名论文";
+  const summary = article.why_worth_reading || article.core_findings?.[0] || "暂无摘要说明。";
+  const journal = article.journal || "期刊待核实";
+  const date = article.publication_date || "日期待核实";
+  elements.featuredPaper.hidden = false;
+  elements.featuredPaper.innerHTML = `
+    <article class="featured-card">
+      <div class="featured-copy">
+        <div class="featured-kicker">今日焦点 · TOP SIGNAL</div>
+        <h3>${escapeHtml(title)}</h3>
+        <p class="featured-summary">${escapeHtml(summary)}</p>
+        <div class="featured-meta"><span>${escapeHtml(journal)}</span><span>${escapeHtml(date)}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
+        <div class="featured-bottom"><span class="featured-score">推荐 ${escapeHtml(score)} 分</span><a class="featured-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">阅读原文 <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="featured-visual" aria-hidden="true">
+        <div class="detector-graphic"><span class="detector-core"></span><span class="detector-node node-a"></span><span class="detector-node node-b"></span><span class="detector-node node-c"></span></div>
+        <span class="visual-label">RADIATION / SIGNAL ${String(score).padStart(2, "0")}</span>
+      </div>
+    </article>`;
+}
+
+function renderPaperCard(article, index) {
+  const score = Number(article.recommendation_score) || 0;
+  const href = safeHref(article.url);
+  const title = article.chinese_title || article.title || "未命名论文";
+  const englishTitle = article.title && article.title !== title ? article.title : "";
+  const topBadge = article.top3_reason ? `<span class="top-badge">TOP 3</span>` : "";
+  const findings = (article.core_findings || []).slice(0, 3);
+  return `
+    <article class="paper-card">
+      <div class="paper-topline"><span class="paper-rank">SIGNAL ${String(index + 2).padStart(2, "0")}</span><span class="score">${escapeHtml(score)} 分</span></div>
+      <h3>${escapeHtml(title)}</h3>
+      ${englishTitle ? `<div class="paper-title-en">${escapeHtml(englishTitle)}</div>` : ""}
+      <div class="paper-meta"><span>${escapeHtml(article.journal || "期刊待核实")}</span><span>${escapeHtml(article.publication_date || "日期待核实")}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
+      <div class="tag-row">${(article.tags || []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
+      ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
+      ${renderList(findings, "finding-list")}
+      ${renderDetails(article)}
+      <div class="paper-footer">${topBadge}<a class="paper-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">打开 DOI / 原文 ↗</a></div>
+    </article>`;
+}
+
 function renderArticles() {
   const articles = filteredArticles();
   elements.resultCount.textContent = `${articles.length} / ${state.report?.articles?.length || 0} 篇`;
   elements.emptyState.hidden = articles.length > 0;
-  elements.paperGrid.innerHTML = articles.map((article, index) => {
-    const score = Number(article.recommendation_score) || 0;
-    const href = safeHref(article.url);
-    const title = article.chinese_title || article.title || "未命名论文";
-    const englishTitle = article.title && article.title !== title ? article.title : "";
-    const topBadge = article.top3_reason ? `<span class="top-badge">TOP 3</span>` : "";
-    const findings = (article.core_findings || []).slice(0, 3);
-    return `
-      <article class="paper-card">
-        <div class="paper-topline"><span class="paper-rank">SIGNAL ${String(index + 1).padStart(2, "0")}</span><span class="score">${escapeHtml(score)} 分</span></div>
-        <h3>${escapeHtml(title)}</h3>
-        ${englishTitle ? `<div class="paper-title-en">${escapeHtml(englishTitle)}</div>` : ""}
-        <div class="paper-meta"><span>${escapeHtml(article.journal || "期刊待核实")}</span><span>${escapeHtml(article.publication_date || "日期待核实")}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
-        <div class="tag-row">${(article.tags || []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
-        ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
-        ${renderList(findings, "finding-list")}
-        ${renderDetails(article)}
-        <div class="paper-footer">${topBadge}<a class="paper-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">打开 DOI / 原文 ↗</a></div>
-      </article>`;
-  }).join("");
+  renderFeaturedArticle(articles[0]);
+  elements.paperGrid.innerHTML = articles.slice(1).map(renderPaperCard).join("");
 }
 
 function renderIdeas() {

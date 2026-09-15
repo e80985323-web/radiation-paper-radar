@@ -3,85 +3,80 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#07111f">
+    <meta name="theme-color" content="#f5f5f7">
     <meta name="description" content="辐射探测论文雷达：每日精选辐射探测、闪烁体、能谱、成像与读出相关科研论文。">
     <title>辐射探测论文雷达</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <div class="site-shell">
-      <div class="ambient ambient-one" aria-hidden="true"></div>
-      <div class="ambient ambient-two" aria-hidden="true"></div>
-      <div class="grid-overlay" aria-hidden="true"></div>
-
-      <header class="hero container">
-        <div class="eyebrow"><span class="signal-dot"></span><span>DAILY RESEARCH RADAR</span><span class="eyebrow-divider"></span><span>RADIATION DETECTION</span></div>
-        <div class="hero-layout">
-          <div>
-            <h1>辐射探测<br><span>论文雷达</span></h1>
-            <p class="hero-copy">从近期科研论文中筛出真正值得读的信号，聚焦探测器、闪烁体、能谱、成像与读出方法。</p>
-            <div class="hero-links">
-              <span id="latest-date">正在读取最新日报…</span>
-              <a href="https://github.com/e80985323-web/radiation-paper-radar" target="_blank" rel="noreferrer">查看 GitHub <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-          <div class="hero-orbit" aria-hidden="true">
-            <div class="orbit orbit-a"></div>
-            <div class="orbit orbit-b"></div>
-            <div class="orbit-core"><span>γ</span><small>RADAR</small></div>
-          </div>
+      <header class="global-header">
+        <div class="container nav-bar">
+          <a class="brand" href="./" aria-label="辐射探测论文雷达首页">
+            <span class="brand-mark" aria-hidden="true">γ</span>
+            <span class="brand-name"><strong>论文雷达</strong><small>RADIATION DETECTION</small></span>
+          </a>
+          <nav class="main-nav" aria-label="主导航">
+            <a class="nav-link active" href="#today">今日精选</a>
+            <a class="nav-link" href="#topics">研究主题</a>
+            <a class="nav-link" href="#ideas">研究启发</a>
+          </nav>
+          <a class="nav-github" href="https://github.com/e80985323-web/radiation-paper-radar" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </header>
 
-      <main class="container main-layout">
-        <aside class="control-panel panel">
-          <div class="panel-header">
-            <div>
-              <div class="panel-kicker">CONTROL PANEL</div>
-              <h2>筛选与归档</h2>
+      <main>
+        <section class="hero container" id="today">
+          <div class="hero-eyebrow"><span class="eyebrow-dot"></span><span>每日研究精选</span><span class="hero-date" id="latest-date">正在读取最新日报…</span></div>
+          <h1>今天，发现<br><em><span class="hero-line">值得读的辐射</span><span class="hero-line">探测论文。</span></em></h1>
+          <p class="hero-copy"><span class="copy-desktop">从近期科研文献中筛出真正值得读的信号，聚焦探测器、闪烁体、能谱、成像与读出方法。</span><span class="copy-mobile">从近期科研文献中筛出真正<br>值得读的信号，聚焦探测器、<br>闪烁体、能谱、成像与读出方法。</span></p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#papers">浏览今日精选 <span aria-hidden="true">↓</span></a>
+            <span class="hero-status"><span class="status-dot"></span>经过证据复核的每日更新</span>
+          </div>
+        </section>
+
+        <section class="topic-strip" id="topics" aria-label="研究主题">
+          <div class="container topic-nav">
+            <span class="topic-label">探索主题</span>
+            <div id="tag-filters" class="tag-filters" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="container dashboard" id="papers" aria-live="polite">
+          <div class="filter-bar">
+            <div class="section-title">
+              <span class="section-eyebrow">CURATED SIGNALS</span>
+              <h2>精选论文</h2>
+              <span id="result-count" class="result-count">—</span>
             </div>
-            <button id="reset-button" class="ghost-button" type="button">重置</button>
+            <div class="filter-controls">
+              <label class="search-box" for="search-input">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <span class="sr-only">快速检索</span>
+                <input id="search-input" type="search" placeholder="搜索标题、期刊、方法…" autocomplete="off">
+              </label>
+              <label class="date-box" for="date-select">
+                <span class="sr-only">日报日期</span>
+                <select id="date-select" class="field-control"></select>
+              </label>
+              <button id="reset-button" class="reset-button" type="button">重置</button>
+            </div>
           </div>
 
-          <label class="field-label" for="date-select">日报日期</label>
-          <select id="date-select" class="field-control"></select>
-
-          <label class="field-label" for="search-input">快速检索</label>
-          <input id="search-input" class="field-control" type="search" placeholder="标题、期刊、方法…" autocomplete="off">
-
-          <div class="field-label tag-label">主题标签</div>
-          <div id="tag-filters" class="tag-filters" aria-live="polite"></div>
-
-          <div class="method-note">
-            <div class="note-mark">i</div>
-            <div>
-              <strong>筛选口径</strong>
-              <p>只展示经过证据复核且推荐分不低于 70 的论文；术语同时提供学术解释与易懂解释。</p>
-            </div>
-          </div>
-        </aside>
-
-        <section class="content-column" aria-live="polite">
           <div id="error-banner" class="error-banner" hidden></div>
-
-          <div class="section-heading">
-            <div>
-              <div class="panel-kicker">CURATED SIGNALS</div>
-              <h2>今日精选</h2>
-            </div>
-            <div id="result-count" class="result-count">—</div>
-          </div>
-
           <div id="report-stats" class="stats-grid"></div>
+          <div id="featured-paper" class="featured-paper" hidden></div>
           <div id="paper-grid" class="paper-grid"></div>
           <div id="empty-state" class="empty-state" hidden>当前筛选条件下没有匹配论文。</div>
 
           <section id="ideas-section" class="ideas-section" hidden>
             <div class="section-heading compact-heading">
               <div>
-                <div class="panel-kicker">NEXT EXPERIMENTS</div>
+                <span class="section-eyebrow">NEXT EXPERIMENTS</span>
                 <h2>可检验的研究思路</h2>
               </div>
+              <span class="section-note">从今日文献延伸出的下一步</span>
             </div>
             <div id="ideas-list" class="ideas-list"></div>
           </section>
