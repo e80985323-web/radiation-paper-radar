@@ -323,12 +323,12 @@ a { color: inherit; }
 .featured-details-content { margin-top: 14px; padding: 24px 0 0; border: 0; border-radius: 0; color: #000; background: transparent; }
 .featured-details-content h4 { margin: 0 0 8px; color: var(--ink); font-size: var(--ios-footnote); font-weight: 650; }
 .featured-details-content h4:not(:first-child) { margin-top: 18px; }
-.featured-details-content p, .featured-details-content li { color: #000; font-size: var(--ios-subheadline); line-height: 1.7; }
+.featured-details-content p, .featured-details-content li { color: #000; font-size: var(--ios-body); line-height: 1.7; }
 .featured-details-content p { margin: 4px 0; }
 .featured-details-content ul { margin: 4px 0 0; padding-left: 18px; }
 .featured-details-content .term { padding: 9px 0; border-bottom: 1px solid #ededee; }
 .featured-details-content .term:last-child { border-bottom: 0; }
-.featured-details-content .term strong { color: #000; font-size: var(--ios-subheadline); }
+.featured-details-content .term strong { color: #000; font-size: var(--ios-body); }
 .featured-details-content .term em { color: #000; font-style: normal; }
 .featured-details-content .term p { margin: 3px 0 0; }
 .featured-finding-list { margin: 0; padding-left: 18px; }
@@ -425,14 +425,14 @@ a { color: inherit; }
 .paper-card > .finding-list,
 .paper-card > .details { max-width: 1280px; }
 .paper-card h3 { margin: 0 0 9px; font-size: var(--ios-title-2); font-weight: 650; line-height: 1.35; letter-spacing: .015em; }
-.paper-title-en { color: #000; font-size: var(--ios-subheadline); line-height: 1.6; overflow-wrap: anywhere; }
+.paper-title-en { color: #000; font-size: var(--ios-body); line-height: 1.6; overflow-wrap: anywhere; }
 .paper-meta { display: flex; flex-wrap: wrap; gap: 5px 12px; margin-top: 13px; color: var(--subtle); font-size: var(--ios-footnote); }
 .paper-meta span + span::before { margin-right: 12px; color: var(--line); content: "•"; }
 .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
 .tag, .tag-more { padding: 5px 8px; border: 1px solid #e5e5e7; border-radius: 999px; color: var(--muted); background: transparent; font-size: var(--ios-caption-1); }
 .tag-more { border-color: transparent; color: var(--subtle); }
-.why { margin: 17px 0 0; padding: 0 0 0 12px; border-left: 2px solid rgba(232, 93, 4, .42); color: #000; background: transparent; font-size: var(--ios-subheadline); line-height: 1.65; }
-.finding-list { margin: 15px 0 0; padding: 0 0 0 18px; color: #000; font-size: var(--ios-subheadline); line-height: 1.7; }
+.why { margin: 17px 0 0; padding: 0 0 0 12px; border-left: 2px solid rgba(232, 93, 4, .42); color: #000; background: transparent; font-size: var(--ios-body); line-height: 1.65; }
+.finding-list { margin: 15px 0 0; padding: 0 0 0 18px; color: #000; font-size: var(--ios-body); line-height: 1.7; }
 .finding-list li + li { margin-top: 6px; }
 .paper-footer { display: flex; align-items: center; justify-content: flex-start; gap: 12px; margin-top: 19px; padding-top: 16px; border-top: 1px solid #e5e5e7; }
 .paper-footer-leading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; min-width: 0; }
@@ -449,12 +449,12 @@ a { color: inherit; }
 .details summary:hover { color: var(--ink); }
 .details-content { padding-top: 8px; }
 .details-content h4 { margin: 14px 0 6px; color: var(--ink); font-size: var(--ios-footnote); font-weight: 650; }
-.details-content p, .details-content li { color: #000; font-size: var(--ios-subheadline); line-height: 1.7; }
+.details-content p, .details-content li { color: #000; font-size: var(--ios-body); line-height: 1.7; }
 .details-content p { margin: 4px 0; }
 .details-content ul { margin: 4px 0 0; padding-left: 16px; }
 .term { padding: 9px 0; border-bottom: 1px solid #ededee; }
 .term:last-child { border-bottom: 0; }
-.term strong { color: #000; font-size: var(--ios-subheadline); }
+.term strong { color: #000; font-size: var(--ios-body); }
 .term em { color: #000; font-style: normal; }
 .term p { margin: 3px 0 0; }
 .empty-state { padding: 48px 20px; border: 1px dashed var(--line); border-radius: 20px; color: var(--muted); text-align: center; font-size: var(--ios-callout); }
