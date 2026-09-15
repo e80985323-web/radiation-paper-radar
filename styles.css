@@ -221,7 +221,50 @@ a { color: inherit; }
 .error-banner { margin: 20px 0 0; padding: 13px 16px; border: 1px solid #f1b7b7; border-radius: 13px; color: #a22d2d; background: #fff5f5; font-size: var(--ios-subheadline); line-height: 1.6; }
 .stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; min-width: 0; margin: 28px 0 22px; }
 .stat { min-height: 112px; padding: 20px 21px; border-radius: 20px; background: var(--surface); }
-.stat-label { color: var(--subtle); font-size: var(--ios-footnote); }
+.stat-label { display: flex; align-items: center; gap: 6px; color: var(--subtle); font-size: var(--ios-footnote); }
+.stat-info {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--subtle);
+  background: transparent;
+  font: inherit;
+  font-size: var(--ios-caption-2);
+  font-weight: 700;
+  line-height: 1;
+  cursor: help;
+}
+.stat-info:hover,
+.stat-info:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+.stat-tooltip {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 8px);
+  right: 0;
+  width: min(360px, calc(100vw - 48px));
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  background: var(--page);
+  box-shadow: var(--shadow);
+  font-size: var(--ios-caption-1);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3px);
+  transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+  pointer-events: none;
+}
+.stat-info:hover .stat-tooltip,
+.stat-info:focus-visible .stat-tooltip { opacity: 1; visibility: visible; transform: translateY(0); }
 .stat-value { margin-top: 12px; color: var(--ink); font-size: var(--ios-large-title); font-weight: 650; letter-spacing: -.045em; }
 .stat-value.accent { color: var(--accent); }
 
@@ -338,7 +381,7 @@ a { color: inherit; }
   .filter-bar { align-items: stretch; flex-direction: column; gap: 20px; }
   .section-title h2 { font-size: 28px; }
   .stats-grid { width: 100%; max-width: 100%; grid-template-columns: minmax(0, 1fr); }
-  .stat { width: 100%; min-width: 0; max-width: 100%; overflow: hidden; padding: 18px 16px; }
+  .stat { width: 100%; min-width: 0; max-width: 100%; overflow: visible; padding: 18px 16px; }
   .stat-value { font-size: var(--ios-title-1); overflow-wrap: anywhere; word-break: break-all; }
   .filter-controls { width: 100%; min-width: 0; justify-content: flex-start; }
   .search-box { width: 100%; max-width: 100%; flex: 0 0 100%; }

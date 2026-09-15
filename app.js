@@ -96,18 +96,28 @@ function reportMetadata() {
   return state.report?.metadata || {};
 }
 
+function summarizeWindow(windowText) {
+  const text = String(windowText || "");
+  if (!text) return "—";
+  if (text.includes("最近7天")) return "近 7 日 · 自动扩展";
+  if (text.includes("近24小时")) return "近 24 小时优先";
+  return text;
+}
+
 function renderStats() {
   const metadata = reportMetadata();
   const articles = state.report?.articles || [];
   const topScore = Math.max(...articles.map((item) => Number(item.recommendation_score) || 0), 0);
+  const windowText = metadata.window || "";
+  const windowSummary = summarizeWindow(windowText);
   const stats = [
     ["最终精选", `${articles.length} 篇`, "accent"],
     ["最高推荐分", `${topScore} / 100`, "accent"],
     ["候选筛选", `${metadata.screened_count ?? "—"} 篇`, ""],
-    ["检索窗口", metadata.window || "—", ""],
+    ["本期检索范围", windowSummary, "", windowText],
   ];
-  elements.reportStats.innerHTML = stats.map(([label, value, tone]) => (
-    `<div class="stat"><div class="stat-label">${escapeHtml(label)}</div><div class="stat-value ${tone}">${escapeHtml(value)}</div></div>`
+  elements.reportStats.innerHTML = stats.map(([label, value, tone, detail]) => (
+    `<div class="stat"><div class="stat-label"><span>${escapeHtml(label)}</span>${detail && detail !== value ? `<button class="stat-info" type="button" aria-label="查看完整检索范围说明" title="${escapeHtml(detail)}"><span aria-hidden="true">i</span><span class="stat-tooltip" role="tooltip">${escapeHtml(detail)}</span></button>` : ""}</div><div class="stat-value ${tone}">${escapeHtml(value)}</div></div>`
   )).join("");
 }
 
