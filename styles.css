@@ -288,20 +288,22 @@ a { color: inherit; }
 
 .error-banner { margin: 20px 0 0; padding: 13px 16px; border: 1px solid #f1b7b7; border-radius: 13px; color: #a22d2d; background: #fff5f5; font-size: var(--ios-subheadline); line-height: 1.6; }
 .appendix-section { margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--subtle); scroll-margin-top: 88px; }
-.appendix-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; }
-.appendix-heading h2 { margin: 0; color: var(--ink); font-size: var(--ios-title-3); font-weight: 650; letter-spacing: -.03em; }
-.appendix-heading > span { padding-bottom: 2px; font-size: var(--ios-footnote); }
+.appendix-heading { display: block; color: var(--subtle); font-size: var(--ios-footnote); line-height: 1.65; }
+.appendix-heading > div, .appendix-heading > span { display: block; }
+.appendix-heading h2 { margin: 16px 0 0; color: inherit; font-size: inherit; font-weight: 400; letter-spacing: normal; }
+.appendix-heading > span { margin-top: 16px; padding: 0; font-size: inherit; }
 .section-kicker { margin: 0 0 7px; color: var(--accent); font-size: var(--ios-caption-1); font-weight: 700; letter-spacing: .14em; line-height: 1; text-transform: uppercase; }
-.appendix-stats { margin-top: 20px; }
-.provenance-grid { display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid #e5e5e7; }
-.provenance-item { display: grid; grid-template-columns: minmax(130px, 180px) minmax(0, 1fr); align-items: baseline; gap: 24px; min-width: 0; padding: 17px 0 18px; }
-.provenance-item + .provenance-item { padding-left: 0; border-top: 1px solid #e5e5e7; }
-.provenance-label { color: var(--subtle); font-size: var(--ios-footnote); }
-.provenance-item strong { color: var(--ink); font-size: var(--ios-subheadline); font-weight: 600; line-height: 1.45; overflow-wrap: anywhere; }
-.provenance-note { margin: 15px 0 0; color: var(--subtle); font-size: var(--ios-footnote); line-height: 1.65; }
-.provenance-notes { margin-top: 14px; border-top: 1px solid #e5e5e7; }
-.provenance-notes summary { padding-top: 13px; color: var(--blue); font-size: var(--ios-footnote); cursor: pointer; }
-.provenance-notes ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: var(--ios-footnote); line-height: 1.65; }
+.appendix-section .section-kicker { margin: 0; color: inherit; font-size: inherit; font-weight: 400; letter-spacing: normal; line-height: inherit; text-transform: none; }
+.appendix-stats { margin-top: 22px; }
+.provenance-grid { display: block; border: 0; }
+.provenance-item { display: block; min-width: 0; padding: 0; color: var(--subtle); font-size: var(--ios-footnote); font-weight: 400; line-height: 1.65; overflow-wrap: anywhere; }
+.provenance-item + .provenance-item { margin-top: 17px; padding-left: 0; border: 0; }
+.provenance-label, .provenance-item strong { color: inherit; font-size: inherit; font-weight: inherit; line-height: inherit; }
+.provenance-item strong::before { content: " "; }
+.provenance-note { margin: 21px 0 0; padding: 0; border: 0; color: var(--subtle); font-size: var(--ios-footnote); font-weight: 400; line-height: 1.65; }
+.provenance-notes { margin-top: 18px; border: 0; }
+.provenance-notes summary { padding: 0; color: var(--subtle); font-size: var(--ios-footnote); cursor: pointer; }
+.provenance-notes ul { margin: 10px 0 0; padding-left: 18px; color: var(--subtle); font-size: var(--ios-footnote); line-height: 1.65; }
 
 .featured-paper { margin: 24px 0 48px; }
 .featured-card {
@@ -481,11 +483,8 @@ a { color: inherit; }
   .history-stats { grid-column: 1; }
   .history-action { grid-column: 2; grid-row: 1 / span 2; }
   .appendix-section { margin-top: 58px; }
-  .appendix-heading { align-items: start; flex-direction: column; gap: 8px; }
-  .provenance-grid { grid-template-columns: minmax(0, 1fr); }
-  .provenance-item { grid-template-columns: minmax(108px, 120px) minmax(0, 1fr); gap: 10px; padding: 15px 0; }
-  .provenance-item + .provenance-item { padding-left: 0; border-left: 0; }
-  .provenance-item:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .appendix-heading { display: block; }
+  .provenance-item { padding: 0; }
   .ideas-section { margin-top: 78px; }
   .ideas-heading { margin-bottom: 36px; }
   .ideas-heading h2 { font-size: 42px; }
