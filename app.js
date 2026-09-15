@@ -258,7 +258,6 @@ async function start() {
     await loadReport(state.selectedDate);
   } catch (error) {
     showError(`日报读取失败：${error.message}。请确认站点已包含 data/index.json，并通过 HTTP 服务访问。`);
-    elements.latestDate.textContent = "数据尚未就绪";
   }
 }
 
