@@ -282,16 +282,16 @@ function renderFeaturedArticle(article) {
   elements.featuredPaper.hidden = false;
   elements.featuredPaper.innerHTML = `
     <article class="featured-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
-      <div class="featured-copy">
-        <h3>${escapeHtml(title)}</h3>
-        <p class="featured-summary">${escapeHtml(summary)}</p>
-        ${renderFeaturedDetails(article)}
-        <div class="featured-meta"><span>${escapeHtml(journal)}</span><span>${escapeHtml(date)}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
-        <div class="featured-bottom"><span class="featured-score">TOP1 ${escapeHtml(score)} 分</span>${evidenceStatus(article)}<a class="featured-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">阅读原文 <span aria-hidden="true">↗</span></a></div>
-      </div>
       <div class="featured-visual" aria-hidden="true">
         <div class="detector-graphic"><span class="detector-core"></span><span class="detector-node node-a"></span><span class="detector-node node-b"></span><span class="detector-node node-c"></span></div>
       </div>
+      <div class="featured-copy">
+        <h3>${escapeHtml(title)}</h3>
+        <p class="featured-summary">${escapeHtml(summary)}</p>
+        <div class="featured-meta"><span>${escapeHtml(journal)}</span><span>${escapeHtml(date)}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
+        <div class="featured-bottom"><span class="featured-score">TOP1 ${escapeHtml(score)} 分</span>${evidenceStatus(article)}<a class="featured-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">阅读原文 <span aria-hidden="true">↗</span></a></div>
+      </div>
+      ${renderFeaturedDetails(article)}
     </article>`;
 }
 
