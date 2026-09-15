@@ -350,15 +350,15 @@ a { color: inherit; }
   width: 100%;
   height: 360px;
   min-height: 360px;
-  place-items: start end;
-  padding: 40px 48px 0 0;
+  place-items: center;
+  padding: 0;
   overflow: hidden;
-  background: transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .18), rgba(255, 241, 231, .48));
   pointer-events: none;
 }
 .featured-visual::before, .featured-visual::after { position: absolute; border: 1px solid rgba(232, 93, 4, .15); border-radius: 50%; content: ""; }
-.featured-visual::before { top: 0; right: 0; width: 350px; height: 350px; }
-.featured-visual::after { top: 53px; right: 52px; width: 245px; height: 245px; border-color: rgba(232, 93, 4, .24); }
+.featured-visual::before { top: 50%; right: 50%; width: 350px; height: 350px; transform: translate(50%, -50%); }
+.featured-visual::after { top: 50%; right: 50%; width: 245px; height: 245px; border-color: rgba(232, 93, 4, .24); transform: translate(50%, -50%); }
 .detector-graphic { position: relative; width: 174px; height: 174px; border: 1px solid rgba(232, 93, 4, .48); border-radius: 50%; background: rgba(255, 255, 255, .72); box-shadow: none; }
 .detector-graphic::before, .detector-graphic::after { position: absolute; inset: 25px; border: 1px dashed rgba(232, 93, 4, .32); border-radius: 50%; content: ""; }
 .detector-graphic::after { inset: 54px; border-style: solid; background: rgba(255, 255, 255, .63); }
@@ -519,9 +519,9 @@ a { color: inherit; }
   .featured-copy { order: 2; width: 100%; min-width: 0; min-height: 0; padding: 28px 22px 0; }
   .featured-card h3, .featured-summary { max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
   .featured-card h3 { font-size: 30px; }
-  .featured-visual { order: 1; width: 100%; height: 230px; min-height: 230px; padding: 26px 24px 0 0; }
-  .featured-visual::before { width: 275px; height: 275px; }
-  .featured-visual::after { width: 190px; height: 190px; }
+  .featured-visual { order: 1; width: 100%; height: 230px; min-height: 230px; }
+  .featured-visual::before { width: 230px; height: 230px; }
+  .featured-visual::after { width: 166px; height: 166px; }
   .featured-details { order: 3; padding: 0 22px 28px; }
   .history-heading { display: block; }
   .history-row { padding: 0; }
