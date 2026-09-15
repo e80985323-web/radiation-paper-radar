@@ -160,7 +160,7 @@ def build(input_path: Path, site_root: Path) -> tuple[Path, Path]:
     }
     report = {
         "schema_version": 1,
-        "title": "辐射探测论文雷达",
+        "title": "Research Paper Daily",
         "date": date,
         "published_at": datetime.now(timezone.utc).isoformat(),
         "term_explanation_mode": "dual",
@@ -195,7 +195,7 @@ def build(input_path: Path, site_root: Path) -> tuple[Path, Path]:
     reports = [by_date[key] for key in sorted(by_date, reverse=True)]
     index = {
         "schema_version": 1,
-        "title": "辐射探测论文雷达",
+        "title": "Research Paper Daily",
         "description": "面向辐射探测、闪烁体、能谱、成像与信号读出的精选科研文献雷达。",
         "updated_at": report["published_at"],
         "latest_date": reports[0]["date"] if reports else date,
