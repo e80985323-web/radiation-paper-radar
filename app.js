@@ -12,6 +12,7 @@ const elements = {
   topicMenu: document.querySelector("#topic-menu"),
   topicCurrent: document.querySelector("#topic-current"),
   tagFilters: document.querySelector("#tag-filters"),
+  tagPreview: document.querySelector("#tag-preview"),
   resetButton: document.querySelector("#reset-button"),
   reportStats: document.querySelector("#report-stats"),
   featuredPaper: document.querySelector("#featured-paper"),
@@ -82,19 +83,22 @@ function allTags() {
 }
 
 function renderTagFilters() {
+  const tags = allTags();
+  const buttonMarkup = (tag, className) => (
+    `<button class="${className} ${tag === state.activeTag ? "active" : ""}" type="button" data-tag="${escapeHtml(tag)}" aria-pressed="${tag === state.activeTag}">${escapeHtml(tag)}</button>`
+  );
+  const selectTag = (event) => {
+    state.activeTag = event.currentTarget.dataset.tag || "全部";
+    elements.topicMenu.open = false;
+    renderTagFilters();
+    renderArticles();
+    document.querySelector("#papers")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   elements.topicCurrent.textContent = state.activeTag;
-  elements.tagFilters.innerHTML = allTags().map((tag) => (
-    `<button class="tag-filter ${tag === state.activeTag ? "active" : ""}" type="button" data-tag="${escapeHtml(tag)}" aria-pressed="${tag === state.activeTag}">${escapeHtml(tag)}</button>`
-  )).join("");
-  elements.tagFilters.querySelectorAll("[data-tag]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.activeTag = button.dataset.tag || "全部";
-      elements.topicMenu.open = false;
-      renderTagFilters();
-      renderArticles();
-      document.querySelector("#papers")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
+  elements.tagFilters.innerHTML = tags.map((tag) => buttonMarkup(tag, "tag-filter")).join("");
+  elements.tagPreview.innerHTML = tags.slice(1, 6).map((tag) => buttonMarkup(tag, "topic-preview-filter")).join("");
+  elements.tagFilters.querySelectorAll("[data-tag]").forEach((button) => button.addEventListener("click", selectTag));
+  elements.tagPreview.querySelectorAll("[data-tag]").forEach((button) => button.addEventListener("click", selectTag));
 }
 
 function reportMetadata() {
