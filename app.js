@@ -375,7 +375,7 @@ function renderIdeas() {
 function renderReportChrome() {
   const date = state.report?.date || state.selectedDate;
   elements.updatedAt.textContent = state.report?.published_at ? `更新于 ${new Date(state.report.published_at).toLocaleString("zh-CN")}` : "—";
-  document.title = date ? `${formatDate(date)} · Research Paper Daily` : "Research Paper Daily";
+  document.title = "Research Paper Daily";
 }
 
 function renderAll() {
