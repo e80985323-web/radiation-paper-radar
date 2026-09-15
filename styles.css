@@ -340,6 +340,8 @@ a { color: inherit; }
   background: #fff;
   transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
+.paper-card[data-paper-href], .featured-card[data-paper-href] { cursor: pointer; }
+.paper-card[data-paper-href]:focus-visible, .featured-card[data-paper-href]:focus-visible { outline: 3px solid rgba(0, 122, 255, .3); outline-offset: 5px; }
 .paper-card:hover { border-color: #b8b8bd; box-shadow: var(--shadow-hover); transform: translateY(-3px); }
 .paper-topline { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
 .score { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 999px; color: var(--accent); background: var(--accent-soft); font-size: var(--ios-footnote); font-weight: 700; }

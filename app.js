@@ -39,6 +39,28 @@ function safeHref(value) {
   return /^https?:\/\//i.test(text) ? text : "#";
 }
 
+function openPaperLink(href) {
+  const target = safeHref(href);
+  if (target === "#") return;
+  window.open(target, "_blank", "noopener,noreferrer");
+}
+
+function bindCardNavigation(container) {
+  container.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    const card = target?.closest(".featured-card, .paper-card");
+    if (!card || !container.contains(card) || target.closest("a, button, summary, details")) return;
+    openPaperLink(card.dataset.paperHref);
+  });
+  container.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const card = event.target instanceof Element ? event.target.closest(".featured-card, .paper-card") : null;
+    if (!card || event.target !== card || !container.contains(card)) return;
+    event.preventDefault();
+    openPaperLink(card.dataset.paperHref);
+  });
+}
+
 function formatDate(dateText) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(dateText || "")) return dateText || "—";
   const date = new Date(`${dateText}T00:00:00+08:00`);
@@ -195,12 +217,12 @@ function renderFeaturedArticle(article) {
   const date = article.publication_date || "日期待核实";
   elements.featuredPaper.hidden = false;
   elements.featuredPaper.innerHTML = `
-    <article class="featured-card">
+    <article class="featured-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
       <div class="featured-copy">
         <h3>${escapeHtml(title)}</h3>
         <p class="featured-summary">${escapeHtml(summary)}</p>
         <div class="featured-meta"><span>${escapeHtml(journal)}</span><span>${escapeHtml(date)}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
-        <div class="featured-bottom"><span class="featured-score">推荐 ${escapeHtml(score)} 分</span><a class="featured-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">阅读原文 <span aria-hidden="true">↗</span></a></div>
+        <div class="featured-bottom"><span class="featured-score">推荐 ${escapeHtml(score)} 分</span><a class="featured-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">阅读原文 <span aria-hidden="true">↗</span></a></div>
       </div>
       <div class="featured-visual" aria-hidden="true">
         <div class="detector-graphic"><span class="detector-core"></span><span class="detector-node node-a"></span><span class="detector-node node-b"></span><span class="detector-node node-c"></span></div>
@@ -216,7 +238,7 @@ function renderPaperCard(article) {
   const topBadge = article.top3_reason ? `<span class="top-badge">重点推荐</span>` : "";
   const findings = (article.core_findings || []).slice(0, 3);
   return `
-    <article class="paper-card">
+    <article class="paper-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
       <div class="paper-topline"><span class="score">${escapeHtml(score)} 分</span></div>
       <h3>${escapeHtml(title)}</h3>
       ${englishTitle ? `<div class="paper-title-en">${escapeHtml(englishTitle)}</div>` : ""}
@@ -225,7 +247,7 @@ function renderPaperCard(article) {
       ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
       ${renderList(findings, "finding-list")}
       ${renderDetails(article)}
-      <div class="paper-footer">${topBadge}<a class="paper-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">打开 DOI / 原文 ↗</a></div>
+      <div class="paper-footer">${topBadge}<a class="paper-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">打开 DOI / 原文 ↗</a></div>
     </article>`;
 }
 
@@ -293,5 +315,8 @@ elements.resetButton.addEventListener("click", () => {
   renderTagFilters();
   renderArticles();
 });
+
+bindCardNavigation(elements.featuredPaper);
+bindCardNavigation(elements.paperGrid);
 
 start();
