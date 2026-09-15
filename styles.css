@@ -261,7 +261,7 @@ a { color: inherit; }
 .search-box input:focus, .field-control:focus { border-color: rgba(0, 113, 227, .58); background: #fff; box-shadow: 0 0 0 4px rgba(0, 113, 227, .12); }
 .date-box { width: clamp(205px, 19vw, 260px); }
 .date-box::after { position: absolute; top: 50%; right: 17px; width: 8px; height: 8px; margin-top: -5px; border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted); content: ""; transform: rotate(45deg); pointer-events: none; }
-.field-control { padding-right: 42px; appearance: none; cursor: pointer; text-overflow: ellipsis; white-space: nowrap; }
+.field-control { padding-right: 42px; -webkit-appearance: none; appearance: none; cursor: pointer; text-overflow: ellipsis; white-space: nowrap; }
 .reset-button {
   min-height: 50px;
   padding: 0 13px;
