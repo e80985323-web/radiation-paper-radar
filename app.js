@@ -164,88 +164,6 @@ function searchableText(article) {
   ].join(" ").toLocaleLowerCase("zh-CN");
 }
 
-function paperVisualVariant(article) {
-  const tags = (article.tags || []).join(" ");
-  if (/符合测量/.test(tags)) return "coincidence";
-  if (/读出电子学|SiPM/.test(tags)) return "readout";
-  if (/半导体探测器|异质结|钙钛矿|硅探测器/.test(tags)) return "semiconductor";
-  if (/标定|校正|响应|栅格/.test(tags)) return "calibration";
-  if (/成像|微通道|闪烁屏|X射线/.test(tags)) return "imaging";
-  if (/闪烁体/.test(tags)) return "scintillator";
-  return "detector";
-}
-
-function renderPaperVisual(article) {
-  const variant = paperVisualVariant(article);
-  const drawings = {
-    imaging: `
-      <svg viewBox="0 0 120 88" focusable="false">
-        <rect class="art-stroke" x="14" y="12" width="46" height="60" rx="6"></rect>
-        <path class="art-faint" d="M20 60 29 49l9 7 10-19 7 10"></path>
-        <circle class="art-accent-fill" cx="48" cy="36" r="3"></circle>
-        <path class="art-stroke" d="M76 24h28M76 33h20M76 42h13"></path>
-        <path class="art-accent-line" d="M76 58c6-8 12-8 18 0s12 8 18 0"></path>
-        <path class="art-faint" d="M78 65h24"></path>
-      </svg>`,
-    semiconductor: `
-      <svg viewBox="0 0 120 88" focusable="false">
-        <rect class="art-stroke" x="12" y="16" width="46" height="55" rx="6"></rect>
-        <path class="art-faint" d="M24 16v55M36 16v55M48 16v55M12 29h46M12 42h46M12 55h46"></path>
-        <circle class="art-accent-fill" cx="24" cy="29" r="3"></circle>
-        <circle class="art-accent-fill" cx="48" cy="55" r="3"></circle>
-        <path class="art-accent-line" d="M77 21v45M70 29l7-8 7 8M70 57l7 9 7-9"></path>
-        <path class="art-stroke" d="M88 28h19M88 44h13M88 59h19"></path>
-      </svg>`,
-    calibration: `
-      <svg viewBox="0 0 120 88" focusable="false">
-        <path class="art-stroke" d="M16 69V15M16 69h91"></path>
-        <path class="art-faint" d="M29 69V23M43 69V23M57 69V23M71 69V23M85 69V23M99 69V23"></path>
-        <path class="art-accent-line" d="M19 60c12-4 17-22 28-19 10 3 12 14 20 8 10-8 16-26 37-30"></path>
-        <circle class="art-accent-fill" cx="67" cy="49" r="3"></circle>
-        <path class="art-stroke" d="M83 19h20v20M103 19 83 39"></path>
-      </svg>`,
-    coincidence: `
-      <svg viewBox="0 0 120 88" focusable="false">
-        <rect class="art-stroke" x="13" y="16" width="29" height="18" rx="4"></rect>
-        <rect class="art-stroke" x="13" y="54" width="29" height="18" rx="4"></rect>
-        <path class="art-faint" d="M49 25h56M49 63h56"></path>
-        <path class="art-accent-line" d="M51 25h10l4-9 7 19 6-10h18M51 63h10l4-9 7 19 6-10h18"></path>
-        <path class="art-stroke" d="M88 14v60"></path>
-        <path class="art-accent-line" d="M88 35v18"></path>
-        <circle class="art-accent-fill" cx="88" cy="44" r="3"></circle>
-      </svg>`,
-    readout: `
-      <svg viewBox="0 0 120 88" focusable="false">
-        <rect class="art-stroke" x="12" y="19" width="35" height="49" rx="6"></rect>
-        <circle class="art-accent-fill" cx="23" cy="31" r="2.7"></circle>
-        <circle class="art-accent-fill" cx="35" cy="43" r="2.7"></circle>
-        <circle class="art-accent-fill" cx="23" cy="55" r="2.7"></circle>
-        <path class="art-faint" d="M50 31h11M50 43h11M50 55h11"></path>
-        <path class="art-stroke" d="M61 31h8l5 10 6-20 7 36 6-18h11"></path>
-        <path class="art-accent-line" d="M61 55h13"></path>
-        <circle class="art-accent-fill" cx="102" cy="39" r="3"></circle>
-      </svg>`,
-    scintillator: `
-      <svg viewBox="0 0 120 88" focusable="false">
-        <path class="art-stroke" d="m18 25 21-9 19 11-21 10zM18 25v28l19 12V37M58 27v28L37 65"></path>
-        <path class="art-accent-line" d="M72 20c8 8-5 14 5 23 8 7-2 13 6 23"></path>
-        <path class="art-accent-line" d="M91 18c-5 6 5 10 0 16M103 31c-6 6 5 11-1 18"></path>
-        <circle class="art-accent-fill" cx="76" cy="43" r="3"></circle>
-        <path class="art-faint" d="M69 70h36"></path>
-      </svg>`,
-    detector: `
-      <svg viewBox="0 0 120 88" focusable="false">
-        <circle class="art-stroke" cx="43" cy="44" r="27"></circle>
-        <circle class="art-faint" cx="43" cy="44" r="17"></circle>
-        <circle class="art-accent-fill" cx="43" cy="44" r="4"></circle>
-        <path class="art-accent-line" d="M75 21h28M75 44h19M75 67h28"></path>
-        <circle class="art-accent-fill" cx="75" cy="21" r="3"></circle>
-        <circle class="art-accent-fill" cx="94" cy="44" r="3"></circle>
-      </svg>`,
-  };
-  return `<div class="paper-art paper-art-${variant}" aria-hidden="true">${drawings[variant]}</div>`;
-}
-
 function filteredArticles() {
   const query = state.query.trim().toLocaleLowerCase("zh-CN");
   return (state.report?.articles || []).filter((article) => {
@@ -342,13 +260,8 @@ function renderPaperCard(article) {
   const findings = (article.core_findings || []).slice(0, 3);
   return `
     <article class="paper-card" role="link" tabindex="0" data-paper-href="${escapeHtml(href)}" aria-label="打开论文：${escapeHtml(title)}">
-      <div class="paper-card-intro">
-        <div class="paper-card-copy">
-          <h3>${escapeHtml(title)}</h3>
-          ${englishTitle ? `<div class="paper-title-en">${escapeHtml(englishTitle)}</div>` : ""}
-        </div>
-        ${renderPaperVisual(article)}
-      </div>
+      <h3>${escapeHtml(title)}</h3>
+      ${englishTitle ? `<div class="paper-title-en">${escapeHtml(englishTitle)}</div>` : ""}
       <div class="paper-meta"><span>${escapeHtml(article.journal || "期刊待核实")}</span><span>${escapeHtml(article.publication_date || "日期待核实")}</span><span>${escapeHtml(article.article_type || "论文")}</span></div>
       <div class="tag-row">${(article.tags || []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
       ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
