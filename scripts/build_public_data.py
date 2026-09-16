@@ -41,11 +41,131 @@ def as_text_list(value: Any) -> list[str]:
     return [item.strip() for item in value if isinstance(item, str) and item.strip()]
 
 
+def as_text_or_list(value: Any) -> list[str]:
+    if isinstance(value, list):
+        return as_text_list(value)
+    text = as_text(value)
+    return [text] if text else []
+
+
+def nonnegative_int(value: Any) -> int:
+    return value if isinstance(value, int) and not isinstance(value, bool) and value >= 0 else 0
+
+
 def safe_url(value: Any) -> str:
     value = as_text(value)
     if value.startswith("https://") or value.startswith("http://"):
         return value
     return ""
+
+
+def normalize_public_doi(value: Any) -> str:
+    text = as_text(value)
+    text = re.sub(r"^(?:https?://(?:dx\.)?doi\.org/|doi:\s*)", "", text, flags=re.IGNORECASE)
+    text = text.rstrip(" .")
+    return text if re.fullmatch(r"10\.\d{4,9}/\S+", text) else ""
+
+
+def public_evidence_paper(value: Any) -> dict[str, str]:
+    if not isinstance(value, dict):
+        return {}
+    title = as_text(value.get("title"))
+    doi = normalize_public_doi(value.get("doi"))
+    url = safe_url(value.get("url"))
+    if not url and doi.startswith("10."):
+        url = f"https://doi.org/{doi}"
+    if not title or not url:
+        return {}
+    result = {
+        "title": title,
+        "year": as_text(value.get("year")),
+        "doi": doi,
+        "url": url,
+        "relation": as_text(value.get("relation")),
+    }
+    return {key: item for key, item in result.items() if item}
+
+
+def public_related_work_review(value: Any) -> dict[str, Any]:
+    if not isinstance(value, dict):
+        return {}
+    status = as_text(value.get("status"))
+    result: dict[str, Any] = {
+        "status": status,
+        "searched_at": as_text(value.get("searched_at")),
+        "search_window": as_text(value.get("search_window")),
+        "candidate_count": nonnegative_int(value.get("candidate_count")),
+        "verified_count": nonnegative_int(value.get("verified_count")),
+        "searched_sources": as_text_or_list(value.get("searched_sources")),
+        "limitations": as_text_or_list(value.get("limitations")),
+    }
+    if status == "no_reliable_judgment":
+        result["reason"] = as_text(value.get("reason"))
+        return {key: item for key, item in result.items() if item not in ("", [], 0)}
+    themes = []
+    for raw_theme in value.get("themes") if isinstance(value.get("themes"), list) else []:
+        if not isinstance(raw_theme, dict):
+            continue
+        raw_works = raw_theme.get("representative_works")
+        works = [
+            paper
+            for paper in (public_evidence_paper(item) for item in raw_works)
+            if paper
+        ] if isinstance(raw_works, list) else []
+        theme = {
+            "title": as_text(raw_theme.get("title")),
+            "related_work_status": as_text_or_list(raw_theme.get("related_work_status")),
+            "today_increment": as_text_or_list(raw_theme.get("today_increment")),
+            "research_gap": as_text_or_list(raw_theme.get("research_gap")),
+            "secondary_judgment": as_text_or_list(raw_theme.get("secondary_judgment")),
+            "paper_angle": as_text_or_list(raw_theme.get("paper_angle")),
+            "minimum_validation": as_text_or_list(raw_theme.get("minimum_validation")),
+            "novelty_risk": as_text_or_list(raw_theme.get("novelty_risk")),
+            "confidence": as_text(raw_theme.get("confidence")),
+            "representative_works": works,
+        }
+        if theme["title"] and works:
+            themes.append(theme)
+    result["themes"] = themes
+    return {key: item for key, item in result.items() if item not in ("", [], 0)}
+
+
+def public_publication_opportunities(value: Any) -> dict[str, Any]:
+    if not isinstance(value, dict):
+        return {}
+    status = as_text(value.get("status"))
+    result: dict[str, Any] = {
+        "status": status,
+        "overall_judgment": as_text(value.get("overall_judgment")),
+    }
+    if status == "no_reliable_judgment":
+        result["reason"] = as_text(value.get("reason"))
+        return {key: item for key, item in result.items() if item}
+    opportunities = []
+    for raw_opportunity in value.get("opportunities") if isinstance(value.get("opportunities"), list) else []:
+        if not isinstance(raw_opportunity, dict):
+            continue
+        raw_evidence = raw_opportunity.get("evidence_papers")
+        evidence = [
+            paper
+            for paper in (public_evidence_paper(item) for item in raw_evidence)
+            if paper
+        ] if isinstance(raw_evidence, list) else []
+        opportunity = {
+            "title": as_text(raw_opportunity.get("title")),
+            "research_gap": as_text_or_list(raw_opportunity.get("research_gap")),
+            "why_worth_doing": as_text_or_list(raw_opportunity.get("why_worth_doing")),
+            "recommended_work": as_text_or_list(raw_opportunity.get("recommended_work")),
+            "paper_contribution": as_text_or_list(raw_opportunity.get("paper_contribution")),
+            "daily_evidence": as_text_or_list(raw_opportunity.get("daily_evidence")),
+            "main_risks": as_text_or_list(raw_opportunity.get("main_risks")),
+            "article_type": as_text(raw_opportunity.get("article_type")),
+            "evidence_papers": evidence,
+        }
+        if opportunity["title"] and evidence:
+            opportunities.append(opportunity)
+    result["opportunities"] = opportunities
+    return {key: item for key, item in result.items() if item not in ("", [], 0)}
 
 
 def score_map(value: Any) -> dict[str, int]:
@@ -161,7 +281,7 @@ def build(input_path: Path, site_root: Path) -> tuple[Path, Path]:
         "warnings": as_text_list(metadata.get("warnings")),
     }
     report = {
-        "schema_version": 1,
+        "schema_version": 2,
         "title": "Research Paper Daily",
         "date": date,
         "published_at": datetime.now(timezone.utc).isoformat(),
@@ -169,6 +289,8 @@ def build(input_path: Path, site_root: Path) -> tuple[Path, Path]:
         "metadata": public_metadata,
         "articles": articles,
         "research_ideas": as_text_list(source.get("research_ideas")),
+        "related_work_review": public_related_work_review(source.get("related_work_review")),
+        "publication_opportunities": public_publication_opportunities(source.get("publication_opportunities")),
     }
 
     data_root = site_root / "data"

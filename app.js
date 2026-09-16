@@ -21,6 +21,11 @@ const elements = {
   reportStatus: document.querySelector("#report-status"),
   paperGrid: document.querySelector("#paper-grid"),
   emptyState: document.querySelector("#empty-state"),
+  researchInsights: document.querySelector("#research-insights"),
+  relatedWorkMeta: document.querySelector("#related-work-meta"),
+  relatedWorkContent: document.querySelector("#related-work-content"),
+  publicationOpportunitiesMeta: document.querySelector("#publication-opportunities-meta"),
+  publicationOpportunitiesContent: document.querySelector("#publication-opportunities-content"),
   ideasSection: document.querySelector("#ideas-section"),
   ideasList: document.querySelector("#ideas-list"),
   updatedAt: document.querySelector("#updated-at"),
@@ -250,6 +255,154 @@ function renderList(items, className = "") {
   return `<ul class="${className}">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
 }
 
+function textList(value) {
+  if (Array.isArray(value)) return value.map((item) => String(item ?? "").trim()).filter(Boolean);
+  const text = String(value ?? "").trim();
+  return text ? [text] : [];
+}
+
+function renderInsightList(value, className = "insight-list") {
+  return renderList(textList(value), className);
+}
+
+function renderInsightField(label, value) {
+  const values = textList(value);
+  if (!values.length) return "";
+  return `<div class="insight-field"><dt>${escapeHtml(label)}</dt><dd>${renderInsightList(values)}</dd></div>`;
+}
+
+function evidenceHref(paper) {
+  const direct = safeHref(paper?.url);
+  if (direct !== "#") return direct;
+  const doi = String(paper?.doi ?? "").trim().replace(/^(?:https?:\/\/(?:dx\.)?doi\.org\/|doi:\s*)/i, "");
+  return /^10\.\S+$/i.test(doi) ? safeHref(`https://doi.org/${doi}`) : "#";
+}
+
+function renderEvidenceLinks(papers) {
+  const entries = Array.isArray(papers) ? papers.filter((paper) => paper && typeof paper === "object") : [];
+  if (!entries.length) return `<p class="insight-no-data">暂未列出可访问的支撑论文。</p>`;
+  return `<ul class="insight-evidence-list">${entries.map((paper) => {
+    const title = String(paper.title || "未命名论文").trim();
+    const href = evidenceHref(paper);
+    const metadata = [paper.year, paper.relation].map((item) => String(item ?? "").trim()).filter(Boolean).join(" · ");
+    const titleMarkup = href === "#"
+      ? escapeHtml(title)
+      : `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(title)} <span aria-hidden="true">↗</span></a>`;
+    return `<li><span class="insight-evidence-title">${titleMarkup}</span>${metadata ? `<span class="insight-evidence-meta">${escapeHtml(metadata)}</span>` : ""}</li>`;
+  }).join("")}</ul>`;
+}
+
+function renderInsightUnavailable(reason, fallback) {
+  return `<div class="insight-unavailable"><p>${escapeHtml(reason || fallback)}</p><span>本期不沿用前一天的判断。</span></div>`;
+}
+
+function renderRelatedWork() {
+  const review = state.report?.related_work_review;
+  const fallback = "本期日报生成时尚未接入联网查新结果，不能把历史内容补写成当天判断。";
+  if (!review || typeof review !== "object") {
+    elements.relatedWorkMeta.textContent = "暂无可靠判断";
+    elements.relatedWorkContent.innerHTML = renderInsightUnavailable("", fallback);
+    return;
+  }
+  const status = String(review.status || "").toLowerCase();
+  if (status === "no_reliable_judgment") {
+    elements.relatedWorkMeta.textContent = "本期不下结论";
+    elements.relatedWorkContent.innerHTML = renderInsightUnavailable(review.reason, "本期暂无足够证据形成可靠查新判断。");
+    return;
+  }
+  const themes = Array.isArray(review.themes) ? review.themes.filter((theme) => theme && typeof theme === "object") : [];
+  if (status !== "evidence_reviewed" || !themes.length) {
+    elements.relatedWorkMeta.textContent = "暂无可靠判断";
+    elements.relatedWorkContent.innerHTML = renderInsightUnavailable("", fallback);
+    return;
+  }
+  const metadata = [
+    review.search_window,
+    Number.isInteger(review.candidate_count) ? `候选 ${review.candidate_count} 篇` : "",
+    Number.isInteger(review.verified_count) ? `核实 ${review.verified_count} 篇` : "",
+  ].map((item) => String(item ?? "").trim()).filter(Boolean);
+  elements.relatedWorkMeta.textContent = metadata.join(" · ") || "联网查新已完成";
+  const sourceLine = textList(review.searched_sources).length
+    ? `<p class="insight-source-line">检索来源：${escapeHtml(textList(review.searched_sources).join(" · "))}</p>`
+    : "";
+  const limitations = textList(review.limitations);
+  elements.relatedWorkContent.innerHTML = `
+    ${sourceLine}
+    <div class="insight-theme-list">
+      ${themes.map((theme, index) => `
+        <article class="insight-theme">
+          <div class="insight-theme-heading">
+            <div class="insight-theme-title"><span class="insight-index">${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(theme.title || `研究主题 ${index + 1}`)}</h3></div>
+            ${theme.confidence ? `<span class="insight-confidence">${escapeHtml(theme.confidence)}</span>` : ""}
+          </div>
+          <dl class="insight-fields">
+            ${renderInsightField("相关工作已经做到哪里", theme.related_work_status)}
+            ${renderInsightField("当天论文带来的进展", theme.today_increment)}
+            ${renderInsightField("仍有研究价值的缺口", theme.research_gap)}
+            ${renderInsightField("二次研究判断", theme.secondary_judgment)}
+            ${renderInsightField("建议论文切口", theme.paper_angle)}
+            ${renderInsightField("最低验证要求", theme.minimum_validation)}
+            ${renderInsightField("新颖性风险", theme.novelty_risk)}
+          </dl>
+          <div class="insight-evidence"><p class="insight-field-label">代表性工作</p>${renderEvidenceLinks(theme.representative_works)}</div>
+        </article>`).join("")}
+    </div>
+    ${limitations.length ? `<div class="insight-limitations"><p class="insight-field-label">查新边界与限制</p>${renderInsightList(limitations)}</div>` : ""}
+  `;
+}
+
+function renderPublicationOpportunities() {
+  const report = state.report?.publication_opportunities;
+  const fallback = "本期日报生成时尚未接入联网查新结果，不能把历史内容补写成当天判断。";
+  if (!report || typeof report !== "object") {
+    elements.publicationOpportunitiesMeta.textContent = "暂无可靠判断";
+    elements.publicationOpportunitiesContent.innerHTML = renderInsightUnavailable("", fallback);
+    return;
+  }
+  const status = String(report.status || "").toLowerCase();
+  if (status === "no_reliable_judgment") {
+    elements.publicationOpportunitiesMeta.textContent = "本期不下结论";
+    elements.publicationOpportunitiesContent.innerHTML = renderInsightUnavailable(report.reason, "本期暂无足够证据形成可靠发文判断。");
+    return;
+  }
+  const opportunities = Array.isArray(report.opportunities)
+    ? report.opportunities.filter((opportunity) => opportunity && typeof opportunity === "object")
+    : [];
+  if (status !== "evidence_reviewed" || !opportunities.length) {
+    elements.publicationOpportunitiesMeta.textContent = "暂无可靠判断";
+    elements.publicationOpportunitiesContent.innerHTML = renderInsightUnavailable("", fallback);
+    return;
+  }
+  elements.publicationOpportunitiesMeta.textContent = `${opportunities.length} 个方向 · 基于当日论文`;
+  elements.publicationOpportunitiesContent.innerHTML = `
+    ${report.overall_judgment ? `<p class="insight-overall">${escapeHtml(report.overall_judgment)}</p>` : ""}
+    <div class="insight-opportunity-list">
+      ${opportunities.map((opportunity, index) => `
+        <article class="insight-opportunity">
+          <div class="insight-theme-heading">
+            <div class="insight-theme-title"><span class="insight-index">${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(opportunity.title || `研究机会 ${index + 1}`)}</h3></div>
+            ${opportunity.article_type ? `<span class="insight-confidence">${escapeHtml(opportunity.article_type)}</span>` : ""}
+          </div>
+          <dl class="insight-fields">
+            ${renderInsightField("研究空白", opportunity.research_gap)}
+            ${renderInsightField("为什么值得开展", opportunity.why_worth_doing)}
+            ${renderInsightField("建议工作", opportunity.recommended_work)}
+            ${renderInsightField("可形成的论文贡献", opportunity.paper_contribution)}
+            ${renderInsightField("当日文献依据", opportunity.daily_evidence)}
+            ${renderInsightField("主要风险", opportunity.main_risks)}
+          </dl>
+          <div class="insight-evidence"><p class="insight-field-label">支撑论文</p>${renderEvidenceLinks(opportunity.evidence_papers)}</div>
+        </article>`).join("")}
+    </div>
+  `;
+}
+
+function renderResearchInsights() {
+  elements.researchInsights.hidden = false;
+  renderRelatedWork();
+  renderPublicationOpportunities();
+}
+
 function renderDetailContent(article) {
   const terms = article.term_explanations || [];
   const inspiration = article.research_inspiration || {};
@@ -398,6 +551,7 @@ function renderAll() {
   renderAppendix();
   renderTagFilters();
   renderArticles();
+  renderResearchInsights();
   renderHistory();
   renderIdeas();
 }
