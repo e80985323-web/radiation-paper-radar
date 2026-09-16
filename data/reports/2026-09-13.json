@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "title": "Research Paper Daily",
   "date": "2026-09-13",
   "published_at": "2026-09-13T06:52:29.667088+00:00",
@@ -952,5 +952,380 @@
     "建立‘材料/探测器响应—信号波形—能谱反演—质量控制’一体化验证平台：用准单能中子或标准伽马源产生可追溯数据，同时记录光子时间、脉冲高度和多通道健康状态。",
     "围绕低剂量、高分辨率闪烁成像，比较透明复合涂层、单晶薄膜和低维卤化物晶体的厚度—光散射—光产额—分辨率权衡，并加入温度与辐照老化测试。",
     "将设备专属蒙特卡洛响应矩阵与异常检测结合：先自动剔除坏道/漂移通道，再进行能谱展开和核素识别，使用独立标准源与飞行时间或第二种谱仪交叉验证。"
-  ]
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "review_type": "historical_backfill",
+    "reviewed_at": "2026-09-17",
+    "searched_at": "2026-09-17",
+    "search_window": "主要覆盖2021-09-17至2026-09-17；直接相关的经典基线研究适度向前回溯。",
+    "search_scope": [
+      "液氙 LZ 脉冲形状判别、光子到达时间与波形分类",
+      "EJ-315 氘化液闪的中子响应、准单能标定与能谱反演",
+      "HPGe 与 UAV/UAS γ 能谱的现场校准、响应建模及计量溯源",
+      "卤化物闪烁体的 X 射线成像、空间分辨率与辐照/环境稳定性"
+    ],
+    "anchor_article_count": 10,
+    "candidate_count": 9,
+    "verified_count": 9,
+    "searched_sources": [
+      "OpenAlex",
+      "学术网页主题检索",
+      "期刊/出版社论文页面与摘要"
+    ],
+    "limitations": [
+      "本条为 2026-09-17 执行的历史回溯查新；检索锚点是 9/13 日报收录的 10 篇论文，不是 9/13 当时已经形成的查新结论。",
+      "候选/核实计数仅统计页面列出的代表性论文；检索窗口以近五年为主，EJ-315 响应基线额外纳入 2013/2016 年工作；不是穷尽式系统综述。",
+      "判断依据以期刊/出版社可见题录和摘要为主；付费全文中的实验细节仍需作者逐篇核验，不能据此断言无先行工作或全球首发。"
+    ],
+    "themes": [
+      {
+        "title": "液氙波形判别：从分类器转向物理量联合与跨数据验证",
+        "related_work_status": [
+          "双相氙 TPC 已有 XENONnT 实测的贝叶斯波形属性分析，也有用 LZ 模拟数据作代理的机器学习分类流程。"
+        ],
+        "today_increment": [
+          "9/13 锚点把光子到达时间尾部特征与电荷/光信息联合；“首次把机器学习用于液氙脉冲分类”不成立。"
+        ],
+        "research_gap": [
+          "现有工作间数据集、能区、标签来源与评估指标并不统一；低能区、漂移时间和探测器状态变化下的泛化仍需同一基准检验。"
+        ],
+        "secondary_judgment": [
+          "方向有研究空间，但贡献应落在可解释的物理特征、独立实测验证及系统误差，而不是换一个分类算法。"
+        ],
+        "paper_angle": [
+          "构建 photon-timing 与 S1/S2 互补判别，并在不同校准期/独立运行数据上检验稳定性。"
+        ],
+        "minimum_validation": [
+          "使用真实校准或物理运行数据；留出独立测试集；与传统 cut、贝叶斯方法及现有 ML 同指标对比；报告效率、泄漏率、能区依赖和不确定度。"
+        ],
+        "novelty_risk": [
+          "通用 ML/波形分类新颖性风险高；2022 工作有模拟代理数据边界，不能将模拟精度直接当作实测性能。"
+        ],
+        "confidence": "中等",
+        "representative_works": [
+          {
+            "title": "Detector signal characterization with a Bayesian network in XENONnT",
+            "year": "2023",
+            "doi": "10.1103/PhysRevD.108.012016",
+            "url": "https://doi.org/10.1103/PhysRevD.108.012016",
+            "relation": "实测波形特征分类基线。"
+          },
+          {
+            "title": "A machine learning-based methodology for pulse classification in dual-phase xenon time projection chambers",
+            "year": "2022",
+            "doi": "10.1140/epjc/s10052-022-10502-x",
+            "url": "https://doi.org/10.1140/epjc/s10052-022-10502-x",
+            "relation": "模拟代理数据上的分类流程基线。"
+          }
+        ]
+      },
+      {
+        "title": "EJ-315 中子响应：紧凑几何、响应矩阵与谱反演",
+        "related_work_status": [
+          "EJ-315 的中子光输出、响应矩阵、TOF 测量与 PSD 已有多年基线；另有 EJ-301 的 ANN 能谱反演，但那是不同闪烁液且训练依赖模拟。"
+        ],
+        "today_increment": [
+          "9/13 锚点关注紧凑型 EJ-315 在准单能中子场中的表征，不应将“首次表征 EJ-315”或“首次液闪中子谱反演”作为发文主张。"
+        ],
+        "research_gap": [
+          "值得核实的是小体积/不同几何下响应矩阵是否可迁移，以及探测器响应、PSD 误判和谱反演不确定度如何共同影响结果。"
+        ],
+        "secondary_judgment": [
+          "更可辩护的增量是紧凑几何下的独立响应校准和测量验证，而不是重复测一条光输出曲线。"
+        ],
+        "paper_angle": [
+          "建立紧凑 EJ-315 的实测响应矩阵，并与大体积/既有参数模型比较其能量与几何迁移误差。"
+        ],
+        "minimum_validation": [
+          "至少使用多组已知中子能量；报告源能散、TOF/PSD 选择、γ 泄漏、几何效应、响应矩阵协方差和独立谱验证。"
+        ],
+        "novelty_risk": [
+          "2013/2016 已直接研究 EJ-315；EJ-301 ANN 不能当作 EJ-315 的直接验证；须明确与已有曲线/响应矩阵的差异。"
+        ],
+        "confidence": "中等",
+        "representative_works": [
+          {
+            "title": "Response characterization for an EJ315 deuterated organic-liquid scintillation detector for neutron spectroscopy",
+            "year": "2013",
+            "doi": "10.1016/j.nima.2013.05.172",
+            "url": "https://doi.org/10.1016/j.nima.2013.05.172",
+            "relation": "EJ-315 响应矩阵基线；经典工作。"
+          },
+          {
+            "title": "Neutron light output function and resolution investigation of the deuterated organic liquid scintillator EJ-315",
+            "year": "2016",
+            "doi": "10.1016/j.radmeas.2016.03.009",
+            "url": "https://doi.org/10.1016/j.radmeas.2016.03.009",
+            "relation": "TOF、PSD、光输出和分辨率基线；经典工作。"
+          },
+          {
+            "title": "Determination of neutron spectrum based on artificial neural network using liquid scintillation detector EJ-301",
+            "year": "2024",
+            "doi": "10.1093/rpd/ncae189",
+            "url": "https://doi.org/10.1093/rpd/ncae189",
+            "relation": "相邻的 EJ-301 模拟训练/测量验证方法，不等同于 EJ-315。"
+          }
+        ]
+      },
+      {
+        "title": "现场 γ 能谱与 HPGe：校准链、环境修正和不确定度传递",
+        "related_work_status": [
+          "UAV γ 谱已有点源校准与航高/本底等修正研究；HPGe 也已有用 GEANT4 对效率和峰形作实验验证的工作。"
+        ],
+        "today_increment": [
+          "9/13 锚点同时覆盖地面/UAS 数据分析、HPGe 内部性能检验和中子注量场次级标准化，研究对象是多种测量链而非同一台仪器。"
+        ],
+        "research_gap": [
+          "各流程中的点源效率、探测器模型、航高/地形/氡本底修正与量值溯源通常分别处理；跨链路不确定度如何传至活度/注量结论值得补齐。"
+        ],
+        "secondary_judgment": [
+          "可形成计量与应用结合的工作，但不可把不同探测器的校准结果简单拼成一个“通用算法”。"
+        ],
+        "paper_angle": [
+          "围绕同一批标准源或可溯源参考场，对地面谱、UAS 谱与 HPGe 模型做独立交叉核验，并显式传播修正因子不确定度。"
+        ],
+        "minimum_validation": [
+          "给出校准证书/参考值、几何与航高、背景扣除、效率模型残差、重复测量和不确定度预算；说明各仪器链的适用边界。"
+        ],
+        "novelty_risk": [
+          "点源 UAV 校准与 HPGe GEANT4 建模都已有先例；创新应来自具体场景、可复用校准数据或完整不确定度闭环。"
+        ],
+        "confidence": "中等",
+        "representative_works": [
+          {
+            "title": "Calibration of an airborne γ-ray spectrometer based on an unmanned aerial vehicle using a point source",
+            "year": "2022",
+            "doi": "10.1016/j.anucene.2022.109349",
+            "url": "https://doi.org/10.1016/j.anucene.2022.109349",
+            "relation": "UAV 点源校准与现场修正先例。"
+          },
+          {
+            "title": "Spectroscopic performance evaluation and modeling of a low background HPGe detector using GEANT4",
+            "year": "2024",
+            "doi": "10.1016/j.nima.2023.168826",
+            "url": "https://doi.org/10.1016/j.nima.2023.168826",
+            "relation": "HPGe 实测性能与 GEANT4 响应交叉验证。"
+          }
+        ]
+      },
+      {
+        "title": "卤化物闪烁体：材料指标之外的成像屏可比性",
+        "related_work_status": [
+          "Cu(I)-I 团簇柔性屏和玻璃陶瓷屏已展示 X 射线成像及稳定性；高分辨材料论文数量多，材料名称或单项光产额不足以证明空白。"
+        ],
+        "today_increment": [
+          "9/13 的 Mn 基卤化物、Ag(I) 卤化物、Cs₃Cu₂I₅ 与钙钛矿/类钙钛矿论文把材料设计、薄膜/涂层与 X 射线探测同时推到前台。"
+        ],
+        "research_gap": [
+          "论文常用不同厚度、剂量率、光学耦合和成像系统报告光产额、检出限与 lp/mm，跨论文数值无法直接排优劣；长期老化也常不足。"
+        ],
+        "secondary_judgment": [
+          "机会在同条件器件级验证、稳定性和应用约束；不宜仅凭某一个新配方或摘要指标主张“首个高分辨闪烁体”。"
+        ],
+        "paper_angle": [
+          "在统一基板/厚度/光学耦合下比较候选卤化物屏的 MTF、DQE/灵敏度、辐照稳定性与湿热老化。"
+        ],
+        "minimum_validation": [
+          "统一 X 射线谱与剂量、膜厚、探测器和处理链；至少重复制样；报告 MTF、光产额/检出限定义、辐照累计剂量及老化前后变化。"
+        ],
+        "novelty_risk": [
+          "领域拥挤且指标口径分散；缺少严格同条件对照时，跨论文性能排序与材料优越性结论不可靠。"
+        ],
+        "confidence": "中低",
+        "representative_works": [
+          {
+            "title": "Ultrastable and flexible glass-ceramic scintillation films with reduced light scattering for efficient X-ray imaging",
+            "year": "2024",
+            "doi": "10.1038/s41528-024-00319-x",
+            "url": "https://doi.org/10.1038/s41528-024-00319-x",
+            "relation": "柔性屏高分辨率与环境/辐照稳定性的器件级基线。"
+          },
+          {
+            "title": "Efficient X-ray luminescence imaging with ultrastable and eco-friendly copper(I)-iodide cluster microcubes",
+            "year": "2023",
+            "doi": "10.1038/s41377-023-01208-0",
+            "url": "https://doi.org/10.1038/s41377-023-01208-0",
+            "relation": "Cu(I)-I 团簇材料、抗湿性及柔性成像屏先例。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "review_type": "historical_backfill",
+    "reviewed_at": "2026-09-17",
+    "searched_at": "2026-09-17",
+    "anchor_article_count": 10,
+    "overall_judgment": "9/13 日报呈现的是四条并行线索，而不是单一研究主题。相对可操作的优先顺序是：先做卤化物屏同条件基准或紧凑 EJ-315 的实测验证；液氙 PSD 与 UAS/HPGe 方向也有论文空间，但都必须用独立数据和完整系统误差区别于既有工作。仅凭本次有限回溯不能判断任何方向“全球首次”。",
+    "opportunities": [
+      {
+        "title": "卤化物闪烁屏的同条件成像与老化基准",
+        "research_gap": [
+          "多种 9/13 材料论文都报告成像性能，但厚度、剂量和相机链不同，当前难以作公平比较。"
+        ],
+        "why_worth_doing": [
+          "若能给出同条件器件级数据，可把材料新颖性判断转为可复验的工程性能贡献。"
+        ],
+        "recommended_work": [
+          "挑选可稳定制备的 2–3 种候选屏，在同基板、厚度与成像链下测 MTF/DQE、灵敏度、湿热与累计剂量漂移。"
+        ],
+        "paper_contribution": [
+          "形成可复用的材料—屏结构—成像指标比较数据，而非只报告单样品最佳值。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "需要获得可比样品并固定测试链；新材料合成若缺少机理与器件优势，投稿贡献会偏弱。"
+        ],
+        "article_type": "材料与成像实验",
+        "evidence_papers": [
+          {
+            "title": "Mn(II)‐Based Hybrid Halide Transparent Scintillator Coating for High‐Resolution and High‐Temperature X‐Ray Imaging",
+            "year": "2026",
+            "doi": "10.1002/lpor.71880",
+            "url": "https://doi.org/10.1002/lpor.71880",
+            "relation": "本期日报中的研究锚点"
+          },
+          {
+            "title": "Halogen Tailoring Enables Large-Area Mn-Based Halide Single-Crystal Films with Enhanced Radioluminescence and High-Resolution X-ray Imaging",
+            "year": "2026",
+            "doi": "10.1021/acs.inorgchem.6c02724",
+            "url": "https://doi.org/10.1021/acs.inorgchem.6c02724",
+            "relation": "本期日报中的研究锚点"
+          },
+          {
+            "title": "Halogen‐Regulated Luminescent Silver(I) Halide Complexes and the Gel Scintillation Screen for X‐Ray Imaging",
+            "year": "2026",
+            "doi": "10.1002/adfm.78388",
+            "url": "https://doi.org/10.1002/adfm.78388",
+            "relation": "本期日报中的研究锚点"
+          },
+          {
+            "title": "Phase-Controlled Crystal Growth of Cs3Cu2I5 Scintillators via the Solution Method for γ-ray Detection.",
+            "year": "2026",
+            "doi": "10.1021/acsami.6c09525",
+            "url": "https://doi.org/10.1021/acsami.6c09525",
+            "relation": "本期日报中的研究锚点"
+          },
+          {
+            "title": "Strong Hydrogen Bond Interaction Induced Dimensional Evolution in Aromatic Diammonium-Based Perovskite/Perovskitoid for Achieving High-Performance X-ray Detection",
+            "year": "2026",
+            "doi": "10.1021/acsenergylett.6c01440",
+            "url": "https://doi.org/10.1021/acsenergylett.6c01440",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      },
+      {
+        "title": "紧凑 EJ-315 的实测响应矩阵迁移与中子谱反演",
+        "research_gap": [
+          "已知 EJ-315 响应基线不能自动保证在紧凑体积、不同光收集和实验室几何下仍可直接沿用。"
+        ],
+        "why_worth_doing": [
+          "将材料响应表征推进到小型仪器校准和未知谱验证，应用目标清楚。"
+        ],
+        "recommended_work": [
+          "围绕 9/13 紧凑 EJ-315 论文的几何建立多能点实测矩阵；用盲测混合谱检验响应迁移、γ 泄漏与反演不确定度。"
+        ],
+        "paper_contribution": [
+          "给出紧凑探测器在实际中子谱测量中的可追溯误差边界。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "EJ-315 光输出和响应矩阵已有直接先例，必须证明新几何/校准/测量条件带来可量化的新能力。"
+        ],
+        "article_type": "探测器标定与方法验证",
+        "evidence_papers": [
+          {
+            "title": "Characterization of a compact EJ315 deuterated liquid scintillator using quasi-monoenergetic neutrons",
+            "year": "2026",
+            "doi": "10.1088/1748-0221/21/09/p09018",
+            "url": "https://doi.org/10.1088/1748-0221/21/09/p09018",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      },
+      {
+        "title": "液氙 PSD 的跨运行期独立复核",
+        "research_gap": [
+          "LZ 新 PSD 特征需与已有 waveform 分类/贝叶斯方法在一致数据划分和物理工作点下比较。"
+        ],
+        "why_worth_doing": [
+          "若在真实独立运行数据上证明更稳健的泄漏—效率权衡，可形成可复核的方法论文。"
+        ],
+        "recommended_work": [
+          "固定基线选择与盲测数据；对 photon-time tail、S1/S2、贝叶斯特征和既有 cuts 做消融比较，并按能区/运行期拆分。"
+        ],
+        "paper_contribution": [
+          "量化额外光子计时信息的独立收益及系统误差对 PSD 的影响。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "泛化的波形分类已很拥挤；若只替换分类器或复述 LZ 结果，不足以支撑新颖性。"
+        ],
+        "article_type": "实测数据分析",
+        "evidence_papers": [
+          {
+            "title": "Pushing the limits of pulse shape discrimination in a large liquid xenon detector",
+            "year": "2026",
+            "doi": "10.1140/epjc/s10052-026-16216-8",
+            "url": "https://doi.org/10.1140/epjc/s10052-026-16216-8",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      },
+      {
+        "title": "UAS/HPGe γ 能谱校准链的场景化不确定度预算",
+        "research_gap": [
+          "点源 UAV 校准、HPGe 模拟效率和现场谱修正各有先例，但当它们串入同一个测量结论时误差传递常不透明。"
+        ],
+        "why_worth_doing": [
+          "能把可溯源校准、环境修正和现场验证闭合起来，对污染巡测/原位测量有直接价值。"
+        ],
+        "recommended_work": [
+          "用参考源或可溯源测量作地面与 UAS 交叉测试，同时给出 HPGe/谱响应验证、航高和本底修正的逐项不确定度。"
+        ],
+        "paper_contribution": [
+          "提供一套可审计的现场 γ 谱测量质量控制流程。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "HPGe、UAS γ 谱与中子注量标准装置并非同一系统；研究设计需围绕量值溯源/误差传播，而非声称三种仪器可以直接互校。"
+        ],
+        "article_type": "计量与现场方法",
+        "evidence_papers": [
+          {
+            "title": "Internal validation and performance characterization of a p-type HPGe detector for gamma-ray spectroscopy",
+            "year": "2026",
+            "doi": "10.1088/1748-0221/21/09/t09002",
+            "url": "https://doi.org/10.1088/1748-0221/21/09/t09002",
+            "relation": "本期日报中的研究锚点"
+          },
+          {
+            "title": "Methods for analysing data from in-situ ground-based and UAS-borne scintillation gamma spectrometry",
+            "year": "2026",
+            "doi": "10.14311/ap.2026.66.0421",
+            "url": "https://doi.org/10.14311/ap.2026.66.0421",
+            "relation": "本期日报中的研究锚点"
+          },
+          {
+            "title": "Secondary Standardization of Neutron Fluence Fields at the Argonaut Reactor - IEN: Assessment of Calibration and Irradiation Metrological Capacity for Samples and Instruments",
+            "year": "2026",
+            "doi": "10.15392/2319-0612.2026.3068",
+            "url": "https://doi.org/10.15392/2319-0612.2026.3068",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "title": "Research Paper Daily",
   "date": "2026-09-15",
   "published_at": "2026-09-15T07:51:33.628103+00:00",
@@ -515,5 +515,319 @@
     "建立微结构闪烁屏的厚度—隔光层深度二维实验，联合MTF、绝对探测效率和光学串扰，并用光子输运模型解释最优区间。",
     "把SiPM双端塑闪模块与伽马–带电粒子符合框架结合，系统扫描温度、时间门与计数率，检验峰背比提升和真符合效率之间的权衡。",
     "为像素化X射线探测器设计运行中自标定通道，对比钙钛矿器件基线漂移与参考通道响应，评估材料漂移如何传播到谱和图像。"
-  ]
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "review_type": "historical_backfill",
+    "reviewed_at": "2026-09-17",
+    "searched_at": "2026-09-17",
+    "search_window": "主要覆盖2021-09-17至2026-09-17；直接相关的经典基线研究适度向前回溯。",
+    "search_scope": [
+      "玻璃微通道板与结构化闪烁屏的串扰、MTF、DQE 和分辨率",
+      "钙钛矿单晶/异质结 X 射线直接探测、离子迁移和器件稳定性",
+      "STIX 栅格传输率、在轨自标定与太阳硬 X 射线成像校准",
+      "核物理符合测量、塑料闪烁体 SiPM 读出与时间分辨率"
+    ],
+    "anchor_article_count": 6,
+    "candidate_count": 9,
+    "verified_count": 9,
+    "searched_sources": [
+      "OpenAlex",
+      "学术网页主题检索",
+      "期刊/出版社论文页面与摘要"
+    ],
+    "limitations": [
+      "本条为 2026-09-17 执行的历史回溯查新；检索锚点严格使用 9/15 日报中的 6 篇论文。出版社公开日期与日报日界线可能相差一天：Communications in Physics 当前页面显示该篇 γ-粒子符合论文于 9/16 上线，故网站日报归属与出版社在线日期应分别理解。",
+      "候选/核实计数仅统计页面列出的代表性论文；窗口以近五年为主，部分 MCP/SiPM 仪器基线略早；不是穷尽式系统综述。",
+      "MCP X 射线成像器件与玻璃微通道闪烁屏、STIX 空间校准与固定靶符合仪器结构不同；引用用于界定相邻方法和先例，不表示可直接横向比较。",
+      "判断以出版社/期刊题录及摘要为主；对高灵敏度、检出限和长期稳定性需回到全文核对偏压、剂量定义、厚度、样品统计和完整测试条件。"
+    ],
+    "themes": [
+      {
+        "title": "微结构 X 射线闪烁屏：MTF 提升必须同时看效率和噪声",
+        "related_work_status": [
+          "结构化 CsI(Tl) 屏已用 MTF、DQE 和光输出优化通道/隔墙；MCP X 射线成像器件也有高时间/空间分辨先例，但工作机理和结构并不等同。"
+        ],
+        "today_increment": [
+          "9/15 的玻璃微通道板闪烁屏使用银层降低通道串扰，并对银层深度做模拟/实验分析；全深度银层的进一步提升仍是模拟预测。"
+        ],
+        "research_gap": [
+          "目前关键空白不是再报一个高 lp/mm，而是量化银层深度、光收集效率、均匀性、DQE、噪声和可制造性之间的联合权衡。"
+        ],
+        "secondary_judgment": [
+          "方向具备明确器件工程价值；全深度银层和性能改进在做出实验前应标作预测，不是已验证结果。"
+        ],
+        "paper_angle": [
+          "制备多个银层深度/通道结构样品，按同一标准源和成像链测 MTF、DQE、透过率、均匀性及剂量响应。"
+        ],
+        "minimum_validation": [
+          "需有标准线对/斜边 MTF、绝对效率或 DQE、样品重复、像素/视野均匀性、光收集损失及辐照后变化；实验数据须覆盖模拟预测区域。"
+        ],
+        "novelty_risk": [
+          "高分辨屏与 MCP 成像均有大量先例；若关键深度只做模拟，或没有效率/DQE 对照，结论和新颖性都会偏弱。"
+        ],
+        "confidence": "中等",
+        "representative_works": [
+          {
+            "title": "Influence of Si wall thickness of CsI(Tl) micro-square-frustums on the performance of the structured CsI(Tl) scintillation screen in X-ray imaging",
+            "year": "2022",
+            "doi": "10.1038/s41598-022-12673-9",
+            "url": "https://doi.org/10.1038/s41598-022-12673-9",
+            "relation": "结构化闪烁屏的 MTF/DQE/光输出对照，但主要考察 Si 微结构。"
+          },
+          {
+            "title": "A sealed X-ray microchannel plate imager with CsI photocathode to improve quantitative precision of framing camera",
+            "year": "2021",
+            "doi": "10.1016/j.nima.2021.165404",
+            "url": "https://doi.org/10.1016/j.nima.2021.165404",
+            "relation": "MCP 成像器件比较；与今日玻璃微通道闪烁屏机理不同。"
+          },
+          {
+            "title": "Ultrastable and flexible glass-ceramic scintillation films with reduced light scattering for efficient X-ray imaging",
+            "year": "2024",
+            "doi": "10.1038/s41528-024-00319-x",
+            "url": "https://doi.org/10.1038/s41528-024-00319-x",
+            "relation": "柔性闪烁屏的成像性能对照。"
+          },
+          {
+            "title": "Designer bright and fast CsPbBr3 perovskite nanocrystal scintillators for high-speed X-ray imaging",
+            "year": "2024",
+            "doi": "10.1038/s41467-024-53263-9",
+            "url": "https://doi.org/10.1038/s41467-024-53263-9",
+            "relation": "高速闪烁屏对照；须按相同测试条件比较空间分辨率和时间性能。"
+          }
+        ]
+      },
+      {
+        "title": "钙钛矿直接探测：异质结增益需与离子迁移/器件稳定性一起评估",
+        "related_work_status": [
+          "单晶钙钛矿直接 X 射线探测已有单光子灵敏度与长期稳定性研究；CsPbBr₃ 生长气氛调控也已用于抑制离子迁移和基线漂移。"
+        ],
+        "today_increment": [
+          "9/15 的等比例有机-无机混合阳离子单晶异质结报告整流、迁移活化能、灵敏度和未封装稳定性。"
+        ],
+        "research_gap": [
+          "不同论文在偏压、能量、剂量定义、晶体厚度、封装和稳定性测试条件上差异很大；需排除界面/电极及设备漂移后再归因于异质结。"
+        ],
+        "secondary_judgment": [
+          "“抑制离子迁移”已有先行路线；更可辩护的增量是同晶体/同偏压控制实验中识别异质结的独立贡献，并验证阵列成像。"
+        ],
+        "paper_angle": [
+          "制备同批单晶对照与异质结器件，在脉冲/长时偏压下跟踪基线、电流、迁移活化能、滞后和成像信噪比。"
+        ],
+        "minimum_validation": [
+          "多个器件与批次、统一剂量/偏压/温湿度、暗电流/基线漂移、长时照射与恢复、像素阵列或标准图像；报告统计区间和器件失效率。"
+        ],
+        "novelty_risk": [
+          "该方向竞争强且高灵敏度数值高度依赖测试定义；只复现单器件峰值或将未封装短期结果外推为长期可靠性会有高风险。"
+        ],
+        "confidence": "中等",
+        "representative_works": [
+          {
+            "title": "Suppressed ion migration for high-performance X-ray detectors based on atmosphere-controlled EFG-grown perovskite CsPbBr3 single crystals",
+            "year": "2024",
+            "doi": "10.1038/s41566-024-01480-5",
+            "url": "https://doi.org/10.1038/s41566-024-01480-5",
+            "relation": "用生长气氛抑制迁移、漏电和基线漂移的先行策略。"
+          },
+          {
+            "title": "Stable perovskite single-crystal X-ray imaging detectors with single-photon sensitivity",
+            "year": "2023",
+            "doi": "10.1038/s41566-023-01207-y",
+            "url": "https://doi.org/10.1038/s41566-023-01207-y",
+            "relation": "单晶直接探测灵敏度和器件稳定性基线。"
+          }
+        ]
+      },
+      {
+        "title": "仪器校准与读出：在轨响应修正、符合门与时间性能各有先例",
+        "related_work_status": [
+          "STIX 已有在轨可见度校准/硬 X 射线成像研究；塑闪-SiPM 系统也已有低于 40 ps 的系统级计时先例。"
+        ],
+        "today_increment": [
+          "9/15 同时出现 STIX 栅格传输率自校准、γ-带电粒子符合谱学和塑闪/SiPM 固定靶探测器原型，分别针对成像、核反应选道和定时。"
+        ],
+        "research_gap": [
+          "三套仪器不可直接互校；共同的工程缺口是把读出/标定不确定度连到最终能谱、符合峰背比或时间分辨，并做长期漂移验证。"
+        ],
+        "secondary_judgment": [
+          "应按具体仪器任务分别建模；跨领域可借鉴校准与不确定度方法，但不能把 STIX 的结果当作实验室 γ-粒子符合系统的性能证据。"
+        ],
+        "paper_angle": [
+          "固定靶系统可把通道定时、时间游走、温度系数和效率校准一起测；STIX 可独立复核参考像素/照明假设下的传输模型。"
+        ],
+        "minimum_validation": [
+          "提供独立参考源/时间基准、通道间偏差、温漂、符合效率、死时间、峰背比与重复束流数据；STIX 方向需量化参考像素选择和能区适用性。"
+        ],
+        "novelty_risk": [
+          "相关仪器各自有先例；简单重做单个符合峰或复述 STIX 校准流程不足以构成新方法。"
+        ],
+        "confidence": "中等",
+        "representative_works": [
+          {
+            "title": "First Hard X-Ray Imaging Results by Solar Orbiter STIX",
+            "year": "2022",
+            "doi": "10.1007/s11207-022-02029-x",
+            "url": "https://doi.org/10.1007/s11207-022-02029-x",
+            "relation": "STIX 成像可见度校准先例。"
+          },
+          {
+            "title": "Full system of positron timing counter in MEG II having time resolution below 40 ps with fast plastic scintillator readout by SiPMs",
+            "year": "2020",
+            "doi": "10.1016/j.nima.2019.162785",
+            "url": "https://doi.org/10.1016/j.nima.2019.162785",
+            "relation": "塑闪-SiPM 系统级计时的高性能基线。"
+          },
+          {
+            "title": "First experimental demonstration of time-resolved X-ray measurements with next-generation fast-timing MCP-PMT",
+            "year": "2019",
+            "doi": "10.1016/j.nima.2019.02.057",
+            "url": "https://doi.org/10.1016/j.nima.2019.02.057",
+            "relation": "MCP-PMT 快 X 射线测试；仅作读出器件相邻先例。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "review_type": "historical_backfill",
+    "reviewed_at": "2026-09-17",
+    "searched_at": "2026-09-17",
+    "anchor_article_count": 6,
+    "overall_judgment": "9/15 的论文分属闪烁屏、直接型钙钛矿探测、空间仪器校准和核物理符合读出。最直接的实验机会是把玻璃微通道屏的模拟预测做成量化的 MTF—效率闭环；异质结方向要证明界面独立贡献；其余两条更适合按各自仪器任务做独立校准研究，不能拼成一个统一性能结论。",
+    "opportunities": [
+      {
+        "title": "玻璃微通道闪烁屏的分层银化与成像效率闭环",
+        "research_gap": [
+          "9/15 锚点显示全深度银层的 MTF 改善仍由模拟预测，实际制备与光损失还未充分闭环。"
+        ],
+        "why_worth_doing": [
+          "验证“分辨率—效率—均匀性”的折中，能把一个结构方案变成可复用成像器件结论。"
+        ],
+        "recommended_work": [
+          "制备多种银层深度样品；同一 X 射线谱下测 MTF、DQE/绝对光输出、串扰、空间均匀性和长期辐照响应。"
+        ],
+        "paper_contribution": [
+          "确定最佳银化深度及其工艺容差，报告模拟与实测偏差。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "不得把模拟预测写成实验结果；需避免与结构化 CsI 屏/MCP 成像器件直接作不等价性能横比。"
+        ],
+        "article_type": "探测器结构与成像",
+        "evidence_papers": [
+          {
+            "title": "Feasibility study of glass microchannel plate-based X-ray scintillator screens",
+            "year": "2026",
+            "doi": "10.1088/1748-0221/21/09/p09024",
+            "url": "https://doi.org/10.1088/1748-0221/21/09/p09024",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      },
+      {
+        "title": "混合阳离子单晶异质结的偏压漂移与阵列级成像复核",
+        "research_gap": [
+          "高灵敏度和迁移抑制已有单晶生长/器件先例，日报异质结需要证明界面带来的独立收益。"
+        ],
+        "why_worth_doing": [
+          "同片对照加长时/阵列测量，可把材料器件指标推进到稳定成像证据。"
+        ],
+        "recommended_work": [
+          "同批 CsPbBr3 单晶制备异质结与对照器件；统一偏压、剂量和温度，测试迟滞、暗电流、基线漂移、成像信噪比和器件离散性。"
+        ],
+        "paper_contribution": [
+          "定量分离异质结界面贡献，并给出从单器件到像素阵列的性能保持率。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "同领域论文竞争强；单器件高灵敏度数值若无同条件控制、批次统计和阵列图像，创新性不足。"
+        ],
+        "article_type": "材料器件与 X 射线成像",
+        "evidence_papers": [
+          {
+            "title": "Equal-Proportion Organic–Inorganic-Mixed Cation Perovskite Single Crystalline Heterojunctions Enable High-Performance X-ray Detection",
+            "year": "2026",
+            "doi": "10.1021/acsami.6c14882",
+            "url": "https://doi.org/10.1021/acsami.6c14882",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      },
+      {
+        "title": "STIX 在轨自标定的参考像素假设与系统误差独立检验",
+        "research_gap": [
+          "栅格透射自标定依赖参考像素照明/通量假设，且新的传输值会改变光子谱归一化。"
+        ],
+        "why_worth_doing": [
+          "独立参考观测和误差传播有助于判断在轨校准改进能否推广到不同耀斑/能区。"
+        ],
+        "recommended_work": [
+          "按耀斑照明几何、参考像素选择及子准直器分组重算；与独立观测/近太阳地球对齐事件交叉验证并传播到光子谱。"
+        ],
+        "paper_contribution": [
+          "给出标定结果对参考像素、能区和观测几何的敏感度以及系统误差界限。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "该主题日新且主文已提出方法；后续需有独立数据/观测交叉验证，不能只重复原论文拟合。"
+        ],
+        "article_type": "空间仪器校准与数据分析",
+        "evidence_papers": [
+          {
+            "title": "In-Flight Self-Calibration of the STIX Grid Transmission.",
+            "year": "2026",
+            "doi": "10.1007/s11207-026-02739-6",
+            "url": "https://doi.org/10.1007/s11207-026-02739-6",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      },
+      {
+        "title": "固定靶 γ-粒子符合系统的时序、效率和温漂联合标定",
+        "research_gap": [
+          "日报一篇给出符合选道，另一篇给出塑闪-SiPM 原型；需要从单一条件演示走向可重复的系统性能。"
+        ],
+        "why_worth_doing": [
+          "对核反应道识别，时间窗、能量阈值和通道温漂共同决定峰背比与有效效率。"
+        ],
+        "recommended_work": [
+          "用已知反应/标准时间源测通道时间偏差、时间游走、符合效率、死时间、峰背比和温度漂移，并对不同靶/束流做复测。"
+        ],
+        "paper_contribution": [
+          "提供可迁移的固定靶符合测量性能预算和校准流程。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "9/15 日报日期按报告记录；其中越南 Communications in Physics 页面目前显示在线日期为 9/16，数据库/时区日期有一天偏差，需以正式卷期元数据核定。"
+        ],
+        "article_type": "核物理仪器与符合谱学",
+        "evidence_papers": [
+          {
+            "title": "Development of an advanced gamma-charged particle coincidence technique for accelerator-based nuclear experiments in Vietnam",
+            "year": "2026",
+            "doi": "10.15625/0868-3166/24399",
+            "url": "https://doi.org/10.15625/0868-3166/24399",
+            "relation": "本期日报中的研究锚点"
+          },
+          {
+            "title": "Multipurpose particle detector for fixed-target experiments based on plastic scintillators and SiPMs (time resolution)",
+            "year": "2026",
+            "doi": "10.1051/epjconf/202638603007",
+            "url": "https://doi.org/10.1051/epjconf/202638603007",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "title": "Research Paper Daily",
   "date": "2026-09-14",
   "published_at": "2026-09-14T12:46:38.862800+00:00",
@@ -587,5 +587,353 @@
     "构建‘二维光学图像+一维波形’低数据量伽马成像原型，以标准点源和真实气体探测器数据对比全三维读出，检验角分辨率、吞吐量和域偏移。",
     "建立快闪烁体统一评价矩阵：同步测光产额、衰减时间、单光电子读出、束流定时和累积辐照后恢复，避免单指标优化掩盖系统代价。",
     "针对柔性和宽温区X射线闪烁屏，设计厚度—散射—温度—剂量四因素实验，并以MTF、检出限和循环稳定性作为共同终点。"
-  ]
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "review_type": "historical_backfill",
+    "reviewed_at": "2026-09-17",
+    "searched_at": "2026-09-17",
+    "search_window": "主要覆盖2021-09-17至2026-09-17；直接相关的经典基线研究适度向前回溯。",
+    "search_scope": [
+      "electron-tracking Compton camera 三维反冲电子径迹、图像/波形联合读出与重建",
+      "质子治疗提示伽马成像、Compton camera 射程位移与重建算法",
+      "GAGG 快响应、辐照耐受、afterglow 与量热器束流测试",
+      "Mn/CuI 柔性卤化物闪烁体、9,9-dimethylfluorene 塑闪与低光量读出"
+    ],
+    "anchor_article_count": 7,
+    "candidate_count": 10,
+    "verified_count": 10,
+    "searched_sources": [
+      "OpenAlex",
+      "学术网页主题检索",
+      "期刊/出版社论文页面与摘要"
+    ],
+    "limitations": [
+      "本条为 2026-09-17 执行的历史回溯查新；检索锚点是 9/14 日报的 7 篇论文。两篇 arXiv 锚点（GAGG 与 SUBMET）按预印本处理，未标成同行评审论文。",
+      "候选/核实计数仅统计页面列出的代表性论文；窗口以近五年为主，GAGG 辐照基线包含 2019 年工作；不等于系统综述。",
+      "9,9-dimethylfluorene 近邻研究与日报塑闪论文题材高度重叠；这提示风险，不代表两篇论文的具体配方、投稿时间或数据必然相同，需对照全文/版本记录。",
+      "Compton 气体径迹相机和治疗用晶体相机结构、能区与任务不同，引用它们是分别定位方法和应用先例，不作同一性能的直接横比。"
+    ],
+    "themes": [
+      {
+        "title": "Compton 成像：径迹重建与质子射程验证要分开比较",
+        "related_work_status": [
+          "ETCC 已有 CNN 重建反冲方向/散射位置的先例；质子治疗方向已有 MACACO II 束流试验及 MLEM/SOE 重建比较，另有 LYSO 相机实束流验证。"
+        ],
+        "today_increment": [
+          "9/14 的 ETCC 论文把二维光学图像和一维波形用于模拟条件下的 3D 方向推断；同日报射程论文则是实际质子束下的另一种晶体 Compton 原型。"
+        ],
+        "research_gap": [
+          "ETCC 的低能气体径迹重建与治疗用晶体相机在相互作用介质、能区和指标上不同；当前缺口是 ETCC 伪实验到独立真实数据的落差，以及射程系统跨束流/靶材的鲁棒性。"
+        ],
+        "secondary_judgment": [
+          "可以围绕“从模拟到真实数据”的证据闭环开展研究；不可把两种装置的角分辨率或射程精度直接横向比较。"
+        ],
+        "paper_angle": [
+          "先验证 ETCC 光学+波形重建的真实束流可迁移性；另对质子射程相机按束流强度、靶材和重建算法作盲测。"
+        ],
+        "minimum_validation": [
+          "逐项报告真实光学噪声/增益漂移、电子径迹起点和角分辨率；质子相机则报告计数统计、靶材/距离、位移阈值及基线算法。"
+        ],
+        "novelty_risk": [
+          "Compton 相机与质子射程监测均有多篇实测/重建先例；一般性的‘用深度学习提高精度’新颖性风险高。"
+        ],
+        "confidence": "中等",
+        "representative_works": [
+          {
+            "title": "Development of convolutional neural networks for an electron-tracking Compton camera",
+            "year": "2021",
+            "doi": "10.1093/ptep/ptab091",
+            "url": "https://doi.org/10.1093/ptep/ptab091",
+            "relation": "ETCC CNN 重建及校准数据基线。"
+          },
+          {
+            "title": "Proton range verification with MACACO II Compton camera enhanced by a neural network for event selection",
+            "year": "2021",
+            "doi": "10.1038/s41598-021-88812-5",
+            "url": "https://doi.org/10.1038/s41598-021-88812-5",
+            "relation": "提示伽马与 NN 事件筛选的束流验证先例。"
+          },
+          {
+            "title": "Comparison of reconstructed prompt gamma emissions using maximum likelihood estimation and origin ensemble algorithms for a Compton camera system tailored to proton range monitoring",
+            "year": "2023",
+            "doi": "10.1016/j.zemedi.2022.04.005",
+            "url": "https://doi.org/10.1016/j.zemedi.2022.04.005",
+            "relation": "异质靶的 MLEM/SOE 重建比较。"
+          },
+          {
+            "title": "Accurate proton range shift verification by using a two-layer dense-pixel LYSO compton camera prototype",
+            "year": "2024",
+            "doi": "10.1016/j.nima.2024.169339",
+            "url": "https://doi.org/10.1016/j.nima.2024.169339",
+            "relation": "实质子束下 LYSO Compton 相机验证。"
+          }
+        ]
+      },
+      {
+        "title": "GAGG 快量热：辐照后性能不能只看透过率",
+        "related_work_status": [
+          "已有 GAGG 高质子注量辐照研究，也有含 GAGG 晶体纤维的束流量热器原型；关注点包括诱导吸收、afterglow、快响应与系统时间分辨率。"
+        ],
+        "today_increment": [
+          "9/14 的 arXiv 预印本报告共掺杂后有效衰减时间最低约 5.5 ns，并给出高能束流和 1 MGy 辐照相关结果。"
+        ],
+        "research_gap": [
+          "还需在同一批样品、同一读出链中把辐照前后光产额、衰减分量、余辉、定时分辨和恢复过程连起来；报告条件应与先行研究可比。"
+        ],
+        "secondary_judgment": [
+          "值得做独立复现或应用工况验证，但该日 GAGG 工作是预印本，当前只能视为待同行评议结果。"
+        ],
+        "paper_angle": [
+          "做剂量/剂量率扫描并测辐照前后余辉和时间分辨，区分材料本征快分量与探测器/电子学时间抖动。"
+        ],
+        "minimum_validation": [
+          "独立样品与批次；注明粒子能量、束流、剂量率、总剂量、恢复时间；同时报告光产额/透过率/afterglow/时间指标和测量系统响应。"
+        ],
+        "novelty_risk": [
+          "GAGG 辐射硬度、快量热和辐照诱导余辉已有研究；若只复述单一剂量的透光率或衰减常数，增量有限。"
+        ],
+        "confidence": "中低（因锚点为预印本）",
+        "representative_works": [
+          {
+            "title": "Irradiation effects on Gd3Al2Ga3O12 scintillators prospective for application in harsh irradiation environments",
+            "year": "2019",
+            "doi": "10.1016/j.radphyschem.2019.108365",
+            "url": "https://doi.org/10.1016/j.radphyschem.2019.108365",
+            "relation": "质子辐照、计时属性与残余发光的先行基线。"
+          },
+          {
+            "title": "Performance of a spaghetti calorimeter prototype with tungsten absorber and garnet crystal fibres",
+            "year": "2023",
+            "doi": "10.1016/j.nima.2022.167629",
+            "url": "https://doi.org/10.1016/j.nima.2022.167629",
+            "relation": "GAGG 晶体纤维量热器束流性能先例。"
+          }
+        ]
+      },
+      {
+        "title": "塑料闪烁体与芴类配方：同日已有高度相似先行线索",
+        "related_work_status": [
+          "2022 年已有氟烯/芴衍生物改性塑闪；当前检索还发现 2026 年同属 PS/9,9-dimethylfluorene 的另一篇近邻研究，报道不同光产额和衰减时间。"
+        ],
+        "today_increment": [
+          "9/14 日报的 9,9-dimethylfluorene 配方结果应与这两条工作逐项比较；“首次把芴类加入塑闪”显然不能作为主张。"
+        ],
+        "research_gap": [
+          "值得区分的是主体/共掺剂比例、绝对光产额标定、快慢分量、粒子种类依赖、光学衰减和辐照前后性能，而非只比较某一个 photons/MeV 数值。"
+        ],
+        "secondary_judgment": [
+          "领域已有直接材料近邻，单纯配方优化的新颖性风险高；若能补足稳定复现的材料物性和探测器级性能，仍可形成增量。"
+        ],
+        "paper_angle": [
+          "用统一光产额基准和时间分辨装置复配 PS/芴系列，比较 DPO/POPOP、衰减分量及实际 SiPM/PMT 读出表现。"
+        ],
+        "minimum_validation": [
+          "提供完整样品配方/制备、绝对光产额校准、光谱、快慢衰减、样品重复、γ/中子响应与误差；与 2022 和 2026 近邻研究同口径对比。"
+        ],
+        "novelty_risk": [
+          "同年出现高度相似的 9,9-dimethylfluorene 主体研究，优先核对原文配方/发布时间和重叠结果；新颖性风险高。"
+        ],
+        "confidence": "中等（相似工作已定位；细节仍须读全文）",
+        "representative_works": [
+          {
+            "title": "Fluorene Derivatives for Efficient Prompt Scintillation in Plastic Scintillators",
+            "year": "2022",
+            "doi": "10.1021/acsapm.2c00391",
+            "url": "https://doi.org/10.1021/acsapm.2c00391",
+            "relation": "芴衍生物提高塑闪光产额的期刊工作。"
+          },
+          {
+            "title": "Development of plastic scintillators containing 9,9-dimethylfluorene for high scintillation light yields",
+            "year": "2026",
+            "doi": "10.1016/j.jlumin.2026.121972",
+            "url": "https://doi.org/10.1016/j.jlumin.2026.121972",
+            "relation": "同年 PS/9,9-dimethylfluorene 近邻配方研究，需与日报锚点全文对照。"
+          }
+        ]
+      },
+      {
+        "title": "柔性卤化物 X 射线闪烁：比较器件而非孤立的材料指标",
+        "related_work_status": [
+          "Cu(I)-I 柔性 X 射线屏和玻璃陶瓷屏已报告空间分辨率及稳定性；材料屏领域已有多种化学路线。"
+        ],
+        "today_increment": [
+          "9/14 的 Mn 基材料、铜碘杂化材料各自增加了偏振/温度或自陷激子/柔性成像属性。"
+        ],
+        "research_gap": [
+          "不同研究的光产额、检出限、lp/mm 受剂量率、厚度、基底、相机与处理方法共同影响；长期辐照与批次差异常未统一。"
+        ],
+        "secondary_judgment": [
+          "可以做有控制的器件级对照或功能耦合研究；仅凭较高摘要数字无法判定材料全面更优。"
+        ],
+        "paper_angle": [
+          "针对目标应用选取 Mn 与 CuI 柔性屏，在同一成像链下比较空间分辨、响应速度、温度/湿度和 X 射线累计剂量稳定性。"
+        ],
+        "minimum_validation": [
+          "统一屏厚、X 射线条件和相机；测 MTF、剂量响应、余辉/衰减、重复样品，并分别报告偏振、温度等附加功能。"
+        ],
+        "novelty_risk": [
+          "材料体系拥挤、指标口径不一；不同能量转移机制不宜只凭最佳光产额或单幅图像作结论。"
+        ],
+        "confidence": "中低",
+        "representative_works": [
+          {
+            "title": "Efficient X-ray luminescence imaging with ultrastable and eco-friendly copper(I)-iodide cluster microcubes",
+            "year": "2023",
+            "doi": "10.1038/s41377-023-01208-0",
+            "url": "https://doi.org/10.1038/s41377-023-01208-0",
+            "relation": "Cu(I)-I 柔性屏和稳定性参考。"
+          },
+          {
+            "title": "Ultrastable and flexible glass-ceramic scintillation films with reduced light scattering for efficient X-ray imaging",
+            "year": "2024",
+            "doi": "10.1038/s41528-024-00319-x",
+            "url": "https://doi.org/10.1038/s41528-024-00319-x",
+            "relation": "柔性高分辨屏与环境/辐照稳定性参考。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "review_type": "historical_backfill",
+    "reviewed_at": "2026-09-17",
+    "searched_at": "2026-09-17",
+    "anchor_article_count": 7,
+    "overall_judgment": "9/14 的工作覆盖气体 ETCC、质子治疗 Compton 相机、快闪烁材料和低光量读出，不能合并成一个单一结论。最清晰的投稿机会是把模拟结果推进到独立真实数据/束流验证；塑闪 9,9-dimethylfluorene 路线已发现高度相似的 2022 与 2026 研究，需先做重叠审查，不能以首次使用该分子作主张。",
+    "opportunities": [
+      {
+        "title": "ETCC 光学—波形联合重建的真实数据域验证",
+        "research_gap": [
+          "9/14 ETCC 性能主要来自 Geant4/MAGBOLTZ 模拟与伪实验；光学噪声、增益漂移和真实束流径迹会改变重建。"
+        ],
+        "why_worth_doing": [
+          "把模拟改善落实到真实校准/束流数据，是决定方法能否进入成像应用的关键证据。"
+        ],
+        "recommended_work": [
+          "冻结模型后采集独立束流数据；按电子能量、漂移和光学条件分层，并与既有 CNN/条带读出和尽可能完整的 3D 参考作盲测。"
+        ],
+        "paper_contribution": [
+          "给出模拟到实测的性能落差、真实噪声下可达角分辨率与系统适用边界。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "需要获得 ETCC 原型与真实校准数据；其他 Compton 相机的指标不可直接充作 ETCC 性能。"
+        ],
+        "article_type": "探测器方法验证",
+        "evidence_papers": [
+          {
+            "title": "Three-dimensional recoil-electron reconstruction using combined optical imaging and waveform readout for electron-tracking Compton cameras",
+            "year": "2026",
+            "doi": "10.1093/ptep/ptag171",
+            "url": "https://doi.org/10.1093/ptep/ptag171",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      },
+      {
+        "title": "质子射程 Compton 相机的跨靶材/束流鲁棒性",
+        "research_gap": [
+          "已报道 1–2 mm 级位移辨识的原型结果，需要确认在改变束流强度、靶材、探测距离和本底后是否仍成立。"
+        ],
+        "why_worth_doing": [
+          "临床相关条件下的独立复现比再提出一个模拟重建算法更能增加证据价值。"
+        ],
+        "recommended_work": [
+          "按预注册的束流强度、靶材与距离矩阵，盲测 Bragg 峰位移；同时对事件筛选、时间门和 MLEM/SOE 选项做消融。"
+        ],
+        "paper_contribution": [
+          "建立可复用的最低计数、位移阈值和误差预算，说明原型从受控条件到治疗中心的边界。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "9/14 的日报锚点本身已含治疗中心测试；后续须扩展到独立中心/工况，不能重复原型现有实验。"
+        ],
+        "article_type": "束流实验与仪器验证",
+        "evidence_papers": [
+          {
+            "title": "Experimental tests of proton range verification with Compton cameras at proton therapy centers",
+            "year": "2026",
+            "doi": "10.1016/j.radphyschem.2026.114447",
+            "url": "https://doi.org/10.1016/j.radphyschem.2026.114447",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      },
+      {
+        "title": "GAGG 超快响应的剂量—余辉—时间分辨联合复现",
+        "research_gap": [
+          "共掺杂预印本报告了快响应和高剂量辐照，既有 GAGG 文献提示辐照后的残余发光可能影响高率量热。"
+        ],
+        "why_worth_doing": [
+          "直接测量剂量后余辉和时序恢复，可验证材料指标是否转化成高亮度束流下的量热性能。"
+        ],
+        "recommended_work": [
+          "对独立晶体样品作多个剂量率/总剂量点；联测透过率、光产额、衰减曲线、afterglow、能量和时间分辨。"
+        ],
+        "paper_contribution": [
+          "提供预印本结论的独立实验复核和面向高占空比量热的可用窗口。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "锚点为尚未正式同行评议的预印本；需获得束流资源并严格量化系统时间抖动。"
+        ],
+        "article_type": "材料辐照与束流实验",
+        "evidence_papers": [
+          {
+            "title": "Development of Ultrafast and Radiation-Hard GAGG for the Next-Generation of High-Energy Physics Calorimeters",
+            "year": "2026",
+            "doi": "10.48550/arxiv.2609.10116",
+            "url": "https://doi.org/10.48550/arxiv.2609.10116",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      },
+      {
+        "title": "芴类塑闪的绝对光产额与探测器级快响应对照",
+        "research_gap": [
+          "日报塑闪配方与 2022 芴衍生物工作、同年 9,9-dimethylfluorene 近邻论文存在明显重叠。"
+        ],
+        "why_worth_doing": [
+          "若新配方在统一校准下同时改善光产额、时间/粒子鉴别或辐照稳定性，仍可能形成清晰的应用增量。"
+        ],
+        "recommended_work": [
+          "复配同系列样品，统一绝对光产额参考；测试快慢分量、γ/中子 PSD、SiPM/PMT 光收集及辐照老化。"
+        ],
+        "paper_contribution": [
+          "把化学组成变化与实用探测器性能建立可复验映射，而非仅对比单一最佳数值。"
+        ],
+        "daily_evidence": [
+          "所列论文均取自对应日期日报；这些是研究判断的锚点，不是外部查新文献。"
+        ],
+        "main_risks": [
+          "已经找到高度相似的 2022/2026 塑闪工作；必须先做逐配方、逐指标重叠审查，再决定是否值得立项。"
+        ],
+        "article_type": "材料与低光量读出",
+        "evidence_papers": [
+          {
+            "title": "Scintillation characteristics of plastic scintillators using 9,9-dimethylfluorene as a host material",
+            "year": "2026",
+            "doi": "10.1016/j.jlumin.2026.122156",
+            "url": "https://doi.org/10.1016/j.jlumin.2026.122156",
+            "relation": "本期日报中的研究锚点"
+          },
+          {
+            "title": "Readout electronics for SUBMET",
+            "year": "2026",
+            "doi": "10.48550/arxiv.2609.08427",
+            "url": "https://doi.org/10.48550/arxiv.2609.08427",
+            "relation": "本期日报中的研究锚点"
+          }
+        ]
+      }
+    ]
+  }
 }

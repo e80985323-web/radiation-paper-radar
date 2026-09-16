@@ -92,8 +92,12 @@ def public_related_work_review(value: Any) -> dict[str, Any]:
     status = as_text(value.get("status"))
     result: dict[str, Any] = {
         "status": status,
+        "review_type": as_text(value.get("review_type")),
+        "reviewed_at": as_text(value.get("reviewed_at")),
         "searched_at": as_text(value.get("searched_at")),
         "search_window": as_text(value.get("search_window")),
+        "search_scope": as_text_or_list(value.get("search_scope")),
+        "anchor_article_count": nonnegative_int(value.get("anchor_article_count")),
         "candidate_count": nonnegative_int(value.get("candidate_count")),
         "verified_count": nonnegative_int(value.get("verified_count")),
         "searched_sources": as_text_or_list(value.get("searched_sources")),
@@ -136,6 +140,10 @@ def public_publication_opportunities(value: Any) -> dict[str, Any]:
     status = as_text(value.get("status"))
     result: dict[str, Any] = {
         "status": status,
+        "review_type": as_text(value.get("review_type")),
+        "reviewed_at": as_text(value.get("reviewed_at")),
+        "searched_at": as_text(value.get("searched_at")),
+        "anchor_article_count": nonnegative_int(value.get("anchor_article_count")),
         "overall_judgment": as_text(value.get("overall_judgment")),
     }
     if status == "no_reliable_judgment":

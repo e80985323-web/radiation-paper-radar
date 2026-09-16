@@ -316,17 +316,38 @@ function renderRelatedWork() {
     elements.relatedWorkContent.innerHTML = renderInsightUnavailable("", fallback);
     return;
   }
-  const metadata = [
-    review.search_window,
-    Number.isInteger(review.candidate_count) ? `候选 ${review.candidate_count} 篇` : "",
-    Number.isInteger(review.verified_count) ? `核实 ${review.verified_count} 篇` : "",
-  ].map((item) => String(item ?? "").trim()).filter(Boolean);
+  const isHistoricalBackfill = review.review_type === "historical_backfill";
+  const metadata = isHistoricalBackfill
+    ? [
+      "历史回溯查新",
+      review.searched_at ? `检索日期 ${review.searched_at}` : "",
+      Number.isInteger(review.candidate_count) && Number.isInteger(review.verified_count)
+        ? `候选/核实 ${review.candidate_count}/${review.verified_count} 篇`
+        : "",
+    ].map((item) => String(item ?? "").trim()).filter(Boolean)
+    : [
+      review.search_window,
+      Number.isInteger(review.candidate_count) ? `候选 ${review.candidate_count} 篇` : "",
+      Number.isInteger(review.verified_count) ? `核实 ${review.verified_count} 篇` : "",
+    ].map((item) => String(item ?? "").trim()).filter(Boolean);
   elements.relatedWorkMeta.textContent = metadata.join(" · ") || "联网查新已完成";
+  const anchorLine = isHistoricalBackfill
+    ? `<p class="insight-source-line">检索锚点：${escapeHtml(state.report?.date || "本期")} 日报中的 ${Number.isInteger(review.anchor_article_count) ? review.anchor_article_count : "本期"} 篇论文。以上为 ${escapeHtml(review.searched_at || "历史回溯")} 检索形成的判断，并非当日已发布的查新结论。</p>`
+    : "";
+  const searchScopeLine = isHistoricalBackfill && textList(review.search_scope).length
+    ? `<p class="insight-source-line">逐主题检索：${escapeHtml(textList(review.search_scope).join("；"))}</p>`
+    : "";
+  const searchWindowLine = isHistoricalBackfill && review.search_window
+    ? `<p class="insight-source-line">检索范围：${escapeHtml(review.search_window)}</p>`
+    : "";
   const sourceLine = textList(review.searched_sources).length
     ? `<p class="insight-source-line">检索来源：${escapeHtml(textList(review.searched_sources).join(" · "))}</p>`
     : "";
   const limitations = textList(review.limitations);
   elements.relatedWorkContent.innerHTML = `
+    ${anchorLine}
+    ${searchScopeLine}
+    ${searchWindowLine}
     ${sourceLine}
     <div class="insight-theme-list">
       ${themes.map((theme, index) => `
@@ -373,7 +394,13 @@ function renderPublicationOpportunities() {
     elements.publicationOpportunitiesContent.innerHTML = renderInsightUnavailable("", fallback);
     return;
   }
-  elements.publicationOpportunitiesMeta.textContent = `${opportunities.length} 个方向 · 基于当日论文`;
+  const isHistoricalBackfill = report.review_type === "historical_backfill";
+  const historicalMeta = isHistoricalBackfill
+    ? ["历史回溯研判", report.searched_at ? `检索日期 ${report.searched_at}` : "", `依据${state.report?.date || "本期日报"}日报${Number.isInteger(report.anchor_article_count) ? report.anchor_article_count : "本期"}篇论文`]
+    : [];
+  elements.publicationOpportunitiesMeta.textContent = isHistoricalBackfill
+    ? historicalMeta.filter(Boolean).join(" · ")
+    : `${opportunities.length} 个方向 · 基于当日论文`;
   elements.publicationOpportunitiesContent.innerHTML = `
     ${report.overall_judgment ? `<p class="insight-overall">${escapeHtml(report.overall_judgment)}</p>` : ""}
     <div class="insight-opportunity-list">
