@@ -455,12 +455,11 @@ function renderDetailContent(article) {
   return `${termMarkup}${inspirationMarkup}`;
 }
 
-function renderDetails(article, extraFindings = [], englishTitle = "") {
+function renderDetails(article, extraFindings = []) {
   const content = renderDetailContent(article);
   const findingsMarkup = extraFindings.length ? `<h4>更多摘要要点</h4>${renderList(extraFindings)}` : "";
-  const englishMarkup = englishTitle ? `<h4>英文题名</h4><p class="paper-title-en">${escapeHtml(englishTitle)}</p>` : "";
-  if (!content && !findingsMarkup && !englishMarkup) return "";
-  return `<details class="details"><summary>展开完整解读</summary><div class="details-content">${findingsMarkup}${englishMarkup}${content}</div></details>`;
+  if (!content && !findingsMarkup) return "";
+  return `<details class="details"><summary>展开完整解读</summary><div class="details-content">${findingsMarkup}${content}</div></details>`;
 }
 
 function renderFeaturedDetails(article) {
@@ -511,7 +510,6 @@ function renderPaperCard(article) {
   const score = Number(article.recommendation_score) || 0;
   const href = safeHref(article.url);
   const title = article.chinese_title || article.title || "未命名论文";
-  const englishTitle = article.title && article.title !== title ? article.title : "";
   const topBadge = article.top3_reason ? `<span class="top-badge">重点推荐</span>` : "";
   const findings = (article.core_findings || []).slice(0, 2);
   const extraFindings = (article.core_findings || []).slice(2);
@@ -527,7 +525,7 @@ function renderPaperCard(article) {
         ${tags.length ? `<div class="tag-row">${tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>` : ""}
         ${article.why_worth_reading ? `<p class="why">${escapeHtml(article.why_worth_reading)}</p>` : ""}
         ${renderList(findings, "finding-list")}
-        ${renderDetails(article, extraFindings, englishTitle)}
+        ${renderDetails(article, extraFindings)}
         <div class="paper-footer"><div class="paper-footer-leading"><span class="score">${escapeHtml(score)} 分</span>${topBadge}${evidenceStatus(article)}</div></div>
       </article>
     </div>`;
