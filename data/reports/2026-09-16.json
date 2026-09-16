@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "title": "Research Paper Daily",
+  "date": "2026-09-16",
+  "published_at": "2026-09-16T11:58:01.030662+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（近24小时候选不足5篇后扩展；本次所有配置来源均连接失败）",
+    "retrieved_count": 0,
+    "screened_count": 0,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 0,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 0,
+      "crossref": 0,
+      "semanticscholar": 0,
+      "openalex": 0,
+      "biorxiv": 0
+    },
+    "warnings": [
+      "Europe PMC、Crossref、Semantic Scholar、OpenAlex 和 bioRxiv 均连接失败；按技能规则停止候选评估，不以历史论文或无可靠证据的记录填充名额。",
+      "已人工检查 review_queue.json、ranked_24h.json 和 ranked_7d.json；三者均无候选论文、摘要或可复核评分证据。",
+      "本期为零推荐：没有论文可在证据复核后达到70分门槛。"
+    ]
+  },
+  "articles": [],
+  "research_ideas": []
+}
