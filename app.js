@@ -150,15 +150,45 @@ function sourceSummary(metadata) {
     .join(" · ") || "—";
 }
 
+function evidenceTier(article) {
+  const level = String(article.evidence_level || "").toLowerCase().replace(/[\s-]+/g, "_");
+  const fullTextReviewed = article.full_text_reviewed === true
+    || article.full_text_reviewed === "true"
+    || ["full_text", "full_text_reviewed", "fulltext", "fulltext_reviewed"].includes(level);
+  if (fullTextReviewed) {
+    return { key: "full_text", label: "全文复核", title: "已阅读并核对可用论文全文" };
+  }
+  if (article.score_status === "evidence_reviewed" || ["abstract_sources", "abstract_plus_sources", "source_reviewed"].includes(level)) {
+    return { key: "abstract_sources", label: "摘要与来源复核", title: "已复核公开摘要、DOI 与可靠来源" };
+  }
+  return { key: "abstract", label: "摘要级复核", title: "当前内容主要依据公开摘要，尚未完成来源级复核" };
+}
+
+function evidenceCounts(articles) {
+  const counts = { abstract: 0, abstract_sources: 0, full_text: 0 };
+  articles.forEach((article) => { counts[evidenceTier(article).key] += 1; });
+  return counts;
+}
+
+function evidenceSummary(articles) {
+  const counts = evidenceCounts(articles);
+  return [
+    counts.full_text ? `全文复核 ${counts.full_text}篇` : "",
+    counts.abstract_sources ? `摘要与来源复核 ${counts.abstract_sources}篇` : "",
+    counts.abstract ? `摘要级复核 ${counts.abstract}篇` : "",
+  ].filter(Boolean).join(" · ") || "暂无复核记录";
+}
+
 function evidenceStatus(article) {
   const needsVerification = Array.isArray(article.needs_verification) ? article.needs_verification : [];
-  if (needsVerification.length) {
-    return `<span class="evidence-status needs-review" title="仍需核实：${escapeHtml(needsVerification.join("；"))}">待核实</span>`;
-  }
-  if (article.score_status === "evidence_reviewed") {
-    return `<span class="evidence-status reviewed" title="摘要、DOI 与可靠来源已复核">已复核</span>`;
-  }
-  return `<span class="evidence-status" title="当前内容主要依据公开摘要">摘要依据</span>`;
+  const tier = evidenceTier(article);
+  const classNames = [];
+  if (tier.key !== "abstract") classNames.push("reviewed");
+  if (needsVerification.length) classNames.push("needs-review");
+  const title = needsVerification.length
+    ? `${tier.title}；仍需核实：${needsVerification.join("；")}`
+    : tier.title;
+  return `<span class="evidence-status ${classNames.join(" ")}" title="${escapeHtml(title)}">${tier.label}</span>`;
 }
 
 function summarizeWindow(windowText) {
@@ -176,7 +206,7 @@ function renderAppendix() {
   const windowText = metadata.window || "";
   const windowSummary = summarizeWindow(windowText);
   const pendingCount = articles.filter((article) => Array.isArray(article.needs_verification) && article.needs_verification.length > 0).length;
-  const reviewedLabel = pendingCount ? `${articles.length - pendingCount} 已复核 · ${pendingCount} 待核实` : "本期均已复核";
+  const reviewedLabel = `${evidenceSummary(articles)}${pendingCount ? ` · ${pendingCount}篇仍待核实` : ""}`;
   const candidatePath = [metadata.retrieved_count, metadata.screened_count, articles.length]
     .map((value) => value ?? "—")
     .join(" → ");
@@ -357,7 +387,7 @@ function renderReportChrome() {
   elements.updatedAt.textContent = state.report?.published_at ? `更新于 ${new Date(state.report.published_at).toLocaleString("zh-CN")}` : "—";
   const articles = state.report?.articles || [];
   const pendingCount = articles.filter((article) => Array.isArray(article.needs_verification) && article.needs_verification.length > 0).length;
-  elements.reportStatus.textContent = pendingCount ? `${pendingCount} 篇待核实` : "摘要与来源已复核";
+  elements.reportStatus.textContent = `${evidenceSummary(articles)}${pendingCount ? ` · ${pendingCount}篇待核实` : ""}`;
   elements.reportStatus.classList.toggle("needs-review", pendingCount > 0);
   document.title = "Research Paper Daily";
 }

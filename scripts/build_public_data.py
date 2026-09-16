@@ -102,6 +102,8 @@ def public_article(article: Any) -> dict[str, Any]:
         "article_type": as_text(article.get("article_type")),
         "recommendation_score": article.get("recommendation_score", 0),
         "score_status": as_text(article.get("score_status")),
+        "evidence_level": as_text(article.get("evidence_level")),
+        "full_text_reviewed": bool(article.get("full_text_reviewed", False)),
         "component_scores": score_map(article.get("component_scores")),
         "why_worth_reading": as_text(article.get("why_worth_reading")),
         "core_findings": as_text_list(article.get("core_findings")),
