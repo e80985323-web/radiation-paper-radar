@@ -271,6 +271,18 @@ function renderInsightField(label, value) {
   return `<div class="insight-field"><dt>${escapeHtml(label)}</dt><dd>${renderInsightList(values)}</dd></div>`;
 }
 
+function renderInsightTakeaway(label, ...candidates) {
+  const text = candidates.map((candidate) => textList(candidate)[0]).find(Boolean);
+  if (!text) return "";
+  return `<p class="insight-takeaway"><span class="insight-takeaway-label">${escapeHtml(label)}</span>${escapeHtml(text)}</p>`;
+}
+
+function renderInsightDisclosure(label, content, className = "") {
+  if (!String(content ?? "").trim()) return "";
+  const classes = ["insight-disclosure", className].filter(Boolean).join(" ");
+  return `<details class="${classes}"><summary>${escapeHtml(label)}</summary><div class="insight-disclosure-content">${content}</div></details>`;
+}
+
 function evidenceHref(paper) {
   const direct = safeHref(paper?.url);
   if (direct !== "#") return direct;
@@ -325,7 +337,7 @@ function renderRelatedWork() {
         : "",
     ].map((item) => String(item ?? "").trim()).filter(Boolean)
     : [
-      review.search_window,
+      "联网查新",
       Number.isInteger(review.candidate_count) ? `候选 ${review.candidate_count} 篇` : "",
       Number.isInteger(review.verified_count) ? `核实 ${review.verified_count} 篇` : "",
     ].map((item) => String(item ?? "").trim()).filter(Boolean);
@@ -336,25 +348,23 @@ function renderRelatedWork() {
   const searchScopeLine = isHistoricalBackfill && textList(review.search_scope).length
     ? `<p class="insight-source-line">逐主题检索：${escapeHtml(textList(review.search_scope).join("；"))}</p>`
     : "";
-  const searchWindowLine = isHistoricalBackfill && review.search_window
+  const searchWindowLine = review.search_window
     ? `<p class="insight-source-line">检索范围：${escapeHtml(review.search_window)}</p>`
     : "";
   const sourceLine = textList(review.searched_sources).length
     ? `<p class="insight-source-line">检索来源：${escapeHtml(textList(review.searched_sources).join(" · "))}</p>`
     : "";
   const limitations = textList(review.limitations);
+  const limitationsMarkup = limitations.length
+    ? `<div class="insight-limitations"><p class="insight-field-label">查新边界与限制</p>${renderInsightList(limitations)}</div>`
+    : "";
+  const methodNotes = [anchorLine, searchScopeLine, searchWindowLine, sourceLine, limitationsMarkup].filter(Boolean).join("");
+  const methodDisclosure = renderInsightDisclosure("查看检索范围与局限", methodNotes, "insight-method-disclosure");
   elements.relatedWorkContent.innerHTML = `
-    ${anchorLine}
-    ${searchScopeLine}
-    ${searchWindowLine}
-    ${sourceLine}
+    ${methodDisclosure}
     <div class="insight-theme-list">
-      ${themes.map((theme, index) => `
-        <article class="insight-theme">
-          <div class="insight-theme-heading">
-            <div class="insight-theme-title"><span class="insight-index">${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(theme.title || `研究主题 ${index + 1}`)}</h3></div>
-            ${theme.confidence ? `<span class="insight-confidence">${escapeHtml(theme.confidence)}</span>` : ""}
-          </div>
+      ${themes.map((theme, index) => {
+        const details = `
           <dl class="insight-fields">
             ${renderInsightField("相关工作已经做到哪里", theme.related_work_status)}
             ${renderInsightField("当天论文带来的进展", theme.today_increment)}
@@ -364,10 +374,18 @@ function renderRelatedWork() {
             ${renderInsightField("最低验证要求", theme.minimum_validation)}
             ${renderInsightField("新颖性风险", theme.novelty_risk)}
           </dl>
-          <div class="insight-evidence"><p class="insight-field-label">代表性工作</p>${renderEvidenceLinks(theme.representative_works)}</div>
-        </article>`).join("")}
+          <div class="insight-evidence"><p class="insight-field-label">代表性工作</p>${renderEvidenceLinks(theme.representative_works)}</div>`;
+        return `
+          <article class="insight-theme">
+            <div class="insight-theme-heading">
+              <div class="insight-theme-title"><span class="insight-index">${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(theme.title || `研究主题 ${index + 1}`)}</h3></div>
+              ${theme.confidence ? `<span class="insight-confidence">${escapeHtml(theme.confidence)}</span>` : ""}
+            </div>
+            ${renderInsightTakeaway("判断摘要", theme.secondary_judgment, theme.research_gap, theme.today_increment)}
+            ${renderInsightDisclosure("展开查新依据与完整判断", details)}
+          </article>`;
+      }).join("")}
     </div>
-    ${limitations.length ? `<div class="insight-limitations"><p class="insight-field-label">查新边界与限制</p>${renderInsightList(limitations)}</div>` : ""}
   `;
 }
 
@@ -401,14 +419,10 @@ function renderPublicationOpportunities() {
     ? historicalMeta.filter(Boolean).join(" · ")
     : `${opportunities.length} 个方向 · 基于当日论文`;
   elements.publicationOpportunitiesContent.innerHTML = `
-    ${report.overall_judgment ? `<p class="insight-overall">${escapeHtml(report.overall_judgment)}</p>` : ""}
+    ${report.overall_judgment ? `<p class="insight-overall"><span class="insight-takeaway-label">总体判断</span>${escapeHtml(report.overall_judgment)}</p>` : ""}
     <div class="insight-opportunity-list">
-      ${opportunities.map((opportunity, index) => `
-        <article class="insight-opportunity">
-          <div class="insight-theme-heading">
-            <div class="insight-theme-title"><span class="insight-index">${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(opportunity.title || `研究机会 ${index + 1}`)}</h3></div>
-            ${opportunity.article_type ? `<span class="insight-confidence">${escapeHtml(opportunity.article_type)}</span>` : ""}
-          </div>
+      ${opportunities.map((opportunity, index) => {
+        const details = `
           <dl class="insight-fields">
             ${renderInsightField("研究空白", opportunity.research_gap)}
             ${renderInsightField("为什么值得开展", opportunity.why_worth_doing)}
@@ -417,8 +431,17 @@ function renderPublicationOpportunities() {
             ${renderInsightField("当日文献依据", opportunity.daily_evidence)}
             ${renderInsightField("主要风险", opportunity.main_risks)}
           </dl>
-          <div class="insight-evidence"><p class="insight-field-label">支撑论文</p>${renderEvidenceLinks(opportunity.evidence_papers)}</div>
-        </article>`).join("")}
+          <div class="insight-evidence"><p class="insight-field-label">支撑论文</p>${renderEvidenceLinks(opportunity.evidence_papers)}</div>`;
+        return `
+          <article class="insight-opportunity">
+            <div class="insight-theme-heading">
+              <div class="insight-theme-title"><span class="insight-index">${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(opportunity.title || `研究机会 ${index + 1}`)}</h3></div>
+              ${opportunity.article_type ? `<span class="insight-confidence">${escapeHtml(opportunity.article_type)}</span>` : ""}
+            </div>
+            ${renderInsightTakeaway("发文价值", opportunity.paper_contribution, opportunity.why_worth_doing, opportunity.recommended_work)}
+            ${renderInsightDisclosure("展开研究设计与文献依据", details)}
+          </article>`;
+      }).join("")}
     </div>
   `;
 }
