@@ -282,12 +282,11 @@ function renderEvidenceLinks(papers) {
   const entries = Array.isArray(papers) ? papers.filter((paper) => paper && typeof paper === "object") : [];
   if (!entries.length) return `<p class="insight-no-data">暂未列出可访问的支撑论文。</p>`;
   return `<ul class="insight-evidence-list">${entries.map((paper) => {
-    const title = String(paper.title || "未命名论文").trim();
     const href = evidenceHref(paper);
     const metadata = [paper.year, paper.relation].map((item) => String(item ?? "").trim()).filter(Boolean).join(" · ");
     const titleMarkup = href === "#"
-      ? escapeHtml(title)
-      : `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(title)} <span aria-hidden="true">↗</span></a>`;
+      ? "相关文献"
+      : `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">查看原文 <span aria-hidden="true">↗</span></a>`;
     return `<li><span class="insight-evidence-title">${titleMarkup}</span>${metadata ? `<span class="insight-evidence-meta">${escapeHtml(metadata)}</span>` : ""}</li>`;
   }).join("")}</ul>`;
 }
@@ -484,7 +483,7 @@ function renderFeaturedArticle(article) {
   }
   const score = Number(article.recommendation_score) || 0;
   const href = safeHref(article.url);
-  const title = article.chinese_title || article.title || "未命名论文";
+  const title = article.chinese_title || "中文题名待补充";
   const summary = article.why_worth_reading || article.core_findings?.[0] || "暂无摘要说明。";
   const journal = article.journal || "期刊待核实";
   const date = article.publication_date || "日期待核实";
@@ -509,7 +508,7 @@ function renderFeaturedArticle(article) {
 function renderPaperCard(article) {
   const score = Number(article.recommendation_score) || 0;
   const href = safeHref(article.url);
-  const title = article.chinese_title || article.title || "未命名论文";
+  const title = article.chinese_title || "中文题名待补充";
   const topBadge = article.top3_reason ? `<span class="top-badge">重点推荐</span>` : "";
   const findings = (article.core_findings || []).slice(0, 2);
   const extraFindings = (article.core_findings || []).slice(2);
