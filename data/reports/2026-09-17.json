@@ -1,0 +1,868 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-09-17",
+  "published_at": "2026-09-17T03:11:07.730378+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（近24小时高分候选不足5篇后扩展）",
+    "retrieved_count": 1317,
+    "screened_count": 164,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 8,
+    "threshold": 70,
+    "source_counts": {},
+    "warnings": []
+  },
+  "articles": [
+    {
+      "title": "Validation of the ray-tracing Monte-Carlo code tRAYcy for geometry and coincidence-summing corrections in environmental gamma-ray spectrometry.",
+      "chinese_title": "用于环境伽马能谱几何与符合求和校正的射线追踪蒙特卡洛代码 tRAYcy 验证",
+      "journal": "Journal of Environmental Radioactivity",
+      "publication_date": "2026-09-14",
+      "doi": "10.1016/j.jenvrad.2026.108154",
+      "url": "https://doi.org/10.1016/j.jenvrad.2026.108154",
+      "article_type": "研究论文",
+      "recommendation_score": 91,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 96,
+        "novelty": 82,
+        "quality": 88,
+        "methodology": 92,
+        "inspiration": 90
+      },
+      "why_worth_reading": "以两种能力验证材料检验几何、密度和真符合求和校正，并比较效率转移与无源数学标定。",
+      "core_findings": [
+        "未校正活度的绝对偏差可达约11%，说明样品几何、基质密度和真符合求和不可忽略。",
+        "联合几何与符合求和校正后，五种核素结果与指定参考值的差异控制在4%以内。",
+        "无源数学标定可复现实验标定结果，并能在单次模拟中重建主要谱结构。",
+        "低能X射线区及高能峰下方仍存在局部偏差，提示模型细节仍需改进。"
+      ],
+      "term_explanations": [
+        {
+          "term": "真符合求和",
+          "academic_explanation": "同一次衰变级联产生的多个光子在探测器分辨时间内被共同记录，使峰面积从单峰迁移到求和峰的效应。",
+          "plain_explanation": "两个几乎同时到达的光子被仪器当成一次更大的脉冲，像把两笔账误记成一笔。"
+        },
+        {
+          "term": "全能峰效率",
+          "academic_explanation": "入射光子在探测器中沉积全部能量并落入对应全能峰的计数概率。",
+          "plain_explanation": "一批光子进来后，有多少能被完整记到账本对应栏目里。"
+        },
+        {
+          "term": "无源数学标定",
+          "academic_explanation": "用经验证的辐射输运模型直接计算特定样品—探测器几何的效率，而不依赖形状匹配的实物标准源。",
+          "plain_explanation": "不用为每种容器都做一套标准样，而用经过验证的数字模型算出标尺。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "采用参考活度已知、密度差异明显的多种基质进行盲验证。"
+        ],
+        "methods": [
+          "将效率转移、符合求和校正、无源标定和完整合成谱置于同一误差框架比较。"
+        ],
+        "key_entities_mechanisms": [
+          "HPGe响应、样品密度、Marinelli几何和级联符合共同决定定量偏差。"
+        ],
+        "target_system": [
+          "环境样品HPGe伽马能谱定量。"
+        ],
+        "future_direction": [
+          "扩展至更多密度、容器尺寸及低能核素并传播模型参数不确定度。"
+        ],
+        "paper_potential": [
+          "可形成面向跨几何无源标定的验证规范或开放基准数据集。"
+        ],
+        "limitations_validation": [
+          "低能区与峰下连续谱仍有偏差，需进一步核对材料组成、死层和散射环境。"
+        ]
+      },
+      "top3_reason": "校正链完整、参考材料可追溯，且直接对应能谱定量的核心误差源。",
+      "tags": [
+        "伽马能谱",
+        "HPGe",
+        "蒙特卡洛",
+        "标定",
+        "全谱建模"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": []
+    },
+    {
+      "title": "Angular emission of scintillators for nuclear fusion diagnostics",
+      "chinese_title": "核聚变诊断用闪烁体的角向发光特性",
+      "journal": "Plasma Physics and Controlled Fusion",
+      "publication_date": "2026-09-14",
+      "doi": "10.1088/1361-6587/aea709",
+      "url": "https://doi.org/10.1088/1361-6587/aea709",
+      "article_type": "研究论文",
+      "recommendation_score": 89,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 92,
+        "novelty": 86,
+        "quality": 86,
+        "methodology": 88,
+        "inspiration": 84
+      },
+      "why_worth_reading": "实测快离子闪烁屏的角向非各向同性，并量化其对 ITER 光学诊断信号预测的影响。",
+      "core_findings": [
+        "TG-Green 与β-SiAlON在3.5 MeV氦离子和1 MeV氘离子照射下均呈显著角向发光非各向同性。",
+        "相对效率随观察角增大而下降，可由经验余弦模型描述。",
+        "归一化角响应对本实验中的离子种类和能量依赖较小。",
+        "将角响应纳入ITER快离子损失探测器模型后，预测信号较各向同性假设提高约8%。"
+      ],
+      "term_explanations": [
+        {
+          "term": "角向发光非各向同性",
+          "academic_explanation": "闪烁光输出强度随观察方向变化，而非在所有方向具有相同辐射强度。",
+          "plain_explanation": "同一块闪烁屏从不同角度看亮度不同，像有方向性的灯而不是均匀灯泡。"
+        },
+        {
+          "term": "快离子损失探测器",
+          "academic_explanation": "用于测量聚变等离子体中逸出高能离子的通量、能量或落点分布的诊断装置。",
+          "plain_explanation": "它像守在装置边缘的测速摄像头，记录从等离子体里跑出来的高能粒子。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "在离子种类、能量和观察角之间做交叉测量，并先量化光纤弯曲与辐照稳定性。"
+        ],
+        "methods": [
+          "角扫描、光学对准、系统标定与经验角响应模型联合。"
+        ],
+        "key_entities_mechanisms": [
+          "闪烁屏微结构和出光路径可能共同造成方向依赖，具体机制仍需核实。"
+        ],
+        "target_system": [
+          "聚变快离子损失闪烁诊断和其他斜视角光学读出系统。"
+        ],
+        "future_direction": [
+          "把角响应与表面粗糙度、厚度及辐照老化建立可迁移模型。"
+        ],
+        "paper_potential": [
+          "可围绕角响应校正对通量反演系统误差的贡献开展方法论文。"
+        ],
+        "limitations_validation": [
+          "仅两种商用材料和有限束流条件；绝对光产额与长期辐照后的角响应需要验证。"
+        ]
+      },
+      "top3_reason": "发现会直接影响通量反演的系统响应项，并给出装置级影响量化。",
+      "tags": [
+        "闪烁体",
+        "带电粒子",
+        "聚变诊断",
+        "响应建模",
+        "标定"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": []
+    },
+    {
+      "title": "The Characterization of a Compact CLLB:Ce Scintillation Detector for Mixed-Field Monitoring at a Muon Facility",
+      "chinese_title": "用于缪子设施混合场监测的紧凑型 CLLB:Ce 闪烁探测器表征",
+      "journal": "Applied Sciences",
+      "publication_date": "2026-09-16",
+      "doi": "10.3390/app16189177",
+      "url": "https://doi.org/10.3390/app16189177",
+      "article_type": "研究论文",
+      "recommendation_score": 85,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 94,
+        "novelty": 76,
+        "quality": 78,
+        "methodology": 82,
+        "inspiration": 86
+      },
+      "why_worth_reading": "在真实缪子设施中验证CLLB:Ce—SiPM紧凑系统的中子/伽马混合场响应与脉冲形状判别。",
+      "core_findings": [
+        "探测器在环境本底中记录到3–5 MeV区间的内禀α活动。",
+        "AmBe与137Cs联合照射在3.1–3.5 MeV区间产生增强，包含伽马样和带电粒子样贡献。",
+        "数字电荷积分脉冲形状判别的品质因数在本底和混合源条件下分别为1.71±0.03与1.53±0.03。",
+        "受照Ag-Cu板测量表明系统可在缪子照射期间记录候选元素相关谱特征，但仍需HPGe基准验证。"
+      ],
+      "term_explanations": [
+        {
+          "term": "脉冲形状判别",
+          "academic_explanation": "利用不同辐射在闪烁体中产生的时间波形差异，对事件类型进行分类的方法。",
+          "plain_explanation": "不只看脉冲有多高，还看它的尾巴形状，从而判断是哪类粒子敲门。"
+        },
+        {
+          "term": "品质因数",
+          "academic_explanation": "量化两类脉冲分布分离程度的指标，通常综合峰间距与两峰宽度。",
+          "plain_explanation": "它衡量两堆数据分得有多开；数值越大，通常越不容易认错。"
+        },
+        {
+          "term": "内禀α活动",
+          "academic_explanation": "由探测材料自身所含放射性核素衰变产生的α事件，而非外部辐射源造成。",
+          "plain_explanation": "噪声不是外面来的，而是晶体材料自己偶尔在放射。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "按本底、混合标准源和真实受照样品三级场景逐步验证。"
+        ],
+        "methods": [
+          "CLLB:Ce、SiPM与数字电荷积分判别结合，并保留HPGe对照接口。"
+        ],
+        "key_entities_mechanisms": [
+          "6Li俘获反应提供中子敏感信号，内禀α本底与伽马事件构成主要混淆源。"
+        ],
+        "target_system": [
+          "小型混合辐射场监测与缪子诱发元素分析辅助测量。"
+        ],
+        "future_direction": [
+          "构建能量依赖的中子/伽马效率矩阵并进行场强定量。"
+        ],
+        "paper_potential": [
+          "可发展为紧凑混合场探测器的跨设施标定和不确定度论文。"
+        ],
+        "limitations_validation": [
+          "当前为可行性研究；定量应用需效率标定、HPGe基准和谱线归属验证。"
+        ]
+      },
+      "top3_reason": "覆盖材料、读出、粒子鉴别和真实场景，且诚实界定了定量化缺口。",
+      "tags": [
+        "中子探测",
+        "伽马探测",
+        "CLLB",
+        "SiPM",
+        "粒子鉴别"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": []
+    },
+    {
+      "title": "Analysis of mixed radiation fields at the MoEDAL experiment based on real-time data from a Timepix detector network",
+      "chinese_title": "基于 Timepix 探测器网络实时数据的 MoEDAL 实验混合辐射场分析",
+      "journal": "The European Physical Journal Special Topics",
+      "publication_date": "2026-09-16",
+      "doi": "10.1140/epjs/s11734-026-02586-3",
+      "url": "https://doi.org/10.1140/epjs/s11734-026-02586-3",
+      "article_type": "研究论文",
+      "recommendation_score": 85,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 89,
+        "novelty": 80,
+        "quality": 84,
+        "methodology": 84,
+        "inspiration": 82
+      },
+      "why_worth_reading": "以多年Timepix网络数据分解LHC混合场，并展示单帧粒子方向和能损轨迹重建。",
+      "core_findings": [
+        "研究目标是确定MoEDAL区域快中子、其他强子和高电离粒子的注量及场特征。",
+        "Timepix网络提供混合场组成、谱学性质和不同区域方向分布的实时测量。",
+        "论文重点分析中子与高电离粒子，并报告其方向分布。",
+        "单个探测器帧初步展示了粒子方向与能量损失剖面的空间轨迹重建能力。"
+      ],
+      "term_explanations": [
+        {
+          "term": "混合辐射场",
+          "academic_explanation": "由多种粒子或光子成分及不同能量分布共同构成的辐射环境。",
+          "plain_explanation": "现场不是只有一种辐射，而是中子、带电粒子等多种成分混在一起。"
+        },
+        {
+          "term": "注量",
+          "academic_explanation": "穿过单位截面积的粒子数，是表征辐射场强度的基本物理量。",
+          "plain_explanation": "把一小块面积当门口，数有多少粒子从这扇门穿过去。"
+        },
+        {
+          "term": "高电离粒子",
+          "academic_explanation": "沿径迹产生较高局部电离密度、单位长度能量损失较大的粒子。",
+          "plain_explanation": "这类粒子一路留下很密的电离痕迹，像在材料里画出一条粗线。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "用多点网络长期同步采样，并将区域分布与单帧径迹信息联合。"
+        ],
+        "methods": [
+          "像素簇形态、谱响应、方向分布和能损剖面联合分析。"
+        ],
+        "key_entities_mechanisms": [
+          "不同辐射成分在硅像素阵列中的簇形态与能量沉积差异支持分类。"
+        ],
+        "target_system": [
+          "加速器实验区实时混合场监测和被动径迹探测器本底表征。"
+        ],
+        "future_direction": [
+          "建立跨探测点响应展开和时间变化模型，并与蒙特卡洛场图比较。"
+        ],
+        "paper_potential": [
+          "可形成像素网络多模态混合场反演或异常监测方法论文。"
+        ],
+        "limitations_validation": [
+          "摘要未给出分类混淆矩阵、效率和系统误差，需全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "半导体探测器",
+        "Timepix",
+        "混合场",
+        "中子",
+        "带电粒子",
+        "成像"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需由全文核实各辐射成分的识别效率和不确定度预算。"
+      ]
+    },
+    {
+      "title": "Cage-like Organic Cation-Engineered 0D Hybrid Bromide [S3(CH2)4.5]2(SbBr6): Synthesis, Structure, and Photoluminescence and Radioluminescence Properties",
+      "chinese_title": "笼状有机阳离子工程零维杂化溴化物 [S3(CH2)4.5]2(SbBr6)：合成、结构与光致/辐射发光性能",
+      "journal": "Inorganic Chemistry",
+      "publication_date": "2026-09-14",
+      "doi": "10.1021/acs.inorgchem.6c04390",
+      "url": "https://doi.org/10.1021/acs.inorgchem.6c04390",
+      "article_type": "研究论文",
+      "recommendation_score": 84,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 88,
+        "novelty": 84,
+        "quality": 82,
+        "methodology": 78,
+        "inspiration": 80
+      },
+      "why_worth_reading": "把笼状阳离子结构设计连接到高光产额和5 lp/mm X射线成像，指标链较完整。",
+      "core_findings": [
+        "离散(SbBr6)3−八面体与笼状有机阳离子构成零维杂化结构。",
+        "材料在542 nm呈宽带黄绿光发射，光致发光量子产率为84.91%。",
+        "X射线辐射发光峰位于538 nm，报告光产额为21050 photons/MeV。",
+        "其PVA复合膜用于X射线成像时报告空间分辨率为5 lp/mm。"
+      ],
+      "term_explanations": [
+        {
+          "term": "零维杂化金属卤化物",
+          "academic_explanation": "发光金属卤化物多面体在晶体中彼此离散、由有机组分隔离的有机—无机杂化材料。",
+          "plain_explanation": "发光单元像一座座互不相连的小岛，被有机分子隔开。"
+        },
+        {
+          "term": "自陷激子",
+          "academic_explanation": "电子—空穴激发态通过局域晶格畸变被束缚在局部势阱中的准粒子状态。",
+          "plain_explanation": "激发能量把周围晶格压出一个小坑，随后自己被困在这个坑里发光。"
+        },
+        {
+          "term": "线对每毫米",
+          "academic_explanation": "成像系统每毫米可分辨的黑白线对数量，用于表征空间分辨能力。",
+          "plain_explanation": "一毫米内能看清多少组相邻黑白细线，数量越多通常越清晰。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "将结构、稳态发光、X射线光产额和复合膜成像串成材料—器件证据链。"
+        ],
+        "methods": [
+          "阳离子空间隔离设计与PVA成膜相结合。"
+        ],
+        "key_entities_mechanisms": [
+          "离散SbBr6八面体和自陷激子发射是主要结构—发光线索。"
+        ],
+        "target_system": [
+          "低维杂化卤化物X射线闪烁屏。"
+        ],
+        "future_direction": [
+          "比较膜厚、颗粒分散和光散射对检出限与调制传递函数的影响。"
+        ],
+        "paper_potential": [
+          "可围绕结构隔离度—非辐射损失—成像分辨率建立定量关系。"
+        ],
+        "limitations_validation": [
+          "摘要未提供检出限、辐照稳定性、余辉和标准材料同条件对照。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "闪烁体",
+        "X射线探测",
+        "X射线成像",
+        "杂化卤化物"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需核实辐照稳定性、余辉和光产额测量基准。"
+      ]
+    },
+    {
+      "title": "The Liquid Scintillator Track Detector",
+      "chinese_title": "液体闪烁体径迹探测器",
+      "journal": "Physics of Particles and Nuclei",
+      "publication_date": "2026-09-15",
+      "doi": "10.1134/s106377962670111x",
+      "url": "https://doi.org/10.1134/s106377962670111x",
+      "article_type": "研究论文",
+      "recommendation_score": 81,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 88,
+        "novelty": 78,
+        "quality": 72,
+        "methodology": 74,
+        "inspiration": 78
+      },
+      "why_worth_reading": "以短焦菲涅耳透镜将有机闪烁体出光用于宇宙缪子径迹成像，报告毫米级空间分辨率。",
+      "core_findings": [
+        "研究开发了采用有机闪烁体和菲涅耳透镜的径迹探测方案。",
+        "塑料和液体闪烁体中均获得可辨识的宇宙缪子径迹。",
+        "方案用于检验结合SiPM阵列获取粒子径迹的可行性。",
+        "液体闪烁体探测器报告空间分辨率为2.1 mm。"
+      ],
+      "term_explanations": [
+        {
+          "term": "菲涅耳透镜",
+          "academic_explanation": "将传统透镜连续曲面分割为同心环带以减薄重量、保留主要聚焦能力的光学元件。",
+          "plain_explanation": "把厚透镜的有效弯曲部分压成一圈圈台阶，变薄但还能聚光。"
+        },
+        {
+          "term": "径迹探测",
+          "academic_explanation": "根据粒子在敏感介质中沿路径产生的连续或离散信号重建其运动轨迹。",
+          "plain_explanation": "不是只记一次撞击，而是把粒子一路留下的脚印连起来。"
+        },
+        {
+          "term": "硅光电倍增器",
+          "academic_explanation": "由大量工作于盖革模式的微单元组成、可探测弱光并输出电信号的固态光传感器。",
+          "plain_explanation": "它像由许多微小光开关组成的芯片，能把很弱的闪光放大成可读电信号。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "并列比较塑料与液体闪烁介质的径迹可视化效果。"
+        ],
+        "methods": [
+          "短焦菲涅耳成像与SiPM阵列读出可用于低成本大视场探索。"
+        ],
+        "key_entities_mechanisms": [
+          "粒子沿程激发的闪烁光经透镜映射到位置敏感读出。"
+        ],
+        "target_system": [
+          "宇宙缪子径迹成像和教学型粒子探测。"
+        ],
+        "future_direction": [
+          "量化光子统计、景深、像差和散射对位置分辨率的贡献。"
+        ],
+        "paper_potential": [
+          "可发展为大体积液闪光学径迹重建的系统优化研究。"
+        ],
+        "limitations_validation": [
+          "摘要仅给出单一空间分辨率，效率、角分辨率、事件率和重建算法需全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "液体闪烁体",
+        "SiPM",
+        "缪子",
+        "径迹成像"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需由全文核实效率、统计量和空间分辨率定义。"
+      ]
+    },
+    {
+      "title": "Machine learning-based interpolation of density-dependent full-energy peak efficiency in Marinelli geometry using experimental NaI(Tl) calibration data.",
+      "chinese_title": "基于实验 NaI(Tl) 标定数据的 Marinelli 几何密度依赖全能峰效率机器学习插值",
+      "journal": "Applied Radiation and Isotopes",
+      "publication_date": "2026-09-12",
+      "doi": "10.1016/j.apradiso.2026.112939",
+      "url": "https://doi.org/10.1016/j.apradiso.2026.112939",
+      "article_type": "研究论文",
+      "recommendation_score": 80,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 70,
+        "quality": 76,
+        "methodology": 76,
+        "inspiration": 70
+      },
+      "why_worth_reading": "用独立中间密度数据验证效率插值，同时显示简单插值在当前平滑条件下仍优于集成学习。",
+      "core_findings": [
+        "实验获得0.7、1.0和1.3 g/cm³三种密度、60–1837 keV范围的NaI(Tl)全能峰效率曲线。",
+        "模型仅用两端密度训练，并将1.0 g/cm³数据完全留作独立验证。",
+        "梯度提升和随机森林均能重建中间密度响应，前者误差较低。",
+        "在当前平滑且对称有界条件下，线性和对数线性插值的数值误差反而更低。"
+      ],
+      "term_explanations": [
+        {
+          "term": "Marinelli几何",
+          "academic_explanation": "样品容器环绕探测器端帽布置的测量几何，可提高大体积样品的探测立体角。",
+          "plain_explanation": "样品像套筒一样包住探测器前端，让更多伽马光子有机会进入。"
+        },
+        {
+          "term": "梯度提升回归",
+          "academic_explanation": "按序训练多个弱预测器，每一步拟合此前残差并加权组合的集成回归方法。",
+          "plain_explanation": "让一串小模型轮流纠正前一个模型的错误，最后把答案合起来。"
+        },
+        {
+          "term": "留出验证",
+          "academic_explanation": "将未参与训练的数据独立用于评估模型对未见条件的预测性能。",
+          "plain_explanation": "先把一套答案锁起来，模型训练完后再拿它做真正的闭卷测试。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "中间密度完全留出，是避免把插值能力与训练拟合混淆的关键。"
+        ],
+        "methods": [
+          "应同时报告机器学习、物理插值和简单基线，避免复杂模型的虚假优势。"
+        ],
+        "key_entities_mechanisms": [
+          "样品密度改变自吸收和散射，从而改变能量依赖效率。"
+        ],
+        "target_system": [
+          "Marinelli容器NaI(Tl)环境伽马能谱标定。"
+        ],
+        "future_direction": [
+          "引入非对称密度点、不同基质和容器几何检验外推边界。"
+        ],
+        "paper_potential": [
+          "可形成物理约束学习与传统效率转移的系统基准比较。"
+        ],
+        "limitations_validation": [
+          "仅三种密度且目标曲线平滑；不能据此证明机器学习优于简单插值或可外推。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "NaI(Tl)",
+        "能谱标定",
+        "机器学习",
+        "全能峰效率"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": []
+    },
+    {
+      "title": "Hardness of PbS nanocrystal-based photoconductor to X-ray irradiation",
+      "chinese_title": "PbS 纳米晶光电导器件的 X 射线辐照耐受性",
+      "journal": "Nanotechnology",
+      "publication_date": "2026-09-14",
+      "doi": "10.1088/1361-6528/aea6e2",
+      "url": "https://doi.org/10.1088/1361-6528/aea6e2",
+      "article_type": "研究论文",
+      "recommendation_score": 77,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 76,
+        "novelty": 78,
+        "quality": 82,
+        "methodology": 80,
+        "inspiration": 70
+      },
+      "why_worth_reading": "虽面向红外器件而非电离辐射探测，但以高剂量X射线和谱学证据解析纳米晶器件失效机制。",
+      "core_findings": [
+        "PbS纳米晶光电导器件接受最高1.6 Grad(PbS)的X射线辐照测试。",
+        "暗态与受光响应均逐步下降，未观察到突发阈值式失效。",
+        "暗电流下降更快，使信噪比在测试条件下反而提高。",
+        "XPS/HAXPES证据将电导变化关联到Pb和S的X射线诱导氧化及相关相形成。"
+      ],
+      "term_explanations": [
+        {
+          "term": "辐射硬度",
+          "academic_explanation": "材料或器件在规定辐射种类、剂量和环境下维持功能与参数的能力。",
+          "plain_explanation": "看器件被大量辐射轰击后还能不能正常工作，以及性能掉得多快。"
+        },
+        {
+          "term": "光电导器件",
+          "academic_explanation": "入射光改变材料载流子浓度或迁移行为，从而使电导发生可测变化的光探测器件。",
+          "plain_explanation": "光照后材料更容易导电，电流变化就代表它看到了光。"
+        },
+        {
+          "term": "硬X射线光电子能谱",
+          "academic_explanation": "利用较高能X射线激发光电子、以更大探测深度分析材料元素化学态的谱学技术。",
+          "plain_explanation": "用更有穿透力的X射线查看材料较深处元素发生了怎样的化学变化。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "将器件电学、光学吸收和表面/体相化学态随累积剂量关联。"
+        ],
+        "methods": [
+          "高剂量步进辐照结合XPS/HAXPES可区分性能漂移与化学退化。"
+        ],
+        "key_entities_mechanisms": [
+          "PbS纳米晶氧化、有效尺寸减小和暗电流变化共同影响响应。"
+        ],
+        "target_system": [
+          "空间红外纳米晶光电导器件的辐照可靠性。"
+        ],
+        "future_direction": [
+          "在真空、惰性气氛和含氧环境下做对照，以分离直接位移损伤与氧化。"
+        ],
+        "paper_potential": [
+          "可迁移为辐射传感器材料多模态失效诊断的方法框架。"
+        ],
+        "limitations_validation": [
+          "目标器件探测红外而非X射线；对电离辐射探测的启发主要是可靠性方法，不能外推探测性能。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "辐照可靠性",
+        "半导体",
+        "纳米晶",
+        "X射线"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": []
+    }
+  ],
+  "research_ideas": [
+    "在同一HPGe或NaI(Tl)系统中，把物理效率转移、全谱蒙特卡洛和数据驱动插值置于跨密度盲测，比较准确度、可解释性与外推失效边界。",
+    "为闪烁体—SiPM系统建立角响应、脉冲形状判别和辐照老化的联合响应矩阵，检验单因素标定是否低估真实混合场误差。",
+    "将Timepix像素簇形态与CLLB波形判别作为互补观测，探索混合场中中子、伽马和高电离粒子的多探测器联合分类。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-09-17T12:20:00+08:00",
+    "search_window": "以2021-01-01至2026-09-17为主，围绕当天入选论文的闪烁体/SiPM、半导体成像、伽马能谱标定、混合场与读出主题检索Crossref和出版商DOI元数据；宽搜48条，逐条核对其中12条的题名、年份、DOI和主题关系。",
+    "candidate_count": 48,
+    "verified_count": 12,
+    "limitations": [
+      "该查新是定向相关工作扫描，不是穷尽式系统综述，不能支持绝对首创性表述。",
+      "部分2026年论文引用数尚未形成，判断主要依据方法与验证设计而非影响力指标。",
+      "可访问元数据和摘要支持主题级比较，但个别性能口径仍需全文同条件复核。"
+    ],
+    "themes": [
+      {
+        "title": "混合场闪烁探测与SiPM粒子鉴别",
+        "related_work_status": [
+          "近五年已有CLYC、NaIL和stilbene与SiPM结合的中子/伽马判别及双粒子成像研究。"
+        ],
+        "today_increment": [
+          "当天CLLB工作把紧凑SiPM系统放入真实缪子设施，并同时暴露内禀α本底、混合源判别和样品测量的定量缺口。"
+        ],
+        "research_gap": [
+          "跨设施、跨源强的能量依赖混淆矩阵、效率标定和长期温漂仍缺少统一验证。"
+        ],
+        "secondary_judgment": [
+          "增量更像场景化验证和证据链整合，而非全新的粒子鉴别原理。"
+        ],
+        "paper_angle": [
+          "以统一数字读出和标准数据格式完成CLLB/CLYC/stilbene的跨材料盲测。"
+        ],
+        "minimum_validation": [
+          "至少包含单源与混合源、多个能量区间、温度重复、HPGe或经溯源标准的效率对照。"
+        ],
+        "novelty_risk": [
+          "若仅报告单一品质因数或单一源条件，容易与既有SiPM-PSD工作重叠。"
+        ],
+        "confidence": "中高",
+        "representative_works": [
+          {
+            "title": "Optimization of pulse shape discrimination based on one-class support vector machine for SiPM-based CLYC scintillator detector",
+            "year": "2025",
+            "doi": "10.1088/1748-0221/20/08/p08013",
+            "url": "https://doi.org/10.1088/1748-0221/20/08/p08013",
+            "relation": "CLYC—SiPM机器学习脉冲形状判别"
+          },
+          {
+            "title": "Pulse shape discrimination using a stilbene scintillator array coupled to a large-area SiPM array for hand-held dual particle imager applications",
+            "year": "2023",
+            "doi": "10.1016/j.net.2022.10.016",
+            "url": "https://doi.org/10.1016/j.net.2022.10.016",
+            "relation": "便携式中子/伽马双粒子成像与SiPM阵列"
+          }
+        ]
+      },
+      {
+        "title": "伽马能谱的物理标定、全谱模型与数据驱动插值",
+        "related_work_status": [
+          "近年工作已覆盖蒙特卡洛效率标定、移动/航空系统全谱模型和密度相关效率处理。"
+        ],
+        "today_increment": [
+          "tRAYcy以能力验证材料直接检验几何和符合求和修正；NaI(Tl)研究则用独立中间密度揭示复杂模型未必优于简单插值。"
+        ],
+        "research_gap": [
+          "不同模型在跨基质、跨容器和低能区的可迁移误差尚缺少同一盲测基准。"
+        ],
+        "secondary_judgment": [
+          "真正有价值的增量是可追溯盲验证和失败边界，而非单纯增加算法复杂度。"
+        ],
+        "paper_angle": [
+          "建立同时覆盖峰效率、连续谱、符合求和和不确定度传播的公开基准。"
+        ],
+        "minimum_validation": [
+          "保留完全未参与拟合的基质/密度/几何组合，并报告核素分能区误差与不确定度覆盖率。"
+        ],
+        "novelty_risk": [
+          "只在平滑插值区间展示较高R²会弱化科学增量；需预注册简单基线。"
+        ],
+        "confidence": "高",
+        "representative_works": [
+          {
+            "title": "Development and validation of a high-fidelity full-spectrum Monte Carlo model for the Swiss airborne gamma-ray spectrometry system",
+            "year": "2025",
+            "doi": "10.1016/j.nima.2025.170512",
+            "url": "https://doi.org/10.1016/j.nima.2025.170512",
+            "relation": "航空伽马能谱高保真全谱蒙特卡洛验证"
+          },
+          {
+            "title": "Assessment of the detection efficiency calibration of high-resolution gamma-ray spectrometers by EGSnrc and MCNP6.2 Monte Carlo codes",
+            "year": "2023",
+            "doi": "10.1016/j.radphyschem.2022.110601",
+            "url": "https://doi.org/10.1016/j.radphyschem.2022.110601",
+            "relation": "高分辨伽马能谱效率标定的双代码比较"
+          },
+          {
+            "title": "Full-spectrum modeling of mobile gamma-ray spectrometry systems in scattering media",
+            "year": "2026",
+            "doi": "10.1103/yhz2-xmby",
+            "url": "https://doi.org/10.1103/yhz2-xmby",
+            "relation": "散射介质中移动伽马能谱全谱响应建模"
+          }
+        ]
+      },
+      {
+        "title": "半导体/像素成像与辐照可靠性",
+        "related_work_status": [
+          "CZT、Timepix等半导体平台已用于伽马成像、像素簇分析和混合场监测；辐照硬度研究强调剂量—性能—材料机制联测。"
+        ],
+        "today_increment": [
+          "Timepix工作提供多年网络化真实场数据；PbS工作以电学、光学和化学态证据连接渐进退化机制。"
+        ],
+        "research_gap": [
+          "粒子分类误差与器件随剂量/温度漂移之间的耦合，尚少见端到端定量研究。"
+        ],
+        "secondary_judgment": [
+          "当天证据支持把可靠性参数纳入成像/分类校准，但不支持将PbS红外器件性能外推到X射线探测器。"
+        ],
+        "paper_angle": [
+          "建立像素簇分类器随累积剂量变化的校准漂移图谱与在线修正策略。"
+        ],
+        "minimum_validation": [
+          "多剂量点、退火与环境对照、独立束流测试集，并同时报告材料表征和任务级分类/成像指标。"
+        ],
+        "novelty_risk": [
+          "若只有器件参数前后对比而无任务级影响，难以形成区别于常规辐照表征的贡献。"
+        ],
+        "confidence": "中",
+        "representative_works": [
+          {
+            "title": "Noise level and no-reference-based evaluations for gamma-ray image using non-local means algorithm with CZT photon counting semiconductor detector",
+            "year": "2025",
+            "doi": "10.1016/j.apradiso.2024.111628",
+            "url": "https://doi.org/10.1016/j.apradiso.2024.111628",
+            "relation": "CZT光子计数伽马成像的噪声与图像评价"
+          },
+          {
+            "title": "Thermal neutron detector based on BNCT beam monitoring: conceptual design and readout electronics measurement",
+            "year": "2025",
+            "doi": "10.1016/j.radphyschem.2025.113107",
+            "url": "https://doi.org/10.1016/j.radphyschem.2025.113107",
+            "relation": "中子探测器与读出电子学的系统级验证"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "当天证据最支持两类可发表方向：以可追溯盲测统一比较能谱标定方法，以及把角响应/老化纳入混合场探测器的联合校准。两者均需强调验证边界，避免把算法或材料单项指标包装成绝对新颖性。",
+    "opportunities": [
+      {
+        "title": "跨密度与跨几何的伽马能谱标定盲测基准",
+        "research_gap": [
+          "物理效率转移、全谱蒙特卡洛和机器学习插值通常在不同数据集上评价，缺少可追溯的同场比较。"
+        ],
+        "why_worth_doing": [
+          "可直接回答复杂模型何时真正优于简单插值，并量化低能区、符合求和与基质差异造成的失效边界。"
+        ],
+        "recommended_work": [
+          "设计多密度、多容器、不同核素的训练/盲测矩阵；预注册线性、对数线性、蒙特卡洛和学习模型；报告分能区误差及不确定度覆盖率。"
+        ],
+        "paper_contribution": [
+          "提供开放基准数据、统一评价协议和面向应用选择模型的决策图。"
+        ],
+        "daily_evidence": [
+          "tRAYcy论文显示联合物理校正可显著降低偏差；NaI(Tl)论文显示简单插值在当前条件下优于集成学习。"
+        ],
+        "main_risks": [
+          "标准源与多基质实验成本较高；模型几何参数相关性可能使误差归因困难。"
+        ],
+        "article_type": "方法学与基准验证研究论文",
+        "evidence_papers": [
+          {
+            "title": "Validation of the ray-tracing Monte-Carlo code tRAYcy for geometry and coincidence-summing corrections in environmental gamma-ray spectrometry.",
+            "year": "2026",
+            "doi": "10.1016/j.jenvrad.2026.108154",
+            "url": "https://doi.org/10.1016/j.jenvrad.2026.108154"
+          },
+          {
+            "title": "Machine learning-based interpolation of density-dependent full-energy peak efficiency in Marinelli geometry using experimental NaI(Tl) calibration data.",
+            "year": "2026",
+            "doi": "10.1016/j.apradiso.2026.112939",
+            "url": "https://doi.org/10.1016/j.apradiso.2026.112939"
+          }
+        ]
+      },
+      {
+        "title": "闪烁体—SiPM混合场的角响应、粒子鉴别与漂移联合校准",
+        "research_gap": [
+          "角向出光、脉冲形状判别、内禀本底和辐照/温度漂移多被分开测量，系统级误差传播不清楚。"
+        ],
+        "why_worth_doing": [
+          "这些效应都能改变分类边界或通量反演，联合响应模型比单一品质因数更贴近真实设施。"
+        ],
+        "recommended_work": [
+          "在多角度、多粒子源、多个温度和累积剂量点测量波形与光产额，构建带不确定度的联合响应矩阵并在独立混合场盲测。"
+        ],
+        "paper_contribution": [
+          "给出可迁移的联合校准流程，量化忽略角响应或漂移对粒子分类和通量估计的偏差。"
+        ],
+        "daily_evidence": [
+          "角向发光论文显示各向同性假设会改变装置信号预测；CLLB论文显示真实混合场下判别品质下降且需进一步效率标定。"
+        ],
+        "main_risks": [
+          "变量维度高导致实验量大；不同闪烁体的机制差异可能限制模型迁移。"
+        ],
+        "article_type": "探测器标定与系统性能研究论文",
+        "evidence_papers": [
+          {
+            "title": "Angular emission of scintillators for nuclear fusion diagnostics",
+            "year": "2026",
+            "doi": "10.1088/1361-6587/aea709",
+            "url": "https://doi.org/10.1088/1361-6587/aea709"
+          },
+          {
+            "title": "The Characterization of a Compact CLLB:Ce Scintillation Detector for Mixed-Field Monitoring at a Muon Facility",
+            "year": "2026",
+            "doi": "10.3390/app16189177",
+            "url": "https://doi.org/10.3390/app16189177"
+          }
+        ]
+      }
+    ]
+  }
+}
