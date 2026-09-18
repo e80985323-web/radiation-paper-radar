@@ -1,0 +1,1311 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-09-18",
+  "published_at": "2026-09-18T06:19:23.346689+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 1932,
+    "screened_count": 242,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 10,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 90,
+      "crossref": 507,
+      "semanticscholar": 0,
+      "openalex": 735,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "发现 13 篇已推送论文的出版信息更新；不作为新论文重复推荐",
+      "Semantic Scholar本次采集受限（429），其余来源继续使用。",
+      "实际候选窗口为2026-09-12至2026-09-18，近24小时为日级近似；同时复查24小时排序独有记录。",
+      "自动推荐为0；人工复核从全部排序候选重新选择10篇，未以初筛分作为最终分。",
+      "多数当天论文依据采集摘要复核；未获取全文的参数和验证边界逐篇注明。",
+      "本地结构化画像已激活；主题说明仍留有草案字样，本次按已配置画像及用户明确主题执行，未修改配置。",
+      "本次独立查新39篇线索、核实12篇、公开选8篇；不是穷尽性新颖性检索。",
+      "交付历史和研究记忆仅保存到本次运行目录，未更新全局文件。",
+      "补充在线核对：8篇取得Crossref记录；其余通过OpenAlex与Europe PMC核验。土壤论文的2026在线记录与2027卷期差异已逐篇注明。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Proton-induced radiation stability in FAPbBr3 perovskite detectors: Multi-descriptor damage model and experimental validation",
+      "chinese_title": "FAPbBr3钙钛矿探测器的质子辐照稳定性：多指标损伤模型及实验验证",
+      "journal": "Applied Physics Letters",
+      "publication_date": "2026-09-16",
+      "doi": "10.1063/5.0349653",
+      "url": "https://doi.org/10.1063/5.0349653",
+      "article_type": "研究论文",
+      "recommendation_score": 88,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 95,
+        "novelty": 80,
+        "quality": 80,
+        "methodology": 90,
+        "inspiration": 90
+      },
+      "why_worth_reading": "将空间损伤分布与实测电性能联系起来，适合检验传统总量损伤指标的预测边界。",
+      "core_findings": [
+        "模型联合比较非电离能损、原子空位分布和DPA等指标，模拟质子能量为70–250 MeV。",
+        "器件在70、100和150 MeV辐照后的迁移率寿命积保留率分别为97.2%、91.5%和66.6%；150 MeV下暗电流恶化最明显。",
+        "作者认为局部空位峰值更能解释本组退化趋势；摘要不足以证明其对其他材料、厚度或注量普遍有效。"
+      ],
+      "term_explanations": [
+        {
+          "term": "FAPbBr3钙钛矿",
+          "academic_explanation": "甲脒铅溴化物半导体，可将辐射产生的电荷转换为电信号；FA为甲脒阳离子。",
+          "plain_explanation": "一种能把辐射变成电信号的晶体，表现也受电极和缺陷影响。"
+        },
+        {
+          "term": "蒙特卡洛模拟",
+          "academic_explanation": "通过随机抽样模拟粒子输运或其他概率过程，并估计观测量及统计误差。",
+          "plain_explanation": "在电脑里让大量虚拟粒子按物理概率运动，统计它们留下的信号。"
+        },
+        {
+          "term": "非电离能损NIEL",
+          "academic_explanation": "入射粒子通过非电离过程向原子位移等通道传递的能量损失指标。",
+          "plain_explanation": "辐射能量中用于扰动原子位置的那部分账目，不能单独代表最终器件损坏。"
+        },
+        {
+          "term": "原子空位与DPA",
+          "academic_explanation": "空位是晶格位置缺少原子的缺陷；DPA表示平均每个原子发生位移的估计次数。",
+          "plain_explanation": "一个看哪里出现空座，一个统计平均搬动多少次；都不直接等于电性能退化。"
+        },
+        {
+          "term": "迁移率寿命积μτ",
+          "academic_explanation": "载流子迁移率与有效寿命之积，反映电场下电荷在被俘获或复合前的输运能力。",
+          "plain_explanation": "电荷跑得快不快、能跑多久的综合指标。"
+        },
+        {
+          "term": "暗电流",
+          "academic_explanation": "未受目标辐射激发时器件在规定条件下的背景电流。",
+          "plain_explanation": "没有信号时仪器自己流出的底电流，其变化可能提示器件退化。"
+        },
+        {
+          "term": "质子注量",
+          "academic_explanation": "单位面积通过的质子数，区别于单位质量吸收的能量即吸收剂量。",
+          "plain_explanation": "一块面积上总共打来多少质子，不能只凭数量判断它们留下多少能量。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "保持注量、器件厚度和测试时点一致，改变质子能量。"
+        ],
+        "methods": [
+          "同时比较局部空位指标和NIEL的预测误差。"
+        ],
+        "key_entities_mechanisms": [
+          "关注缺陷产生位置与电荷输运的关联。"
+        ],
+        "target_system": [
+          "用于半导体探测器辐照环境可靠性阶段。"
+        ],
+        "future_direction": [
+          "检验辐照后恢复时间能否改变损伤指标排序。"
+        ],
+        "paper_potential": [
+          "若能跨能量和独立批次预测退化，可形成器件可靠性方法论文。"
+        ],
+        "limitations_validation": [
+          "需要核实实验注量、重复数、误差和辐照后等待时间；现有关联不能认定为因果。"
+        ]
+      },
+      "top3_reason": "将空间损伤分布与实测电性能联系起来，适合检验传统总量损伤指标的预测边界。",
+      "tags": [
+        "半导体探测器",
+        "辐照可靠性"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需要核实实验注量、重复数、误差和辐照后等待时间；现有关联不能认定为因果。"
+      ]
+    },
+    {
+      "title": "Lanthanide-Enabled Lattice Engineering of Copper(I) Cluster Scintillators",
+      "chinese_title": "镧系元素驱动的铜(I)团簇闪烁体晶格工程",
+      "journal": "Journal of the American Chemical Society",
+      "publication_date": "2026-09-17",
+      "doi": "10.1021/jacs.6c11739",
+      "url": "https://doi.org/10.1021/jacs.6c11739",
+      "article_type": "研究论文",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 85,
+        "quality": 85,
+        "methodology": 85,
+        "inspiration": 85
+      },
+      "why_worth_reading": "以系列配位结构比较调节竞争发光通道，同时给出X射线探测和成像指标。",
+      "core_findings": [
+        "比较La、Eu、Gd、Ho和Lu体系，作者将单带发光归因于配体电荷转移通道受到抑制而团簇中心发光保留。",
+        "La体系报告90%的光致发光量子产率及16015 photons/MeV光产额；相对Cu-NHIC的辐射发光强度提高117倍。",
+        "报告X射线检出限12.5 nGy/s和22.3 lp/mm空间分辨率；两者不是与其他论文无条件可比的指标。"
+      ],
+      "term_explanations": [
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射并将部分沉积能量转换为光子的材料。",
+          "plain_explanation": "把不可见辐射变成可被光传感器读取的闪光，闪光多少还受材料和收光条件影响。"
+        },
+        {
+          "term": "镧系调控与Cu(I)团簇",
+          "academic_explanation": "通过引入镧系离子改变一价铜团簇的局部配位与电子态，从而调节发光。",
+          "plain_explanation": "改变铜原子小团体周围的支架和能量通道，影响它怎样发光。"
+        },
+        {
+          "term": "配体电荷转移态与团簇中心态",
+          "academic_explanation": "前者涉及金属或卤素到配体的电子激发转移，后者主要局域于团簇；两者可竞争发光。",
+          "plain_explanation": "激发能可以走不同发光通道，改变结构能改变各通道分到多少能量。"
+        },
+        {
+          "term": "光致发光量子产率",
+          "academic_explanation": "发射光子数与吸收激发光子数的比值，不能直接替代电离辐射下的光产额。",
+          "plain_explanation": "用光照进去后有多少又变成光出来；不等于X射线转光效率。"
+        },
+        {
+          "term": "光产额",
+          "academic_explanation": "单位沉积能量产生的闪烁光子数；测量须明确绝对或相对标定方法。",
+          "plain_explanation": "同样接收一份能量，材料能发出多少光；不等同于相机实际收到多少光。"
+        },
+        {
+          "term": "检出限",
+          "academic_explanation": "在规定噪声统计和判定规则下，可与背景区分的最低被测量水平。",
+          "plain_explanation": "信号至少多大才不容易被背景淹没，取决于读出和测量时间。"
+        },
+        {
+          "term": "空间分辨率与线对每毫米",
+          "academic_explanation": "空间分辨率描述分辨邻近结构的能力；lp/mm表示每毫米可辨认的明暗线对数，须注明判据。",
+          "plain_explanation": "能看清多密的条纹；不同对比度门槛下的数字不能直接比高低。"
+        },
+        {
+          "term": "余辉",
+          "academic_explanation": "激发停止后仍持续的延迟发光，可能造成连续帧间残留。",
+          "plain_explanation": "上一幅画面留下的光尾巴，会影响下一幅图。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "通过已知参考量确定仪器信号与被测物理量之间的关系，并评价不确定度。",
+          "plain_explanation": "用已知标准给仪器定尺子，同时说明尺子有多准。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "同厚度、同剂量和同相机比较系列样品。"
+        ],
+        "methods": [
+          "联合测发光光谱、光产额和成像性能。"
+        ],
+        "key_entities_mechanisms": [
+          "检验局部配位与竞争发光态的联系。"
+        ],
+        "target_system": [
+          "用于闪烁材料设计及响应表征阶段。"
+        ],
+        "future_direction": [
+          "补充余辉、温度和累计辐照后的性能。"
+        ],
+        "paper_potential": [
+          "以机制验证和器件条件下性能保持率形成贡献，避免仅以亮度排序。"
+        ],
+        "limitations_validation": [
+          "需要核实光产额标定、成像判据和多批次重复性。"
+        ]
+      },
+      "top3_reason": "以系列配位结构比较调节竞争发光通道，同时给出X射线探测和成像指标。",
+      "tags": [
+        "闪烁体",
+        "X射线成像"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需要核实光产额标定、成像判据和多批次重复性。"
+      ]
+    },
+    {
+      "title": "From Bulk to Colloidal Nanocrystals: Top‐Down Synthesis of Highly Luminescent Cs 2 ZrCl 6 :Te 4+ Double Perovskite Nanocrystals for X‐Ray Imaging",
+      "chinese_title": "从块体到胶体纳米晶：高发光Te掺杂Cs2ZrCl6双钙钛矿纳米晶的自上而下合成及X射线成像",
+      "journal": "Advanced Functional Materials",
+      "publication_date": "2026-09-16",
+      "doi": "10.1002/adfm.78397",
+      "url": "https://doi.org/10.1002/adfm.78397",
+      "article_type": "研究论文",
+      "recommendation_score": 86,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 80,
+        "quality": 85,
+        "methodology": 85,
+        "inspiration": 85
+      },
+      "why_worth_reading": "提供由块体获得高发光胶体并成膜的路线，可连接材料制备与实际闪烁屏性能。",
+      "core_findings": [
+        "通过配体辅助超声由块体粉末制备胶体纳米晶，晶粒横向尺寸超过100 nm。",
+        "报告光致发光量子产率最高65%，高于该研究常规热注入样品的24%；结构分析提示Te掺杂增加晶格应变且偏向晶粒内部。",
+        "制成薄膜后报告光产额42600±2300 photons/MeV和12.2 lp/mm成像分辨率。"
+      ],
+      "term_explanations": [
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射并将部分沉积能量转换为光子的材料。",
+          "plain_explanation": "把不可见辐射变成可被光传感器读取的闪光，闪光多少还受材料和收光条件影响。"
+        },
+        {
+          "term": "Te掺杂Cs2ZrCl6纳米晶",
+          "academic_explanation": "含碲掺杂的氯锆酸铯纳米尺度晶体，文中用配体辅助超声从块体获得。",
+          "plain_explanation": "把大晶体加工成可分散的小晶粒，并引入少量碲改变发光。"
+        },
+        {
+          "term": "配体辅助超声与胶体薄膜",
+          "academic_explanation": "配体协助超声分散并稳定晶粒，再由胶体分散液制成薄膜的加工路线。",
+          "plain_explanation": "用超声把颗粒分开并防止重新抱团，再涂成一层发光膜。"
+        },
+        {
+          "term": "光致发光量子产率",
+          "academic_explanation": "发射光子数与吸收激发光子数的比值，不能直接替代电离辐射下的光产额。",
+          "plain_explanation": "用光照进去后有多少又变成光出来；不等于X射线转光效率。"
+        },
+        {
+          "term": "晶格应变",
+          "academic_explanation": "晶体局部原子间距相对参考结构的形变，可影响电子态和发光。",
+          "plain_explanation": "原子排列被局部拉伸或挤压；影响方向需靠实验确认。"
+        },
+        {
+          "term": "光产额",
+          "academic_explanation": "单位沉积能量产生的闪烁光子数；测量须明确绝对或相对标定方法。",
+          "plain_explanation": "同样接收一份能量，材料能发出多少光；不等同于相机实际收到多少光。"
+        },
+        {
+          "term": "空间分辨率与线对每毫米",
+          "academic_explanation": "空间分辨率描述分辨邻近结构的能力；lp/mm表示每毫米可辨认的明暗线对数，须注明判据。",
+          "plain_explanation": "能看清多密的条纹；不同对比度门槛下的数字不能直接比高低。"
+        },
+        {
+          "term": "余辉",
+          "academic_explanation": "激发停止后仍持续的延迟发光，可能造成连续帧间残留。",
+          "plain_explanation": "上一幅画面留下的光尾巴，会影响下一幅图。"
+        },
+        {
+          "term": "双钙钛矿与热注入法",
+          "academic_explanation": "双钙钛矿指具有有序阳离子或空位排列的钙钛矿衍生结构；热注入法将前驱物快速注入热溶剂诱导成核生长。",
+          "plain_explanation": "一个说明晶体怎样排列，一个说明怎样在热溶液里制备小晶粒；两种制法须保持比较条件一致。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "改变超声条件并记录粒径、膜厚和批次差异。"
+        ],
+        "methods": [
+          "将胶体稳定性测试和X射线响应同步进行。"
+        ],
+        "key_entities_mechanisms": [
+          "关注掺杂分布、晶格应变与发光之间的关系。"
+        ],
+        "target_system": [
+          "用于大面积闪烁屏材料及成膜工艺。"
+        ],
+        "future_direction": [
+          "测试厚膜中光产额和空间分辨率是否同时保持。"
+        ],
+        "paper_potential": [
+          "可围绕可重复成膜及性能稳定性形成材料到器件的研究。"
+        ],
+        "limitations_validation": [
+          "需要核实储存稳定性、余辉、辐照老化和大面积均匀性。"
+        ]
+      },
+      "top3_reason": "提供由块体获得高发光胶体并成膜的路线，可连接材料制备与实际闪烁屏性能。",
+      "tags": [
+        "闪烁体",
+        "X射线成像"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需要核实储存稳定性、余辉、辐照老化和大面积均匀性。"
+      ]
+    },
+    {
+      "title": "Electroluminescence in Xe-SF6 mixtures",
+      "chinese_title": "Xe–SF6混合气体中的电致发光",
+      "journal": "Nuclear Instruments and Methods in Physics Research Section A Accelerators Spectrometers Detectors and Associated Equipment",
+      "publication_date": "2026-09-16",
+      "doi": "10.1016/j.nima.2026.172058",
+      "url": "https://doi.org/10.1016/j.nima.2026.172058",
+      "article_type": "研究论文",
+      "recommendation_score": 86,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 95,
+        "novelty": 75,
+        "quality": 80,
+        "methodology": 85,
+        "inspiration": 85
+      },
+      "why_worth_reading": "实测负离子体系能否恢复光学信号及其损失，适合评估气体探测读出的真实权衡。",
+      "core_findings": [
+        "用两种布置分离GEM孔内和孔后区域的光信号，研究电场与SF6浓度的影响。",
+        "达到电子脱附条件后电荷和光信号随孔内电场增加，电致发光出现在电荷倍增之前。",
+        "相对纯氙，两区域有效光产额明显降低，并随SF6比例升高继续下降；光信号和倍增阈值向更高约化电场移动。"
+      ],
+      "term_explanations": [
+        {
+          "term": "Xe–SF6电致发光",
+          "academic_explanation": "氙与六氟化硫混合气中，电场加速电子并激发气体产生光的过程。",
+          "plain_explanation": "用电场让气体里的电荷带出闪光，添加气体可能让闪光变弱。"
+        },
+        {
+          "term": "GEM与电子脱附",
+          "academic_explanation": "GEM为带微孔的气体电子倍增结构；强孔内电场可使负离子释放电子，随后激发或倍增。",
+          "plain_explanation": "微孔像局部强电场通道，把被负离子抓住的电子释放出来；释放和倍增是不同步骤。"
+        },
+        {
+          "term": "负离子漂移",
+          "academic_explanation": "电子附着于气体分子后形成负离子，并在电场下迁移的电荷输运方式。",
+          "plain_explanation": "让较重的离子载着电荷走，可减小扩散，但速度和读出条件也会改变。"
+        },
+        {
+          "term": "约化电场",
+          "academic_explanation": "电场强度除以气体数密度等归一化变量，用于比较不同气体密度下的输运过程。",
+          "plain_explanation": "把电场强弱按气体有多密折算，便于在不同压力下比较。"
+        },
+        {
+          "term": "猝灭",
+          "academic_explanation": "激发能经非辐射途径损失或发光过程受到抑制，导致光输出下降。",
+          "plain_explanation": "能量走了不发光的岔路，使可读出的闪光减少。"
+        },
+        {
+          "term": "光产额",
+          "academic_explanation": "单位沉积能量产生的闪烁光子数；测量须明确绝对或相对标定方法。",
+          "plain_explanation": "同样接收一份能量，材料能发出多少光；不等同于相机实际收到多少光。"
+        },
+        {
+          "term": "能量分辨率",
+          "academic_explanation": "通常以单能峰的半高全宽除以峰位能量表示，值越小代表区分邻近能量越好。",
+          "plain_explanation": "同一种能量的信号聚得越紧，就越能分清相邻能量。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "分别扫描气体比例和孔内、孔后电场。"
+        ],
+        "methods": [
+          "同时记录光与电荷，避免只用单一信号判断工作点。"
+        ],
+        "key_entities_mechanisms": [
+          "比较负离子漂移优势与发光猝灭代价。"
+        ],
+        "target_system": [
+          "用于气体探测器结构与读出阶段。"
+        ],
+        "future_direction": [
+          "测量同一条件下的能量分辨率和长期稳定性。"
+        ],
+        "paper_potential": [
+          "建立光输出与电荷输运共同约束的工作区间更有方法价值。"
+        ],
+        "limitations_validation": [
+          "摘要未提供可复现的全部浓度、场强与误差，需要全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "气体探测器",
+        "读出"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "摘要未提供可复现的全部浓度、场强与误差，需要全文核实。"
+      ]
+    },
+    {
+      "title": "Development of compact high-Q LC filters using ALD-grown HfO2 for FDM readout in DIXE",
+      "chinese_title": "采用原子层沉积HfO2的紧凑高Q值LC滤波器：面向DIXE频分复用读出",
+      "journal": "Superconductor Science and Technology",
+      "publication_date": "2026-09-15",
+      "doi": "10.1088/1361-6668/aea7e3",
+      "url": "https://doi.org/10.1088/1361-6668/aea7e3",
+      "article_type": "研究论文",
+      "recommendation_score": 85,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 75,
+        "quality": 80,
+        "methodology": 90,
+        "inspiration": 85
+      },
+      "why_worth_reading": "针对低温X射线读出的面积限制，给出滤波器工艺、良率和低温实测结果。",
+      "core_findings": [
+        "滤波器面向10×10 TES微量热计阵列读出，用HfO2介质提高单位面积电容。",
+        "报告制备良率92.5%，在60 mK下完成样品表征。",
+        "在1–10 MHz内观测37个通道谐振，最高Q值超过25000；这不等于已实现37通道整机能谱性能。"
+      ],
+      "term_explanations": [
+        {
+          "term": "原子层沉积HfO2",
+          "academic_explanation": "通过循环表面反应逐层生长氧化铪薄膜；氧化铪可作高介电常数电容介质。",
+          "plain_explanation": "一层层铺出很薄的绝缘层，使小面积也能做出较大的电容。"
+        },
+        {
+          "term": "LC滤波器与品质因数Q",
+          "academic_explanation": "由电感和电容构成谐振滤波器；Q衡量储能相对损耗及谐振选择性。",
+          "plain_explanation": "像只挑某个频率的窄门，Q高通常表示门更尖锐、损耗更小。"
+        },
+        {
+          "term": "频分复用FDM",
+          "academic_explanation": "让多个探测通道使用不同载波频率，共享读出线路并分别解调。",
+          "plain_explanation": "像不同电台共用天线，用不同频率区分各个探测像素。"
+        },
+        {
+          "term": "TES微量热计",
+          "academic_explanation": "利用超导转变区电阻对温度的敏感性，测量辐射沉积引起的微小温升。",
+          "plain_explanation": "用极敏感的低温温度计估计一个光子带来多少能量。"
+        },
+        {
+          "term": "串扰",
+          "academic_explanation": "一个通道的信号通过电学、光学或其他耦合进入另一通道。",
+          "plain_explanation": "一个通道说话被旁边通道听见，可能被误认成另一个事件。"
+        },
+        {
+          "term": "能量分辨率",
+          "academic_explanation": "通常以单能峰的半高全宽除以峰位能量表示，值越小代表区分邻近能量越好。",
+          "plain_explanation": "同一种能量的信号聚得越紧，就越能分清相邻能量。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "同片统计频率分布、Q和批次良率。"
+        ],
+        "methods": [
+          "把滤波器接入实际TES后测试能量分辨率。"
+        ],
+        "key_entities_mechanisms": [
+          "关注介质损耗、滤波器频率偏差与串扰。"
+        ],
+        "target_system": [
+          "用于探测器读出集成阶段。"
+        ],
+        "future_direction": [
+          "量化小型化对多通道同时工作性能的影响。"
+        ],
+        "paper_potential": [
+          "若实现同等能谱性能下更小面积和更高可用通道数，可形成系统论文。"
+        ],
+        "limitations_validation": [
+          "需要核实整机读出、噪声、热循环及多通道串扰，不能由元件Q直接推断。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "低温探测器",
+        "X射线能谱",
+        "读出"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需要核实整机读出、噪声、热循环及多通道串扰，不能由元件Q直接推断。"
+      ]
+    },
+    {
+      "title": "Uncertainty evaluation of the SIR Transfer Instrument (SIRTI) using Monte Carlo simulations",
+      "chinese_title": "利用蒙特卡洛模拟评估SIR传递仪器SIRTI的不确定度",
+      "journal": "Metrologia",
+      "publication_date": "2026-09-14",
+      "doi": "10.1088/1681-7575/aea6e0",
+      "url": "https://doi.org/10.1088/1681-7575/aea6e0",
+      "article_type": "研究论文",
+      "recommendation_score": 84,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 70,
+        "quality": 85,
+        "methodology": 90,
+        "inspiration": 80
+      },
+      "why_worth_reading": "把可运输测量系统的不确定度具体追溯到容器与装液几何，便于改进标定流程。",
+      "core_findings": [
+        "计算六种核素测量中由安瓿几何和溶液参数引起的探测效率不确定度。",
+        "安瓿内径与溶液体积被识别为主要贡献来源，低光子能量时影响更明显。",
+        "研究支持细化未来活度比对的不确定度预算；摘要未给出每项具体数值。"
+      ],
+      "term_explanations": [
+        {
+          "term": "SIRTI与短寿命核素",
+          "academic_explanation": "SIRTI是国际计量局用于短寿命放射性核素活度比对的可运输测量仪器。",
+          "plain_explanation": "把比较用的仪器带到实验室，避免样品在远途运输中衰变太多。"
+        },
+        {
+          "term": "安瓿几何",
+          "academic_explanation": "盛放放射性溶液的密封小瓶尺寸与形状，影响辐射到探测器的路径和效率。",
+          "plain_explanation": "小瓶内径和装液量改变了放射性物质的位置，进而改变仪器读数。"
+        },
+        {
+          "term": "蒙特卡洛模拟",
+          "academic_explanation": "通过随机抽样模拟粒子输运或其他概率过程，并估计观测量及统计误差。",
+          "plain_explanation": "在电脑里让大量虚拟粒子按物理概率运动，统计它们留下的信号。"
+        },
+        {
+          "term": "探测效率",
+          "academic_explanation": "在规定辐射、能量、几何及阈值条件下，被有效记录事件占相应发射或入射事件的比例。",
+          "plain_explanation": "规定条件下发来一百个事件，能记住几个；分母定义必须相同。"
+        },
+        {
+          "term": "不确定度预算",
+          "academic_explanation": "列出输入量和模型等误差来源及其传播后对结果不确定度的贡献。",
+          "plain_explanation": "把测量不够准的原因逐项记账，找出最值得改进的一项。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "通过已知参考量确定仪器信号与被测物理量之间的关系，并评价不确定度。",
+          "plain_explanation": "用已知标准给仪器定尺子，同时说明尺子有多准。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "设计内径和装液体积独立变化的可控实验。"
+        ],
+        "methods": [
+          "用模拟灵敏度指导哪些尺寸需要精密测量。"
+        ],
+        "key_entities_mechanisms": [
+          "关注样品几何与低能光子响应的耦合。"
+        ],
+        "target_system": [
+          "用于仪器响应表征及计量标定阶段。"
+        ],
+        "future_direction": [
+          "检验跨实验室制样差异是否解释比对偏差。"
+        ],
+        "paper_potential": [
+          "几何公差到结果不确定度的可复核传播可形成计量方法论文。"
+        ],
+        "limitations_validation": [
+          "需核实六核素各自的预算、参数分布和实物验证。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "辐射计量",
+        "标定",
+        "伽马测量"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需核实六核素各自的预算、参数分布和实物验证。"
+      ]
+    },
+    {
+      "title": "Field-scale soil carbon analysis: Correcting for moisture and bulk density effects in Inelastic Neutron Scattering",
+      "chinese_title": "田间尺度土壤碳分析：非弹性中子散射中水分和容重效应的校正",
+      "journal": "Soil and Tillage Research",
+      "publication_date": "2026-09-15",
+      "doi": "10.1016/j.still.2026.107459",
+      "url": "https://doi.org/10.1016/j.still.2026.107459",
+      "article_type": "研究论文",
+      "recommendation_score": 83,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 85,
+        "novelty": 75,
+        "quality": 80,
+        "methodology": 90,
+        "inspiration": 85
+      },
+      "why_worth_reading": "以模拟加受控土柱验证衰减校正，可借鉴到复杂介质中的中子诱发伽马测量。",
+      "core_findings": [
+        "通过模拟不同组成、容重和含水量土壤的中子衰减，建立只需干容重与体积含水量的预测模型。",
+        "在模拟土壤中，30 cm深度处预测精度在10%以内；实验用INS–API系统验证到18 cm深度。",
+        "实验验证深度小于模拟范围，尚不能认定30 cm实际田间测量已达到同等精度。"
+      ],
+      "term_explanations": [
+        {
+          "term": "非弹性中子散射INS",
+          "academic_explanation": "中子使原子核进入激发态，随后发出的特征伽马射线可用于元素分析。",
+          "plain_explanation": "用中子敲原子核，再听它发出的特征伽马信号辨认元素。"
+        },
+        {
+          "term": "伴随粒子成像API",
+          "academic_explanation": "利用中子产生反应中的伴随粒子提供方向或时间标记，并与伽马探测关联以定位相互作用。",
+          "plain_explanation": "给中子事件加上出发时间和方向标签，再据此判断信号来自哪里。"
+        },
+        {
+          "term": "衰减与土壤容重",
+          "academic_explanation": "衰减描述辐射通过物质后强度降低；土壤容重为土壤质量与总体积之比。",
+          "plain_explanation": "材料越密或成分不同，信号穿过去后剩下多少也不同。"
+        },
+        {
+          "term": "蒙特卡洛模拟",
+          "academic_explanation": "通过随机抽样模拟粒子输运或其他概率过程，并估计观测量及统计误差。",
+          "plain_explanation": "在电脑里让大量虚拟粒子按物理概率运动，统计它们留下的信号。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "通过已知参考量确定仪器信号与被测物理量之间的关系，并评价不确定度。",
+          "plain_explanation": "用已知标准给仪器定尺子，同时说明尺子有多准。"
+        },
+        {
+          "term": "不确定度预算",
+          "academic_explanation": "列出输入量和模型等误差来源及其传播后对结果不确定度的贡献。",
+          "plain_explanation": "把测量不够准的原因逐项记账，找出最值得改进的一项。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "独立改变含水量、容重和土壤组成，预留未知样品验证。"
+        ],
+        "methods": [
+          "把中子衰减校正与伽马能谱分析结合。"
+        ],
+        "key_entities_mechanisms": [
+          "重点控制氢含量对中子输运的影响。"
+        ],
+        "target_system": [
+          "用于复杂介质辐射测量与标定阶段。"
+        ],
+        "future_direction": [
+          "检查模型在分层和非均匀介质中的失效边界。"
+        ],
+        "paper_potential": [
+          "跨土类外部验证和完整不确定度预算可构成方法贡献。"
+        ],
+        "limitations_validation": [
+          "仍需验证现场异质性、30 cm实验范围和参考碳含量的溯源。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "中子探测",
+        "伽马能谱",
+        "标定"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "仍需验证现场异质性、30 cm实验范围和参考碳含量的溯源。",
+        "日期采用OpenAlex记录2026-09-15；Crossref卷期为2027年2月且无在线日，出版商在线日尚待核实。本文不是把2027卷期当作已到日期。"
+      ]
+    },
+    {
+      "title": "A novel preclinical system for cascade gamma photon coincidence imaging with high resolution and sensitivity.",
+      "chinese_title": "兼顾高分辨率和灵敏度的级联伽马光子符合成像临床前系统",
+      "journal": "Physics in medicine and biology",
+      "publication_date": "2026-09-16",
+      "doi": "10.1088/1361-6560/aea305",
+      "url": "https://doi.org/10.1088/1361-6560/aea305",
+      "article_type": "研究论文（模拟研究）",
+      "recommendation_score": 82,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 70,
+        "quality": 80,
+        "methodology": 80,
+        "inspiration": 85
+      },
+      "why_worth_reading": "比较混合准直与重建算法的性能，但现有证据是模拟，适合作为原型设计参考。",
+      "core_findings": [
+        "模拟全环LaBr3阵列和针孔–狭缝混合准直器，使用177Lu的113及208 keV级联光子。",
+        "模拟中心符合灵敏度为2.97×10^-5、平均空间分辨率2.32 mm；体模中可辨认1.2 mm热棒，二者是不同评价指标。",
+        "改进直接反投影比原算法的CNR平均提高4.37%；低计数下联合重建比MLEM提高3.80%，尚未构成实物验证。"
+      ],
+      "term_explanations": [
+        {
+          "term": "级联伽马符合成像",
+          "academic_explanation": "利用同一衰变短时间内发出的多光子符合事件及方向约束重建放射源空间分布。",
+          "plain_explanation": "把同一次衰变发出的光子配成对，用它们的方向交会找源位置。"
+        },
+        {
+          "term": "LaBr3与针孔–狭缝准直器",
+          "academic_explanation": "溴化镧闪烁探测器配合针孔和狭缝选择光子传播方向；结构决定效率与定位权衡。",
+          "plain_explanation": "让闪光探测器隔着小孔和窄缝看辐射源，孔缝大小会影响看得清和收得多。"
+        },
+        {
+          "term": "蒙特卡洛模拟",
+          "academic_explanation": "通过随机抽样模拟粒子输运或其他概率过程，并估计观测量及统计误差。",
+          "plain_explanation": "在电脑里让大量虚拟粒子按物理概率运动，统计它们留下的信号。"
+        },
+        {
+          "term": "图像重建与MLEM",
+          "academic_explanation": "重建由探测数据估计源分布；MLEM通过期望最大化迭代优化计数数据的似然。",
+          "plain_explanation": "把各方向收到的信号拼回图像，一轮轮调整到更符合实际计数。"
+        },
+        {
+          "term": "对比噪声比CNR",
+          "academic_explanation": "目标与背景的信号差相对于噪声幅度的指标，需明确区域与噪声定义。",
+          "plain_explanation": "目标比背景突出多少，再除以画面有多乱。"
+        },
+        {
+          "term": "空间分辨率与线对每毫米",
+          "academic_explanation": "空间分辨率描述分辨邻近结构的能力；lp/mm表示每毫米可辨认的明暗线对数，须注明判据。",
+          "plain_explanation": "能看清多密的条纹；不同对比度门槛下的数字不能直接比高低。"
+        },
+        {
+          "term": "断层成像CT与体模",
+          "academic_explanation": "CT利用多角度投影重建内部结构；体模是具有已知形状或材料的测试物。",
+          "plain_explanation": "从多个方向拍摄再拼出内部切片，先用结构已知的样品检验成像质量。"
+        },
+        {
+          "term": "探测效率",
+          "academic_explanation": "在规定辐射、能量、几何及阈值条件下，被有效记录事件占相应发射或入射事件的比例。",
+          "plain_explanation": "规定条件下发来一百个事件，能记住几个；分母定义必须相同。"
+        },
+        {
+          "term": "直接反投影与联合重建",
+          "academic_explanation": "直接反投影将事件约束直接映射到空间；联合重建结合多类测量信息估计源分布。",
+          "plain_explanation": "前者把每次记录画回可能来源的位置，后者综合更多信息来缩小不确定范围。"
+        },
+        {
+          "term": "散射与偶然符合",
+          "academic_explanation": "散射改变光子传播方向或能量；偶然符合是无共同起源的事件落入同一时间窗。",
+          "plain_explanation": "一个是光子中途拐弯，另一个是碰巧同时到来的信号被配成一对。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "统一源活度、采集时间和视野比较不同准直器。"
+        ],
+        "methods": [
+          "分别检验硬件几何与重建算法的增益。"
+        ],
+        "key_entities_mechanisms": [
+          "关注真实符合与散射或偶然配对的区分。"
+        ],
+        "target_system": [
+          "用于伽马成像系统设计阶段。"
+        ],
+        "future_direction": [
+          "在实物体模上检验低计数收益是否保持。"
+        ],
+        "paper_potential": [
+          "贡献应建立在等条件对照及可重复原型验证上。"
+        ],
+        "limitations_validation": [
+          "需核实时间窗、散射处理、性能置信区间和计算成本。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "伽马成像",
+        "模拟"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需核实时间窗、散射处理、性能置信区间和计算成本。"
+      ]
+    },
+    {
+      "title": "Tomographic quality evaluation of flexible X-ray scintillating imaging skins",
+      "chinese_title": "柔性X射线闪烁成像皮肤的断层成像质量评价",
+      "journal": "Biomedical Physics & Engineering Express",
+      "publication_date": "2026-09-17",
+      "doi": "10.1088/2057-1976/aea910",
+      "url": "https://doi.org/10.1088/2057-1976/aea910",
+      "article_type": "研究论文",
+      "recommendation_score": 80,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 85,
+        "novelty": 70,
+        "quality": 80,
+        "methodology": 80,
+        "inspiration": 80
+      },
+      "why_worth_reading": "以已知体模将柔性探测层推进到三维成像评价，明确显示与常规系统仍有差距。",
+      "core_findings": [
+        "使用柔性闪烁膜对定制质量评价体模进行断层扫描，并与平板微CT比较。",
+        "在10%对比度条件下报告3.11 lp/mm空间分辨率，性能低于本研究的微CT系统。",
+        "展示了贴附式三维X射线成像可行性；作者仍需开展伪影校正和更先进重建，不能由体模结果推出临床有效性。"
+      ],
+      "term_explanations": [
+        {
+          "term": "柔性闪烁成像皮肤",
+          "academic_explanation": "可贴附物体表面的柔性闪烁薄膜，将X射线转为光供外部成像读出。",
+          "plain_explanation": "像贴在物体上的发光膜，帮助记录穿过物体的X射线。"
+        },
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射并将部分沉积能量转换为光子的材料。",
+          "plain_explanation": "把不可见辐射变成可被光传感器读取的闪光，闪光多少还受材料和收光条件影响。"
+        },
+        {
+          "term": "断层成像CT与体模",
+          "academic_explanation": "CT利用多角度投影重建内部结构；体模是具有已知形状或材料的测试物。",
+          "plain_explanation": "从多个方向拍摄再拼出内部切片，先用结构已知的样品检验成像质量。"
+        },
+        {
+          "term": "空间分辨率与线对每毫米",
+          "academic_explanation": "空间分辨率描述分辨邻近结构的能力；lp/mm表示每毫米可辨认的明暗线对数，须注明判据。",
+          "plain_explanation": "能看清多密的条纹；不同对比度门槛下的数字不能直接比高低。"
+        },
+        {
+          "term": "图像重建与MLEM",
+          "academic_explanation": "重建由探测数据估计源分布；MLEM通过期望最大化迭代优化计数数据的似然。",
+          "plain_explanation": "把各方向收到的信号拼回图像，一轮轮调整到更符合实际计数。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "通过已知参考量确定仪器信号与被测物理量之间的关系，并评价不确定度。",
+          "plain_explanation": "用已知标准给仪器定尺子，同时说明尺子有多准。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "用同一体模比较平面和弯曲贴附状态。"
+        ],
+        "methods": [
+          "同时评价空间分辨率、均匀性和对比度。"
+        ],
+        "key_entities_mechanisms": [
+          "关注形变引入的几何变化与成像误差。"
+        ],
+        "target_system": [
+          "用于柔性探测层系统成像阶段。"
+        ],
+        "future_direction": [
+          "研究弯曲重复性及扫描期间运动的影响。"
+        ],
+        "paper_potential": [
+          "可形成柔性探测系统可用边界和标定方法论文。"
+        ],
+        "limitations_validation": [
+          "需要核实剂量匹配、重复测量和人体适用性。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "柔性探测器",
+        "X射线成像"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需要核实剂量匹配、重复测量和人体适用性。"
+      ]
+    },
+    {
+      "title": "Investigation of YSO–SiPM detector response for alpha spectroscopy applications",
+      "chinese_title": "面向α能谱应用的YSO–SiPM探测器响应研究",
+      "journal": "Open Research Europe",
+      "publication_date": "2026-09-18",
+      "doi": "10.12688/openreseurope.24095.1",
+      "url": "https://doi.org/10.12688/openreseurope.24095.1",
+      "article_type": "研究论文（开放评议状态待核实）",
+      "recommendation_score": 80,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 65,
+        "quality": 70,
+        "methodology": 80,
+        "inspiration": 80
+      },
+      "why_worth_reading": "在空气中测量紧凑晶体读出系统的能量响应，便于评估便携α测量的性能代价。",
+      "core_findings": [
+        "用238Pu源改变空气路径获得约0.4–5.5 MeV能量区间，报告响应偏离线性约3%。",
+        "报告能量分辨率在5.5 MeV约10.5%，低能端约21%；约500 keV以上信号可清楚分辨。",
+        "空气射程实测40.58±0.87 mm，与模拟约42 mm接近；能量分辨率仍不及常规硅α探测器。"
+      ],
+      "term_explanations": [
+        {
+          "term": "YSO–SiPM",
+          "academic_explanation": "正硅酸钇闪烁体与硅光电倍增器组成的探测系统，先将能量转成光再转成电信号。",
+          "plain_explanation": "晶体先闪光，后面的微小光传感器阵列把闪光变成可计数的电信号。"
+        },
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射并将部分沉积能量转换为光子的材料。",
+          "plain_explanation": "把不可见辐射变成可被光传感器读取的闪光，闪光多少还受材料和收光条件影响。"
+        },
+        {
+          "term": "α能谱与空气降能",
+          "academic_explanation": "测量α粒子的能量分布；改变空气路径可降低粒子到达探测器时的能量，同时引入展宽。",
+          "plain_explanation": "让α粒子穿过不同厚度空气消耗能量，再看仪器能否区分它们。"
+        },
+        {
+          "term": "能量分辨率",
+          "academic_explanation": "通常以单能峰的半高全宽除以峰位能量表示，值越小代表区分邻近能量越好。",
+          "plain_explanation": "同一种能量的信号聚得越紧，就越能分清相邻能量。"
+        },
+        {
+          "term": "响应线性",
+          "academic_explanation": "探测信号与入射能量等输入量在指定范围内接近比例关系。",
+          "plain_explanation": "输入增加一倍时信号是否也大致翻倍，只对测过的范围成立。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "通过已知参考量确定仪器信号与被测物理量之间的关系，并评价不确定度。",
+          "plain_explanation": "用已知标准给仪器定尺子，同时说明尺子有多准。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "同时改变空气路径和光耦合，避免把空气展宽全部归因于探测器。"
+        ],
+        "methods": [
+          "用参考能量及独立硅探测器核验响应标定。"
+        ],
+        "key_entities_mechanisms": [
+          "关注YSO发光和SiPM读出的共同限制。"
+        ],
+        "target_system": [
+          "用于便携α探测器响应表征阶段。"
+        ],
+        "future_direction": [
+          "检验温度变化和长时间运行的稳定性。"
+        ],
+        "paper_potential": [
+          "若能量化便携性与能谱性能权衡，可形成应用仪器论文。"
+        ],
+        "limitations_validation": [
+          "已通过Crossref复核题名、日期及出版商提交摘要；开放同行评议状态仍待核实，不宣称已完成正式同行评议。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "带电粒子探测",
+        "SiPM",
+        "α能谱"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "已通过Crossref复核题名、日期及出版商提交摘要；开放同行评议状态仍待核实，不宣称已完成正式同行评议。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "在独立能量和恢复时点盲测FAPbBr3局部空位预测，比较其相对总量损伤指标的泛化误差。",
+    "将DIXE紧凑滤波器连接实际TES，检验面积缩减后多通道能谱与串扰是否保持。",
+    "在未知分层土壤中验证容重—含水量校正，并检验测量不确定度能否覆盖参考值。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-09-18T06:16:19.301298+00:00",
+    "search_window": "2021-09-18至2026-09-18为主；补充2021年上半年标定方法与2019年API基础线索。",
+    "candidate_count": 39,
+    "verified_count": 12,
+    "limitations": [
+      "仅对12篇核实题名、年份、DOI或原文链接并阅读可得摘要/内容；其余为候选线索。",
+      "部分出版商限制直接访问，采用出版商检索结果、PubMed与作者预印本互证；不把访问限制解释为论文不存在。",
+      "未完成专利、非英文全文和所有版本的穷尽检索；研究空白均限定于本次证据范围。",
+      "气体体系比较证据弱于其他主题，不给出其优先权判断。"
+    ],
+    "themes": [
+      {
+        "title": "闪烁材料到实际X射线成像",
+        "related_work_status": [
+          "铜簇材料的快速合成、柔性成膜和动态成像已有公开实验，材料类别或高发光本身不是充分新颖点。"
+        ],
+        "today_increment": [
+          "当天Cu–Ln工作比较竞争发光通道；Cs2ZrCl6工作推进胶体加工；柔性成像皮肤给出三维体模评价。"
+        ],
+        "research_gap": [
+          "在本次证据范围内，尚缺这些当天体系同剂量、同厚度、同读出条件下的余辉与重复弯曲联合比较。"
+        ],
+        "secondary_judgment": [
+          "机制与工程评价可结合，但不同论文的lp/mm和检出限不宜直接排榜。"
+        ],
+        "paper_angle": [
+          "保持吸收厚度和读出一致，研究发光通道调控能否改善动态或弯曲成像。"
+        ],
+        "minimum_validation": [
+          "至少三独立批次；统一剂量、膜厚、像素和对比度判据；测余辉、均匀性和辐照后性能。"
+        ],
+        "novelty_risk": [
+          "已存在高分辨与动态成像先例；只替换配体或报告更亮薄膜可能增量不足。"
+        ],
+        "confidence": "中等：已核实摘要和元数据，未穷尽全文及专利",
+        "representative_works": [
+          {
+            "title": "Flash synthesis of high-performance and color-tunable copper(I)-based cluster scintillators for efficient dynamic X-ray imaging",
+            "doi": "10.1038/s41528-024-00365-5",
+            "url": "https://www.nature.com/articles/s41528-024-00365-5",
+            "relation": "已有快速合成、柔性薄膜及动态成像；当天铜簇材料须比较竞争发光通道的机制和同条件性能。"
+          }
+        ]
+      },
+      {
+        "title": "半导体与带电粒子探测的辐照可靠性",
+        "related_work_status": [
+          "MAPbBr3已有质子探测及恢复研究，混合阳离子钙钛矿已有动态修复设计。"
+        ],
+        "today_increment": [
+          "当天FAPbBr3将局部空位与电性能退化对照，比只报告总剂量稳定性更接近预测问题。"
+        ],
+        "research_gap": [
+          "不同质子能量、器件厚度、注量及恢复时间下，局部损伤指标是否优于总量指标仍需验证。"
+        ],
+        "secondary_judgment": [
+          "可以提出预测模型课题，但现有少量能量点尚不能建立普适损伤定律。"
+        ],
+        "paper_angle": [
+          "盲测局部空位指标对独立器件和恢复时点的预测能力。"
+        ],
+        "minimum_validation": [
+          "控制注量和温度；记录辐照后时间序列；跨批次测试μτ、暗电流和能谱；保留未参与拟合的能量点。"
+        ],
+        "novelty_risk": [
+          "修复与耐辐照不是新概念；材料、粒子及剂量条件不同，不能直接类比性能。"
+        ],
+        "confidence": "中等：已核实摘要和元数据，未穷尽全文及专利",
+        "representative_works": [
+          {
+            "title": "Radiation-Tolerant Proton Detector Based on the MAPbBr3 Single Crystal",
+            "doi": "10.1021/acsaelm.2c01406",
+            "url": "https://pubs.acs.org/doi/10.1021/acsaelm.2c01406",
+            "relation": "2022年在线、2023年期次；已研究质子探测及辐照后恢复，当天FAPbBr3不能仅以耐辐照作为新颖点。"
+          },
+          {
+            "title": "Highly sensitive and stable perovskite detector for ultrahigh-energy radiations via dynamic repair regulation",
+            "doi": "10.1038/s41566-026-01849-8",
+            "url": "https://www.nature.com/articles/s41566-026-01849-8",
+            "relation": "已涉及晶格调控和动态修复；其X射线/电子条件不能直接替代当天高能质子验证。"
+          }
+        ]
+      },
+      {
+        "title": "读出限制：低温能谱、SiPM与气体光信号",
+        "related_work_status": [
+          "已有TES多像素频分复用能谱演示；已有SiPM中子成像读出发现材料相关的鉴别限制。"
+        ],
+        "today_increment": [
+          "当天DIXE工作提供紧凑高Q元件；YSO工作表征α能谱；Xe–SF6工作测定光输出与添加气体的权衡。"
+        ],
+        "research_gap": [
+          "元件指标到完整系统性能的转化仍需实证，尤其是多通道串扰、温度漂移和弱光信号。"
+        ],
+        "secondary_judgment": [
+          "三类探测体系只能比较验证逻辑，不能互相替代性能基准；气体方向本次全文覆盖较弱。"
+        ],
+        "paper_angle": [
+          "用实际事件能谱或粒子鉴别质量约束读出设计，而非只优化Q或光输出。"
+        ],
+        "minimum_validation": [
+          "读出接入真实传感器；跨计数率和温度测量；报告效率、误判、能量分辨率及工作稳定性。"
+        ],
+        "novelty_risk": [
+          "已有系统级性能先例；LC高Q不等于整机更优，α标定也不能证明中子/伽马鉴别。"
+        ],
+        "confidence": "中等：已核实摘要和元数据，未穷尽全文及专利",
+        "representative_works": [
+          {
+            "title": "Developments on frequency domain multiplexing readout for large arrays of transition-edge sensor X-ray micro-calorimeters",
+            "doi": "10.1007/s10909-024-03099-w",
+            "url": "https://arxiv.org/abs/2403.02989",
+            "relation": "已展示70像素双通道读出及5.9 keV处能谱性能；当天LC元件结果尚需同等级整机验证。"
+          },
+          {
+            "title": "Evaluation of a Positron-Emission-Tomography-based SiPM readout for Compact Segmented Neutron Imagers",
+            "doi": "10.1016/j.nima.2022.167624",
+            "url": "https://arxiv.org/abs/2202.07759",
+            "relation": "读出能用于部分中子成像条件，但材料间脉冲鉴别表现不同；不能把SiPM模块性能跨粒子和材料直接迁移。"
+          }
+        ]
+      },
+      {
+        "title": "复杂介质与几何相关的标定",
+        "related_work_status": [
+          "土壤伴随粒子方法已有双重衰减校正；HPGe已有多距离多能量的效率实验。"
+        ],
+        "today_increment": [
+          "当天土壤研究简化到容重和含水量参数；SIRTI研究分解安瓿与装液几何的不确定度。"
+        ],
+        "research_gap": [
+          "少参数校正跨介质外推及几何公差跨实验室迁移仍缺统一外部验证。"
+        ],
+        "secondary_judgment": [
+          "可形成可追溯的校正方法，但不能把特定土柱或核素结果推广到所有现场。"
+        ],
+        "paper_angle": [
+          "构建分层介质与几何扰动盲测，检验校正后误差和预算覆盖率。"
+        ],
+        "minimum_validation": [
+          "独立标准样品；不同深度、含水率和容器尺寸；报告未校正基线与校正后偏差及不确定度。"
+        ],
+        "novelty_risk": [
+          "衰减校正和几何校准均已有成熟方法，新增价值应来自验证覆盖和可迁移性。"
+        ],
+        "confidence": "中等：已核实摘要和元数据，未穷尽全文及专利",
+        "representative_works": [
+          {
+            "title": "Carbon analysis of large soil samples using the tagged neutron method: Accounting for radiation attenuation",
+            "doi": "10.1016/j.apradiso.2024.111332",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38696919/",
+            "relation": "已有中子和伽马衰减校正及实验对照；当天增量应落在少参数模型、适用深度和跨土类验证。"
+          },
+          {
+            "title": "Efficiency and energy resolution of gamma spectrometry system with HPGe detector depending on variable source-to-detector distances",
+            "doi": "10.1140/epjp/s13360-024-04903-y",
+            "url": "https://link.springer.com/article/10.1140/epjp/s13360-024-04903-y",
+            "relation": "多距离多能量实验说明几何依赖已被系统研究；SIRTI增量是特定安瓿和溶液参数的不确定度分解。"
+          }
+        ]
+      },
+      {
+        "title": "级联伽马成像的模拟到原型验证",
+        "related_work_status": [
+          "2021年已有L形双相机与混合孔缝的177Lu三维符合成像实物演示。"
+        ],
+        "today_increment": [
+          "当天论文采用全环LaBr3与混合准直设计并报告模拟性能和算法改进。"
+        ],
+        "research_gap": [
+          "新几何在真实散射、偶然符合和低计数条件下是否维持优势尚待原型验证。"
+        ],
+        "secondary_judgment": [
+          "结构与算法可能构成组合增量，但已有原型使单纯模拟指标比较的证明力有限。"
+        ],
+        "paper_angle": [
+          "用匹配视野、活度和采集时间的原型比较不同几何。"
+        ],
+        "minimum_validation": [
+          "共同体模、能量窗和时间窗；分离硬件与算法增益；多次计数重复及不确定度。"
+        ],
+        "novelty_risk": [
+          "两篇灵敏度和空间分辨率定义、视野及材料不同，不能直接用比值宣称改进倍数。"
+        ],
+        "confidence": "中等：已核实摘要和元数据，未穷尽全文及专利",
+        "representative_works": [
+          {
+            "title": "A 3-dimensional stationary cascade gamma-ray coincidence imager",
+            "doi": "10.1088/1361-6560/ac311b",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34666327/",
+            "relation": "已有177Lu三维符合成像的模拟与实物原型；当天全环混合准直模拟须与其在匹配条件下比较。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "三项均为条件性课题建议；是否值得投稿取决于独立验证能否产生实质增量，现有证据不能保证发文或高水平期刊接收。",
+    "opportunities": [
+      {
+        "title": "质子损伤空间指标的跨条件预测验证",
+        "research_gap": [
+          "局部空位能否在不同能量和恢复时点稳定预测器件退化尚缺独立验证。"
+        ],
+        "why_worth_doing": [
+          "当天研究已有实验锚点，而既有恢复研究说明测试时点可能改变结论。"
+        ],
+        "recommended_work": [
+          "固定注量和厚度，分能量、批次和恢复时间采样；预注册局部与总量模型并盲测。"
+        ],
+        "paper_contribution": [
+          "提供经外部验证的损伤预测边界和可复用数据，而非宣称普适耐辐照。"
+        ],
+        "daily_evidence": [
+          "FAPbBr3论文报告三种能量的不同μτ保留率，并提出局部空位解释。"
+        ],
+        "main_risks": [
+          "注量或恢复时间混杂；样本量不足；模型只能拟合不能预测。"
+        ],
+        "article_type": "半导体探测器可靠性与方法研究",
+        "evidence_papers": [
+          {
+            "title": "Proton-induced radiation stability in FAPbBr3 perovskite detectors: Multi-descriptor damage model and experimental validation",
+            "doi": "10.1063/5.0349653",
+            "url": "https://doi.org/10.1063/5.0349653"
+          }
+        ]
+      },
+      {
+        "title": "低温读出小型化的完整能谱代价",
+        "research_gap": [
+          "高Q小面积滤波器是否在实际多通道同时读出下保持能谱质量尚未由当天摘要证明。"
+        ],
+        "why_worth_doing": [
+          "元件工艺结果较具体，且已有多像素TES能谱演示可建立合理基线。"
+        ],
+        "recommended_work": [
+          "将新旧滤波器连接同批TES，比较面积、可用通道、串扰和能量分辨率，进行热循环。"
+        ],
+        "paper_contribution": [
+          "给出面积与整机能谱性能共同约束下的设计边界。"
+        ],
+        "daily_evidence": [
+          "当天DIXE研究给出37通道谐振、最高Q及良率，提供可验证的元件起点。"
+        ],
+        "main_risks": [
+          "低温平台门槛高；Q提升可能不转化为系统收益；复用已有FDM方案导致增量有限。"
+        ],
+        "article_type": "探测器读出系统实验论文",
+        "evidence_papers": [
+          {
+            "title": "Development of compact high-Q LC filters using ALD-grown HfO2 for FDM readout in DIXE",
+            "doi": "10.1088/1361-6668/aea7e3",
+            "url": "https://doi.org/10.1088/1361-6668/aea7e3"
+          }
+        ]
+      },
+      {
+        "title": "衰减与几何校正的可迁移验证",
+        "research_gap": [
+          "低维校正模型对分层介质和几何扰动的适用范围仍需确定。"
+        ],
+        "why_worth_doing": [
+          "当天土壤校正和SIRTI预算均指向样品条件对定量结果的重要影响。"
+        ],
+        "recommended_work": [
+          "选择一个目标探测系统先完成标准样品盲测；分别扫描介质和几何并报告完整预算，不将两个系统强行合并。"
+        ],
+        "paper_contribution": [
+          "形成带外推边界的可追溯校正方法与公开验证数据。"
+        ],
+        "daily_evidence": [
+          "土壤论文实测到18 cm；SIRTI论文识别内径和装液体积为主要来源。"
+        ],
+        "main_risks": [
+          "已有成熟校正工作；野外非均匀性使少参数失效；高精度参考值难获得。"
+        ],
+        "article_type": "辐射测量与计量方法论文",
+        "evidence_papers": [
+          {
+            "title": "Field-scale soil carbon analysis: Correcting for moisture and bulk density effects in Inelastic Neutron Scattering",
+            "doi": "10.1016/j.still.2026.107459",
+            "url": "https://doi.org/10.1016/j.still.2026.107459"
+          },
+          {
+            "title": "Uncertainty evaluation of the SIR Transfer Instrument (SIRTI) using Monte Carlo simulations",
+            "doi": "10.1088/1681-7575/aea6e0",
+            "url": "https://doi.org/10.1088/1681-7575/aea6e0"
+          }
+        ]
+      }
+    ]
+  }
+}
