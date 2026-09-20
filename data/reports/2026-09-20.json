@@ -1,0 +1,881 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-09-20",
+  "published_at": "2026-09-20T03:27:33.711437+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 1414,
+    "screened_count": 126,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 5,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 7,
+      "crossref": 724,
+      "semanticscholar": 0,
+      "openalex": 83,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "semanticscholar: HTTPError: HTTP Error 429:",
+      "发现 1 篇已推送论文的出版信息更新；不作为新论文重复推荐",
+      "实际窗口：2026-09-14至2026-09-20（日级日期）；7天池122条，另核查近24小时优先池19条，其中4条未进入7天池，合并人工筛选126条。1414为7天来源检索条目数，非独立论文数。",
+      "自动推荐0篇；人工检查完整ranked列表后推荐5篇，未依赖空推荐队列。",
+      "自然语言主题文件仍标为未激活草案，与configured=true结构配置存在状态不一致；本次按用户明确指定的辐射探测范围执行，不修改画像。",
+      "YSO首版等待同行评议；蜂窝墙为模拟会议论文；液闪中子论文已有2026年1月预印本，本次为正式发表。",
+      "部分候选未能获得可核实的原始来源或摘要，保留复核记录但不推荐；不能把未推荐理解为论文无价值。",
+      "本次历史与记忆只写入日期目录副本；全局去重历史和研究记忆保持原状，后续默认任务不会自动读到本次交付记录。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Proton-induced radiation stability in FAPbBr3 perovskite detectors: Multi-descriptor damage model and experimental validation",
+      "chinese_title": "FAPbBr3钙钛矿探测器的质子辐照稳定性：多指标损伤模型及实验验证",
+      "journal": "Applied Physics Letters",
+      "publication_date": "2026-09-16",
+      "doi": "10.1063/5.0349653",
+      "url": "https://doi.org/10.1063/5.0349653",
+      "article_type": "研究论文",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 95,
+        "novelty": 80,
+        "quality": 80,
+        "methodology": 85,
+        "inspiration": 80
+      },
+      "why_worth_reading": "将材料损伤计算与器件实测退化对照，提示平均损伤指标可能掩盖局部损伤，是辐照可靠性建模的直接参考。",
+      "core_findings": [
+        "研究联合蒙特卡洛模拟、NIEL、空位分布和DPA等指标评估质子对FAPbBr3探测器的影响。",
+        "模拟覆盖70–250 MeV；实验报告70、100、150 MeV条件下μτ保留率依次为97.2%、91.5%、66.6%，150 MeV时暗电流退化最明显。",
+        "局部空位峰值与观测退化趋势更一致是比较性提示，尚不足以证明其跨材料、跨注量普遍优于其他指标。"
+      ],
+      "term_explanations": [
+        {
+          "term": "钙钛矿与FAPbBr3",
+          "academic_explanation": "钙钛矿为一类晶体结构；FAPbBr3是甲脒铅溴化物，可作为半导体辐射探测材料。",
+          "plain_explanation": "这里指一种能把辐射变成电信号的晶体；不同配方不能视为同一种器件。"
+        },
+        {
+          "term": "半导体探测器",
+          "academic_explanation": "利用辐射在半导体中产生并被收集的电荷测量辐射的器件。",
+          "plain_explanation": "把粒子留下的电信号收集起来进行测量。"
+        },
+        {
+          "term": "蒙特卡洛模拟",
+          "academic_explanation": "通过随机抽样模拟粒子输运与相互作用、估计响应及统计误差的方法。",
+          "plain_explanation": "让计算机重复模拟许多粒子的经历；结果仍取决于输入和物理模型。"
+        },
+        {
+          "term": "非电离能损（NIEL）",
+          "academic_explanation": "入射粒子传给原子位移等非电离过程的能量损失，用于描述位移损伤。",
+          "plain_explanation": "粒子能量中用于撞动晶格原子的部分，不等于全部电学退化。"
+        },
+        {
+          "term": "原子平均位移次数（DPA）",
+          "academic_explanation": "给定辐照条件下每个原子的平均位移数，是位移损伤计算指标。",
+          "plain_explanation": "平均每个原子被撞离原位多少次的账本，不直接等同永久缺陷数。"
+        },
+        {
+          "term": "空位",
+          "academic_explanation": "晶格中正常应由原子占据但缺失原子的点缺陷。",
+          "plain_explanation": "晶格座位上出现的空位，可能影响电荷移动。"
+        },
+        {
+          "term": "迁移率—寿命积（μτ）",
+          "academic_explanation": "载流子迁移率与有效寿命的乘积，反映在给定电场下被俘获前的输运能力。",
+          "plain_explanation": "电荷能走多快和能存活多久的综合指标。"
+        },
+        {
+          "term": "暗电流",
+          "academic_explanation": "没有目标辐射输入时器件仍产生的电流，可增加本底与噪声。",
+          "plain_explanation": "没有要测的信号时，仪器仍流过的底电流。"
+        },
+        {
+          "term": "通量与注量",
+          "academic_explanation": "通量通常描述单位面积单位时间粒子数；注量描述单位面积累积粒子数。",
+          "plain_explanation": "前者是粒子来得多快，后者是累计来了多少。"
+        },
+        {
+          "term": "退火与恢复",
+          "academic_explanation": "材料缺陷随温度和时间发生重排或消除，从而使性能变化的过程。",
+          "plain_explanation": "损伤后有些缺陷会逐渐修复，因此刚照完和放置后的读数可能不同。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "在相同样品批次控制质子能量、注量、温度和测量等待时间，区分即时退化与恢复。"
+        ],
+        "methods": [
+          "在同一实验数据上比较NIEL、DPA及局部空位指标的预测误差。"
+        ],
+        "key_entities_mechanisms": [
+          "重点观察μτ与暗电流是否同步变化，不将计算空位直接等同电学失效原因。"
+        ],
+        "target_system": [
+          "处于辐照环境可靠性阶段；向其他半导体探测器迁移时重新测量并建模。"
+        ],
+        "future_direction": [
+          "检验局部损伤指标在独立能量与注量下是否仍有预测优势。"
+        ],
+        "paper_potential": [
+          "只有独立样品与未参与建模条件的验证，才可能形成可推广的可靠性方法论文。"
+        ],
+        "limitations_validation": [
+          "摘要未提供完整注量、重复样品和误差预算；当前不能据此制定寿命阈值。"
+        ]
+      },
+      "top3_reason": "将材料损伤计算与器件实测退化对照，提示平均损伤指标可能掩盖局部损伤，是辐照可靠性建模的直接参考。",
+      "tags": [
+        "半导体探测器",
+        "辐照可靠性",
+        "质子",
+        "损伤建模"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "需全文核实实验注量、器件数量、测量时序和不确定度。"
+      ]
+    },
+    {
+      "title": "Comprehensive study of cosmogenic neutron production in large liquid scintillator detectors",
+      "chinese_title": "大型液体闪烁体探测器中宇宙成因中子产生的综合研究",
+      "journal": "The European Physical Journal C",
+      "publication_date": "2026-09-18",
+      "doi": "10.1140/epjc/s10052-026-16173-2",
+      "url": "https://doi.org/10.1140/epjc/s10052-026-16173-2",
+      "article_type": "研究论文",
+      "recommendation_score": 84,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 75,
+        "quality": 85,
+        "methodology": 85,
+        "inspiration": 80
+      },
+      "why_worth_reading": "总中子产额改善后事件多重数仍有偏差，明确显示只校准总量不足以验证中子本底模型。",
+      "core_findings": [
+        "以大亚湾等实验的中子产额与多重数测量为参照，比较三组Geant4物理列表。",
+        "引入TALYS反应截面调整后，BERT相关总产额偏差约从20%降至6%，BIC相关偏差约从13%降至0.3%。",
+        "模拟仍低估单中子事件并高估多中子事件，因此总产额的一致性不代表事件分布正确。"
+      ],
+      "term_explanations": [
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射能量后发光、用于将辐射信号转换为光信号的材料。",
+          "plain_explanation": "粒子经过时发出微弱闪光的材料。"
+        },
+        {
+          "term": "宇宙成因中子与缪子",
+          "academic_explanation": "宇宙线缪子及其次级粒子与物质相互作用产生的中子；缪子是带电轻子。",
+          "plain_explanation": "穿透到地下的宇宙线粒子也会在周围材料中制造中子。"
+        },
+        {
+          "term": "中子产额",
+          "academic_explanation": "按入射粒子数和材料路径等约定归一化的中子产生数量，必须注明定义。",
+          "plain_explanation": "每次照射平均造出多少中子，比较前需统一计算口径。"
+        },
+        {
+          "term": "中子多重数",
+          "academic_explanation": "同一事件中产生或探测到的中子个数；产生数与探测数须区分。",
+          "plain_explanation": "一次事件带来一个还是多个中子。"
+        },
+        {
+          "term": "Geant4",
+          "academic_explanation": "用于粒子在物质中输运的模拟工具包，可组合不同物理过程模型。",
+          "plain_explanation": "一套模拟粒子如何穿过材料的工具，不同模型选择可能给出不同答案。"
+        },
+        {
+          "term": "蒙特卡洛模拟",
+          "academic_explanation": "通过随机抽样模拟粒子输运与相互作用、估计响应及统计误差的方法。",
+          "plain_explanation": "让计算机重复模拟许多粒子的经历；结果仍取决于输入和物理模型。"
+        },
+        {
+          "term": "物理列表与BERT/BIC",
+          "academic_explanation": "Geant4中组合相互作用模型的配置；BERT和BIC分别涉及Bertini和Binary级联模型。",
+          "plain_explanation": "给模拟选择不同的粒子碰撞规则，结果需要用实验检验。"
+        },
+        {
+          "term": "TALYS与反应截面",
+          "academic_explanation": "TALYS是核反应计算程序；反应截面量化特定核反应发生的概率尺度。",
+          "plain_explanation": "用于估计核反应发生机会的计算工具与概率指标。"
+        },
+        {
+          "term": "本底",
+          "academic_explanation": "并非目标过程却会进入测量数据的事件或信号。",
+          "plain_explanation": "混进目标信号中的其他来源，需要估计而不能直接忽略。"
+        },
+        {
+          "term": "重加权",
+          "academic_explanation": "对已有模拟事件按条件调整权重，以修正其统计分布的方法。",
+          "plain_explanation": "给某类模拟事件改变计票份量；应在独立数据上检查是否过拟合。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "将总产额和中子多重数同时列为验证终点，并保留独立实验作为检验。"
+        ],
+        "methods": [
+          "固定几何与输入，比较物理列表和截面调整的贡献。"
+        ],
+        "key_entities_mechanisms": [
+          "关注不同核反应对单中子与多中子分布的影响，避免只靠统一比例重加权。"
+        ],
+        "target_system": [
+          "处于响应表征与算法建模阶段；可用于液体闪烁体中子本底评估。"
+        ],
+        "future_direction": [
+          "检验按反应条件重加权能否同时改善总量与多重数且不破坏独立数据。"
+        ],
+        "paper_potential": [
+          "可形成多观测量共同验证的模拟基准研究；仅重复总量拟合增量有限。"
+        ],
+        "limitations_validation": [
+          "宇宙线环境的改进不能直接外推到聚变中子源；需重新核对能区和产生机制。"
+        ]
+      },
+      "top3_reason": "总中子产额改善后事件多重数仍有偏差，明确显示只校准总量不足以验证中子本底模型。",
+      "tags": [
+        "中子探测",
+        "液体闪烁体",
+        "本底",
+        "模拟验证"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "正式版由SCOAP3核实；存在2026年1月预印本，因此不是首次公开的新方法。"
+      ]
+    },
+    {
+      "title": "Energy spectrum unfolding based on depth-dose distributions of a 10 MeV electron beam on the UELR-10-15S accelerator: experimental and Monte Carlo simulation",
+      "chinese_title": "基于深度—剂量分布展开UELR-10-15S加速器10 MeV电子束能谱：实验与蒙特卡洛模拟",
+      "journal": "Journal of Radioanalytical and Nuclear Chemistry",
+      "publication_date": "2026-09-19",
+      "doi": "10.1007/s10967-026-11181-8",
+      "url": "https://doi.org/10.1007/s10967-026-11181-8",
+      "article_type": "研究论文",
+      "recommendation_score": 81,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 85,
+        "novelty": 70,
+        "quality": 80,
+        "methodology": 85,
+        "inspiration": 80
+      },
+      "why_worth_reading": "出版商摘要补足了缺失证据：将实测深度剂量用于电子能谱反演，可借鉴其测量—模拟闭环并检查独立验证。",
+      "core_findings": [
+        "研究由实测深度—剂量分布展开电子束能谱，并与MCNP 6.3模拟比较。",
+        "重建能谱呈带低能尾的非对称高斯形状；最概然能量10.44 MeV，平均能量9.38 MeV。",
+        "重建谱作为模拟输入后，作者报告最概然能量与平均能量相关差异分别低于0.3%和0.7%；这不等于全能谱误差或所有深度剂量误差均低于该值。"
+      ],
+      "term_explanations": [
+        {
+          "term": "能谱",
+          "academic_explanation": "粒子数或响应随能量分布的表征。",
+          "plain_explanation": "把粒子按能量高低分组后得到的分布图。"
+        },
+        {
+          "term": "能谱展开",
+          "academic_explanation": "根据测量量与能量响应关系反求入射粒子能谱的逆问题。",
+          "plain_explanation": "根据粒子留下的痕迹倒推它们原来的能量分布。"
+        },
+        {
+          "term": "深度—剂量分布（PDD）",
+          "academic_explanation": "介质内吸收剂量随深度的变化；PDD通常指按参考剂量归一化后的百分比。",
+          "plain_explanation": "量粒子在不同深度留下多少能量，再把这条曲线用于比较。"
+        },
+        {
+          "term": "直线加速器与UELR-10-15S",
+          "academic_explanation": "沿直线加速带电粒子的装置；UELR-10-15S是本文研究的电子加速器型号。",
+          "plain_explanation": "给电子加速的设备；本文结论首先适用于这个具体型号。"
+        },
+        {
+          "term": "蒙特卡洛模拟",
+          "academic_explanation": "通过随机抽样模拟粒子输运与相互作用、估计响应及统计误差的方法。",
+          "plain_explanation": "让计算机重复模拟许多粒子的经历；结果仍取决于输入和物理模型。"
+        },
+        {
+          "term": "MCNP 6.3",
+          "academic_explanation": "通用蒙特卡洛粒子输运程序的一个版本，可计算材料中的粒子和能量沉积。",
+          "plain_explanation": "另一套模拟粒子运动和沉积能量的计算工具。"
+        },
+        {
+          "term": "最概然能量与平均能量",
+          "academic_explanation": "最概然能量为能谱峰位置，平均能量为按粒子数加权的能量均值。",
+          "plain_explanation": "前者是最常见的能量，后者是所有粒子能量的平均。"
+        },
+        {
+          "term": "非对称高斯分布与低能尾",
+          "academic_explanation": "峰形近似高斯但两侧不对称、且较低能区仍有延伸分量的能谱形状描述。",
+          "plain_explanation": "大多数粒子聚在峰附近，但低能一边拖着较长的尾巴。"
+        },
+        {
+          "term": "正则化与可辨识性",
+          "academic_explanation": "正则化通过附加约束稳定逆问题；可辨识性描述不同参数是否能由数据区分。",
+          "plain_explanation": "倒推答案时加合理限制，同时检查不同答案是否都能解释同一测量。"
+        },
+        {
+          "term": "响应矩阵",
+          "academic_explanation": "离散化后连接不同入射能量与测量通道响应的矩阵。",
+          "plain_explanation": "一张记录每种入射粒子会留下什么读数的对照表。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "设置独立材料或测量批次验证，明确哪些深度剂量数据参与了展开。"
+        ],
+        "methods": [
+          "比较不同能谱形状与正则化条件，检查相似剂量曲线是否对应不同能谱。"
+        ],
+        "key_entities_mechanisms": [
+          "低能尾对测量的影响需要单独检验，不能只比较峰值与平均值。"
+        ],
+        "target_system": [
+          "处于响应表征与算法建模阶段，可迁移到具有可靠响应矩阵的带电粒子测量。"
+        ],
+        "future_direction": [
+          "用留出的测量条件检验模型对能谱低能部分的可辨识性。"
+        ],
+        "paper_potential": [
+          "可发展为不确定度与独立验证方法研究；单机型参数复现的创新性有限。"
+        ],
+        "limitations_validation": [
+          "当前仅核实出版商摘要；展开细节、误差定义和验证数据独立性仍需全文。"
+        ]
+      },
+      "top3_reason": "出版商摘要补足了缺失证据：将实测深度剂量用于电子能谱反演，可借鉴其测量—模拟闭环并检查独立验证。",
+      "tags": [
+        "电子束",
+        "能谱展开",
+        "标定",
+        "模拟验证"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文付费；需核实反演约束、响应构造与独立验证设计。"
+      ]
+    },
+    {
+      "title": "Investigation of YSO–SiPM detector response for alpha spectroscopy applications",
+      "chinese_title": "YSO–SiPM探测器用于α能谱测量的响应研究",
+      "journal": "Open Research Europe",
+      "publication_date": "2026-09-18",
+      "doi": "10.12688/openreseurope.24095.1",
+      "url": "https://doi.org/10.12688/openreseurope.24095.1",
+      "article_type": "研究论文公开首版（等待同行评议）",
+      "recommendation_score": 80,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 95,
+        "novelty": 65,
+        "quality": 65,
+        "methodology": 75,
+        "inspiration": 80
+      },
+      "why_worth_reading": "给出紧凑晶体—SiPM系统的实测线性与能量分辨率；适合读出原型参考，但当前版本仍等待同行评议。",
+      "core_findings": [
+        "用10×10×10 mm³ YSO晶体耦合SiPM，以钚238源和不同空气层厚度研究约0.4–5.5 MeV范围响应。",
+        "研究报告线性偏离约3%；能量分辨率由5.5 MeV附近的约10.5%恶化至低能端约21%。",
+        "实测空气射程40.58±0.87 mm，与SRIM约42 mm相近；作者报告约500 keV仍能区分α信号。",
+        "平台标记为version 1、awaiting peer review；其苛刻环境适用性属于应用展望，不能视为已完成耐辐照验证。"
+      ],
+      "term_explanations": [
+        {
+          "term": "YSO",
+          "academic_explanation": "正硅酸钇，化学式Y2SiO5；掺杂与具体生长条件会影响其闪烁性质。",
+          "plain_explanation": "一种用于接收粒子并发光的晶体；本次不推断未核实的掺杂组成。"
+        },
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射能量后发光、用于将辐射信号转换为光信号的材料。",
+          "plain_explanation": "粒子经过时发出微弱闪光的材料。"
+        },
+        {
+          "term": "SiPM（MPPC）",
+          "academic_explanation": "由多个工作在盖革模式的雪崩光电二极管微单元组成的硅光电倍增器；MPPC为相关产品名称。",
+          "plain_explanation": "许多微小光子计数单元合起来，把微弱闪光变成可读电信号。"
+        },
+        {
+          "term": "α能谱与钚238源",
+          "academic_explanation": "α粒子为氦核；钚238衰变可提供α粒子，测其能量分布称α能谱测量。",
+          "plain_explanation": "用已知放射源发出的氦核检查探测器能否分辨粒子能量。"
+        },
+        {
+          "term": "能谱",
+          "academic_explanation": "粒子数或响应随能量分布的表征。",
+          "plain_explanation": "把粒子按能量高低分组后得到的分布图。"
+        },
+        {
+          "term": "能量分辨率",
+          "academic_explanation": "通常以谱峰半高全宽与峰位置之比衡量能量区分能力，数值越小通常越好。",
+          "plain_explanation": "两种相近能量能否分开看清；同一能量形成的峰越窄通常越好。"
+        },
+        {
+          "term": "线性响应",
+          "academic_explanation": "仪器输出在给定范围内近似与输入成比例；偏离线性需说明参考与计算方式。",
+          "plain_explanation": "输入增大一倍，输出是否也大致增大一倍。"
+        },
+        {
+          "term": "波形数字化与读出",
+          "academic_explanation": "将探测器随时间变化的模拟信号采样并转换为数字数据的过程。",
+          "plain_explanation": "把闪光产生的电脉冲记录成可分析的数字曲线。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "用已知参考输入确定仪器输出与待测物理量之间关系的过程。",
+          "plain_explanation": "用已知的尺子检查仪器的读数该怎样换算。"
+        },
+        {
+          "term": "射程与SRIM",
+          "academic_explanation": "射程描述带电粒子在介质中停止前的传播距离；SRIM用于计算离子阻止与射程。",
+          "plain_explanation": "估算粒子在空气或材料里能走多远再停下。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "分别在空气和受控条件下测量，检查空气能损对线性和峰宽的贡献。"
+        ],
+        "methods": [
+          "记录完整波形，并用已知输入单独标定读出线性。"
+        ],
+        "key_entities_mechanisms": [
+          "区分YSO发光、SiPM读出与空气层对总能量分辨率的贡献。"
+        ],
+        "target_system": [
+          "处于材料器件与响应表征阶段，适合便携式α测量原型。"
+        ],
+        "future_direction": [
+          "在温度变化和长期运行中重复标定，检验稳定性是否超出短期实验。"
+        ],
+        "paper_potential": [
+          "需要与硅探测器在相同测量条件下比较，才能支持工程取舍论文。"
+        ],
+        "limitations_validation": [
+          "等待同行评议；掺杂组成、约0.4 MeV测量与约500 keV辨识界限的定义需核对。"
+        ]
+      },
+      "top3_reason": "给出紧凑晶体—SiPM系统的实测线性与能量分辨率；适合读出原型参考，但当前版本仍等待同行评议。",
+      "tags": [
+        "闪烁体",
+        "SiPM",
+        "α探测",
+        "能谱",
+        "读出"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "公开版本尚未经过正式同行评议；稳健性及耐辐照结论需后续实验。"
+      ]
+    },
+    {
+      "title": "Monte Carlo Simulation of the new honeycomb shaped neutron detection wall at IFUNAM",
+      "chinese_title": "IFUNAM新型蜂窝状中子探测墙的蒙特卡洛模拟",
+      "journal": "EPJ Web of Conferences",
+      "publication_date": "2026-09-15",
+      "doi": "10.1051/epjconf/202638603002",
+      "url": "https://doi.org/10.1051/epjconf/202638603002",
+      "article_type": "会议论文（模拟研究）",
+      "recommendation_score": 74,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 60,
+        "quality": 60,
+        "methodology": 65,
+        "inspiration": 70
+      },
+      "why_worth_reading": "展示模块化塑料闪烁体中子墙的模拟方案；适合几何设计参考，但高效率仅是理想条件模拟结果。",
+      "core_findings": [
+        "方案由19个六角BC-408塑料闪烁体单元构成蜂窝结构，耦合硅光电二极管。",
+        "Geant4中模拟光输运及粒子相互作用，以AmBe宽谱中子和铯137 γ源计算响应。",
+        "摘要报告理想条件下中子效率约89.65%、γ效率约69.44%；这些不是实测系统效率，也不是中子/γ甄别能力。"
+      ],
+      "term_explanations": [
+        {
+          "term": "蒙特卡洛模拟",
+          "academic_explanation": "通过随机抽样模拟粒子输运与相互作用、估计响应及统计误差的方法。",
+          "plain_explanation": "让计算机重复模拟许多粒子的经历；结果仍取决于输入和物理模型。"
+        },
+        {
+          "term": "Geant4",
+          "academic_explanation": "用于粒子在物质中输运的模拟工具包，可组合不同物理过程模型。",
+          "plain_explanation": "一套模拟粒子如何穿过材料的工具，不同模型选择可能给出不同答案。"
+        },
+        {
+          "term": "BC-408塑料闪烁体",
+          "academic_explanation": "以有机塑料为基体的商业闪烁材料，可对中子产生的反冲质子和γ相互作用响应。",
+          "plain_explanation": "容易拼成大阵列的发光塑料，但亮了不自动说明来的是中子。"
+        },
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射能量后发光、用于将辐射信号转换为光信号的材料。",
+          "plain_explanation": "粒子经过时发出微弱闪光的材料。"
+        },
+        {
+          "term": "反冲质子与弹性散射",
+          "academic_explanation": "中子与氢核弹性碰撞时转移能量，获得动能的氢核称反冲质子。",
+          "plain_explanation": "看不直接带电的中子，可以借助它撞动的质子留下的信号。"
+        },
+        {
+          "term": "康普顿响应与γ射线",
+          "academic_explanation": "γ为高能电磁辐射；康普顿散射把部分光子能量传给电子，常产生连续响应。",
+          "plain_explanation": "γ光子只交出部分能量时，读数通常形成连续分布而非完整能量峰。"
+        },
+        {
+          "term": "硅光电二极管",
+          "academic_explanation": "将光转换为电荷或电流的硅半导体器件；并不必然具有SiPM的内部倍增机制。",
+          "plain_explanation": "把闪烁光变成电信号的器件，不能仅凭名称当作SiPM。"
+        },
+        {
+          "term": "AmBe与铯137源",
+          "academic_explanation": "AmBe利用α与铍反应产生宽谱中子；铯137衰变相关γ线常用于探测器标定。",
+          "plain_explanation": "前者提供多种能量的中子，后者提供常用的已知能量γ参考。"
+        },
+        {
+          "term": "探测效率与阈值",
+          "academic_explanation": "效率是在规定几何、能量和触发选择下被记录的事件比例；阈值决定最低可接收信号。",
+          "plain_explanation": "有多少粒子被记下来，取决于仪器多小的信号也愿意计数。"
+        },
+        {
+          "term": "串扰",
+          "academic_explanation": "某通道的光或电信号进入其他通道而形成关联响应的现象。",
+          "plain_explanation": "一个单元亮了，旁边单元也受影响，可能造成误判。"
+        },
+        {
+          "term": "中子/γ甄别",
+          "academic_explanation": "利用事件响应差异区分中子和γ事件，需同时报告接受效率与误判率。",
+          "plain_explanation": "判断这次信号是中子还是γ，不能只报分得开而不报错分多少。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "先用单模块测量核对模拟，再逐步加入19模块几何和真实阈值。"
+        ],
+        "methods": [
+          "记录光输运、触发阈值和串扰对效率的敏感性。"
+        ],
+        "key_entities_mechanisms": [
+          "中子通过反冲质子产生信号；γ的康普顿响应需作为独立误判来源检查。"
+        ],
+        "target_system": [
+          "处于探测器结构设计阶段，可作为快中子阵列方案参考。"
+        ],
+        "future_direction": [
+          "检验几何增益能否在相同γ误判率和阈值下保持。"
+        ],
+        "paper_potential": [
+          "真实混合场测试和完整读出建模能形成工程验证增量；单纯几何模拟不足以证明性能领先。"
+        ],
+        "limitations_validation": [
+          "未见摘要中给出实测验证；需核实效率分母、几何接受范围和能量阈值。"
+        ]
+      },
+      "top3_reason": "展示模块化塑料闪烁体中子墙的模拟方案；适合几何设计参考，但高效率仅是理想条件模拟结果。",
+      "tags": [
+        "中子探测",
+        "塑料闪烁体",
+        "探测器设计",
+        "模拟"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "以Crossref出版商提交摘要核实；需全文与实测补足系统效率定义。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "在FAPbBr3器件中留出一个质子能量和注量条件，检验局部空位指标在控制恢复时间后是否仍优于NIEL/DPA。",
+    "在电子束能谱展开中构造可产生相似深度剂量曲线的不同低能尾，再用独立材料测量判断哪些差异可辨识。",
+    "对塑闪模块固定阈值与γ误判率后逐步扩大阵列，检验几何模拟中的效率优势是否保留。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-09-20T03:26:48.049233+00:00",
+    "search_window": "2021-09-20至2026-09-20，以最近5年为主；当天最终5篇确定后独立检索，排除当天锚点后形成比较候选池。",
+    "candidate_count": 45,
+    "verified_count": 12,
+    "limitations": [
+      "候选池包含宽搜低相关条目，不将其都称为相关证据；核实12篇，公开精选7篇。",
+      "非系统综述、非穷尽新颖性检索；结论仅适用于已核实材料、粒子与测量条件。",
+      "部分全文或DOI跳转不可读；对可读出版商摘要、作者原文和机构来源分层记录。",
+      "查新同时覆盖闪烁体、半导体、γ/中子/带电粒子、X射线成像、能谱、标定、读出及辐照稳定性；不把Zotero代表论文作为比较集合。"
+    ],
+    "themes": [
+      {
+        "title": "闪烁体读出、带电粒子能谱与中子/γ成像",
+        "related_work_status": [
+          "2023年工作已标定紧凑ASIC读出；2026年锂玻璃阵列已完成通道标定及二维中子/γ成像。因此SiPM耦合与阵列结构本身并非充分创新点。"
+        ],
+        "today_increment": [
+          "今日YSO给出α响应实测，但待同行评议；BC-408蜂窝墙给出设计模拟，尚无相应实测效率。"
+        ],
+        "research_gap": [
+          "今日证据未覆盖温度、真实触发阈值和串扰共同变化时的系统响应；这是待验证问题，不断言领域无人研究。"
+        ],
+        "secondary_judgment": [
+          "优先做分项标定到最终能谱/图像误差的传播验证；仅换晶体或蜂窝排布发文增量有限。"
+        ],
+        "paper_angle": [
+          "在同一读出平台测量YSO或塑闪模块的环境变化与标定转移误差。"
+        ],
+        "minimum_validation": [
+          "光学参考与粒子源分开标定；报告误判率、阈值、通道一致性和重复性，并保留独立条件。"
+        ],
+        "novelty_risk": [
+          "ASIC标定及阵列成像已有直接先例；材料、粒子能区、几何不同，不能直接比较单个效率数字。"
+        ],
+        "confidence": "中等：基于有限范围原始来源查新，非穷尽检索；课题可行性尚需实验确认。",
+        "representative_works": [
+          {
+            "title": "Calibration of a compact ASIC-based data acquisition system for neutron/γ discrimination and spectroscopy with organic scintillators",
+            "doi": "10.1016/j.nima.2023.168699",
+            "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168900223006903",
+            "relation": "用独立光参考标定SiPM与ASIC读出；说明紧凑读出与线性验证已有直接先例。"
+          },
+          {
+            "title": "The calibration and performance of a 2D planar neutron and gamma imaging detector",
+            "doi": "10.1016/j.nima.2025.171068",
+            "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168900225008708",
+            "relation": "已实现锂玻璃—SiPM阵列的通道标定和中子/γ成像；与今日模拟墙比较验证层级，不能跨材料直接排名效率。"
+          }
+        ]
+      },
+      {
+        "title": "半导体及塑料闪烁体的辐照可靠性",
+        "related_work_status": [
+          "MAPbBr3已有质子探测与辐照后恢复证据；MAPbI3已有零偏压稳定X射线成像；BC408已有质子辐照光学测量。三者评价对象和辐照条件不同。"
+        ],
+        "today_increment": [
+          "今日FAPbBr3把不同损伤指标与实测退化联系，提示局部空位峰值可能比总量指标更贴近观察趋势。"
+        ],
+        "research_gap": [
+          "独立能量/注量下，局部损伤指标是否仍优于总量指标，以及恢复时序能否解释偏差，尚需验证。"
+        ],
+        "secondary_judgment": [
+          "值得检验的是可外推的损伤—性能关系，而不是再次宣称材料耐辐照；X射线运行稳定不能替代质子损伤结论。"
+        ],
+        "paper_angle": [
+          "统一测量等待时间的跨能量损伤预测与恢复分离。"
+        ],
+        "minimum_validation": [
+          "设置未辐照对照、重复器件、固定偏压温度、即时及延迟测量；留出能量/注量条件检验模型。"
+        ],
+        "novelty_risk": [
+          "成分、电极和偏压可能混淆损伤贡献；BC408预印本剂量单位需审慎核对，不能直接当阈值使用。"
+        ],
+        "confidence": "中等：基于有限范围原始来源查新，非穷尽检索；课题可行性尚需实验确认。",
+        "representative_works": [
+          {
+            "title": "Radiation-Tolerant Proton Detector Based on the MAPbBr3 Single Crystal",
+            "doi": "10.1021/acsaelm.2c01406",
+            "url": "https://pubs.acs.org/doi/10.1021/acsaelm.2c01406",
+            "relation": "已报告质子探测和辐照后的暗电流恢复；必须比较测量等待时间。2022在线、2023卷期。"
+          },
+          {
+            "title": "Stable perovskite single-crystal X-ray imaging detectors with single-photon sensitivity",
+            "doi": "10.1038/s41566-023-01207-y",
+            "url": "https://www.nature.com/articles/s41566-023-01207-y",
+            "relation": "零偏压运行已实现长期稳定X射线成像；说明运行稳定性与质子损伤预测需分别检验。"
+          },
+          {
+            "title": "Radiation hardness study of BC408 plastic scintillator under 80 MeV proton beam irradiations",
+            "url": "https://arxiv.org/abs/2309.04164",
+            "relation": "作者预印本；通过光学与光产额测量研究BC408辐照变化，与今日蜂窝中子墙的材料可靠性直接相关；不照搬其可疑剂量单位。"
+          }
+        ]
+      },
+      {
+        "title": "电子能谱反演与标定的独立验证",
+        "related_work_status": [
+          "2025年AQURE研究已由深度剂量反演能谱，并以不同限束尺寸验证模拟；2023年迭代估谱也已有先例。"
+        ],
+        "today_increment": [
+          "今日UELR工作给出特定10 MeV工业电子束的非对称能谱及两个能量统计量的一致性结果。"
+        ],
+        "research_gap": [
+          "今日摘要不能说明低能尾可辨识性和验证数据独立性；需要区分拟合好与谱正确。"
+        ],
+        "secondary_judgment": [
+          "方法路线已有基础，潜在增量是谱不确定度、独立材料验证与失效边界，不是首次用剂量反演能谱。"
+        ],
+        "paper_angle": [
+          "跨材料、跨几何的能谱展开验证与约束敏感性。"
+        ],
+        "minimum_validation": [
+          "比较多个可产生近似剂量曲线的候选谱；报告完整谱与留出剂量曲线误差，条件允许时引入独立能量测量。"
+        ],
+        "novelty_risk": [
+          "可能得到多个同样拟合良好的谱；单一均值和峰值误差不足以证明低能尾正确。"
+        ],
+        "confidence": "中等：基于有限范围原始来源查新，非穷尽检索；课题可行性尚需实验确认。",
+        "representative_works": [
+          {
+            "title": "Implementation and validation of the method for the energy spectra reconstruction of electron beams generated by the AQURE mobile accelerator",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11999011/",
+            "relation": "已将剂量曲线反演谱用于其他尺寸限束器验证，构成今日电子能谱工作的直接方法对照。"
+          }
+        ]
+      },
+      {
+        "title": "液体闪烁体的中子本底模型验证",
+        "related_work_status": [
+          "CJPL实测研究已经讨论有限探测体积导致的次级粒子逸出和中子产额修正，模型比较必须含探测响应。"
+        ],
+        "today_increment": [
+          "今日工作在改善总产额后仍存在单中子不足、多中子过量，揭示总量和事件分布的验证差异。"
+        ],
+        "research_gap": [
+          "反应模型偏差与探测效率、有限尺寸修正能否分离，需要更多独立数据和共同误差预算。"
+        ],
+        "secondary_judgment": [
+          "联合多观测量与跨实验检验有方法价值；仅按总量调整权重不足以建立可靠模型。"
+        ],
+        "paper_angle": [
+          "总产额与事件多重数共同约束下的中子本底模型检验。"
+        ],
+        "minimum_validation": [
+          "统一实验能区、几何、效率及误差定义；至少对一个未参与调整的实验检验总量与多重数。"
+        ],
+        "novelty_risk": [
+          "不同地下深度、缪子能谱与探测器尺寸差异会制造表观模型偏差；不可直接移植到聚变中子场。"
+        ],
+        "confidence": "中等：基于有限范围原始来源查新，非穷尽检索；课题可行性尚需实验确认。",
+        "representative_works": [
+          {
+            "title": "Study of neutron production for 360 GeV cosmic muons",
+            "doi": "10.1103/PhysRevD.110.112017",
+            "url": "https://scoap3-prod-backend.s3.cern.ch/media/files/90848/10.1103/PhysRevD.110.112017.pdf",
+            "relation": "提供地下液体闪烁体中子产额实测和有限尺寸修正；可用于检查今日模拟调整的跨实验适用性。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "存在可检验的方法与验证切口，但本次证据不支持保证发文、指定高水平刊物或绝对首创；先做独立条件验证，再依据结果收窄贡献。",
+    "opportunities": [
+      {
+        "title": "分离即时损伤与恢复的钙钛矿探测器跨能量验证",
+        "research_gap": [
+          "局部损伤指标在独立辐照条件下的预测能力尚未由本次证据确立。"
+        ],
+        "why_worth_doing": [
+          "今日FAPbBr3结果与既有MAPbBr3恢复现象共同提示：测量时序可能改变损伤排序。"
+        ],
+        "recommended_work": [
+          "控制能量、注量、温度、偏压与等待时间，设置重复样品及未辐照对照。",
+          "对比总量指标与局部空位指标，保留未参与建模条件检验。"
+        ],
+        "paper_contribution": [
+          "若成立，可形成区分辐照与恢复的可验证损伤预测流程及适用边界。"
+        ],
+        "daily_evidence": [
+          "今日FAPbBr3论文显示不同能量下μτ与暗电流退化差异，并提出局部空位指标的比较性优势。"
+        ],
+        "main_risks": [
+          "样品差异、电极变化和恢复过程可混淆机制；当前不能承诺预测优势或刊物层级。"
+        ],
+        "article_type": "实验与模型联合的方法研究",
+        "evidence_papers": [
+          {
+            "title": "Proton-induced radiation stability in FAPbBr3 perovskite detectors: Multi-descriptor damage model and experimental validation",
+            "doi": "10.1063/5.0349653",
+            "url": "https://doi.org/10.1063/5.0349653"
+          }
+        ]
+      },
+      {
+        "title": "以独立测量约束能谱和中子响应模型",
+        "research_gap": [
+          "单一总量或峰值的符合不能保证完整分布正确。"
+        ],
+        "why_worth_doing": [
+          "今日电子能谱只摘要报告部分统计量，而液闪中子模型明确出现总量改善与多重数偏差并存。"
+        ],
+        "recommended_work": [
+          "两个体系分别建模，不混用响应矩阵。",
+          "电子束使用留出材料/几何检验能谱；中子模拟同时检验产额和多重数。",
+          "报告对约束与输入误差的敏感性，比较简单基准模型。"
+        ],
+        "paper_contribution": [
+          "建立从单指标符合到多观测量、独立条件验证的可复现评价流程；选一个体系先完成。"
+        ],
+        "daily_evidence": [
+          "UELR电子能谱反演给出峰值与均值；大型液闪研究直接展示中子多重数仍存在偏差。"
+        ],
+        "main_risks": [
+          "真实能谱不可直接获取、实验之间定义不一致以及模型多解性；不能因验证条件增多就默认具有新颖性。"
+        ],
+        "article_type": "计算方法与实验验证研究",
+        "evidence_papers": [
+          {
+            "title": "Energy spectrum unfolding based on depth-dose distributions of a 10 MeV electron beam on the UELR-10-15S accelerator: experimental and Monte Carlo simulation",
+            "doi": "10.1007/s10967-026-11181-8",
+            "url": "https://doi.org/10.1007/s10967-026-11181-8"
+          },
+          {
+            "title": "Comprehensive study of cosmogenic neutron production in large liquid scintillator detectors",
+            "doi": "10.1140/epjc/s10052-026-16173-2",
+            "url": "https://doi.org/10.1140/epjc/s10052-026-16173-2"
+          }
+        ]
+      },
+      {
+        "title": "紧凑闪烁体系统从单模块到阵列的标定转移",
+        "research_gap": [
+          "今日YSO和蜂窝墙未共同建立真实读出条件变化下的系统误差关系。"
+        ],
+        "why_worth_doing": [
+          "YSO提供实测响应起点，蜂窝墙提供阵列几何起点；已有ASIC和二维成像论文可作严格基准。"
+        ],
+        "recommended_work": [
+          "先完成单模块光学输入与粒子源标定，再扩展阵列。",
+          "在固定阈值及中子/γ误判率下比较通道组合与温度条件。"
+        ],
+        "paper_contribution": [
+          "若获得稳定可转移的标定关系，可形成具有真实混合场验证的仪器方法论文。"
+        ],
+        "daily_evidence": [
+          "YSO首版报告约3%线性偏离；蜂窝墙效率为理想模拟，尚需测量闭环。"
+        ],
+        "main_risks": [
+          "已有读出与成像工作密集；YSO首版未同行评议；硅光电二极管和SiPM不可直接等同。"
+        ],
+        "article_type": "探测仪器与标定方法研究",
+        "evidence_papers": [
+          {
+            "title": "Investigation of YSO–SiPM detector response for alpha spectroscopy applications",
+            "doi": "10.12688/openreseurope.24095.1",
+            "url": "https://doi.org/10.12688/openreseurope.24095.1"
+          },
+          {
+            "title": "Monte Carlo Simulation of the new honeycomb shaped neutron detection wall at IFUNAM",
+            "doi": "10.1051/epjconf/202638603002",
+            "url": "https://doi.org/10.1051/epjconf/202638603002"
+          }
+        ]
+      }
+    ]
+  }
+}
