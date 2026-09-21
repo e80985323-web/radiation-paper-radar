@@ -1,0 +1,873 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-09-21",
+  "published_at": "2026-09-21T04:54:51.113701+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 1376,
+    "screened_count": 116,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 6,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 7,
+      "crossref": 702,
+      "semanticscholar": 0,
+      "openalex": 67,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "semanticscholar: HTTPError: HTTP Error 429:",
+      "发现 1 篇已推送论文的出版信息更新；不作为新论文重复推荐",
+      "实际窗口：2026-09-15至2026-09-21；近24小时按日级日期近似。完整复核7天110篇与24小时18篇，合并116篇；不是仅检查空的自动推荐列表。",
+      "结构化画像已激活，自然语言文件仍标记草案；本次按用户明确指定的广义辐射探测范围复核，未修改画像。",
+      "局部来源和DOI页面访问失败时使用出版者提交的Crossref摘要或可信论文库，不将访问失败当作低质量证据。",
+      "推送历史与研究记忆仅写入本次运行目录的副本，全局历史不更新；后续任务需合并已确认交付记录以避免重复推送。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "JET neutron emissivity reconstruction using the minimum fisher information method for 1 ms temporal resolution",
+      "chinese_title": "以最小Fisher信息方法实现1毫秒时间分辨的JET中子发射率重建",
+      "journal": "Plasma Physics and Controlled Fusion",
+      "publication_date": "2026-09-18",
+      "doi": "10.1088/1361-6587/aea4f3",
+      "url": "https://doi.org/10.1088/1361-6587/aea4f3",
+      "article_type": "研究论文",
+      "recommendation_score": 90,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 98,
+        "novelty": 78,
+        "quality": 85,
+        "methodology": 90,
+        "inspiration": 92
+      },
+      "why_worth_reading": "直接利用D–T实验中子相机数据观察快速空间变化，可借鉴视野建模和时间分辨率验证。",
+      "core_findings": [
+        "利用JET 2021年D–T实验中BC418塑料闪烁体测得的14.1 MeV中子信号进行层析重建。",
+        "方法结合最小Fisher正则化和视野几何描述，分析约1 ms采样数据。",
+        "与两种10 ms一维重建结果比较，观察到锯齿崩塌时发射率分布空心化及随后展平；1 ms采样不等同1 ms运算延迟。"
+      ],
+      "term_explanations": [
+        {
+          "term": "中子发射率",
+          "academic_explanation": "单位体积、单位时间产生的中子数；空间分布可用于诊断聚变反应。",
+          "plain_explanation": "描述等离子体每个位置每秒产生多少中子。"
+        },
+        {
+          "term": "最小Fisher正则化",
+          "academic_explanation": "以Fisher信息型惩罚约束逆问题解的空间变化，在数据拟合与平滑性之间折中。",
+          "plain_explanation": "给重建图像加平滑约束，减少噪声造成的假斑点；也可能抹去真细节。"
+        },
+        {
+          "term": "层析重建",
+          "academic_explanation": "由不同视线的积分测量估计对象内部空间分布的逆问题求解过程。",
+          "plain_explanation": "用多个方向的总读数，反推内部哪里更亮。"
+        },
+        {
+          "term": "D–T聚变",
+          "academic_explanation": "氘与氚发生核聚变，主要生成α粒子和约14.1 MeV中子。",
+          "plain_explanation": "两种氢同位素结合，释放能量并发出中子。"
+        },
+        {
+          "term": "塑料闪烁体",
+          "academic_explanation": "由有机聚合物及发光组分构成，将带电粒子沉积能量转换成光的材料；中子常经反冲质子间接探测。",
+          "plain_explanation": "粒子在塑料中留下能量后发光，中子通常先撞出质子才留下可见信号。"
+        },
+        {
+          "term": "锯齿崩塌",
+          "academic_explanation": "磁约束等离子体中心参数周期性缓升后快速下降的事件，涉及内部输运和重联过程。",
+          "plain_explanation": "中心状态缓慢积累后突然重排，像锯齿曲线的陡降段。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "将同一组数据重采样到1、5和10 ms，区分时间平均效应与重建偏差。"
+        ],
+        "methods": [
+          "保留真实视野几何，并比较不同平滑强度。"
+        ],
+        "key_entities_mechanisms": [
+          "检验空心结构是否随噪声和缺失通道改变。"
+        ],
+        "target_system": [
+          "适用于聚变中子成像；对应系统成像与辐射测量阶段。"
+        ],
+        "future_direction": [
+          "研究低计数条件下快速结构变化的可识别范围。"
+        ],
+        "paper_potential": [
+          "需形成独立验证基准，单独更换重建方法贡献有限。"
+        ],
+        "limitations_validation": [
+          "需要核实全文的误差条、参数选择和运算时间。"
+        ]
+      },
+      "top3_reason": "直接利用D–T实验中子相机数据观察快速空间变化，可借鉴视野建模和时间分辨率验证。",
+      "tags": [
+        "聚变中子",
+        "成像",
+        "重建"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "Crossref确认在线日期2026-09-18；卷期日期为2026-09-01。正确DOI末尾为aea4f3，aea4f2对应另一论文。",
+        "已核对出版者提交摘要，全文运算延迟及空间误差尚未核实。"
+      ]
+    },
+    {
+      "title": "Proton-induced radiation stability in FAPbBr3 perovskite detectors: Multi-descriptor damage model and experimental validation",
+      "chinese_title": "FAPbBr3钙钛矿探测器的质子辐照稳定性：多描述量损伤模型与实验验证",
+      "journal": "Applied Physics Letters",
+      "publication_date": "2026-09-16",
+      "doi": "10.1063/5.0349653",
+      "url": "https://doi.org/10.1063/5.0349653",
+      "article_type": "研究论文",
+      "recommendation_score": 88,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 95,
+        "novelty": 80,
+        "quality": 82,
+        "methodology": 86,
+        "inspiration": 88
+      },
+      "why_worth_reading": "将计算损伤分布与器件电学变化对照，提示整体损伤指标可能掩盖局部失效。",
+      "core_findings": [
+        "以蒙特卡洛粒子输运比较70–250 MeV质子下的NIEL、DPA和空位分布。",
+        "70、100、150 MeV实验中μτ保留率分别为97.2%、91.5%、66.6%；150 MeV条件暗电流退化最明显。",
+        "作者比较发现局部空位峰值更符合退化趋势；这是当前条件下的关联证据，未证明普适损伤规律。"
+      ],
+      "term_explanations": [
+        {
+          "term": "FAPbBr3钙钛矿半导体",
+          "academic_explanation": "甲脒铅溴卤化物钙钛矿，可通过辐射产生的载流子形成电信号。",
+          "plain_explanation": "能把辐射沉积的能量转成可收集电荷的一类晶体。"
+        },
+        {
+          "term": "蒙特卡洛粒子输运",
+          "academic_explanation": "通过随机抽样粒子相互作用和输运过程，计算探测响应及统计不确定度。",
+          "plain_explanation": "在计算机里追踪大量随机粒子的经历，统计最后的响应。"
+        },
+        {
+          "term": "非电离能损（NIEL）",
+          "academic_explanation": "入射粒子用于原子位移等非电离过程的能量损失，常用于比较位移损伤。",
+          "plain_explanation": "粒子把多少能量花在撞动晶格原子上，而不是主要激发电子。"
+        },
+        {
+          "term": "每原子位移数（DPA）",
+          "academic_explanation": "平均每个靶原子发生位移的次数，是依赖位移模型的损伤指标。",
+          "plain_explanation": "把所有被撞离原位的次数，平均分摊到材料中的原子上。"
+        },
+        {
+          "term": "空位",
+          "academic_explanation": "晶格原本应有原子的位置缺失原子形成的点缺陷。",
+          "plain_explanation": "晶格座位上少了一个原子，可能影响电荷通过。"
+        },
+        {
+          "term": "迁移率–寿命积（μτ）",
+          "academic_explanation": "载流子迁移率与有效寿命的乘积，反映给定电场下被俘获前的输运能力。",
+          "plain_explanation": "电荷走得多快、能走多久的综合指标。"
+        },
+        {
+          "term": "暗电流",
+          "academic_explanation": "无目标辐射或光照时器件在给定偏压下的电流。",
+          "plain_explanation": "没有要测的信号，仪器自己仍有的底电流。"
+        },
+        {
+          "term": "辐照损伤",
+          "academic_explanation": "辐射导致材料结构或电学、光学性能变化的过程。",
+          "plain_explanation": "照射留下的变化可能让探测器性能变差，也可能部分恢复。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "保持厚度和测量时点一致，比较不同质子能量和累计照射量。"
+        ],
+        "methods": [
+          "联合计算局部损伤分布与测量μτ、暗电流。"
+        ],
+        "key_entities_mechanisms": [
+          "区分体内空位与接触变化的贡献。"
+        ],
+        "target_system": [
+          "用于半导体探测器辐照可靠性阶段。"
+        ],
+        "future_direction": [
+          "测试不同厚度和照射后恢复时间能否改变指标排序。"
+        ],
+        "paper_potential": [
+          "可形成损伤指标适用范围研究，需独立器件批次验证。"
+        ],
+        "limitations_validation": [
+          "不能把模拟粒子数等同实验照射量；全文需核实剂量匹配和样本数。"
+        ]
+      },
+      "top3_reason": "将计算损伤分布与器件电学变化对照，提示整体损伤指标可能掩盖局部失效。",
+      "tags": [
+        "半导体探测器",
+        "辐照效应"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "摘要未给出实验照射量、重复器件数及恢复时点；不做跨材料耐辐照排名。"
+      ]
+    },
+    {
+      "title": "Comprehensive study of cosmogenic neutron production in large liquid scintillator detectors",
+      "chinese_title": "大型液体闪烁体探测器中宇生中子产生的综合研究",
+      "journal": "The European Physical Journal C",
+      "publication_date": "2026-09-18",
+      "doi": "10.1140/epjc/s10052-026-16173-2",
+      "url": "https://doi.org/10.1140/epjc/s10052-026-16173-2",
+      "article_type": "研究论文",
+      "recommendation_score": 86,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 88,
+        "novelty": 78,
+        "quality": 88,
+        "methodology": 88,
+        "inspiration": 85
+      },
+      "why_worth_reading": "同时检查总产额与中子多重数，揭示总量校正之后仍存在的模型结构偏差。",
+      "core_findings": [
+        "以大亚湾数据比较三种Geant4物理表，并借助TALYS核反应截面调整模拟。",
+        "BERT模型总产额差异由约20%降至约6%；BIC模型由约13%降至约0.3%。",
+        "单中子事件仍偏少、多中子事件偏多；总量一致不能推出事件分布准确。"
+      ],
+      "term_explanations": [
+        {
+          "term": "宇生中子",
+          "academic_explanation": "宇宙线及其次级粒子与物质相互作用产生的中子。",
+          "plain_explanation": "来自宇宙线碰撞链条的中子，会混进目标信号。"
+        },
+        {
+          "term": "液体闪烁体",
+          "academic_explanation": "以液态发光介质将粒子沉积能量转换成光信号的探测材料。",
+          "plain_explanation": "粒子在液体里沉积能量，液体便产生可读取的闪光。"
+        },
+        {
+          "term": "中子多重数",
+          "academic_explanation": "单个触发事件中产生或探测到的中子数量，两者需用探测效率关联。",
+          "plain_explanation": "一次事件带来几个中子；产生几个和实际数到几个并不相同。"
+        },
+        {
+          "term": "Geant4物理表",
+          "academic_explanation": "Geant4中指定粒子、相互作用模型和适用能区的过程组合。",
+          "plain_explanation": "模拟使用的物理规则菜单，选择不同可能得到不同结果。"
+        },
+        {
+          "term": "TALYS核反应截面",
+          "academic_explanation": "TALYS核反应计算程序给出的反应概率尺度，可用于比较或调整输运模型。",
+          "plain_explanation": "给不同核反应发生机会提供计算依据，仍需实验检验。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "联合对照总产额和每次事件的中子数。"
+        ],
+        "methods": [
+          "将同一修正方案用于独立测量条件。"
+        ],
+        "key_entities_mechanisms": [
+          "关注不同反应产生中子的相对比例。"
+        ],
+        "target_system": [
+          "可服务于中子本底响应建模，不能直接等同聚变中子响应。"
+        ],
+        "future_direction": [
+          "研究同时约束总量与事件分布的模型调整。"
+        ],
+        "paper_potential": [
+          "可形成多观测量检验论文；需独立场地数据。"
+        ],
+        "limitations_validation": [
+          "大亚湾上的调整不等于其他尺寸和宇宙线条件下仍准确。"
+        ]
+      },
+      "top3_reason": "同时检查总产额与中子多重数，揭示总量校正之后仍存在的模型结构偏差。",
+      "tags": [
+        "中子探测",
+        "液体闪烁体",
+        "响应建模"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "跨场地泛化与中子多重数误差需进一步验证。"
+      ]
+    },
+    {
+      "title": "Investigation of YSO–SiPM detector response for alpha spectroscopy applications",
+      "chinese_title": "用于α能谱测量的YSO–SiPM探测器响应研究",
+      "journal": "Open Research Europe",
+      "publication_date": "2026-09-18",
+      "doi": "10.12688/openreseurope.24095.1",
+      "url": "https://open-research-europe.ec.europa.eu/articles/6-357/v1",
+      "article_type": "研究论文（版本1，尚待同行评议）",
+      "recommendation_score": 81,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 93,
+        "novelty": 65,
+        "quality": 70,
+        "methodology": 80,
+        "inspiration": 82
+      },
+      "why_worth_reading": "提供紧凑读出的低能响应数据，并明确其能量分辨率逊于硅探测器；尚待同行评议。",
+      "core_findings": [
+        "采用10 mm立方YSO闪烁体与SiPM连接，通过改变空气层厚度获得约0.4–5.5 MeV的α粒子。",
+        "报告线性偏差约3%，5.5 MeV能量分辨率约10.5%，低能端约21%。",
+        "作者报告约500 keV信号仍可辨认；这不等于已建立统计检出限，也未证明恶劣环境下长期稳定。"
+      ],
+      "term_explanations": [
+        {
+          "term": "YSO闪烁体",
+          "academic_explanation": "正硅酸钇晶体闪烁材料，通过辐射激发后发光实现间接探测。",
+          "plain_explanation": "用正硅酸钇晶体把粒子能量变成闪光。"
+        },
+        {
+          "term": "SiPM（硅光电倍增器）",
+          "academic_explanation": "由多个工作于盖革模式的雪崩光电二极管微单元组成的固态光传感器；MPPC为同类器件称谓。",
+          "plain_explanation": "许多微小光子计数单元并联，把微弱闪光变成电信号。"
+        },
+        {
+          "term": "α能谱",
+          "academic_explanation": "α粒子事件数随能量的分布；α粒子是由两个质子和两个中子组成的氦核。",
+          "plain_explanation": "把测到的氦核按能量分组，观察哪些能量最常见。"
+        },
+        {
+          "term": "线性偏差",
+          "academic_explanation": "测量响应相对选定线性关系的偏离；数值依赖拟合和归一化定义。",
+          "plain_explanation": "输入翻倍时输出是否也接近翻倍，以及偏离多少。"
+        },
+        {
+          "term": "能量分辨率",
+          "academic_explanation": "衡量区分相近能量能力的指标，常以谱峰半高全宽除以峰能量表示。",
+          "plain_explanation": "同一能量测出来散得越窄，越能分清相邻能量。"
+        },
+        {
+          "term": "读出",
+          "academic_explanation": "将探测器电信号放大、采样并转换成可分析数据的过程。",
+          "plain_explanation": "把微弱的探测信号变成电脑能够处理的数据。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "通过参考量建立仪器读数与被测量之间的对应关系及其不确定度。",
+          "plain_explanation": "用已知参照给仪器刻度，并说明刻度有多准。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "同时记录空气层厚度、环境条件和重复测量，设置独立参照。"
+        ],
+        "methods": [
+          "比较同一晶体不同读出设置下的低能响应。"
+        ],
+        "key_entities_mechanisms": [
+          "区分光收集变化与SiPM电学变化。"
+        ],
+        "target_system": [
+          "适用于便携α能谱，处于响应表征阶段。"
+        ],
+        "future_direction": [
+          "验证温度变化及累计照射后的标定能否保持。"
+        ],
+        "paper_potential": [
+          "需超出已有晶体与SiPM组合，给出明确失效边界。"
+        ],
+        "limitations_validation": [
+          "空气层引入的能量分散需单独估计；不能据此宣称优于硅探测器。"
+        ]
+      },
+      "top3_reason": "提供紧凑读出的低能响应数据，并明确其能量分辨率逊于硅探测器；尚待同行评议。",
+      "tags": [
+        "闪烁体",
+        "带电粒子",
+        "读出"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "Open Research Europe version 1为awaiting peer review，尚未完成正式同行评议。",
+        "0.4 MeV表征范围与约0.5 MeV可辨信号需结合全文定义理解。"
+      ]
+    },
+    {
+      "title": "Measurement‐anchored Monte Carlo prediction of diagnostic x‐ray air kerma using HVL‐matched spectra and per‐electron normalization",
+      "chinese_title": "以测量为锚点、结合半值层匹配能谱和每电子归一化预测诊断X射线空气比释动能",
+      "journal": "Medical Physics",
+      "publication_date": "2026-09-18",
+      "doi": "10.1002/mp.70679",
+      "url": "https://doi.org/10.1002/mp.70679",
+      "article_type": "研究论文",
+      "recommendation_score": 81,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 82,
+        "novelty": 72,
+        "quality": 83,
+        "methodology": 86,
+        "inspiration": 80
+      },
+      "why_worth_reading": "区分标定集符合与留出条件验证，适合借鉴到射线源模型及标定误差分析。",
+      "core_findings": [
+        "在50、80和120 kV条件下以实测半值层调整能谱，并在PHITS与EGS5中比较。",
+        "使用102个自由空气曝光条件及材料透射条件；部分条件进行留一交叉验证。",
+        "最大平均百分误差7.8%，略超预设±7.5%基准；代表性合成标准不确定度为5.6%，纳入管电压准确度后为7.3%。"
+      ],
+      "term_explanations": [
+        {
+          "term": "半值层（HVL）",
+          "academic_explanation": "在规定束流和几何条件下，使空气比释动能等量降低到一半的吸收材料厚度。",
+          "plain_explanation": "加多厚的指定材料，能把规定的射线读数削减一半。"
+        },
+        {
+          "term": "空气比释动能",
+          "academic_explanation": "不带电粒子在空气中释放的次级带电粒子初始动能与空气质量之比；不等同所有情况下的吸收剂量。",
+          "plain_explanation": "描述射线把多少初始动能交给每千克空气中的带电粒子。"
+        },
+        {
+          "term": "每电子归一化",
+          "academic_explanation": "把模拟响应换算到每个源电子的尺度，并以测量确定现实曝光量对应关系。",
+          "plain_explanation": "把模拟中随意发射的粒子数量，换算成机器实际曝光的读数。"
+        },
+        {
+          "term": "PHITS与EGS5",
+          "academic_explanation": "两种粒子输运计算程序；各自模型、源定义和计数归一化需明确后才可比较。",
+          "plain_explanation": "两套模拟工具，只有输入和记账规则对齐后才方便比较。"
+        },
+        {
+          "term": "留一交叉验证",
+          "academic_explanation": "每次留出一个条件或样本用于验证，其余用于建立模型，并轮换留出对象。",
+          "plain_explanation": "每次藏起一组数据，检查用其他数据得到的方法能否预测它。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "通过参考量建立仪器读数与被测量之间的对应关系及其不确定度。",
+          "plain_explanation": "用已知参照给仪器刻度，并说明刻度有多准。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "将标定与验证条件分开，增加未用于调参的滤片和电压组合。"
+        ],
+        "methods": [
+          "核对两套程序源定义及归一化单位。"
+        ],
+        "key_entities_mechanisms": [
+          "源谱形状与总输出应分别验证。"
+        ],
+        "target_system": [
+          "适用于X射线响应建模和标定。"
+        ],
+        "future_direction": [
+          "检验仅匹配半值层能否预测不同材料透射。"
+        ],
+        "paper_potential": [
+          "可形成可追溯标定比较；单一设备符合不足以支持普适结论。"
+        ],
+        "limitations_validation": [
+          "原摘要部分公式符号缺失，不据此补造公式；跨设备验证仍需开展。"
+        ]
+      },
+      "top3_reason": "区分标定集符合与留出条件验证，适合借鉴到射线源模型及标定误差分析。",
+      "tags": [
+        "X射线",
+        "标定",
+        "响应建模"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "摘要公式符号缺失；具体归一化表达式需全文核实。"
+      ]
+    },
+    {
+      "title": "Energy spectrum unfolding based on depth-dose distributions of a 10 MeV electron beam on the UELR-10-15S accelerator: experimental and Monte Carlo simulation",
+      "chinese_title": "基于深度剂量分布展开UELR-10-15S加速器10 MeV电子束能谱：实验与蒙特卡洛模拟",
+      "journal": "Journal of Radioanalytical and Nuclear Chemistry",
+      "publication_date": "2026-09-19",
+      "doi": "10.1007/s10967-026-11181-8",
+      "url": "https://doi.org/10.1007/s10967-026-11181-8",
+      "article_type": "研究论文",
+      "recommendation_score": 78,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 84,
+        "novelty": 66,
+        "quality": 76,
+        "methodology": 80,
+        "inspiration": 78
+      },
+      "why_worth_reading": "补核出版商摘要后确认与能谱展开相关，可比较谱形恢复和独立验证设计。",
+      "core_findings": [
+        "以实验深度剂量分布展开电子能谱，并与MCNP 6.3计算比较。",
+        "重建谱呈低能拖尾的不对称高斯形状，最概然能量10.44 MeV、平均能量9.38 MeV。",
+        "作者报告相关能量指标偏差低于0.3%与0.7%；这些数值不是整条能谱的逐点误差，也未建立解的唯一性。"
+      ],
+      "term_explanations": [
+        {
+          "term": "能谱展开",
+          "academic_explanation": "借助响应模型，从测量分布反推入射粒子能量分布的逆问题。",
+          "plain_explanation": "根据探测器的响应倒推入射粒子的能量组成，答案可能不唯一。"
+        },
+        {
+          "term": "深度剂量分布（PDD）",
+          "academic_explanation": "剂量随材料深度变化的曲线；百分深度剂量还须指定归一化参考值。",
+          "plain_explanation": "看粒子束进入材料后，在每一层留下多少剂量。"
+        },
+        {
+          "term": "MCNP 6.3",
+          "academic_explanation": "用于中子、光子、电子等粒子输运的蒙特卡洛计算程序版本。",
+          "plain_explanation": "追踪粒子穿过材料并计算响应的一套模拟软件。"
+        },
+        {
+          "term": "最概然能量与平均能量",
+          "academic_explanation": "前者为能谱概率密度最大位置的能量，后者为按概率加权的能量均值。",
+          "plain_explanation": "一个是最常出现的能量，另一个是全部能量的平均值。"
+        },
+        {
+          "term": "不对称高斯分布",
+          "academic_explanation": "峰两侧形状不同的近高斯分布描述，需给出具体参数化定义。",
+          "plain_explanation": "像钟形曲线但两边不对称，某一侧可能拖着长尾。"
+        },
+        {
+          "term": "蒙特卡洛粒子输运",
+          "academic_explanation": "通过随机抽样粒子相互作用和输运过程，计算探测响应及统计不确定度。",
+          "plain_explanation": "在计算机里追踪大量随机粒子的经历，统计最后的响应。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "增加不同材料和几何条件作为独立验证。"
+        ],
+        "methods": [
+          "比较多个允许的谱形是否同样解释深度剂量。"
+        ],
+        "key_entities_mechanisms": [
+          "关注低能拖尾对测量响应的影响。"
+        ],
+        "target_system": [
+          "用于带电粒子能谱与响应建模阶段。"
+        ],
+        "future_direction": [
+          "研究有限深度采样下可辨识的谱细节。"
+        ],
+        "paper_potential": [
+          "有价值的贡献在独立验证和适用范围，单纯恢复峰值并不充分。"
+        ],
+        "limitations_validation": [
+          "摘要不足以核实拟合与验证数据是否独立，需全文核对。"
+        ]
+      },
+      "top3_reason": "补核出版商摘要后确认与能谱展开相关，可比较谱形恢复和独立验证设计。",
+      "tags": [
+        "带电粒子",
+        "能谱展开"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "全文受订阅限制；仅按已核实出版商摘要总结，不宣称整谱精度。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "对聚变中子成像做跨实验时段验证，同时改变时间采样、通道增益和缺失通道，检验空心结构能否稳定恢复。",
+    "对半导体器件联合扫描入射能量、厚度和照射后等待时间，比较局部损伤指标对μτ与暗电流的预测能力。",
+    "对X射线和电子束模型保留未参与拟合的材料与几何条件，比较单一指标符合与完整响应预测是否一致。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-09-21T04:53:45.788293+00:00",
+    "search_window": "以2021-09-21至2026-09-21为主，补充2021年6月SpekPy基础工作；独立于当天候选收集开展。",
+    "candidate_count": 40,
+    "verified_count": 12,
+    "limitations": [
+      "宽搜候选含间接相关条目，核实12篇，公开选8篇；不属于穷尽系统综述。",
+      "部分出版商访问受限，使用Crossref出版者元数据、arXiv原稿、PMC及机构库交叉核实；采用在线年份时已说明卷期差异。",
+      "未对全部参考工作的原始数据复算；研究缺口与发文建议是有条件的推断，不是新颖性证明或录用保证。",
+      "没有复用前一天结论，也未将Zotero代表论文作为本次独立查新结果。"
+    ],
+    "themes": [
+      {
+        "title": "中子成像与液闪本底：从单一指标符合到独立验证",
+        "related_work_status": [
+          "已有ITER/JET多方法重建比较，也有锦屏液闪宇生中子实测及尺寸效应分析。"
+        ],
+        "today_increment": [
+          "JET论文增加约1 ms的二维动态观察；液闪论文显示总产额调整后多重数偏差仍存在。"
+        ],
+        "research_gap": [
+          "尚需在独立时段或场地检验几何、计数统计与模型变化对结构和事件分布的影响；这是本次证据支持的待测问题，不是领域空白证明。"
+        ],
+        "secondary_judgment": [
+          "快速采样和总量符合均不足以证明重建可靠；跨条件检验更有价值。"
+        ],
+        "paper_angle": [
+          "建立可复用的多观测量验证数据集，报告模型在哪些条件下失效。"
+        ],
+        "minimum_validation": [
+          "至少保留一个完全未参与调参的实验时段或场地；对缺失通道、增益变化、计数噪声分别测试，同时报告空间误差和中子多重数。"
+        ],
+        "novelty_risk": [
+          "最小Fisher算法和总产额校正已有基础；宇生中子与聚变中子的物理过程不同，不能强行合并一个通用校正参数。"
+        ],
+        "confidence": "中：方法及结果有直接来源，跨场景可行性仍属研究假设。",
+        "representative_works": [
+          {
+            "title": "Comparison of deconvolution techniques for 1D neutron emission profile reconstruction using ITER Radial Neutron Camera synthetic data and JET neutron camera measurements",
+            "doi": "10.1088/1361-6587/adbd73",
+            "url": "https://research.lu.lv/lv/publications/comparison-of-deconvolution-techniques-for-1d-neutron-emission-pr/",
+            "relation": "已比较四类方法并用JET数据验证；当天增量是更短时间采样下的二维结构观察，不能声称提出最小Fisher方法。"
+          },
+          {
+            "title": "Study of neutron production for 360 GeV cosmic muons",
+            "doi": "10.1103/PhysRevD.110.112017",
+            "url": "https://arxiv.org/abs/2409.04169",
+            "relation": "锦屏液闪实测提供独立场地和尺寸效应依据；可作为跨场地检验方向，但不是同能量条件下的直接优劣比较。"
+          }
+        ]
+      },
+      {
+        "title": "半导体与闪烁读出：辐照后恢复与局部损伤",
+        "related_work_status": [
+          "MAPbBr3质子探测已有耐辐照及恢复研究，钙钛矿纳米晶也已用于透射式单质子计数和成像。"
+        ],
+        "today_increment": [
+          "FAPbBr3研究比较多种损伤描述量并关联器件退化，提示局部空位峰值可能更有解释力。"
+        ],
+        "research_gap": [
+          "材料厚度、入射能量与照射后等待时间对指标预测性的耦合尚需独立验证；不能把不同读出路线的数据直接排序。"
+        ],
+        "secondary_judgment": [
+          "可做的贡献是建立指标的适用边界，而非重复证明钙钛矿能够探测质子。"
+        ],
+        "paper_angle": [
+          "在统一器件批次与测量时序下比较局部和整体损伤指标的预测能力。"
+        ],
+        "minimum_validation": [
+          "独立批次、未拟合能量点、厚度对照及照射后时间序列；同时测量电学退化和探测响应，控制温度及接触因素。"
+        ],
+        "novelty_risk": [
+          "耐辐照和恢复已被报道；当前局部空位与退化关联尚不等于因果机制。"
+        ],
+        "confidence": "中：有实验锚点，但不同材料和能量范围不支持直接性能排名。",
+        "representative_works": [
+          {
+            "title": "Radiation-Tolerant Proton Detector Based on the MAPbBr3 Single Crystal",
+            "doi": "10.1021/acsaelm.2c01406",
+            "url": "https://arxiv.org/abs/2207.01781",
+            "relation": "Crossref确认正式论文2022-12-27在线发表；链接为同项工作预印本。已有3 MeV质子探测及恢复研究，不能把耐辐照或恢复作为全新概念。"
+          },
+          {
+            "title": "Real-time single-proton counting with transmissive perovskite nanocrystal scintillators",
+            "doi": "10.1038/s41563-023-01782-z",
+            "url": "https://www.nature.com/articles/s41563-023-01782-z",
+            "relation": "已有透射式质子闪烁计数和成像；属于光读出路线，不能与当天直接电荷收集器件横向排名。"
+          }
+        ]
+      },
+      {
+        "title": "闪烁体、α能谱与伽马/中子读出标定",
+        "related_work_status": [
+          "SiPM系统已有温漂补偿与通道一致性校正；Eu:LiCaI已有双路光信号区分中子和伽马的实验。"
+        ],
+        "today_increment": [
+          "YSO–SiPM论文提供α能谱低能响应与分辨率数据，尚待同行评议，未验证混合场分类或长期耐受性。"
+        ],
+        "research_gap": [
+          "YSO组合在温度变化和累计照射下的低能标定能否保持，需有受控实验；跨材料粒子判别不能仅凭类比。"
+        ],
+        "secondary_judgment": [
+          "温度补偿本身并非充分贡献；若能分离晶体、光学连接与SiPM漂移，才可能形成可推广结果。"
+        ],
+        "paper_angle": [
+          "建立α能谱模块的温度—照射后时间响应图，并检查伽马参考信号能否预测α响应漂移。"
+        ],
+        "minimum_validation": [
+          "同一模块记录温度、偏压、参考光及α谱；设置补偿前后对照，并测独立能量点，避免把空气层能量分散当器件分辨率。"
+        ],
+        "novelty_risk": [
+          "双路光学判别的先例不能证明YSO具备同样发光差异；α/伽马响应关系必须实测。"
+        ],
+        "confidence": "中偏低：当天α论文尚待评议，建议属于条件性实验路线。",
+        "representative_works": [
+          {
+            "title": "Gain stabilization and consistency correction approach for multiple SiPM-based gamma-ray detectors on GECAM",
+            "doi": "10.1016/j.nima.2021.166222",
+            "url": "https://arxiv.org/abs/2110.01796",
+            "relation": "正式卷期2022，预印本2021；已有温度驱动偏压补偿及通道一致性校正，YSO系统必须比较这一读出基线。"
+          },
+          {
+            "title": "Gamma and neutron separation using emission wavelengths in Eu:LiCaI scintillators",
+            "doi": "10.1093/ptep/ptad003",
+            "url": "https://academic.oup.com/ptep/article/2023/2/023H01/6982932",
+            "relation": "已用滤光与双路MPPC信号比区分中子和伽马；提示α能谱之外可比较多观测量，但该机制不能直接移植到YSO。"
+          }
+        ]
+      },
+      {
+        "title": "X射线与电子束能谱：独立响应检验",
+        "related_work_status": [
+          "SpekPy已有实测谱与半值层验证；AQURE工作已把展开谱用于不同孔径的深度剂量检验。"
+        ],
+        "today_increment": [
+          "X射线论文增加测量归一化和条件留出分析；工业电子束论文提供10 MeV附近的谱形及能量指标。"
+        ],
+        "research_gap": [
+          "匹配半值层、峰能量或同一剂量曲线后，独立材料响应是否仍正确，需要实验检验。"
+        ],
+        "secondary_judgment": [
+          "应区分参数拟合成功和物理预测成功；当天摘要不足以证明整谱唯一恢复。"
+        ],
+        "paper_angle": [
+          "用未参与拟合的材料、厚度及几何条件比较不同谱模型，量化预测偏差。"
+        ],
+        "minimum_validation": [
+          "明确划分拟合与验证数据；比较多个能解释训练测量的谱，报告完整曲线误差及实验不确定度。"
+        ],
+        "novelty_risk": [
+          "从深度剂量展开能谱及半值层匹配已有大量基础；仅换加速器或计算程序的新颖性有限。"
+        ],
+        "confidence": "中：验证设计有直接先例，具体通用性需新增实验。",
+        "representative_works": [
+          {
+            "title": "Technical Note: SpekPy v2.0—a software toolkit for modeling x-ray tube spectra",
+            "doi": "10.1002/mp.14945",
+            "url": "https://aapm.onlinelibrary.wiley.com/doi/full/10.1002%2Fmp.14945",
+            "relation": "2021年6月基础补充，略早于滚动5年窗口；已有实测能谱、半值层和输出比较，当天重点是测量归一化与条件留出验证。"
+          },
+          {
+            "title": "Implementation and validation of the method for the energy spectra reconstruction of electron beams generated by the AQURE mobile accelerator",
+            "doi": "10.5603/rpor.104511",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11999011/",
+            "relation": "已有多能量展开和不同孔径验证；当天10 MeV工业束流结果不能仅凭展开和低能拖尾主张方法新颖。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "有三个值得进一步验证的方向；优先考虑中子诊断验证和器件可靠性。可发表贡献取决于新增独立证据，现有文献不能保证创新性或期刊层级。",
+    "opportunities": [
+      {
+        "title": "聚变中子快速成像的误差传播与独立验证",
+        "research_gap": [
+          "快速空心结构可能对视野误差、通道变化和低计数敏感；当前摘要未量化这些影响。"
+        ],
+        "why_worth_doing": [
+          "直接服务聚变诊断解释，已有1 ms真实数据提供可比较锚点。"
+        ],
+        "recommended_work": [
+          "选择独立实验时段，将时间采样、通道缺失与增益扰动逐项加入，比较至少两种重建方法。"
+        ],
+        "paper_contribution": [
+          "形成可检验的快速结构识别边界和可复用测试数据。"
+        ],
+        "daily_evidence": [
+          "当天JET论文提供1 ms结构观察；液闪论文说明总量符合不足以证明事件层面模型正确，后者仅作为验证方法启发。"
+        ],
+        "main_risks": [
+          "实验原始数据可获得性；两类中子来源不能共用未经验证的物理模型。"
+        ],
+        "article_type": "诊断方法与实验验证论文",
+        "evidence_papers": [
+          {
+            "title": "JET neutron emissivity reconstruction using the minimum fisher information method for 1 ms temporal resolution",
+            "doi": "10.1088/1361-6587/aea4f3",
+            "url": "https://doi.org/10.1088/1361-6587/aea4f3"
+          },
+          {
+            "title": "Comprehensive study of cosmogenic neutron production in large liquid scintillator detectors",
+            "doi": "10.1140/epjc/s10052-026-16173-2",
+            "url": "https://doi.org/10.1140/epjc/s10052-026-16173-2"
+          }
+        ]
+      },
+      {
+        "title": "局部损伤指标能否预测半导体探测器退化与恢复",
+        "research_gap": [
+          "局部空位指标在不同厚度、能量和照射后时点是否优于整体指标尚不清楚。"
+        ],
+        "why_worth_doing": [
+          "可为实际器件可靠性提供可预测指标，而不仅是照射前后性能比较。"
+        ],
+        "recommended_work": [
+          "预先固定评估指标，安排多能量、厚度和恢复时点，留出一批器件作预测验证。"
+        ],
+        "paper_contribution": [
+          "给出损伤描述量的适用范围、失败条件和测量时序规范。"
+        ],
+        "daily_evidence": [
+          "当天FAPbBr3论文报告μτ和暗电流退化与局部空位描述量的对应趋势。"
+        ],
+        "main_risks": [
+          "相关性误作因果；器件接触与批次差异；实验照射量不匹配；既有恢复工作重叠。"
+        ],
+        "article_type": "器件物理与辐照可靠性实验论文",
+        "evidence_papers": [
+          {
+            "title": "Proton-induced radiation stability in FAPbBr3 perovskite detectors: Multi-descriptor damage model and experimental validation",
+            "doi": "10.1063/5.0349653",
+            "url": "https://doi.org/10.1063/5.0349653"
+          }
+        ]
+      },
+      {
+        "title": "能谱模型跨材料与几何条件的盲测基准",
+        "research_gap": [
+          "少量能量或半值层指标相同的谱，可能给出不同独立响应预测。"
+        ],
+        "why_worth_doing": [
+          "适用于探测器标定和工业束流测量，可明确模型能否用于实际预测。"
+        ],
+        "recommended_work": [
+          "在X射线或电子束中先选一类系统，比较多个谱模型，并使用未参与拟合的材料和几何测量。"
+        ],
+        "paper_contribution": [
+          "形成响应预测误差和不确定度基准，明确标定适用范围。"
+        ],
+        "daily_evidence": [
+          "X射线论文部分条件超预设误差基准；电子束论文只报告若干能量指标的良好符合。"
+        ],
+        "main_risks": [
+          "仅改变模拟软件贡献不足；重复使用拟合数据会高估准确度；不同射线类型需各自建立响应模型。"
+        ],
+        "article_type": "测量方法与基准验证论文",
+        "evidence_papers": [
+          {
+            "title": "Measurement‐anchored Monte Carlo prediction of diagnostic x‐ray air kerma using HVL‐matched spectra and per‐electron normalization",
+            "doi": "10.1002/mp.70679",
+            "url": "https://doi.org/10.1002/mp.70679"
+          },
+          {
+            "title": "Energy spectrum unfolding based on depth-dose distributions of a 10 MeV electron beam on the UELR-10-15S accelerator: experimental and Monte Carlo simulation",
+            "doi": "10.1007/s10967-026-11181-8",
+            "url": "https://doi.org/10.1007/s10967-026-11181-8"
+          }
+        ]
+      }
+    ]
+  }
+}
