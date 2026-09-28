@@ -1,0 +1,621 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-09-28",
+  "published_at": "2026-09-28T05:50:32.840340+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 1447,
+    "screened_count": 134,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 3,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 2,
+      "crossref": 711,
+      "semanticscholar": 0,
+      "openalex": 134,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "semanticscholar: HTTPError: HTTP Error 429:",
+      "实际新文献窗口为2026-09-22至2026-09-28（日级日期），不是严格24小时。",
+      "检索1447条为7天采集口径；人工审阅7天130条及24小时独有4条，共134个去重候选。自动推荐为空不代表无合格论文。",
+      "自然语言画像仍标注草案，与已配置结构化画像不一致；按本次明确要求的辐射探测范围复核，未修改画像。",
+      "JUNO与RES-NOVA候选的近期出版日期未充分核实，暂不作为当日新增推荐。",
+      "推送成功后的历史与记忆只写入本次目录副本；全局历史不更新，后续运行需考虑本次回执以免重复。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Fast-Neutron Scintillation with Multi-Quantum-Well 2D Perovskites",
+      "chinese_title": "多量子阱二维钙钛矿的快中子闪烁探测",
+      "journal": "arXiv (Cornell University)",
+      "publication_date": "2026-09-23",
+      "doi": "10.48550/arxiv.2609.28468",
+      "url": "https://arxiv.org/abs/2609.28468",
+      "article_type": "预印本（未经正式同行评议）",
+      "recommendation_score": 86,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 96,
+        "novelty": 78,
+        "quality": 72,
+        "methodology": 85,
+        "inspiration": 88
+      },
+      "why_worth_reading": "直接报告氘氘中子场中的粒子判别，并兼顾伽马能谱；需在统一阈值和读出条件下比较性能。",
+      "core_findings": [
+        "作者报告可分别控制毫米厚、大面积探测体的外形与微观相组成。",
+        "多量子阱设计实现光谱分离，并保留纳秒发光动力学。",
+        "铯-137的662 keV伽马照射下，报告能量分辨率5.4%。",
+        "氘氘聚变中子照射下，以脉冲形状判别分离中子和伽马事件，报告品质因子3.51；摘要未给出对应能量阈值。"
+      ],
+      "term_explanations": [
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射后发射光子的材料，可与光传感器组成间接辐射探测器。",
+          "plain_explanation": "把看不见的射线作用转换为可测的闪光。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "利用已知参考量建立仪器输出与被测物理量的关系，并评估相关不确定度。",
+          "plain_explanation": "用已知刻度的参照物给仪器对尺。"
+        },
+        {
+          "term": "二维钙钛矿",
+          "academic_explanation": "由无机层与有机间隔组分构成的层状钙钛矿类材料；本文为含铅卤化物。",
+          "plain_explanation": "像交替叠放的无机薄层和有机隔层，其性质取决于两者组合。"
+        },
+        {
+          "term": "多量子阱",
+          "academic_explanation": "多个载流子受限区域及势垒组成的能量结构，可改变激发态分布与能量转移。",
+          "plain_explanation": "像一组深浅不同的小能量槽，影响激发能量的去向。"
+        },
+        {
+          "term": "快中子与氘氘/氘氚聚变",
+          "academic_explanation": "快中子具有较高动能；氘氘和氘氚反应典型中子能量分别约2.45和14.1 MeV，具体分布依反应条件而变。",
+          "plain_explanation": "两种聚变反应产生不同能量的中子，不能把一种测试自动当作另一种测试。"
+        },
+        {
+          "term": "伽马射线与能谱",
+          "academic_explanation": "伽马射线是高能光子；能谱统计探测事件在不同能量区间的分布。",
+          "plain_explanation": "既数有多少次信号，也看信号分别落在哪些能量刻度。"
+        },
+        {
+          "term": "能量分辨率",
+          "academic_explanation": "常以单能峰半高全宽与峰位之比表示，须指定能量、拟合和背景处理方法。",
+          "plain_explanation": "同样能量的事件聚得越紧，通常越容易分清相近能量。"
+        },
+        {
+          "term": "脉冲形状判别及品质因子",
+          "academic_explanation": "利用脉冲时间形状区分粒子；常见品质因子为两类判别分布峰间距除以两者半高全宽之和。",
+          "plain_explanation": "看闪光随时间怎样消退来分类；两类越分开越容易辨认，但数值受筛选条件影响。"
+        },
+        {
+          "term": "相组成与光谱分离",
+          "academic_explanation": "相组成指不同结构相的比例；光谱分离指发射信号在波长或能量分布上可区分。",
+          "plain_explanation": "材料内部不同结构的配比会影响闪光颜色分布。"
+        },
+        {
+          "term": "光学耦合与读出带宽",
+          "academic_explanation": "光学耦合影响光到传感器的传输；读出带宽限制电子系统能保留的信号频率。",
+          "plain_explanation": "既要把光送进去，也要让电子仪器跟得上闪光变化。"
+        },
+        {
+          "term": "探测效率、能量阈值与误判率",
+          "academic_explanation": "效率为符合定义的入射事件被探测比例；阈值为接受信号下限；误判率为粒子被错误分类的比例。",
+          "plain_explanation": "能看到多少、从多弱的信号开始算、又有多少认错，必须一起看。"
+        },
+        {
+          "term": "累积辐照",
+          "academic_explanation": "材料或器件在一段时间内承受辐射作用的过程，可能改变探测响应。",
+          "plain_explanation": "连续照射后仪器可能逐渐变样，需要前后比较。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "在相同厚度、光学耦合和读出条件下比较单相与多量子阱材料，避免把几何差异误认为材料优势。"
+        ],
+        "methods": [
+          "同时测量能量分辨率和脉冲形状判别，并报告随能量阈值变化的结果。"
+        ],
+        "key_entities_mechanisms": [
+          "关注相组成改变如何影响发光时间分布；因果解释需额外对照实验。"
+        ],
+        "target_system": [
+          "可作为聚变中子诊断材料候选，但氘氘结果不能直接外推至氘氚中子。"
+        ],
+        "future_direction": [
+          "检验温度和累积辐照是否改变粒子误判率。"
+        ],
+        "paper_potential": [
+          "潜在贡献是材料结构与真实混合场判别的定量联系，不能仅以更高品质因子主张优越性。"
+        ],
+        "limitations_validation": [
+          "需要原始波形、计数统计、探测效率、阈值、读出带宽及独立重复；当前为未经正式同行评议的预印本。"
+        ]
+      },
+      "top3_reason": "直接报告氘氘中子场中的粒子判别，并兼顾伽马能谱；需在统一阈值和读出条件下比较性能。",
+      "tags": [
+        "中子探测",
+        "闪烁体",
+        "伽马能谱",
+        "粒子鉴别"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "未正式同行评议；品质因子对应阈值和统计条件待全文核实。"
+      ]
+    },
+    {
+      "title": "Fabrication and Characterization of 3D-Printed Polystyrene/CdSiO3:Mn2+ Scintillator Films for X-Ray Imaging Applications",
+      "chinese_title": "用于X射线成像的3D打印聚苯乙烯/锰掺杂偏硅酸镉闪烁薄膜的制备与表征",
+      "journal": "Spectroscopy Journal",
+      "publication_date": "2026-09-24",
+      "doi": "10.3390/spectroscj4040018",
+      "url": "https://doi.org/10.3390/spectroscj4040018",
+      "article_type": "研究论文",
+      "recommendation_score": 79,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 92,
+        "novelty": 65,
+        "quality": 65,
+        "methodology": 75,
+        "inspiration": 80
+      },
+      "why_worth_reading": "将可打印复合闪烁材料与成像表征连接；摘要的高空间分辨率需要核对测量尺度与原始图像。",
+      "core_findings": [
+        "研究以挤出制备复合丝材，再通过熔融沉积成型打印闪烁薄膜。",
+        "摘要报告无机填料均匀掺入聚合物，且加工后保留辐射发光。",
+        "提高填料含量增强辐射发光，并伴随光学透过率略降及成像清晰度改善。",
+        "40 wt.%样品报告约60%光学透过率及MTF=0.2时约44 lp/mm；仅为已核对的作者摘要数值，未验证原始图像尺度。"
+      ],
+      "term_explanations": [
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射后发射光子的材料，可与光传感器组成间接辐射探测器。",
+          "plain_explanation": "把看不见的射线作用转换为可测的闪光。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "利用已知参考量建立仪器输出与被测物理量的关系，并评估相关不确定度。",
+          "plain_explanation": "用已知刻度的参照物给仪器对尺。"
+        },
+        {
+          "term": "X射线成像",
+          "academic_explanation": "利用X射线与物体相互作用后产生的信号形成空间图像。",
+          "plain_explanation": "从穿过物体后留下的射线信号看内部结构。"
+        },
+        {
+          "term": "聚苯乙烯/锰掺杂偏硅酸镉复合薄膜",
+          "academic_explanation": "将CdSiO3:Mn2+无机发光填料加入聚苯乙烯基体构成的复合材料。",
+          "plain_explanation": "把发光粉末混进可成型塑料中，二者共同构成薄膜。"
+        },
+        {
+          "term": "熔融沉积成型与挤出",
+          "academic_explanation": "挤出将物料连续成形为丝材；熔融沉积成型逐层沉积热软化丝材以构建物体。",
+          "plain_explanation": "先做成打印线，再像挤细线一样一层层堆出薄膜。"
+        },
+        {
+          "term": "辐射发光",
+          "academic_explanation": "材料受电离辐射激发后发光；强度取决于激发、材料及收光条件。",
+          "plain_explanation": "射线照到材料后产生的光，亮度不能脱离测试条件比较。"
+        },
+        {
+          "term": "光学透过率",
+          "academic_explanation": "指定波长和几何下透射光强与入射光强之比。",
+          "plain_explanation": "光能穿过薄膜多少；不同颜色和厚度会改变结果。"
+        },
+        {
+          "term": "调制传递函数、空间分辨率与lp/mm",
+          "academic_explanation": "MTF描述不同空间频率下对比度的保留；lp/mm为每毫米线对数，必须说明采用的MTF阈值。",
+          "plain_explanation": "越来越细的黑白条纹还能保留多少对比度，不能只报最细条纹数字。"
+        },
+        {
+          "term": "质量分数wt.%",
+          "academic_explanation": "某成分质量占混合物总质量的百分比。",
+          "plain_explanation": "100克混合物中有多少克这种填料。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "固定膜厚与曝光，扫描填料质量分数，并加入不经打印的同配方薄膜对照。"
+        ],
+        "methods": [
+          "联合测量调制传递函数、透过率和相同曝光下的图像噪声。"
+        ],
+        "key_entities_mechanisms": [
+          "关注填料分散和打印层间结构对光传播的影响，不能由摘要认定具体机制。"
+        ],
+        "target_system": [
+          "适合X射线闪烁屏工艺研究；迁移到中子探测需另证实转换机制。"
+        ],
+        "future_direction": [
+          "检验多批次打印一致性和辐照前后的成像变化。"
+        ],
+        "paper_potential": [
+          "有价值的切口是固定测量条件下的加工—成像关系，3D打印闪烁屏本身已有先例。"
+        ],
+        "limitations_validation": [
+          "需核实膜厚、像素尺度、放大率、MTF提取流程及重复性；期刊背景需要核实，不据此直接判低质量。"
+        ]
+      },
+      "top3_reason": "将可打印复合闪烁材料与成像表征连接；摘要的高空间分辨率需要核对测量尺度与原始图像。",
+      "tags": [
+        "X射线成像",
+        "闪烁体",
+        "增材制造"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "出版商网页本次未能打开；依据实时Crossref出版商摘要复核。",
+        "44 lp/mm须核实原始图像和尺度，不能直接用于跨论文性能排名。"
+      ]
+    },
+    {
+      "title": "Beyond Hydrogen: Simultaneous Depth Profiling of Water and Rock‐Forming Elements in the Martian Shallow Subsurface via Combined Active Neutron and Prompt Gamma‐Ray Spectroscopy",
+      "chinese_title": "超越氢：结合主动中子与瞬发伽马能谱同步剖析火星浅表层水与造岩元素的深度分布",
+      "journal": "Journal of Geophysical Research: Planets",
+      "publication_date": "2026-09-23",
+      "doi": "10.1029/2026je009892",
+      "url": "https://doi.org/10.1029/2026je009892",
+      "article_type": "研究论文",
+      "recommendation_score": 78,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 85,
+        "novelty": 68,
+        "quality": 70,
+        "methodology": 78,
+        "inspiration": 83
+      },
+      "why_worth_reading": "用固定含氢量对照探索中子—伽马互补信息；结论来自理想化模拟，适合设计真实响应验证。",
+      "core_findings": [
+        "以Geant4模拟八类代表性火星表层组成，讨论脉冲中子与时间分辨瞬发伽马测量的信息互补。",
+        "在六类含氢量固定为3 wt.%的模型中，中子衰减时间常数集中在61.4–67.0微秒，提示仅靠该量区分组成存在局限。",
+        "模拟中的Fe/Cl、表观Si/Ca和Fe/H伽马比值提供额外元素约束；不据缺失的数学符号转述显著性。",
+        "作者报告20厘米干覆盖层下铁、硅俘获与非弹性信号比值分别变化36%和44%，深度解释依赖模型。"
+      ],
+      "term_explanations": [
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收电离辐射后发射光子的材料，可与光传感器组成间接辐射探测器。",
+          "plain_explanation": "把看不见的射线作用转换为可测的闪光。"
+        },
+        {
+          "term": "标定",
+          "academic_explanation": "利用已知参考量建立仪器输出与被测物理量的关系，并评估相关不确定度。",
+          "plain_explanation": "用已知刻度的参照物给仪器对尺。"
+        },
+        {
+          "term": "Geant4与蒙特卡洛模拟",
+          "academic_explanation": "Geant4是粒子与物质相互作用模拟工具；蒙特卡洛方法用随机抽样估计输运和探测响应。",
+          "plain_explanation": "在计算机中追踪许多粒子的可能路径，不等于已经做过真实实验。"
+        },
+        {
+          "term": "主动中子与瞬发伽马能谱",
+          "academic_explanation": "以外部中子源照射样品，并测量核反应及时发出的伽马能量分布，以获取元素或响应信息。",
+          "plain_explanation": "主动照一下样品，再听不同元素发出的能量“回声”。"
+        },
+        {
+          "term": "时间分辨与脉冲中子",
+          "academic_explanation": "脉冲源按时间间隔发射中子；时间分辨测量保留事件相对脉冲的到达时间信息。",
+          "plain_explanation": "不只看信号有多强，也记下它在照射后什么时候出现。"
+        },
+        {
+          "term": "含氢量与质量分数",
+          "academic_explanation": "含氢量可按规定换算为等效水质量分数；并不说明氢一定以液态水存在。",
+          "plain_explanation": "含多少氢和这些氢藏在哪种物质里是两回事。"
+        },
+        {
+          "term": "中子衰减时间常数",
+          "academic_explanation": "刻画特定模型和时间窗下中子计数随时间衰减速度的参数。",
+          "plain_explanation": "表示中子信号消退得多快，受材料与几何共同影响。"
+        },
+        {
+          "term": "俘获与非弹性信号",
+          "academic_explanation": "俘获指原子核吸收中子；非弹性散射中中子使核激发并损失部分能量，二者均可伴随伽马发射。",
+          "plain_explanation": "一种把中子收进去，另一种让中子碰撞后带着较少能量离开。"
+        },
+        {
+          "term": "联合反演与可辨识性",
+          "academic_explanation": "联合反演用多个观测估计未知参数；可辨识性描述观测能否区分不同参数组合。",
+          "plain_explanation": "同时看几种信号，检查不同样品是否仍可能给出几乎相同答案。"
+        },
+        {
+          "term": "探测器响应、探测效率与背景",
+          "academic_explanation": "响应是入射辐射到仪器信号的映射；效率为记录比例；背景为非目标信号。",
+          "plain_explanation": "仪器会漏看、模糊和混入杂音，模拟必须把这些算进去。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "制备含氢量相同而元素组成不同的样品，检验联合测量能否减少混淆。"
+        ],
+        "methods": [
+          "先验证中子衰减与伽马能谱，再把实测探测器响应纳入Geant4。"
+        ],
+        "key_entities_mechanisms": [
+          "关注水含量、元素组成与覆盖层厚度之间的混淆，不把元素约束写成确定水的化学形态。"
+        ],
+        "target_system": [
+          "可迁移为脉冲中子诊断的联合信号方法研究，火星材料模型不能直接代表反应堆或聚变装置。"
+        ],
+        "future_direction": [
+          "检验加入探测效率、背景和计数损失后，联合反演是否仍优于单一信号。"
+        ],
+        "paper_potential": [
+          "可形成现实测量条件下的可辨识性与失效边界研究，需真实样品验证。"
+        ],
+        "limitations_validation": [
+          "仅有理想化模拟证据；摘要数学公式部分缺失，不使用缺失统计量，必须核对全文。"
+        ]
+      },
+      "top3_reason": "用固定含氢量对照探索中子—伽马互补信息；结论来自理想化模拟，适合设计真实响应验证。",
+      "tags": [
+        "中子探测",
+        "伽马能谱",
+        "响应建模"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "摘要部分数学表达式丢失；未转述对应显著性或源粒子数。",
+        "出版商全文本次不可访问；依据实时Crossref摘要，结论限于理想化模拟。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "统一几何、读出及阈值扫描；加入温度与辐照前后对照。",
+    "固定膜厚曝光，使用尺寸可追溯靶和非打印对照，公开原始图像。",
+    "使用不同组成同含氢量样品；校准真实响应，以盲样比较单信号与联合反演。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-09-28T05:49:51.338162+00:00",
+    "search_window": "2021-09-28至2026-09-28为主；在线年份与卷期年份分别注明",
+    "candidate_count": 47,
+    "verified_count": 12,
+    "limitations": [
+      "检索使用Crossref、学术网页搜索、出版商、arXiv及PubMed/PMC；未使用Zotero代表论文作为唯一比较集。",
+      "宽搜计数包括后续排除的跨领域条目及评审记录，核实12篇，公开展示8篇；不构成穷尽检索。",
+      "部分DOI/出版商页面访问失败，使用可访问论文库或出版商摘要的检索缓存；未声称全部阅读全文。",
+      "半导体、带电粒子、标定、读出与辐照方向作为对照覆盖，今日没有这些方向的合格新增论文不强行补齐。"
+    ],
+    "themes": [
+      {
+        "title": "快中子闪烁材料：性能增量须经相同条件比较",
+        "related_work_status": [
+          "2025年的富氢二维材料已报告中子/伽马判别；另有直接电荷读出薄膜路线。"
+        ],
+        "today_increment": [
+          "今日预印本把多量子阱、探测体几何控制与能谱/判别结合；报告品质因子3.51，但尚不能据此认定超过所有先例。"
+        ],
+        "research_gap": [
+          "需检验厚度、阈值、光收集与读出条件统一后，材料相结构是否仍带来稳定增益。"
+        ],
+        "secondary_judgment": [
+          "有研究价值的是可重复的条件化性能增量；领域空白和机制因果均未被本次检索证明。"
+        ],
+        "paper_angle": [
+          "多量子阱与单相材料在混合场、温度及辐照下的受控对照。"
+        ],
+        "minimum_validation": [
+          "至少三个独立样品或批次，统一几何和读出；公开原始波形、阈值扫描、效率、误判率及不确定度。"
+        ],
+        "novelty_risk": [
+          "同类材料PSD已有直接先例；预印本数值缺少可比条件，不能将品质因子之比视为提升倍数。"
+        ],
+        "confidence": "中等：直接先例及当日摘要明确，全文与统一条件比较不足。",
+        "representative_works": [
+          {
+            "title": "Achieving Efficient Fast Neutron and Gamma Discrimination in Hydrogen‐Rich 2D Halide Perovskite Scintillators",
+            "doi": "10.1002/smll.202411060",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39995390/",
+            "relation": "直接先例：已有氘氘中子/伽马判别；不同阈值的品质因子不能直接排名。"
+          },
+          {
+            "title": "Structure‐Function Integration in 2D Hybrid Perovskite for Fast Neutron and Gamma Ray Discrimination",
+            "doi": "10.1002/advs.202518905",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/41391044/",
+            "relation": "已有能谱、判别与成像组合；2025年在线发表，2026年卷期。"
+          },
+          {
+            "title": "Fast Neutron Detector Based on Hybrid 2D Perovskite Thin Films",
+            "doi": "10.1002/adfm.202502530",
+            "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202502530",
+            "relation": "半导体电荷读出路线对照，与今日闪烁光读出不同。"
+          }
+        ]
+      },
+      {
+        "title": "可打印X射线闪烁屏：工艺优势与成像尺度分开验证",
+        "related_work_status": [
+          "2024年已有3D打印CsI:Tl复合薄膜，显示厚度、光输出和分辨率之间的权衡。"
+        ],
+        "today_increment": [
+          "今日研究改用聚苯乙烯/CdSiO3:Mn2+并报告加工后保留发光与成像；44 lp/mm需单独复核。"
+        ],
+        "research_gap": [
+          "不同制造路线在相同厚度、曝光、放大率和像素尺度下是否仍有可重复差异，尚需实验。"
+        ],
+        "secondary_judgment": [
+          "更适合做标准化加工与测量研究；材料或打印路线替换本身不足以支撑强新颖性。"
+        ],
+        "paper_angle": [
+          "填料比例—打印层结构—图像质量的受控实验。"
+        ],
+        "minimum_validation": [
+          "同配方非打印对照、膜厚测量、已知尺寸靶、原始图像、MTF曲线、透过率与多批次重复。"
+        ],
+        "novelty_risk": [
+          "若尺度换算或图像处理造成表观高分辨率，主要性能优势可能消失。"
+        ],
+        "confidence": "中等偏低：加工结论有摘要依据，成像高值未由全文及原始数据验证。",
+        "representative_works": [
+          {
+            "title": "3D printed microcrystalline CsI:Tl composite scintillating thin films for X-ray imaging",
+            "doi": "10.1016/j.radmeas.2024.107301",
+            "url": "https://www.sciencedirect.com/science/article/pii/S135044872400249X",
+            "relation": "已打印无机复合闪烁膜；比较重点应是膜厚、光输出与成像，而不是是否采用3D打印。"
+          }
+        ]
+      },
+      {
+        "title": "联合中子—伽马测量：把标定、读出与辐照响应纳入模型",
+        "related_work_status": [
+          "已有转换体配合伽马谱测中子的模拟、SiC中子/带电粒子能谱和像素标定，以及SiPM质子辐照评估。"
+        ],
+        "today_increment": [
+          "今日火星模拟用固定含氢量对照研究元素与深度信息；不等于已完成真实探测器验证。"
+        ],
+        "research_gap": [
+          "联合信息在有限效率、真实背景、计数损失及读出漂移下是否仍可辨识，需要实验检验。"
+        ],
+        "secondary_judgment": [
+          "可验证的切口是误差如何影响联合测量收益，而非泛称中子与伽马联合测量是新方法。"
+        ],
+        "paper_angle": [
+          "固定含氢量样品的联合信号盲测及探测器响应误差传播。"
+        ],
+        "minimum_validation": [
+          "单信号与联合信号对照；参考源标定；测量能量和时间响应、背景、重复性，并用未知样品验证。"
+        ],
+        "novelty_risk": [
+          "支撑文献跨材料和应用场景，只能提供方法对照；不能据此断言已穷尽行星探测相关工作。"
+        ],
+        "confidence": "中等：器件与标定先例可靠；向行星联合反演迁移仍是假设。",
+        "representative_works": [
+          {
+            "title": "Fast Neutron Measurement System Using Prompt Gamma Neutron Activation Solid Converter: Monte Carlo Study",
+            "doi": "10.3390/s23084133",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10140877/",
+            "relation": "已有转换体与伽马能谱间接测中子的模拟路线；今日新增重点为同含氢量下元素互补。"
+          },
+          {
+            "title": "Partially depleted operation of 250 μm-thick silicon carbide neutron detectors",
+            "doi": "10.1016/j.nima.2023.168918",
+            "url": "https://www.sciencedirect.com/science/article/pii/S016890022300918X",
+            "relation": "SiC中子与alpha能谱提供半导体对照和能量标定路径。"
+          },
+          {
+            "title": "Silicon Carbide Timepix3 detector for quantum-imaging detection and spectral tracking of charged particles in wide range of energy and field-of-view",
+            "doi": "10.1088/1748-0221/18/11/C11004",
+            "url": "https://arxiv.org/abs/2310.17747",
+            "relation": "带电粒子能谱、像素成像与读出标定对照，不证明今日材料已有同等能力。"
+          },
+          {
+            "title": "Radiation damage assessment of SiPMs for scintillation detectors",
+            "doi": "10.1016/j.nima.2022.167163",
+            "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168900222005320",
+            "relation": "读出器件可因辐照受损，材料稳定不代表探测系统稳定。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "三项均为有条件的研究切口；现有证据支持设计验证实验，不支持绝对新颖性或保证发表的结论。",
+    "opportunities": [
+      {
+        "title": "多量子阱闪烁体的可比判别与稳定性评估",
+        "research_gap": [
+          "同几何同阈值下的材料增益尚未建立。"
+        ],
+        "why_worth_doing": [
+          "今日有直接混合场证据，而查新证明相近PSD材料已有先例。"
+        ],
+        "recommended_work": [
+          "统一几何、读出及阈值扫描；加入温度与辐照前后对照。"
+        ],
+        "paper_contribution": [
+          "给出材料增益、系统代价与失效条件的可复核边界。"
+        ],
+        "daily_evidence": [
+          "今日预印本报告662 keV分辨率5.4%及氘氘场判别品质因子3.51。"
+        ],
+        "main_risks": [
+          "预印本证据、条件不可比、批次差异；不保证高水平发表。"
+        ],
+        "article_type": "实验方法与探测器表征研究",
+        "evidence_papers": [
+          {
+            "title": "Fast-Neutron Scintillation with Multi-Quantum-Well 2D Perovskites",
+            "doi": "10.48550/arxiv.2609.28468",
+            "url": "https://arxiv.org/abs/2609.28468"
+          }
+        ]
+      },
+      {
+        "title": "打印闪烁膜的真实空间分辨率验证",
+        "research_gap": [
+          "加工与测量尺度的贡献尚未分离。"
+        ],
+        "why_worth_doing": [
+          "已有打印先例，今日新配方值得用严格成像比较检验。"
+        ],
+        "recommended_work": [
+          "固定膜厚曝光，使用尺寸可追溯靶和非打印对照，公开原始图像。"
+        ],
+        "paper_contribution": [
+          "建立可重复的配方与加工参数对图像质量的影响关系。"
+        ],
+        "daily_evidence": [
+          "今日复合薄膜摘要报告加工保留发光与44 lp/mm指标，后者待原图验证。"
+        ],
+        "main_risks": [
+          "高指标可能受尺度和处理影响；仅配方替换贡献有限。"
+        ],
+        "article_type": "材料加工与成像方法研究",
+        "evidence_papers": [
+          {
+            "title": "Fabrication and Characterization of 3D-Printed Polystyrene/CdSiO3:Mn2+ Scintillator Films for X-Ray Imaging Applications",
+            "doi": "10.3390/spectroscj4040018",
+            "url": "https://doi.org/10.3390/spectroscj4040018"
+          }
+        ]
+      },
+      {
+        "title": "中子—伽马联合信息在真实探测器中的收益",
+        "research_gap": [
+          "理想化模型尚未证明有限效率和背景下的可辨识性。"
+        ],
+        "why_worth_doing": [
+          "固定含氢量对照能直接检验额外元素信号是否有用。"
+        ],
+        "recommended_work": [
+          "使用不同组成同含氢量样品；校准真实响应，以盲样比较单信号与联合反演。"
+        ],
+        "paper_contribution": [
+          "量化联合测量的有效条件及不确定度，而非只给理想模拟可分性。"
+        ],
+        "daily_evidence": [
+          "今日论文以六类同含氢量模型展示衰减信号接近、伽马比值互补。"
+        ],
+        "main_risks": [
+          "模型到实验的迁移、核数据和背景误差；不能直接称已解决水形态识别。"
+        ],
+        "article_type": "模拟—实验联合验证研究",
+        "evidence_papers": [
+          {
+            "title": "Beyond Hydrogen: Simultaneous Depth Profiling of Water and Rock‐Forming Elements in the Martian Shallow Subsurface via Combined Active Neutron and Prompt Gamma‐Ray Spectroscopy",
+            "doi": "10.1029/2026je009892",
+            "url": "https://doi.org/10.1029/2026je009892"
+          }
+        ]
+      }
+    ]
+  }
+}
