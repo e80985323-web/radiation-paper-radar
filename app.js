@@ -6,6 +6,12 @@ const state = {
   activeTag: "全部",
 };
 
+const FIXED_TOPIC_KEYWORDS = [
+  "SPND",
+  "自供电中子探测器",
+  "self-powered neutron detector",
+];
+
 const elements = {
   dateSelect: document.querySelector("#date-select"),
   searchInput: document.querySelector("#search-input"),
@@ -111,11 +117,7 @@ function setupDateSelect() {
 }
 
 function allTags() {
-  const tags = new Set();
-  for (const article of state.report?.articles || []) {
-    for (const tag of article.tags || []) tags.add(tag);
-  }
-  return ["全部", ...Array.from(tags).sort((a, b) => a.localeCompare(b, "zh-CN"))];
+  return ["全部", ...FIXED_TOPIC_KEYWORDS];
 }
 
 function renderTagFilters() {
@@ -132,7 +134,7 @@ function renderTagFilters() {
   };
   elements.topicCurrent.textContent = state.activeTag;
   elements.tagFilters.innerHTML = tags.map((tag) => buttonMarkup(tag, "tag-filter")).join("");
-  elements.tagPreview.innerHTML = tags.slice(1, 6).map((tag) => buttonMarkup(tag, "topic-preview-filter")).join("");
+  elements.tagPreview.innerHTML = tags.slice(1).map((tag) => buttonMarkup(tag, "topic-preview-filter")).join("");
   elements.tagFilters.querySelectorAll("[data-tag]").forEach((button) => button.addEventListener("click", selectTag));
   elements.tagPreview.querySelectorAll("[data-tag]").forEach((button) => button.addEventListener("click", selectTag));
 }
@@ -244,7 +246,8 @@ function searchableText(article) {
 function filteredArticles() {
   const query = state.query.trim().toLocaleLowerCase("zh-CN");
   return (state.report?.articles || []).filter((article) => {
-    const tagMatch = state.activeTag === "全部" || (article.tags || []).includes(state.activeTag);
+    const tagMatch = state.activeTag === "全部"
+      || searchableText(article).includes(state.activeTag.toLocaleLowerCase("zh-CN"));
     const queryMatch = !query || searchableText(article).includes(query);
     return tagMatch && queryMatch;
   });
