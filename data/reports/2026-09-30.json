@@ -1,0 +1,379 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-09-30",
+  "published_at": "2026-09-30T12:38:18.867703+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近7天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 788,
+    "screened_count": 67,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 4,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 5,
+      "crossref": 783,
+      "semanticscholar": 0,
+      "openalex": 0,
+      "biorxiv": 0
+    },
+    "warnings": [
+      "Semantic Scholar 返回 HTTP 429；OpenAlex 返回 HTTP 500；bioRxiv 请求出现 SSL EOF，本期主要依据 Crossref、Europe PMC 的摘要与 DOI 元数据复核。",
+      "自动元数据初筛没有产生70分以上推荐；以下分数是对摘要、DOI来源和方法线索进行人工复核后的推荐分，不是自动初筛分。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Fabrication and Characterization of 3D-Printed Polystyrene/CdSiO3:Mn2+ Scintillator Films for X-Ray Imaging Applications",
+      "chinese_title": "面向X射线成像的3D打印聚苯乙烯/CdSiO₃:Mn²⁺闪烁膜制备与表征",
+      "journal": "Spectroscopy Journal",
+      "publication_date": "2026-09-24",
+      "doi": "10.3390/spectroscj4040018",
+      "url": "https://doi.org/10.3390/spectroscj4040018",
+      "article_type": "研究论文",
+      "recommendation_score": 89,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 94,
+        "novelty": 85,
+        "quality": 79,
+        "methodology": 88,
+        "inspiration": 90
+      },
+      "why_worth_reading": "把可打印复合闪烁材料、成像分辨率与复杂几何制造放进同一条探测器验证链。",
+      "core_findings": [
+        "研究将Mn²⁺掺杂CdSiO₃闪烁粉体加入聚苯乙烯，经挤出制丝后用熔融沉积3D打印制备闪烁膜。",
+        "XRD、SEM/EDS、透过率、辐射发光和射线成像结果显示，挤出与打印后仍保留辐射发光活性，填料在聚合物中分散较均匀。",
+        "提高CdSiO₃:Mn²⁺含量可增强辐射发光并改善射线图像清晰度；40 wt.%样品约有60%光学透过率，在MTF=0.2时空间分辨率约44 lp/mm。"
+      ],
+      "term_explanations": [
+        {
+          "term": "闪烁体",
+          "academic_explanation": "吸收X射线、伽马射线等高能光子后产生可见或近可见发光，并将沉积能量转换为光信号的辐射探测材料。",
+          "plain_explanation": "像一层会把看不见的X射线翻译成可见亮度的材料，射线打到哪里，那里就留下光学信号。"
+        },
+        {
+          "term": "辐射发光",
+          "academic_explanation": "材料在电离辐射激发下产生的发光现象，其强度和光谱与能量沉积、缺陷态及发光中心有关。",
+          "plain_explanation": "不是通电发光，而是被X射线‘击中’后发亮；亮度可以反映射线在材料中留下了多少能量。"
+        },
+        {
+          "term": "MTF",
+          "academic_explanation": "调制传递函数，用于描述成像系统对不同空间频率细节的对比度传递能力，是评价空间分辨率和清晰度的指标。",
+          "plain_explanation": "把越来越细的黑白条纹交给成像系统，看它还能保留多少对比度；对比度掉到某个标准时对应的线对数就是分辨率。"
+        },
+        {
+          "term": "熔融沉积建模",
+          "academic_explanation": "将热塑性材料熔融后逐层挤出、堆叠成型的增材制造方法，适合制备复杂几何结构。",
+          "plain_explanation": "像一支自动挤出的热塑性‘画笔’，一层一层堆出想要的探测材料形状。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可建立‘填料含量—透过率—辐射发光—MTF’的统一矩阵，并加入不同打印方向和层厚的对照。"
+        ],
+        "methods": [
+          "借鉴XRD、SEM/EDS、辐射发光和数字图像分析串联验证材料、光学与成像性能的流程。"
+        ],
+        "key_entities_mechanisms": [
+          "重点关注无机闪烁颗粒分散、聚合物散射、光输出和空间分辨率之间的耦合。"
+        ],
+        "target_system": [
+          "可迁移到X射线成像屏、柔性探测器和具有曲面或复杂腔体的定制化辐射成像组件。"
+        ],
+        "future_direction": [
+          "进一步加入辐照老化、温度循环、厚度梯度和批次重复性，寻找成像清晰度与探测效率的稳定窗口。"
+        ],
+        "paper_potential": [
+          "若能在自有体系中补足标准源标定、MTF全曲线、剂量响应和长期稳定性，可形成材料—器件一体化论文。"
+        ],
+        "limitations_validation": [
+          "摘要未给出完整剂量响应、能量线性、均匀性和长期辐照数据，需全文核对测试条件与误差。"
+        ]
+      },
+      "top3_reason": "它把辐射转换材料、可制造性和成像指标连接起来，对探测器材料与结构设计都有直接启发。",
+      "tags": [
+        "闪烁体",
+        "X射线成像",
+        "3D打印",
+        "MTF",
+        "复合材料"
+      ],
+      "strong_recommendation": true,
+      "strong_recommendation_reasons": [
+        "与辐射探测材料和成像方向高度贴合，且给出了可比较的透过率与空间分辨率指标。",
+        "3D打印带来的复杂几何制造能力，为定制化探测器结构提供了明确的实验入口。"
+      ],
+      "needs_verification": [
+        "尚未全文核对MTF测量流程、剂量响应、跨批次重复性和长期辐照稳定性。"
+      ]
+    },
+    {
+      "title": "Digitizer-Based Single Photoelectron Detection Approach for Light Yield Measurement of Inorganic Scintillators",
+      "chinese_title": "基于数字化仪的单光电子探测方法：无机闪烁体光产额测量",
+      "journal": "Journal of Radiation Protection and Research",
+      "publication_date": "2026-09-30",
+      "doi": "10.14407/jrpr.2025.00115",
+      "url": "https://doi.org/10.14407/jrpr.2025.00115",
+      "article_type": "研究论文",
+      "recommendation_score": 88,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 93,
+        "novelty": 81,
+        "quality": 80,
+        "methodology": 89,
+        "inspiration": 88
+      },
+      "why_worth_reading": "用时间窗抑制随机符合，直接修正SPE光产额测量中的系统偏高。",
+      "core_findings": [
+        "研究用高速数字化仪记录弱LED激发下PMT阳极信号，并利用事件时间戳在预设时间窗内筛选相关信号。",
+        "随机符合会使单光电子估计产生偏差；抑制后，原先的光产额测量约有11%的高估被消除。",
+        "1英寸×1英寸CsI(Tl)分别耦合R2228和R1924A两种PMT，得到约50,000±2,000和51,000±2,000 photons/MeV，显示方法具有一致性。"
+      ],
+      "term_explanations": [
+        {
+          "term": "单光电子（SPE）",
+          "academic_explanation": "光电倍增管接收到单个光子后产生的单次光电子响应，常用于标定单光电子电荷分布和推算闪烁体绝对光产额。",
+          "plain_explanation": "把探测器调到‘一次只来一个光子’，先量清楚这一个光子会留下多大的电荷脚印。"
+        },
+        {
+          "term": "随机符合",
+          "academic_explanation": "两个本无因果关联的信号在同一时间选择窗口内偶然同时出现，被分析流程误判为相关事件的现象。",
+          "plain_explanation": "两个互不相干的信号刚好撞在同一个时间窗口里，系统就误以为它们是一对。"
+        },
+        {
+          "term": "光产额",
+          "academic_explanation": "辐射在闪烁体中沉积单位能量所产生的闪烁光子数，是评价闪烁材料能量转换效率的重要参数。",
+          "plain_explanation": "每吸收一份能量，材料能吐出多少光子；光子越多，后面的能量测量通常越有余量。"
+        },
+        {
+          "term": "时间窗筛选",
+          "academic_explanation": "依据激发触发与探测器响应之间的时间关联，仅保留落在预设延迟范围内的事件，以削弱非相关背景。",
+          "plain_explanation": "只接纳在规定时间内赶到的信号，迟到或提前太多的信号先当作背景排除。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可在标准闪烁体、PMT或SiPM之间做交叉耦合，并设置不同时间窗、光强和触发频率的系统对照。"
+        ],
+        "methods": [
+          "借鉴‘高速采样—时间戳关联—随机符合抑制—SPE电荷拟合—跨读出器复现’的测量链。"
+        ],
+        "key_entities_mechanisms": [
+          "重点分析触发抖动、PMT暗计数、脉冲重叠和时间窗宽度对光产额估计的共同影响。"
+        ],
+        "target_system": [
+          "适合迁移到闪烁体能谱仪、低光产额中子探测器和需要绝对光响应标定的多通道读出系统。"
+        ],
+        "future_direction": [
+          "可以进一步建立随机符合率随触发频率、光强和时间窗变化的校正模型，并检验低温或辐照后读出稳定性。"
+        ],
+        "paper_potential": [
+          "若结合自有探测器的独立光产额标定、误差预算和多种读出器交叉验证，具有清晰的方法学论文潜力。"
+        ],
+        "limitations_validation": [
+          "摘要层面尚不能判断不同脉冲形状、采样率、触发策略和系统不确定度下的稳健性，需阅读全文核对。"
+        ]
+      },
+      "top3_reason": "它针对探测器标定中容易被忽略的随机符合偏差给出可复现的数字化方案，方法迁移成本较低。",
+      "tags": [
+        "光产额",
+        "单光电子",
+        "数字化仪",
+        "PMT",
+        "闪烁体标定"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对时间窗选择、SPE拟合模型、误差预算和不同采样条件下的重复性。"
+      ]
+    },
+    {
+      "title": "Fusion gamma-ray diagnosis with a gas Cherenkov detector on the 100-kJ laser facility",
+      "chinese_title": "百千焦耳激光装置上的气体Cherenkov聚变伽马射线诊断",
+      "journal": "Plasma Science and Technology",
+      "publication_date": "2026-09-29",
+      "doi": "10.1088/2058-6272/aeae09",
+      "url": "https://doi.org/10.1088/2058-6272/aeae09",
+      "article_type": "研究论文",
+      "recommendation_score": 88,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 95,
+        "novelty": 80,
+        "quality": 82,
+        "methodology": 86,
+        "inspiration": 87
+      },
+      "why_worth_reading": "把气体Cherenkov阈值、Geant4前向模拟与聚变实验信号闭环起来。",
+      "core_findings": [
+        "论文利用气体Cherenkov探测器的本征阈值效应，在强中子诱发干扰背景下区分聚变伽马射线。",
+        "研究用Geant4模拟DT和pD内爆产生的伽马射线谱，并将DT伽马时间轮廓与实验信号进行验证。",
+        "低面密度直接驱动实验中，伽马与中子bang time在20 ps标准差内一致；pD实验通过双峰拟合提取纯伽马信号，信噪比约4:1。"
+      ],
+      "term_explanations": [
+        {
+          "term": "气体Cherenkov探测器",
+          "academic_explanation": "利用带电粒子在气体中速度超过该介质光速时产生Cherenkov辐射，并通过光学读出实现时间或能量相关诊断的探测器。",
+          "plain_explanation": "粒子在气体里跑得足够快就会留下类似‘光锥’的闪光，探测这束光可以判断粒子何时到达。"
+        },
+        {
+          "term": "阈值效应",
+          "academic_explanation": "只有当粒子速度超过介质中的光速阈值时才产生Cherenkov光，因此可利用介质折射率和粒子能量选择性响应。",
+          "plain_explanation": "速度不到门槛就不发光，超过门槛才亮；这道物理门槛本身可以帮忙筛掉不想要的信号。"
+        },
+        {
+          "term": "Geant4",
+          "academic_explanation": "用于模拟粒子输运、相互作用和能量沉积的蒙特卡洛工具包，可预测复杂探测器中的响应和背景。",
+          "plain_explanation": "先在计算机里让伽马和中子穿过装置，逐步模拟它们在哪里产生信号，再拿结果去对照实验。"
+        },
+        {
+          "term": "bang time",
+          "academic_explanation": "惯性约束聚变中燃料达到最大聚变反应率附近的特征时刻，可由中子或伽马时间信号重建。",
+          "plain_explanation": "可以理解为聚变反应‘最集中爆发’的时刻，不同辐射信号测到的这个时间应当彼此对得上。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可设计伽马、快中子和背景监测器的同步时间基准，并用不同阈值气体或几何屏蔽做选择性响应对照。"
+        ],
+        "methods": [
+          "借鉴‘Geant4前向响应—实验时间轮廓—多峰拟合—bang time交叉验证’的诊断闭环。"
+        ],
+        "key_entities_mechanisms": [
+          "重点关注气体折射率、阈值选择、屏蔽结构、余辉和中子诱发背景对时间分辨的影响。"
+        ],
+        "target_system": [
+          "可迁移到聚变伽马诊断、强本底核反应实验以及需要在混合辐射场中提取时间信息的探测系统。"
+        ],
+        "future_direction": [
+          "可以比较不同气体压力、光电读出器和数字波形算法，寻找时间分辨率、信噪比与抗本底能力的折中。"
+        ],
+        "paper_potential": [
+          "若在自有装置上完成响应矩阵标定、背景分解和独立时间基准验证，可形成诊断方法或仪器学论文。"
+        ],
+        "limitations_validation": [
+          "摘要未提供完整探测器结构、系统误差和高面密度工况结果，需全文核对模拟到实验的归一化和不确定度。"
+        ]
+      },
+      "top3_reason": "它展示了如何把探测器的物理选择性、蒙特卡洛响应和真实时间信号结合成可检验的诊断链。",
+      "tags": [
+        "伽马探测",
+        "聚变诊断",
+        "Cherenkov",
+        "Geant4",
+        "时间测量"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对气体参数、阈值建模、实验归一化和20 ps时间一致性的系统误差。"
+      ]
+    },
+    {
+      "title": "Optimization of spectral photon-counting CT reconstruction parameters for improved detection of peritoneal metastases compared with energy-integrating detector dual-energy CT: a phantom study",
+      "chinese_title": "优化光子计数CT重建参数以提升腹膜转移检出：与能量积分型双能CT的模体比较",
+      "journal": "European Radiology Experimental",
+      "publication_date": "2026-09-30",
+      "doi": "10.1186/s41747-026-00816-w",
+      "url": "https://doi.org/10.1186/s41747-026-00816-w",
+      "article_type": "模体研究",
+      "recommendation_score": 81,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 81,
+        "novelty": 76,
+        "quality": 82,
+        "methodology": 86,
+        "inspiration": 78
+      },
+      "why_worth_reading": "展示光子计数CT中重建参数如何共同决定噪声、分辨率与可检出性。",
+      "core_findings": [
+        "研究在8.5 mGy条件下比较光子计数CT与能量积分型双能CT，并系统改变重建核和迭代重建强度。",
+        "通过噪声功率谱、基于任务的传递函数和可检出性指数d'同时评价噪声纹理、空间分辨率与病灶检测能力。",
+        "对于40 keV虚拟单色图像，STD-B核与i9等级给出了噪声纹理、空间分辨率和可检出性之间的最佳折中；但仍需更大临床队列验证。"
+      ],
+      "term_explanations": [
+        {
+          "term": "光子计数CT",
+          "academic_explanation": "直接记录单个X射线光子并按能量阈值分类的CT探测技术，相比能量积分探测器保留更多能谱信息。",
+          "plain_explanation": "不是把一束X射线的能量全部加成一个总数，而是尽量数清每个光子并判断它属于哪个能量档。"
+        },
+        {
+          "term": "虚拟单色图像",
+          "academic_explanation": "依据能谱数据重建出假想单一X射线能量下的图像，可用于调节组织对比度和伪影表现。",
+          "plain_explanation": "把多种能量的X射线数据重新算成‘如果只用某一个能量拍摄’会得到的图像。"
+        },
+        {
+          "term": "噪声功率谱",
+          "academic_explanation": "描述图像噪声随空间频率分布的统计量，用于区分噪声大小和噪声纹理，而不仅是一个总噪声值。",
+          "plain_explanation": "同样是‘不清楚’，有的像细砂，有的像大片起伏；噪声功率谱用频率告诉我们噪声长什么样。"
+        },
+        {
+          "term": "可检出性指数d'",
+          "academic_explanation": "基于任务信号、噪声和成像系统响应计算的检测性能指标，数值越高通常表示目标越容易从背景中辨认。",
+          "plain_explanation": "把病灶信号和背景噪声放在一起比较，量化‘这个小目标到底有多容易被看见’。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可在自有能谱探测器上同步报告噪声幅值、噪声纹理、空间分辨率和任务可检出性，避免只优化单一指标。"
+        ],
+        "methods": [
+          "借鉴NPS、TTF和d'的任务导向评价，把重建参数搜索转化为可量化的多目标优化。"
+        ],
+        "key_entities_mechanisms": [
+          "重点分析能量阈值、探测器像素尺寸、重建核和迭代强度之间对信噪比与分辨率的耦合。"
+        ],
+        "target_system": [
+          "可迁移到能谱X射线成像、核医学探测和需要在低剂量下保持细节的辐射成像系统。"
+        ],
+        "future_direction": [
+          "可以把模体优化扩展到不同材料、不同能区和真实散射背景，并建立跨设备的标准化重建参数评价协议。"
+        ],
+        "paper_potential": [
+          "若加入独立模体、不同剂量和跨设备复现，能够形成面向探测器读出与成像链路优化的应用型论文。"
+        ],
+        "limitations_validation": [
+          "当前摘要主要支持模体层面的结论，临床泛化、病灶形态变化和重建参数跨设备稳定性需全文及后续数据验证。"
+        ]
+      },
+      "top3_reason": "它把探测器能谱能力与后端重建参数联系起来，适合借鉴为辐射成像系统的任务导向评价框架。",
+      "tags": [
+        "光子计数CT",
+        "能谱成像",
+        "探测器读出",
+        "图像重建",
+        "可检出性"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对模体构型、统计检验、iDose参数定义和临床队列外推边界。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "建立‘材料/探测器响应—时间波形—能量或光产额反演—质量控制’一体化验证平台：用标准辐射源或准单能束流产生可追溯数据，同时记录时间戳、脉冲高度和多通道健康状态。",
+    "围绕低剂量、高分辨率辐射成像，比较复合闪烁膜、光子计数读出和任务导向重建的联合优化，并加入MTF、噪声纹理、可检出性与辐照老化测试。"
+  ],
+  "related_work_review": {
+    "status": "no_reliable_judgment",
+    "reason": "本次自动复核子进程在联网查新阶段中断；当前仅完成当日候选的摘要、DOI来源和方法线索复核，未完成达到要求的独立宽搜与5–8篇代表性工作核验，因此不对研究空白或新颖性下可靠结论。"
+  },
+  "publication_opportunities": {
+    "status": "no_reliable_judgment",
+    "reason": "本次运行未完成独立联网查新和发文机会核验；以下论文可作为方法启发，但不能据此宣称存在已核实的投稿空白或论文机会。"
+  }
+}
