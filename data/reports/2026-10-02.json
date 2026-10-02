@@ -2,47 +2,43 @@
   "schema_version": 2,
   "title": "Research Paper Daily",
   "date": "2026-10-02",
-  "published_at": "2026-10-02T14:36:58.963978+00:00",
+  "published_at": "2026-10-02T15:24:27.851281+00:00",
   "term_explanation_mode": "dual",
   "metadata": {
-    "window": "最近7天（因近24小时高分候选不足5篇而扩大）",
-    "retrieved_count": 1015,
-    "screened_count": 0,
-    "preliminary_recommended_count": 0,
+    "window": "最近30天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 4292,
+    "screened_count": 2,
+    "preliminary_recommended_count": 1,
     "final_recommended_count": 0,
     "threshold": 70,
     "source_counts": {
-      "europepmc": 0,
-      "crossref": 400,
+      "europepmc": 3,
+      "crossref": 2800,
       "semanticscholar": 0,
-      "openalex": 15,
+      "openalex": 889,
       "biorxiv": 600
     },
     "warnings": [
-      "实际原始检索窗口为2026-09-26至2026-10-02；近24小时为日级日期近似，两个窗口重叠，返回数量不相加。",
-      "1015为原采集器记录的来源返回条数，并非1015篇已逐篇阅读的论文；原始search文件没有保存可逐篇复核的论文记录。review_queue、ranked_24h和ranked_7d的所有候选数组均为空。",
-      "原始采集仅检索SPND，不能代表本次要求的全部辐射探测方向；结构化画像已启用而主题文件仍标为草案，本次按用户明确的广义范围补充检查，未修改画像。",
-      "Semantic Scholar原采集出现HTTP 429；补充联网检索成功，但部分出版商页面不可访问。",
-      "补充检查两篇相关期刊论文：Crossref只有2026年9月或10月的出版月份、无摘要，出版商页面无法打开，未确认七天窗口及完整核心结论，暂不推荐。另一个当日相关条目为会议贡献，原页面未能打开，不足以作为已核实论文。",
-      "零推荐仅表示本次可获取证据不足，不表示该领域没有新论文。没有当日证据支持的前三名或研究灵感。",
-      "按本次写入边界，交付历史和研究记忆仅写入当前运行目录，不更新全局文件。"
+      "Semantic Scholar 本次返回 HTTP 429；其余来源仍完成检索。",
+      "候选1的 SPND 实为 simultaneous partial nitrification-denitrification（部分硝化-反硝化），不是 self-powered neutron detector，已排除。",
+      "候选2题名为 Demonstration of SPNDs for Real-Time Monitoring of Neutron Energy Spectrum，但 OpenAlex 未提供摘要；本次未能从可访问的权威原文或 DOI 条目核实其核心结论，因此不纳入推送。",
+      "本期没有达到证据复核标准的论文；零推荐表示本次可核实证据不足，不表示 SPND 领域没有新研究。"
     ]
   },
   "articles": [],
   "research_ideas": [],
   "related_work_review": {
     "status": "no_reliable_judgment",
-    "searched_at": "2026-10-02T11:24:27.594656+00:00",
-    "search_window": "原始近期窗口2026-09-26至2026-10-02；零入选，未启动近五年锚定查新",
+    "searched_at": "2026-10-02T15:25:00Z",
+    "search_window": "2026-09-03至2026-10-02；以最近30天候选为主",
     "limitations": [
-      "补充近期检索与独立相关工作查新不混计。",
-      "没有候选论文可评分；根score_status表示本次证据审查已完成，不代表存在获推荐论文。"
+      "补充联网检索与当天候选复核不混计。",
+      "Semantic Scholar 本次限流；剩余候选仍因身份或证据不足排除。"
     ],
-    "reason": "当天最终入选论文为0篇，没有可用于独立相关工作查新的当天论文锚点。原始队列与全部ranked_papers均为空；补充联网检查未获得同时满足近期日期与核心结论核验要求的论文。因此不开展无锚点的30–50篇相关工作扩展，不编造支撑论文、研究空白或发文机会，不沿用前一天结论。"
+    "reason": "本期最终入选论文为0篇：一条候选是非探测器领域的同缩写误命中，另一条SPND报告仅有无摘要的聚合元数据且未能核验原文。因此没有合格的当天论文作为相关工作查新的锚点，不编造研究空白、支撑论文或新颖性判断，也不沿用前一期结论。"
   },
   "publication_opportunities": {
     "status": "no_reliable_judgment",
-    "overall_judgment": "当日证据不足，暂不作发文判断。",
-    "reason": "当天最终入选论文为0篇，没有可用于独立相关工作查新的当天论文锚点。原始队列与全部ranked_papers均为空；补充联网检查未获得同时满足近期日期与核心结论核验要求的论文。因此不开展无锚点的30–50篇相关工作扩展，不编造支撑论文、研究空白或发文机会，不沿用前一天结论。"
+    "reason": "当天没有经过证据复核的SPND论文，无法以当天论文为锚点形成可靠的发文机会判断。"
   }
 }
