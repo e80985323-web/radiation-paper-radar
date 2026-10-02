@@ -2,47 +2,832 @@
   "schema_version": 2,
   "title": "Research Paper Daily",
   "date": "2026-10-01",
-  "published_at": "2026-10-01T16:48:54.277419+00:00",
+  "published_at": "2026-10-02T14:36:58.897674+00:00",
   "term_explanation_mode": "dual",
   "metadata": {
-    "window": "最近7天（因近24小时高分候选不足5篇而扩大）",
-    "retrieved_count": 1026,
-    "screened_count": 0,
-    "preliminary_recommended_count": 0,
-    "final_recommended_count": 0,
+    "window": "最近五年（2021-10-01至2026-10-01；本次一次性检索）",
+    "retrieved_count": 3311,
+    "screened_count": 116,
+    "preliminary_recommended_count": 10,
+    "final_recommended_count": 10,
     "threshold": 70,
     "source_counts": {
-      "europepmc": 0,
-      "crossref": 400,
+      "europepmc": 499,
+      "crossref": 412,
       "semanticscholar": 0,
-      "openalex": 26,
+      "openalex": 1800,
       "biorxiv": 600
     },
     "warnings": [
-      "检索窗口为2026-09-25至2026-10-01；近24小时优先窗口按日级日期覆盖2026-09-30至2026-10-01。",
-      "1026为最近7天来源返回条目统计，并非1026篇经人工阅读的论文；保存的候选、完整排名和原始papers数组均为空，实际逐篇复核0篇。",
-      "现有检索仅使用SPND、自供电中子探测器和self-powered neutron detector，未覆盖本任务要求的完整辐射探测范围；零推荐不能解释为全领域没有合格新论文。",
-      "结构化画像已配置为SPND，自然语言主题文件仍标为未激活的广义辐射探测草案，二者不一致；本次不修改画像。",
-      "Semantic Scholar返回HTTP 429；其他来源统计非零，但未保存可复核论文记录。",
-      "研究记忆中的既往论文不属于本次候选，未作为新论文重复推荐。",
-      "本报告仅记录本次输入复核结果，未执行缺少当天论文锚点的相关工作查新；未沿用此前查新或发文判断。",
-      "遵守仅写入本次运行目录的限制，交付历史与研究记忆输出使用本目录独立路径，不更新全局文件。"
+      "Semantic Scholar 返回 HTTP 429；本期主要依据 OpenAlex、Europe PMC、Crossref 和 bioRxiv 的摘要、DOI与元数据复核。",
+      "本报告为一次性五年窗口推送，不改变后续日报的近日报检索窗口。"
     ]
   },
-  "articles": [],
-  "research_ideas": [],
+  "articles": [
+    {
+      "title": "An Analytical Method for Evaluating the Evolution of Space Charge Effect in Self-Powered Neutron Detectors",
+      "chinese_title": "自供电中子探测器空间电荷效应演化的解析评估方法",
+      "journal": "IEEE Transactions on Nuclear Science",
+      "publication_date": "2025-02-06",
+      "doi": "10.1109/tns.2025.3539354",
+      "url": "https://doi.org/10.1109/tns.2025.3539354",
+      "article_type": "研究论文",
+      "recommendation_score": 95,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 100,
+        "novelty": 93,
+        "quality": 91,
+        "methodology": 95,
+        "inspiration": 95
+      },
+      "why_worth_reading": "把SPND绝缘层空间电荷、通量和时间常数联系起来，直接触及响应漂移的物理根源。",
+      "core_findings": [
+        "论文提出空间电荷演化的解析表达式，用于替代耗时的迭代模拟，并解释探测器参数和中子通量如何影响电场演化。",
+        "解析结果表明空间电荷分布与中子通量密度、绝缘体体电阻率和介电常数有关，并给出空间电荷演化时间常数。",
+        "在Co-SPND和Rh-SPND上将解析结果与迭代计算比较，结果一致，说明该方法可用于预设迭代时间步和判断电场平衡时间。"
+      ],
+      "term_explanations": [
+        {
+          "term": "空间电荷效应",
+          "academic_explanation": "绝缘层或介质内部由载流子积累形成的体电荷会改变局部电场，从而影响SPND中的电荷输运和输出电流。",
+          "plain_explanation": "绝缘层里电荷越积越多，会把内部电场重新‘推歪’，使探测器的电流响应随时间变化。"
+        },
+        {
+          "term": "Rh-SPND与Co-SPND",
+          "academic_explanation": "分别以铑和钴为发射体材料的自供电中子探测器，利用中子反应产生的带电粒子或衰变电子形成电流。",
+          "plain_explanation": "只是把探测器里的‘产电材料’换成铑或钴，不同材料会带来不同的响应时间和灵敏度。"
+        },
+        {
+          "term": "时间常数",
+          "academic_explanation": "描述空间电荷分布或电场接近新平衡状态所需时间尺度的参数，可用于确定数值计算步长和响应稳定时间。",
+          "plain_explanation": "它回答的是：环境改变后，探测器要等多久才基本稳定下来。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可同步记录中子通量、SPND电流和温度，验证空间电荷时间常数对启动、阶跃和周期通量响应的预测。"
+        ],
+        "methods": [
+          "借鉴解析模型与迭代模型双轨交叉验证，并把解析时间常数用于自适应仿真步长。"
+        ],
+        "key_entities_mechanisms": [
+          "重点考察发射体、绝缘层电阻率、介电常数、通量密度与暗电流之间的耦合。"
+        ],
+        "target_system": [
+          "可直接迁移到反应堆堆内SPND响应建模、通量重建和温度补偿系统。"
+        ],
+        "future_direction": [
+          "研究温度、辐照老化和多能谱通量下材料参数变化对解析模型适用边界的影响。"
+        ],
+        "paper_potential": [
+          "若结合实际SPND阶跃响应和长期运行数据，可形成模型—实验闭环的探测器响应论文。"
+        ],
+        "limitations_validation": [
+          "摘要未给出完整实验数据、边界条件和参数不确定度，需全文核对解析假设与工程适用范围。"
+        ]
+      },
+      "top3_reason": "与SPND物理机制高度贴合，且作者信息显示包含Qingmin Zhang，具有很强的主题相关性。",
+      "tags": [
+        "SPND",
+        "空间电荷",
+        "响应建模",
+        "时间常数"
+      ],
+      "strong_recommendation": true,
+      "strong_recommendation_reasons": [
+        "直接研究SPND响应中的关键物理机制，而不是仅把SPND作为系统中的一个传感器。",
+        "解析模型、数值迭代和Co/Rh两种SPND的交叉验证路径清晰，适合继续做实验验证。"
+      ],
+      "needs_verification": [
+        "尚未全文核对解析边界条件、材料参数来源、误差传播和实验验证细节。"
+      ]
+    },
+    {
+      "title": "Development and validation for effective signal response of time-delayed self-powered neutron detectors based on the beta decay reaction",
+      "chinese_title": "基于β衰变反应的延迟型自供电中子探测器有效信号响应开发与验证",
+      "journal": "Journal of Instrumentation",
+      "publication_date": "2025-06-01",
+      "doi": "10.1088/1748-0221/20/06/p06021",
+      "url": "https://doi.org/10.1088/1748-0221/20/06/p06021",
+      "article_type": "研究论文",
+      "recommendation_score": 93,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 99,
+        "novelty": 88,
+        "quality": 87,
+        "methodology": 94,
+        "inspiration": 93
+      },
+      "why_worth_reading": "围绕β衰变型SPND有效电流建立解析公式，并用蒙特卡洛和实验结果交叉验证。",
+      "core_findings": [
+        "论文针对铑、钒、银等β衰变主导型SPND，分析其响应特性并用蒙特卡洛方法计算信号。",
+        "研究提出四个用于有效电流计算的解析公式，并与蒙特卡洛统计结果进行定量交叉验证。",
+        "解析方法最大偏差小于1%，且已通过实验验证并应用于多个核电站，说明其具备工程部署价值。"
+      ],
+      "term_explanations": [
+        {
+          "term": "延迟型SPND",
+          "academic_explanation": "输出电流主要来自中子反应产物的放射性衰变，因此探测器电流相对于中子通量变化存在时间延迟。",
+          "plain_explanation": "中子先让材料产生放射性产物，产物随后衰变并发出电子，所以电流不会立刻完全跟上通量变化。"
+        },
+        {
+          "term": "有效信号响应",
+          "academic_explanation": "将发射体中不同位置、能量和时间分布的衰变贡献折算为可测输出电流的综合响应量。",
+          "plain_explanation": "不是只数一次反应，而是把所有会贡献到外部电流的‘延迟电子’都算进去。"
+        },
+        {
+          "term": "β衰变",
+          "academic_explanation": "放射性核素通过发射电子或正电子并伴随核素转变的衰变过程，是部分SPND输出电流的主要来源。",
+          "plain_explanation": "材料里的不稳定原子慢慢变成另一种原子，同时放出电子；这些电子就组成了可测电流。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可用标准通量阶跃和多种发射体材料，分别测量启动、稳态与关束后的电流响应。"
+        ],
+        "methods": [
+          "借鉴蒙特卡洛统计、解析响应公式和实测电流三者的闭环验证。"
+        ],
+        "key_entities_mechanisms": [
+          "关注发射体核素、衰变时间分布、电子输运和绝缘层电荷收集效率。"
+        ],
+        "target_system": [
+          "适合用于反应堆堆内固定式SPND的在线通量和功率监测。"
+        ],
+        "future_direction": [
+          "可进一步把温度、燃耗、辐照损伤和多能谱通量纳入快速响应模型。"
+        ],
+        "paper_potential": [
+          "若在自有探测器上完成不同发射体与工况的独立实验，可形成响应模型与标定方法论文。"
+        ],
+        "limitations_validation": [
+          "摘要未给出完整公式、实验工况和不确定度预算，需全文核对工程应用的边界。"
+        ]
+      },
+      "top3_reason": "它直接回答SPND输出电流如何从中子反应和β衰变响应中计算出来，方法和验证链都很完整。",
+      "tags": [
+        "SPND",
+        "β衰变",
+        "有效响应",
+        "蒙特卡洛",
+        "核电监测"
+      ],
+      "strong_recommendation": true,
+      "strong_recommendation_reasons": [
+        "直接面向SPND在线监测中的有效信号计算，且摘要给出小于1%的模型偏差。",
+        "解析、蒙特卡洛与实验三种证据相互支撑，工程迁移价值较高。"
+      ],
+      "needs_verification": [
+        "尚未全文核对四个解析公式的适用条件、各发射体参数和实验验证范围。"
+      ]
+    },
+    {
+      "title": "Explicit and simplified modeling of in-core instrument for emitter region reaction rate calculation using STREAM/RAST-K",
+      "chinese_title": "基于STREAM/RAST-K的堆内仪表显式与简化建模及发射体区域反应率计算",
+      "journal": "Nuclear Engineering and Technology",
+      "publication_date": "2026-03-03",
+      "doi": "10.1016/j.net.2026.104243",
+      "url": "https://doi.org/10.1016/j.net.2026.104243",
+      "article_type": "研究论文",
+      "recommendation_score": 91,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 98,
+        "novelty": 86,
+        "quality": 86,
+        "methodology": 92,
+        "inspiration": 91
+      },
+      "why_worth_reading": "把SPND发射体自屏蔽、燃耗和反应性扰动纳入堆芯计算，兼顾精度与计算效率。",
+      "core_findings": [
+        "研究建立了用于实时监测中子通量和功率分布的堆内仪表显式与简化模型，并考虑发射体共振自屏蔽和燃耗行为。",
+        "两项模型均纳入堆内仪表引起的反应性扰动；典型西屋燃料组件中反应性影响约276 pcm，并导致控制棒位置变化2–6 cm。",
+        "在无硼SMR条件下，伪建模的端部功率预测偏差最高可达20%，而显式和简化模型与实际组件功率保持一致。"
+      ],
+      "term_explanations": [
+        {
+          "term": "发射体区域反应率",
+          "academic_explanation": "SPND发射体内中子诱发核反应的空间和能量积分速率，是估算探测器输出响应的基础量。",
+          "plain_explanation": "就是统计发射体这小块材料里，中子到底以多快的速度触发了反应。"
+        },
+        {
+          "term": "共振自屏蔽",
+          "academic_explanation": "发射体在特定能量处具有较强吸收共振，材料内部会削弱入射中子，使有效截面随位置和能量改变。",
+          "plain_explanation": "材料外层先把某些能量的中子吸走，里面看到的中子就少了，像自己给自己挡住了。"
+        },
+        {
+          "term": "反应性扰动",
+          "academic_explanation": "堆内仪表材料吸收或散射中子后改变局部中子学状态，进而影响临界性、功率分布和控制参数。",
+          "plain_explanation": "探测器虽然是用来测量的，但它放进堆芯后也会‘参与’吸收中子，反过来改变堆芯状态。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可设置伪模型、简化模型与显式模型三组对照，并用标准组件功率或反应性实验验证误差。"
+        ],
+        "methods": [
+          "借鉴共振自屏蔽、燃耗和反应性扰动统一纳入响应模型的多物理建模思路。"
+        ],
+        "key_entities_mechanisms": [
+          "关注发射体核素、共振截面、仪表几何、燃耗历史与局部功率重建之间的联系。"
+        ],
+        "target_system": [
+          "可用于反应堆堆芯SPND设计、功率分布反演和堆内仪表布置优化。"
+        ],
+        "future_direction": [
+          "可进一步研究温度、材料老化和多探测器串的联合反演，以及面向实时计算的降阶模型。"
+        ],
+        "paper_potential": [
+          "若结合实际SPND电流数据和堆芯运行工况，可形成探测器—堆芯耦合建模论文。"
+        ],
+        "limitations_validation": [
+          "摘要未说明全部核数据库、几何近似和实验基准，需全文核对模型误差来源。"
+        ]
+      },
+      "top3_reason": "它把SPND从一个被动传感器提升为堆芯中子学模型的一部分，和响应建模及功率重建直接相连。",
+      "tags": [
+        "SPND",
+        "堆内仪表",
+        "反应率",
+        "共振自屏蔽",
+        "堆芯建模"
+      ],
+      "strong_recommendation": true,
+      "strong_recommendation_reasons": [
+        "同时处理SPND发射体物理和堆芯功率预测，研究尺度与方法都很贴合。",
+        "摘要给出了反应性和功率预测偏差等可检验指标。"
+      ],
+      "needs_verification": [
+        "尚未全文核对核数据库、STREAM/RAST-K耦合方式和实际实验基准。"
+      ]
+    },
+    {
+      "title": "Assessment of the Impact of Realistic Sensor Physics and the Integration of Ex-Core Sensors on Reactor Power Synthesis",
+      "chinese_title": "真实传感器物理与堆外传感器集成对反应堆功率综合影响的评估",
+      "journal": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)",
+      "publication_date": "2024-09-01",
+      "doi": "10.2172/2448162",
+      "url": "https://doi.org/10.2172/2448162",
+      "article_type": "技术报告",
+      "recommendation_score": 90,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 100,
+        "novelty": 82,
+        "quality": 78,
+        "methodology": 92,
+        "inspiration": 92
+      },
+      "why_worth_reading": "比较Geant4真实SPND模型与解析模型，并量化堆外传感器对功率重建误差的改善。",
+      "core_findings": [
+        "研究用MCNP堆芯模型和点迭代加权函数方法，根据模拟SPND响应综合堆芯功率分布。",
+        "用Geant4真实SPND模型与解析模型比较传感器物理，对NuScale、AP1000和TAMU TRIGA模型进行评估。",
+        "加入堆外传感器后，靠近堆芯边缘的高斯型功率扰动综合误差显著下降，同时只带来很小的迭代计算成本增加。"
+      ],
+      "term_explanations": [
+        {
+          "term": "堆外传感器",
+          "academic_explanation": "布置在反应堆活性区外部、通过泄漏中子或外部响应提供堆芯边界信息的测量单元。",
+          "plain_explanation": "不把探测器都塞进堆芯，而是在外面补几只‘耳朵’，帮助看清边缘区域发生了什么。"
+        },
+        {
+          "term": "功率综合",
+          "academic_explanation": "根据多个探测器响应和中子学模型反演堆芯空间功率分布的计算过程。",
+          "plain_explanation": "把各个SPND的电流读数拼在一起，反推出整个堆芯哪里功率高、哪里功率低。"
+        },
+        {
+          "term": "MCNP与Geant4",
+          "academic_explanation": "分别用于反应堆中子输运和复杂探测器粒子输运的蒙特卡洛模拟工具，可联合生成更真实的SPND响应。",
+          "plain_explanation": "一个更擅长模拟堆芯里的中子怎么走，另一个更擅长模拟中子进入探测器后怎么产生信号。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可比较仅堆内SPND、堆内加堆外SPND两种布置，并用已知局部扰动检验空间定位能力。"
+        ],
+        "methods": [
+          "借鉴MCNP堆芯输运、Geant4探测器响应和迭代加权功率重建的三级耦合流程。"
+        ],
+        "key_entities_mechanisms": [
+          "重点关注探测器布置、响应函数、边缘泄漏中子和重建迭代收敛之间的关系。"
+        ],
+        "target_system": [
+          "可迁移到反应堆功率在线监测、堆芯异常定位和SPND布置优化。"
+        ],
+        "future_direction": [
+          "可以把真实电流噪声、燃耗变化和温度影响加入功率综合的不确定度分析。"
+        ],
+        "paper_potential": [
+          "结合实验堆SPND数据和不同布置方案，可形成探测器阵列与反演算法联合优化论文。"
+        ],
+        "limitations_validation": [
+          "报告摘要主要基于模拟模型，需全文核对实验验证、传感器噪声和模型边界。"
+        ]
+      },
+      "top3_reason": "它提供了SPND真实响应、传感器布局和功率反演之间的完整系统视角。",
+      "tags": [
+        "SPND",
+        "Geant4",
+        "功率重建",
+        "堆外传感器",
+        "MCNP"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对传感器噪声、重建误差统计和模拟与实验的一致性。"
+      ]
+    },
+    {
+      "title": "Demonstration of Temperature Compensation Techniques for SPNDs Operating in High Temperatures",
+      "chinese_title": "高温运行SPND温度补偿技术的实验验证",
+      "journal": "Idaho National Laboratory, Idaho Falls, ID (United States)",
+      "publication_date": "2024-06-01",
+      "doi": "10.2172/2405046",
+      "url": "https://doi.org/10.2172/2405046",
+      "article_type": "技术报告",
+      "recommendation_score": 89,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 98,
+        "novelty": 82,
+        "quality": 76,
+        "methodology": 89,
+        "inspiration": 91
+      },
+      "why_worth_reading": "直接测试Rh-SPND从室温到850°C的温度效应，并尝试建立高温补偿曲线。",
+      "core_findings": [
+        "研究在反应堆炉管中对Rh-SPND进行从环境温度到850°C的高温辐照和低功率测试。",
+        "通过不同稳定温度点拟合温度引起的位移电流和稳定暗电流，分析移动空间电荷与光电导性质的关系。",
+        "发现550–600°C附近存在光电导向离子电导转变，675–700°C附近出现离子电导向电导转变；但现有数据分辨率不足以仅凭温度实现可靠预测补偿。"
+      ],
+      "term_explanations": [
+        {
+          "term": "温度补偿",
+          "academic_explanation": "通过标定温度对SPND暗电流、位移电流和响应系数的影响，修正测得电流以降低温度引起的测量偏差。",
+          "plain_explanation": "探测器变热后电流会自己漂移，温度补偿就是先估计这部分‘假变化’，再从读数里扣掉。"
+        },
+        {
+          "term": "位移电流",
+          "academic_explanation": "介质内部电场或空间电荷随时间变化所产生的等效电流分量，不一定对应新的中子反应。",
+          "plain_explanation": "即使中子通量不变，内部电荷重新排布也会让电流动一下，这就是需要区分的额外信号。"
+        },
+        {
+          "term": "离子电导",
+          "academic_explanation": "由离子载流子迁移贡献的电导机制，其温度依赖性可改变绝缘体内部电荷输运和SPND响应。",
+          "plain_explanation": "温度很高时，材料里可能主要是带电离子在移动，而不再是低温下的同一种导电方式。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可在升温、降温、恒温和通量阶跃四种工况下同步测量SPND电流与温度，分离热瞬态和中子响应。"
+        ],
+        "methods": [
+          "借鉴分温度平台标定、曲线拟合和电导机制转变区间识别的实验方法。"
+        ],
+        "key_entities_mechanisms": [
+          "关注绝缘材料电导、空间电荷迁移、暗电流和发射体响应的温度耦合。"
+        ],
+        "target_system": [
+          "适合迁移到高温反应堆堆内SPND和辐照环境下的温度补偿读出。"
+        ],
+        "future_direction": [
+          "可加入更密集温度点、多个通量水平和不同绝缘材料，建立带不确定度的补偿模型。"
+        ],
+        "paper_potential": [
+          "若补足高温长期循环、不同发射体和在线补偿算法，可形成SPND高温可靠性论文。"
+        ],
+        "limitations_validation": [
+          "摘要已指出温度单变量预测能力不足，需全文核对数据分辨率、拟合残差和补偿失效边界。"
+        ]
+      },
+      "top3_reason": "它将SPND的温度漂移从现象推进到高温电导机制和补偿实验，适合做可验证的延伸。",
+      "tags": [
+        "SPND",
+        "温度补偿",
+        "高温辐照",
+        "暗电流"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对高温炉管、通量条件、拟合参数和补偿模型的误差范围。"
+      ]
+    },
+    {
+      "title": "Towards Realistic and High Fidelity Models for Nuclear Reactor Power Synthesis Simulation with Self-Powered Neutron Detectors",
+      "chinese_title": "面向自供电中子探测器核反应堆功率综合仿真的真实高保真模型",
+      "journal": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)",
+      "publication_date": "2023-08-01",
+      "doi": "10.2172/1996662",
+      "url": "https://doi.org/10.2172/1996662",
+      "article_type": "技术报告",
+      "recommendation_score": 87,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 100,
+        "novelty": 78,
+        "quality": 76,
+        "methodology": 88,
+        "inspiration": 89
+      },
+      "why_worth_reading": "用传感器不确定度、Geant4响应和功率扰动反演展示SPND高保真建模的完整路线。",
+      "core_findings": [
+        "研究用MCNP中子通量和加权函数方法，根据模拟SPND响应综合NuScale、AP1000和TAMU TRIGA反应堆的功率分布。",
+        "在5%随机SPND不确定度下，燃料组件分段平均功率误差约2–3%，但最大误差在不确定度超过约3%后可能超过15%。",
+        "17条SPND串、每串4个探测器的高保真示例能够识别局部高斯型功率扰动；Geant4与解析SPND模型的电流幅度存在显著差异。"
+      ],
+      "term_explanations": [
+        {
+          "term": "高保真SPND模型",
+          "academic_explanation": "显式考虑探测器有限几何、粒子输运、反应产物和电流形成过程的响应模型。",
+          "plain_explanation": "不把SPND简化成一个点，而是尽量模拟它内部每个位置怎样产生和收集信号。"
+        },
+        {
+          "term": "功率分布综合",
+          "academic_explanation": "利用稀疏探测器响应和堆芯先验模型重建三维或轴向功率分布的反演问题。",
+          "plain_explanation": "只测到一些位置的电流，却要还原整个堆芯的功率地图。"
+        },
+        {
+          "term": "传感器不确定度",
+          "academic_explanation": "描述SPND灵敏度、噪声、标定和模型误差对最终功率重建结果传播影响的统计量。",
+          "plain_explanation": "每只探测器的读数都有一点不准，这些小误差叠加后可能让功率地图出现大偏差。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可通过人为注入局部功率扰动和不同传感器噪声水平，系统评估SPND阵列的可定位边界。"
+        ],
+        "methods": [
+          "借鉴MCNP、Geant4和加权函数反演的耦合框架，并把传感器不确定度显式传递到功率结果。"
+        ],
+        "key_entities_mechanisms": [
+          "重点关注有限几何效应、响应函数、传感器串密度和迭代收敛。"
+        ],
+        "target_system": [
+          "可迁移到实验堆SPND阵列、堆芯功率在线监测和异常扰动定位。"
+        ],
+        "future_direction": [
+          "可研究温度、燃耗、漂移和真实电流噪声共同作用下的鲁棒重建。"
+        ],
+        "paper_potential": [
+          "如果加入真实SPND阵列数据和独立功率基准，具有系统建模与反演论文潜力。"
+        ],
+        "limitations_validation": [
+          "报告摘要以模拟结果为主，需全文核对真实测量数据和模型验证层级。"
+        ]
+      },
+      "top3_reason": "它把SPND响应物理、不确定度和堆芯功率反演放入同一框架，适合作为系统建模主线参考。",
+      "tags": [
+        "SPND",
+        "高保真建模",
+        "功率综合",
+        "不确定度"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对传感器不确定度模型、Geant4电流计算和功率反演的独立验证。"
+      ]
+    },
+    {
+      "title": "Analysis of WIRE-21 SPND and Optical Fiber Sensor Measurements",
+      "chinese_title": "WIRE-21实验中SPND与光纤传感器测量结果分析",
+      "journal": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States)",
+      "publication_date": "2023-08-01",
+      "doi": "10.2172/1997703",
+      "url": "https://doi.org/10.2172/1997703",
+      "article_type": "技术报告",
+      "recommendation_score": 85,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 100,
+        "novelty": 75,
+        "quality": 75,
+        "methodology": 86,
+        "inspiration": 88
+      },
+      "why_worth_reading": "提供高通量反应堆环境中SPND实测失效、灵敏度和辐照运行表现的真实案例。",
+      "core_findings": [
+        "WIRE-21实验在高通量研究堆中同时测试无线温压传感器、分布式光纤传感器和SPND。",
+        "四只SPND中只有一只在三个辐照循环中表现正常；辐射输运模型用于计算其随时间变化的中子通量和灵敏度。",
+        "该SPND前后循环的平均灵敏度约为1.5×10⁻²²和1.4×10⁻²² A/nv，并同时记录了高快中子注量下光纤传感器的漂移。"
+      ],
+      "term_explanations": [
+        {
+          "term": "SPND灵敏度",
+          "academic_explanation": "单位中子通量或通量率引起的SPND输出电流，是比较探测器响应能力和校准系数的基本参数。",
+          "plain_explanation": "来同样多的中子时，探测器能产生多少电流；电流越大，通常越容易测。"
+        },
+        {
+          "term": "快中子注量",
+          "academic_explanation": "单位面积上累计通过的快中子数，用于表征辐照环境强度和材料、器件的累积损伤。",
+          "plain_explanation": "可以理解为有多少高速中子‘穿过’了每平方厘米，时间久了会影响器件寿命。"
+        },
+        {
+          "term": "辐射输运模型",
+          "academic_explanation": "根据几何、材料和辐射源模拟中子或光子在系统中的传播、散射、吸收和能量沉积。",
+          "plain_explanation": "在计算机里追踪中子穿过反应堆和探测器的路线，用来估计实际测量位置的通量。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可采用多只同规格SPND并行布置，记录每个辐照循环后的电流、灵敏度和失效状态。"
+        ],
+        "methods": [
+          "借鉴实测SPND电流与辐射输运模型结合的灵敏度反演方法。"
+        ],
+        "key_entities_mechanisms": [
+          "重点关注高通量、温度、长电缆、绝缘退化和读出噪声对微弱电流的影响。"
+        ],
+        "target_system": [
+          "适合迁移到反应堆堆内长期监测和高通量辐照环境下的SPND可靠性评价。"
+        ],
+        "future_direction": [
+          "可建立辐照前后灵敏度、响应时间和噪声的统一寿命模型。"
+        ],
+        "paper_potential": [
+          "如果补充多批次器件和失效机理分析，可形成SPND辐照可靠性与现场测量论文。"
+        ],
+        "limitations_validation": [
+          "摘要只给出少量器件的运行结果，需全文核对失效判据、通量不确定度和电流读出细节。"
+        ]
+      },
+      "top3_reason": "它不是纯仿真，而是给出了高通量环境中SPND真实运行与失效的现场证据。",
+      "tags": [
+        "SPND",
+        "辐照可靠性",
+        "灵敏度",
+        "高通量"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对四只SPND的结构差异、失效判据和灵敏度误差。"
+      ]
+    },
+    {
+      "title": "Electrometric Measurement and Dynamic Compensation of a Vanadium Self-Powered Neutron Detector",
+      "chinese_title": "钒自供电中子探测器的静电计测量与动态补偿",
+      "journal": "2026 Argentine Conference on Electronics (CAE)",
+      "publication_date": "2026-03-12",
+      "doi": "10.1109/cae69023.2026.11450325",
+      "url": "https://doi.org/10.1109/cae69023.2026.11450325",
+      "article_type": "会议论文",
+      "recommendation_score": 83,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 99,
+        "novelty": 78,
+        "quality": 70,
+        "methodology": 86,
+        "inspiration": 86
+      },
+      "why_worth_reading": "针对钒SPND低灵敏度和慢响应，设计了测量电路并用反应堆实验验证动态补偿。",
+      "core_findings": [
+        "论文面向输出电流很低、自然响应时间较慢的钒SPND，设计能测量微弱电流并动态补偿响应的电子装置。",
+        "在阿根廷RA-3研究堆开展两组测试：先表征探测器确定电路参数，再测试完整装置并验证设计。",
+        "测量结果与连接校准静电计的铑SPND进行比较，用于检验动态补偿后的通量响应。"
+      ],
+      "term_explanations": [
+        {
+          "term": "钒SPND",
+          "academic_explanation": "以钒为发射体的自供电中子探测器，具有较低灵敏度和较长响应时间，适合反应堆通量监测。",
+          "plain_explanation": "钒材料比较耐用，但信号小、反应慢，所以对读出电路要求更高。"
+        },
+        {
+          "term": "静电计",
+          "academic_explanation": "用于测量极低电流、电荷或电压的高灵敏度仪器，通常具有很高输入阻抗和低漏电。",
+          "plain_explanation": "它像一个专门听极微弱电流的‘安静耳朵’，不会因为自己漏电而淹没SPND信号。"
+        },
+        {
+          "term": "动态响应补偿",
+          "academic_explanation": "根据探测器迟滞或时间响应模型对实时读数进行算法或电路修正，使输出更快逼近瞬时中子通量。",
+          "plain_explanation": "探测器本身反应慢，就用电路或算法提前估计它还没来得及表现出来的变化。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可用通量阶跃、周期变化和稳态三类工况，比较原始钒SPND、补偿输出和参考探测器。"
+        ],
+        "methods": [
+          "借鉴先测探测器参数、再设计低漏电读出、最后用参考静电计交叉验证的工程流程。"
+        ],
+        "key_entities_mechanisms": [
+          "关注微弱电流、响应时间常数、输入漏电、噪声和动态补偿稳定性。"
+        ],
+        "target_system": [
+          "适合迁移到钒SPND反应堆在线通量监测和低电流多通道读出。"
+        ],
+        "future_direction": [
+          "可进一步比较不同补偿算法、温度条件和长期漂移下的实时误差。"
+        ],
+        "paper_potential": [
+          "如果形成可复现的低电流前端和独立动态响应标定，可形成探测器读出仪器学论文。"
+        ],
+        "limitations_validation": [
+          "会议论文摘要未给出完整电路噪声、带宽、补偿算法和定量误差，需全文核对。"
+        ]
+      },
+      "top3_reason": "它直接落到SPND微弱电流读出和慢响应补偿，工程实施路径清楚。",
+      "tags": [
+        "SPND",
+        "钒探测器",
+        "微弱电流",
+        "动态补偿"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对前端电路、补偿模型、噪声带宽和参考测量误差。"
+      ]
+    },
+    {
+      "title": "A real-sized start-up monitoring module prototype for comprehensive test and irradiation campaigns of miniaturized neutron detectors according to the IFMIF-DONES baseline",
+      "chinese_title": "基于IFMIF-DONES基线的微型中子探测器综合测试与辐照试验实尺寸启动监测模块原型",
+      "journal": "Nuclear Materials and Energy",
+      "publication_date": "2024-07-23",
+      "doi": "10.1016/j.nme.2024.101712",
+      "url": "https://doi.org/10.1016/j.nme.2024.101712",
+      "article_type": "研究论文",
+      "recommendation_score": 79,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 84,
+        "novelty": 76,
+        "quality": 82,
+        "methodology": 78,
+        "inspiration": 78
+      },
+      "why_worth_reading": "把SPND放进高通量、密集布置、长电缆的真实装置约束中考察系统可用性。",
+      "core_findings": [
+        "IFMIF-DONES启动监测模块将集成微裂变室、电离室、SPND和伽马温度计，用于表征装置内辐射场。",
+        "研究构建了1:1实尺寸STUMM-PROTO原型，用于模拟高空间密度、最高约5×10¹⁴ n/cm²/s中子通量和超过30 m长矿物绝缘电缆的条件。",
+        "论文介绍原型的测试能力、建造状态和后续综合测试与辐照试验计划，为SPND在强辐照复杂系统中的验证提供平台。"
+      ],
+      "term_explanations": [
+        {
+          "term": "IFMIF-DONES",
+          "academic_explanation": "面向聚变材料研究的加速器驱动中子源设施，以高能氘束轰击液态锂靶产生约14 MeV中子场。",
+          "plain_explanation": "它是一台专门制造强中子场的设施，用来测试材料和探测器能否扛住聚变环境。"
+        },
+        {
+          "term": "STUMM-PROTO",
+          "academic_explanation": "按启动监测模块尺寸和接口构建的实尺寸原型，用于在正式装置运行前开展探测器和电缆系统测试。",
+          "plain_explanation": "先做一个和将来装置一样大的‘演练版本’，把探测器、电缆和安装问题提前暴露出来。"
+        },
+        {
+          "term": "伽马温度计",
+          "academic_explanation": "利用伽马加热或辐射沉积效应测量辐射场相关热负荷的温度传感器。",
+          "plain_explanation": "它不是测普通环境温度，而是借助伽马辐射造成的热效应来感知辐射场。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可在实尺寸或缩比平台上同时测试SPND、长电缆和前端电子学，分离探测器本体与系统布线问题。"
+        ],
+        "methods": [
+          "借鉴先做装置级原型、再开展系统辐照和多探测器交叉比较的工程验证路线。"
+        ],
+        "key_entities_mechanisms": [
+          "关注高通量、探测器密集布置、长电缆电容和微弱电流传输之间的耦合。"
+        ],
+        "target_system": [
+          "适合迁移到聚变中子源和高通量辐照设施中的SPND系统集成。"
+        ],
+        "future_direction": [
+          "可把SPND灵敏度漂移、噪声、温度和电缆老化纳入长期系统试验。"
+        ],
+        "paper_potential": [
+          "若有完整辐照前后数据和多探测器对照，可形成强辐照探测系统集成论文。"
+        ],
+        "limitations_validation": [
+          "摘要主要介绍原型和计划，尚不能代替正式辐照结果，需全文核对已完成的实验范围。"
+        ]
+      },
+      "top3_reason": "它补足了SPND从器件到装置集成之间的工程验证环节。",
+      "tags": [
+        "SPND",
+        "聚变中子源",
+        "系统集成",
+        "高通量辐照"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对原型已完成的辐照工况、SPND实测数据和长电缆信号完整性。"
+      ]
+    },
+    {
+      "title": "Challenges of Target and Irradiation Diagnostics of the IFMIF-DONES Facility",
+      "chinese_title": "IFMIF-DONES设施靶区与辐照诊断的挑战",
+      "journal": "CERN Document Server (European Organization for Nuclear Research)",
+      "publication_date": "2023-10-11",
+      "doi": "10.18429/jacow-hb2023-wec1c2",
+      "url": "https://doi.org/10.18429/jacow-hb2023-wec1c2",
+      "article_type": "会议论文",
+      "recommendation_score": 76,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "abstract_sources",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 82,
+        "novelty": 70,
+        "quality": 68,
+        "methodology": 70,
+        "inspiration": 78
+      },
+      "why_worth_reading": "从14 MeV强中子源设施的整体诊断需求中定位SPND的在线监测角色。",
+      "core_findings": [
+        "IFMIF-DONES将用40 MeV、125 mA氘束轰击液态锂靶，产生约1×10¹⁷ n/s的宽峰14 MeV中子场。",
+        "设施需要同时诊断锂液靶、束流参数和辐照场，在线中子探测方案包括SPND和微裂变室。",
+        "论文总结靶区和辐照诊断的工程挑战，并将SPND与活化箔、球形谱仪等离线中子通量方法放在同一系统需求中比较。"
+      ],
+      "term_explanations": [
+        {
+          "term": "14 MeV中子源",
+          "academic_explanation": "由氘—锂反应等聚变相关反应产生、能量约为14 MeV的高强度中子场，用于模拟聚变材料环境。",
+          "plain_explanation": "这是能量很高、数量也很多的中子，用来给材料和探测器制造接近聚变的压力测试。"
+        },
+        {
+          "term": "在线中子探测",
+          "academic_explanation": "在辐照运行过程中连续获取中子通量或通量率信息，而不是停机后取样分析。",
+          "plain_explanation": "设施运行时就实时看中子有多强，不必等实验结束再知道结果。"
+        },
+        {
+          "term": "活化箔",
+          "academic_explanation": "利用箔材被中子照射后产生放射性核素，通过衰变活度反推累计中子注量的被动测量器件。",
+          "plain_explanation": "让一小片金属‘记录’自己被中子照了多少，实验后再通过它的放射性倒推出通量。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可设计SPND在线信号与活化箔、微裂变室和中子谱仪的交叉标定。"
+        ],
+        "methods": [
+          "借鉴将在线探测、离线注量和设施运行参数放进同一诊断链的系统工程思路。"
+        ],
+        "key_entities_mechanisms": [
+          "关注14 MeV中子谱、空间梯度、束流波动和探测器长期辐照响应。"
+        ],
+        "target_system": [
+          "可作为聚变中子源和高能辐照设施SPND系统设计的需求参考。"
+        ],
+        "future_direction": [
+          "可进一步研究SPND在强通量、宽能谱和高温环境下的实时校准方法。"
+        ],
+        "paper_potential": [
+          "若在具体中子源平台完成在线—离线交叉验证，可形成设施诊断方法论文。"
+        ],
+        "limitations_validation": [
+          "该文是设施诊断概览，摘要没有给出SPND具体性能实验，需全文区分设计方案与已验证结果。"
+        ]
+      },
+      "top3_reason": "适合补充SPND在聚变相关强中子源中的系统应用背景，但不是本期最核心的器件论文。",
+      "tags": [
+        "SPND",
+        "IFMIF-DONES",
+        "14 MeV中子",
+        "在线诊断"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "尚未全文核对SPND部分的具体技术方案、性能指标和实施状态。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "建立SPND空间电荷—温度—通量联合模型：用阶跃与周期中子场、多个温度平台和Co/Rh或钒发射体交叉验证响应时间常数与补偿边界。",
+    "构建‘Geant4/MCNP真实响应—SPND电流—堆芯功率重建’闭环：比较解析、简化和高保真模型对局部功率扰动与边缘区域的反演误差。",
+    "面向高通量聚变中子源搭建SPND系统级验证平台：同步评估探测器、长电缆、低电流前端、温度漂移和辐照寿命，并用活化箔或微裂变室交叉标定。"
+  ],
   "related_work_review": {
     "status": "no_reliable_judgment",
-    "search_window": "未执行；计划范围为最近5年并按需补充经典基础论文",
-    "limitations": [
-      "无当天入选论文锚点。",
-      "输入检索仅覆盖SPND，无法据此作全领域判断。"
-    ],
-    "reason": "当天最终articles为空：review_queue.json、ranked_24h.json、ranked_7d.json及search_24h.json、search_7d.json均无可复核论文记录。没有当天入选论文作为独立联网查新的锚点，按零推荐规则不开展锚定查新，无法形成可靠判断；不使用历史记忆或前日报告替代。现有SPND检索不足以代表广义辐射探测领域。"
+    "reason": "本次任务是临时五年窗口推送；已完成三个SPND关键词的五年检索、去重和候选复核，但未额外开展面向研究空白的独立宽搜与5–8篇代表性工作核验，因此不对新颖性下可靠结论。"
   },
   "publication_opportunities": {
     "status": "no_reliable_judgment",
-    "overall_judgment": "本期无法形成可靠发文判断。",
-    "reason": "当天最终articles为空：review_queue.json、ranked_24h.json、ranked_7d.json及search_24h.json、search_7d.json均无可复核论文记录。没有当天入选论文作为独立联网查新的锚点，按零推荐规则不开展锚定查新，无法形成可靠判断；不使用历史记忆或前日报告替代。现有SPND检索不足以代表广义辐射探测领域。"
+    "reason": "本次只按临时五年窗口完成论文筛选，未完成独立发文机会查新；报告中的研究思路是基于当天入选论文的启发，不等同于已核实的投稿空白。"
   }
 }
