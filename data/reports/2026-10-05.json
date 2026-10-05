@@ -1,0 +1,288 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-10-05",
+  "published_at": "2026-10-05T06:36:47.720936+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近30天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 4341,
+    "screened_count": 2,
+    "preliminary_recommended_count": 1,
+    "final_recommended_count": 1,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 2,
+      "crossref": 2800,
+      "semanticscholar": 0,
+      "openalex": 939,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "semanticscholar: HTTPError: HTTP Error 429:",
+      "实际采用最近30天窗口；近24小时按日级元数据近似，无入选候选。",
+      "两篇候选均人工复核；排除1篇污水处理SPND缩写同名论文。",
+      "入选技术报告：OSTI公开日期为10月1日，PDF封面为9月。",
+      "独立查新共37篇候选、核实12篇、公开比较7篇；部分出版社直接访问受限，以可读取的出版社摘要和元数据交叉核实。",
+      "按本次写入边界，交付历史与研究记忆仅写入本次目录的副本，不更新全局文件。",
+      "更正版：新颖性分项为65，加权总分86；推荐结论与研究判断不变。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Demonstration of SPNDs for Real-Time Monitoring of Neutron Energy Spectrum",
+      "chinese_title": "用于实时监测中子能谱的自供电中子探测器示范",
+      "journal": "Idaho National Laboratory（INL/RPT-26-96046）",
+      "publication_date": "2026-10-01",
+      "doi": "10.2172/17049043",
+      "url": "https://www.osti.gov/servlets/purl/17049043",
+      "article_type": "技术报告（非期刊同行评议论文）",
+      "recommendation_score": 86,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 100,
+        "novelty": 65,
+        "quality": 80,
+        "methodology": 80,
+        "inspiration": 90
+      },
+      "why_worth_reading": "直接展示多材料SPND能谱测量的可行范围与失败边界，尤其揭示护套干扰、温度影响和快区信息不足。",
+      "core_findings": [
+        "制备钆、铪、钽、钒四类发射体原型，并实施有、无镉过滤的反应堆辐照；钆器件噪声过大，未用于后续能谱分析。",
+        "护套的中子和伽马贡献使总电流随功率增加而变得更负；作者通过信号分解获得用于GRAVEL反演的输入，并非电流与功率成倒数关系。",
+        "MCNP响应建模与GRAVEL结果支持区分热区和合并的超热—快区，但不足以可靠分离超热与快中子。",
+        "350°C温度效应大于探测信号，该条件数据被排除；绝缘层受潮仅为作者假说，尚未证实。",
+        "实验反演相对STAYSL参考的快区误差在两处位置均超过80%；结果更适合作为方法局限证据，不能宣称已实现精确宽能区实时能谱仪。"
+      ],
+      "term_explanations": [
+        {
+          "term": "自供电中子探测器（SPND）",
+          "academic_explanation": "通过辐射作用产生的电荷迁移输出电流、探测元件无需外加偏置的中子探测器；读出电路仍可需要供电。",
+          "plain_explanation": "辐射在器件里产生可测的小电流，不代表整套仪器不耗电。"
+        },
+        {
+          "term": "发射体、收集极与护套",
+          "academic_explanation": "发射体和收集极是由绝缘层隔开的电极；护套是外部包覆结构，在本器件中也产生辐射相关电流。",
+          "plain_explanation": "中心与外层像电流的两端，外壳也可能出信号，不能当作完全安静的包装。"
+        },
+        {
+          "term": "绝缘层",
+          "academic_explanation": "限制电极间导电、同时影响辐射电荷迁移和漏电的介质层。",
+          "plain_explanation": "像隔开两端的屏障，受潮等变化可能影响测量，但本报告尚未证实受潮原因。"
+        },
+        {
+          "term": "中子能谱与热、超热、快中子",
+          "academic_explanation": "能谱描述中子随能量的分布；三类为不同能段，具体分界应按测量和分析约定给出。",
+          "plain_explanation": "不仅问有多少中子，也问它们能量如何分布；分组边界须说明。"
+        },
+        {
+          "term": "镉过滤",
+          "academic_explanation": "利用镉对低能中子的强吸收改变入射中子能量分布的实验方法。",
+          "plain_explanation": "给中子加一道更容易挡住低能部分的筛子，并非只改变一个完全独立变量。"
+        },
+        {
+          "term": "伽马辐射",
+          "academic_explanation": "原子核等过程产生的高能光子辐射，可在探测器中产生次级电荷信号。",
+          "plain_explanation": "另一类辐射也会让电流表有读数，须与中子贡献区分。"
+        },
+        {
+          "term": "MCNP响应模型",
+          "academic_explanation": "使用蒙特卡洛粒子输运计算建立入射辐射与探测器输出之间关系的模型。",
+          "plain_explanation": "计算大量粒子可能走过的路线，估计各类入射会带来多少信号。"
+        },
+        {
+          "term": "能谱反演与GRAVEL",
+          "academic_explanation": "由探测器响应反求入射能谱；GRAVEL为依赖响应函数和初始谱的迭代展开方法，结果受信息量与误差限制。",
+          "plain_explanation": "从少数读数倒推能量组成；反复调整能谱也不能自动补出没有测到的信息。"
+        },
+        {
+          "term": "STAYSL",
+          "academic_explanation": "利用活化测量、响应数据及其不确定度调整中子谱的分析程序；本报告将其结果用作比较参考。",
+          "plain_explanation": "用另一套测量和计算得到对照谱，对照本身也有误差。"
+        },
+        {
+          "term": "信号分解",
+          "academic_explanation": "在结构及响应假设下，把总输出分成不同来源或时间行为的贡献。",
+          "plain_explanation": "把混在一起的读数拆开；拆得是否正确需要单独对照实验。"
+        },
+        {
+          "term": "标定与误差传播",
+          "academic_explanation": "标定建立参考量和输出的关系；误差传播评估输入与参数不确定度对最终结果的影响。",
+          "plain_explanation": "先用已知条件定刻度，再追踪刻度和读数的不准会怎样影响答案。"
+        },
+        {
+          "term": "辐照与噪声",
+          "academic_explanation": "辐照是暴露于辐射场；噪声是妨碍识别目标信号的随机或非目标波动。",
+          "plain_explanation": "把器件放到辐射中测试，观察真正信号是否被杂乱读数淹没。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "设置同几何护套参考通道，分别改变中子场、伽马场及温度；使用未参与拟合的测量条件检验分解结果。"
+        ],
+        "methods": [
+          "保留MCNP响应模型与GRAVEL作为基线，比较加入独立快中子通道前后的分能区误差。"
+        ],
+        "key_entities_mechanisms": [
+          "重点核验护套与发射体的电流贡献；以干燥前后对照检验绝缘层受潮假说。"
+        ],
+        "target_system": [
+          "对应SPND响应与标定阶段；先明确现有结构的有效测量边界。"
+        ],
+        "future_direction": [
+          "研究温度、伽马贡献及快区补充观测共同作用下的SPND能谱反演。"
+        ],
+        "paper_potential": [
+          "可形成以独立实验验证为核心的方法论文；单独替换反演算法的贡献可能有限。"
+        ],
+        "limitations_validation": [
+          "该技术报告未提供精确宽能区在线测量的充分证明；必须补充参考通道、误差传播和跨条件验证。"
+        ]
+      },
+      "top3_reason": "当天唯一通过复核的论文；其失败工况与能力边界对SPND实验设计尤其有价值。",
+      "tags": [
+        "SPND",
+        "能谱反演",
+        "护套贡献",
+        "响应标定",
+        "温度效应"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "OSTI公开日期为2026-10-01；PDF封面为2026年9月，不能把入库日期等同实验完成日期。",
+        "绝缘层受潮机理与高温补偿尚待验证。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "检验同几何护套参考通道能否在不同伽马比例下稳定分离SPND电流，并以独立测量验证。",
+    "在同位置增加快中子参考观测，比较加入前后超热和快区误差；同步检验温度变化下的有效边界。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-10-05T06:36:05.308510+00:00",
+    "search_window": "2021-10-05至2026-10-05；以最近5年为主，预印本按所读版本计年",
+    "candidate_count": 37,
+    "verified_count": 12,
+    "limitations": [
+      "非穷尽检索，不支持绝对新颖性判断。",
+      "Crossref部分查询失败；部分出版社403/429，部分核实基于可检索的出版社摘要。",
+      "跨探测器结果只能支持验证设计，不能证明SPND性能。"
+    ],
+    "themes": [
+      {
+        "title": "混合场SPND能谱的有效信息与系统验证",
+        "related_work_status": [
+          "已有SPND分项响应模型，闪烁体快中子反演、SiC能谱及辐照表征、像素和多通道标定也已有实证；简单组合或更换算法不足以构成新颖性。"
+        ],
+        "today_increment": [
+          "当天报告增加了多材料SPND在实际混合场中的负向电流、分解困难及超热—快区分离失败证据。"
+        ],
+        "research_gap": [
+          "本次有限检索未建立同一装置下护套参考、快区辅助通道和温度/辐照漂移联合验证的充分证据链；这只是待验证切口，非已证明的领域空白。"
+        ],
+        "secondary_judgment": [
+          "优先研究哪些独立观测真正改善能段辨识；辅助探测器的能谱、成像或耐辐照结果不能直接迁移为SPND性能。"
+        ],
+        "paper_angle": [
+          "以同位置参考测量检验SPND混合场分解，量化增加快区观测的收益和失效条件。"
+        ],
+        "minimum_validation": [
+          "同几何参考通道和独立快中子测量；有无镉过滤、多个温度及伽马比例条件。",
+          "公开响应数据与误差来源；比较原始SPND、分解后SPND、联合通道；用未参与拟合的条件验证。",
+          "若主张长期可靠性，需辐照前后重复标定；若利用成像辅助，需独立验证空间对应关系。"
+        ],
+        "novelty_risk": [
+          "能谱展开、分项模拟、多通道标定均为已有路线；应以新实验约束和可复现实证增量立论。"
+        ],
+        "confidence": "中等：关键对比有原始摘要/方法支持，但不是穷尽检索；多篇全文受访问限制。",
+        "representative_works": [
+          {
+            "title": "Assessment of SPND Signal in IFMIF-DONES using a Monte Carlo Modelling",
+            "doi": "10.1007/s10894-025-00542-y",
+            "url": "https://link.springer.com/article/10.1007/s10894-025-00542-y",
+            "relation": "分项计算中子、光子与延迟电流；支持将混合场贡献纳入模型，但不能替代当天反演实验。"
+          },
+          {
+            "title": "Measuring and unfolding fast neutron spectra using solution-grown trans-stilbene scintillation detector",
+            "doi": "10.1016/j.net.2022.10.041",
+            "url": "https://www.sciencedirect.com/science/article/pii/S1738573322005228",
+            "relation": "闪烁体响应标定与快中子反演实验可作独立参考；其脉冲信息不等同于SPND积分电流。"
+          },
+          {
+            "title": "Partially depleted operation of 250 μm-thick silicon carbide neutron detectors",
+            "doi": "10.1016/j.nima.2023.168918",
+            "url": "https://www.sciencedirect.com/science/article/pii/S016890022300918X",
+            "relation": "使用α粒子和14 MeV中子表征偏压相关响应，提供快区补充观测的候选，但尚未验证与SPND联合。"
+          },
+          {
+            "title": "Neutron irradiation and polarization effect of 4H–SiC Schottky detector",
+            "doi": "10.1016/j.nima.2024.169326",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0168900224002523",
+            "relation": "实测辐照后电学与收集性能变化，提醒辅助半导体通道也须重新标定；材料失效机制不可直接移植至SPND。"
+          },
+          {
+            "title": "Calibration of a compact ASIC-based data acquisition system for neutron/γ discrimination and spectroscopy with organic scintillators",
+            "doi": "10.1016/j.nima.2023.168699",
+            "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168900223006903",
+            "relation": "多通道读出与光学标定提供系统级参考，不能据此认定低电流SPND前端已经解决。"
+          },
+          {
+            "title": "The calibration and performance of a 2D planar neutron and gamma imaging detector",
+            "doi": "10.1016/j.nima.2025.171068",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0168900225008708",
+            "relation": "逐通道、能量与成像性能验证可借鉴为联合测量的空间一致性检查；并非SPND成像成果。"
+          },
+          {
+            "title": "Towards a Timepix3 Radiation Monitor for the Accelerator Mixed Radiation Field: Characterisation with Protons and Alphas from 0.6 MeV to 5.6 MeV",
+            "doi": "10.3390/app14020624",
+            "url": "https://www.mdpi.com/2076-3417/14/2/624",
+            "relation": "质子与α粒子标定揭示线性区和饱和边界，支持明确辅助探测器的适用范围。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "有条件值得开展方法验证；现有证据不足以承诺高水平发表或判定首次。",
+    "opportunities": [
+      {
+        "title": "护套参考与快区辅助观测约束的SPND能谱测量",
+        "research_gap": [
+          "本次有限检索未建立同一装置下护套参考、快区辅助通道和温度/辐照漂移联合验证的充分证据链；这只是待验证切口，非已证明的领域空白。"
+        ],
+        "why_worth_doing": [
+          "当天实测说明主要瓶颈包括信号来源混淆与能段信息不足，具有明确可检验对象。"
+        ],
+        "recommended_work": [
+          "同几何参考通道和独立快中子测量；有无镉过滤、多个温度及伽马比例条件。",
+          "公开响应数据与误差来源；比较原始SPND、分解后SPND、联合通道；用未参与拟合的条件验证。",
+          "若主张长期可靠性，需辐照前后重复标定；若利用成像辅助，需独立验证空间对应关系。"
+        ],
+        "paper_contribution": [
+          "若实验成立，贡献是经独立参考验证的误差降低和适用边界，而不是算法名称或未经证实的新颖性。"
+        ],
+        "daily_evidence": [
+          "当天报告排除了高噪声钆数据及350°C数据，并承认超热—快区分离不足。"
+        ],
+        "main_risks": [
+          "辅助通道引入自身漂移、偏压与辐照退化。",
+          "不同位置和测量时间导致参考谱不可比。",
+          "同类联合测量可能已有工作，投稿前还需针对性补检索。"
+        ],
+        "article_type": "实验验证与测量方法研究论文",
+        "evidence_papers": [
+          {
+            "title": "Demonstration of SPNDs for Real-Time Monitoring of Neutron Energy Spectrum",
+            "doi": "10.2172/17049043",
+            "url": "https://www.osti.gov/servlets/purl/17049043"
+          }
+        ]
+      }
+    ]
+  }
+}
