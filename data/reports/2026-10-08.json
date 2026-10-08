@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-10-08",
+  "published_at": "2026-10-08T06:29:56.325080+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近30天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 2,
+    "screened_count": 1,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 0,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 2,
+      "crossref": 0,
+      "semanticscholar": 0,
+      "openalex": 0,
+      "biorxiv": 0
+    },
+    "warnings": [
+      "crossref: IncompleteRead: IncompleteRead(1420262 bytes read)",
+      "semanticscholar: HTTPError: HTTP Error 429:",
+      "openalex: HTTPError: HTTP Error 429: Too Many Requests",
+      "biorxiv: HTTPError: HTTP Error 500: Internal Server Error",
+      "实际检索窗口为2026-09-09至2026-10-08；近24小时采用日级日期近似，候选不足后扩展30天。",
+      "复核覆盖 review_queue.json 及全部 ranked_*.json；原始2条命中合并为1篇，唯一候选为SPND缩写异义误命中，已排除。",
+      "上述来源故障限制检索覆盖；零推荐不等于该时间段不存在相关论文。",
+      "排除依据：[PubMed摘要](https://pubmed.ncbi.nlm.nih.gov/42754108/)及[出版商页面](https://www.sciencedirect.com/science/article/pii/S0960852426019759)。",
+      "遵守本次仅允许写入运行目录的限制，交付历史和研究记忆使用本目录独立文件，不更新全局文件。"
+    ]
+  },
+  "articles": [],
+  "research_ideas": [],
+  "related_work_review": {
+    "status": "no_reliable_judgment",
+    "search_window": "未开展：当天无入选论文；原计划最近5年为主",
+    "limitations": [
+      "候选排除的联网核验不计作独立相关工作查新。",
+      "四个采集来源发生错误，无法给出完整覆盖判断。"
+    ],
+    "reason": "当天最终入选论文为0篇，唯一候选经摘要及出版商、PubMed联网核对，属于环境生物处理中的同步部分硝化—反硝化，并非自供电中子探测器。没有当天入选论文可作独立相关工作查新锚点，因此未开展30–50篇跨领域查新，不生成代表性支撑论文或新颖性判断，也不沿用历史结论。"
+  },
+  "publication_opportunities": {
+    "status": "no_reliable_judgment",
+    "overall_judgment": "暂无可靠判断",
+    "reason": "当天articles为空，无当日文献依据支持发文机会判断；不借用旧日报或代表论文补写。"
+  }
+}
