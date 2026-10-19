@@ -1,0 +1,336 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-10-19",
+  "published_at": "2026-10-19T11:40:32.027835+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近30天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 3413,
+    "screened_count": 1,
+    "preliminary_recommended_count": 1,
+    "final_recommended_count": 1,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 12,
+      "crossref": 2801,
+      "semanticscholar": 0,
+      "openalex": 0,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "近24小时候选池按日级日期近似；扩大到最近30天，最终论文出版日期为2026-10-01。",
+      "原检索共3413条记录，主题过滤后1篇；两个ranked文件全部候选均已核查。",
+      "Semantic Scholar限流、OpenAlex鉴权失败；相关工作部分查询失败，已用Crossref、出版商和原始论文库补充。",
+      "当天论文为摘要级核验，未取得可确认全文；结论限定于初步模拟。",
+      "按本次写入边界，交付历史与研究记忆仅保存于本次运行目录，全局文件不更新。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Monte Carlo Investigation of SPNDs for the Monitoring of the Position of the ISIS Proton Beam",
+      "chinese_title": "用于监测ISIS质子束位置的自供电中子探测器蒙特卡洛研究",
+      "journal": "Journal of Physics: Conference Series",
+      "publication_date": "2026-10-01",
+      "doi": "10.1088/1742-6596/3339/1/012021",
+      "url": "https://doi.org/10.1088/1742-6596/3339/1/012021",
+      "article_type": "会议论文集论文（初步模拟研究）",
+      "recommendation_score": 79,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 100,
+        "novelty": 65,
+        "quality": 60,
+        "methodology": 70,
+        "inspiration": 65
+      },
+      "why_worth_reading": "直接研究钴发射体SPND的束流位置响应，并指出束宽变化的干扰，适合用于设计后续验证实验。",
+      "core_findings": [
+        "作者在FLUKA中实现Goldstein蒙特卡洛方法，初步计算ISIS第一靶站内SPND的响应；摘要未提供束流实验验证。",
+        "模拟提示瞬发信号主要由中子引起；电流估计高度依赖尚未确定的系统时间响应，不能当作已测得的工作范围。",
+        "钴发射体SPND采用三角布置时，束流每偏移1厘米，模拟信号约变化1%–10%；这一数值不是定位精度。",
+        "束宽变化可能引起相近量级的电流变化，因此仅靠电流变化不能直接区分束位偏移与束宽变化。",
+        "作者明确指出瞬发信号的信噪比仍需进一步研究；本期不将该方案视为已完成标定或可靠性验证。"
+      ],
+      "term_explanations": [
+        {
+          "term": "自供电中子探测器（SPND）",
+          "academic_explanation": "利用辐射与材料相互作用产生可测电流、通常无需外加探测器偏压的中子探测器；读出电路仍可能需要供电。",
+          "plain_explanation": "中子到来后器件自身产生微小电流，再由仪器读取。"
+        },
+        {
+          "term": "发射体、收集极与绝缘层",
+          "academic_explanation": "发射体参与辐射诱导电荷产生，收集极接收电荷，绝缘层隔开两者并影响电荷输运。",
+          "plain_explanation": "可理解为产生电荷的一侧、接收的一侧和中间的隔离材料。"
+        },
+        {
+          "term": "蒙特卡洛方法与FLUKA",
+          "academic_explanation": "蒙特卡洛方法通过随机抽样模拟粒子相互作用；FLUKA是实现粒子输运计算的软件。",
+          "plain_explanation": "在计算机中模拟大量粒子的可能路线，统计它们对信号的贡献。"
+        },
+        {
+          "term": "Goldstein方法",
+          "academic_explanation": "此处指作者用于SPND响应计算的蒙特卡洛方法；具体实现和边界条件须查全文。",
+          "plain_explanation": "这是作者采用的一套计算办法，本次摘要不能说明其全部细节。"
+        },
+        {
+          "term": "瞬发信号与时间响应",
+          "academic_explanation": "瞬发信号相对于放射性衰变延迟分量较快产生；系统时间响应描述输入变化后输出随时间的变化。",
+          "plain_explanation": "信号产生得快，不代表整套仪器就能同样快地准确读出。"
+        },
+        {
+          "term": "束位、束宽与三角布置",
+          "academic_explanation": "束位描述束流中心位置，束宽描述空间展宽；三角布置以多个空间分离的探测点比较响应。",
+          "plain_explanation": "用不同位置的探头观察束流往哪里移动，以及它是否变宽。"
+        },
+        {
+          "term": "信噪比",
+          "academic_explanation": "在明确测量带宽和统计定义下，有用信号与噪声的相对大小。",
+          "plain_explanation": "关注的变化是否大到能从背景起伏中辨认出来。"
+        },
+        {
+          "term": "标定与定位精度",
+          "academic_explanation": "标定建立输出与参考量的关系；定位精度需通过位置估计相对参考位置的误差评价。",
+          "plain_explanation": "信号随位置变化，并不等于已经知道位置能测多准。"
+        },
+        {
+          "term": "核数据与统计误差",
+          "academic_explanation": "核数据描述核反应概率等物理量；计算统计误差源于有限随机样本。",
+          "plain_explanation": "模型用的物理参数和模拟次数都可能影响答案。"
+        },
+        {
+          "term": "温度漂移与辐照稳定性",
+          "academic_explanation": "温度漂移指温度改变造成输出变化；辐照稳定性描述累计辐照过程中性能保持程度。",
+          "plain_explanation": "要检查探头变热或长期受照后，读数是否仍然可信。"
+        },
+        {
+          "term": "读出",
+          "academic_explanation": "将探测器输出电荷或电流转换为可记录数据的电路与采集过程。",
+          "plain_explanation": "把探头的微小电信号变成可分析的记录。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "独立扫描束流位置和束宽，并同步记录温度与参考位置测量；检验两种变化能否区分。"
+        ],
+        "methods": [
+          "结合FLUKA响应计算与实测电流，检验模型预测的变化幅度和方向。"
+        ],
+        "key_entities_mechanisms": [
+          "重点考察钴发射体及瞬发信号；摘要不足以确定绝缘层和收集极的具体参数。"
+        ],
+        "target_system": [
+          "对应SPND研究阶段：响应、标定及束流监测应用。"
+        ],
+        "future_direction": [
+          "研究温度和读出条件改变后，束位与束宽的联合估计是否仍然有效。"
+        ],
+        "paper_potential": [
+          "若增加独立束流实验及误差分析，可形成探测器方法论文；现有证据不足以预判期刊层级。"
+        ],
+        "limitations_validation": [
+          "需全文核对几何、核数据、计算统计误差、电流定义和时间响应；需实测信噪比、温度漂移和辐照后的稳定性。"
+        ]
+      },
+      "top3_reason": "本期唯一符合核心对象且可由完整登记摘要支持的论文；最值得关注的是束位与束宽之间的混淆。",
+      "tags": [
+        "SPND",
+        "钴发射体",
+        "响应标定",
+        "束流监测"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "出版商页面和PDF请求未取得可确认的全文；已核对Crossref出版商登记摘要。",
+        "摘要给出的0.1 nA–100 mA跨度依赖未知时间响应，未作为性能指标引用。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "用独立束位与束宽扫描检验钴SPND多路电流是否足以区分两者；若在温度变化或噪声加入后失效，应报告适用边界。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-10-19T11:39:55.649589+00:00",
+    "search_window": "2021-01-01至2026-10-19（最近5年为主；包含2021年方法工作）",
+    "candidate_count": 35,
+    "verified_count": 10,
+    "limitations": [
+      "宽搜候选清单及逐项核验范围见review_audit.json；10篇核对题名、年份、链接及摘要/正文，另有3篇仅核实元数据，未计入实质核验。",
+      "不是系统综述；未完成所有全文比对，不支持绝对新颖性或期刊录用概率判断。",
+      "公开报告选8篇比较文献，跨领域工作不作为当天SPND推荐。"
+    ],
+    "themes": [
+      {
+        "title": "SPND混合辐射响应与可区分的束位估计",
+        "related_work_status": [
+          "铬自供电探测器已有中子和伽马辐照与模拟比较；钒SPND已有灵敏度计算与实验比较。不能把使用蒙特卡洛本身作为新贡献。",
+          "塑料闪烁体已有强脉冲中子场电流模式能量响应标定，可借鉴实验对照设计，但其信号机制不同于SPND。"
+        ],
+        "today_increment": [
+          "当天论文把钴SPND用于ISIS束位监测的初步模拟，并指出束宽变化可能造成同量级干扰。"
+        ],
+        "research_gap": [
+          "对当天方案而言，束位与束宽能否由实测多路电流分别估计、瞬发信号能否可靠读出仍未得到验证。"
+        ],
+        "secondary_judgment": [
+          "值得检验的是实际测量条件下的可区分性和误差边界；现有检索不能证明该问题在整个领域尚无人研究。"
+        ],
+        "paper_angle": [
+          "钴SPND阵列对束位和束宽的联合标定与独立盲测。"
+        ],
+        "minimum_validation": [
+          "分别改变束位、束宽和束强，并用独立参考测量给出真实位置。",
+          "加入伽马背景、温度及读出噪声，报告定位误差和失败工况。"
+        ],
+        "novelty_risk": [
+          "已有SPND模拟和实验标定基础；仅更换设施或再次计算灵敏度，贡献可能有限。"
+        ],
+        "confidence": "中等：当天和主要比较工作已读摘要，尚未完成全文级模型对照。",
+        "representative_works": [
+          {
+            "title": "Monte Carlo analyses of the fusion neutron and gamma signals from the chromium self-powered detector",
+            "doi": "10.1063/5.0041086",
+            "url": "https://pubs.aip.org/rsi/article/92/6/063307/990515/Monte-Carlo-analyses-of-the-fusion-neutron-and",
+            "relation": "SPND中子/伽马信号模拟与实验比较的直接先例。"
+          },
+          {
+            "title": "Study of neutron sensitivity for vanadium self-powered neutron detector in nuclear reactors",
+            "doi": "10.1063/5.0154279",
+            "url": "https://pubs.aip.org/adv/article/13/12/125015/2929426/Study-of-neutron-sensitivity-for-vanadium-self",
+            "relation": "SPND灵敏度模型需用实验检验的直接对照。"
+          },
+          {
+            "title": "Measurement of relative neutron energy response curve of plastic scintillator detector based on the back-n-white neutron source at CSNS",
+            "doi": "10.1063/5.0207673",
+            "url": "https://pubs.aip.org/adv/article/14/12/125027/3328463/Measurement-of-relative-neutron-energy-response",
+            "relation": "闪烁体电流模式中子能量响应标定的跨器件方法参考；不证明SPND性能。"
+          }
+        ]
+      },
+      {
+        "title": "温度、能谱与模型误差的分离验证",
+        "related_work_status": [
+          "伽马能谱研究已同时考察温度对能量、谱形和效率标定的影响；NaI(Tl)的FLUKA验证表明，模型与实测仍可能在部分谱区存在系统差异。"
+        ],
+        "today_increment": [
+          "当天论文对系统时间响应尚不确定，提示输出幅度解释必须同时考虑器件与测量链。"
+        ],
+        "research_gap": [
+          "当天方案缺少温度、读出条件与束流参数联合变化下的验证；跨领域证据只能支持实验设计，不能移植数值结论。"
+        ],
+        "secondary_judgment": [
+          "应先识别误差来源，再判断补偿是否有效；不宜预先把全部漂移归于某一种机制。"
+        ],
+        "paper_angle": [
+          "SPND束位监测的温度与读出条件交叉标定。"
+        ],
+        "minimum_validation": [
+          "独立改变温度及读出设置，以未参与拟合的条件验证补偿后位置误差，并保留未补偿对照。"
+        ],
+        "novelty_risk": [
+          "温度补偿和谱响应建模均有成熟先例，单独拟合曲线不足以支持较强新颖性。"
+        ],
+        "confidence": "中等偏低：跨领域方法关联，不是SPND温度效应的直接证据。",
+        "representative_works": [
+          {
+            "title": "Temperature drift during environmental radiation monitoring and its unfolding",
+            "doi": "10.1016/j.apradiso.2024.111210",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0969804324000381",
+            "relation": "温度与不同标定量分别评估的参考。"
+          },
+          {
+            "title": "Experimental and Simulated Spectral Gamma-Ray Response of a NaI(Tl) Scintillation Detector used in Airborne Gamma-Ray Spectrometry",
+            "doi": "10.5194/adgeo-57-89-2022",
+            "url": "https://adgeo.copernicus.org/articles/57/89/2022/",
+            "relation": "FLUKA与标准源实测的能谱误差检验参考。"
+          }
+        ]
+      },
+      {
+        "title": "带电粒子成像读出与辐照可靠性的比较边界",
+        "related_work_status": [
+          "SiC-Timepix3已有质子能量标定及空间响应评估；高剂量率Timepix3研究显示读出设置影响饱和和可成像范围；Si/SiC重离子研究同时评估电学和探测性能退化。"
+        ],
+        "today_increment": [
+          "当天SPND方案针对质子束位置，但尚未展示实际位置成像、读出限制或累计辐照结果。"
+        ],
+        "research_gap": [
+          "需要把束位估计性能随读出条件和累计辐照的变化纳入验证，不能由材料耐辐照性直接推出整个系统可靠。"
+        ],
+        "secondary_judgment": [
+          "这些工作适合作为验证项目清单及参考测量候选；像素探测器与SPND的响应机制和使用位置不同。"
+        ],
+        "paper_angle": [
+          "SPND阵列读出极限与辐照前后定位误差的系统验证。"
+        ],
+        "minimum_validation": [
+          "对照独立束位测量，记录辐照前后信号、噪声、温度和位置误差；明确参考探测器自身的饱和及损伤限制。"
+        ],
+        "novelty_risk": [
+          "器件耐辐照测试和高速成像已有大量先例，需围绕SPND定位误差提供新增证据。"
+        ],
+        "confidence": "中等：比较工作有原始摘要或正文证据，但尚无当天方案的实测数据。",
+        "representative_works": [
+          {
+            "title": "Silicon Carbide Timepix3 detector for quantum-imaging detection and spectral tracking of charged particles in wide range of energy and field-of-view",
+            "url": "https://arxiv.org/abs/2310.17747",
+            "relation": "半导体探测器质子标定及空间响应的参考；引用arXiv版本，未核实正式同行评议状态。"
+          },
+          {
+            "title": "Radiation Measurements Using Timepix3 with Silicon Sensor and Bare Chip in Proton Beams for FLASH Radiotherapy",
+            "url": "https://arxiv.org/abs/2410.00549",
+            "relation": "读出设置、饱和及束斑成像边界的参考；引用arXiv版本，未核实正式同行评议状态。"
+          },
+          {
+            "title": "Radiation Damage by Heavy Ions in Silicon and Silicon Carbide Detectors",
+            "doi": "10.3390/s23146522",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10384444/",
+            "relation": "辐照后电学与探测性能同时评价的参考。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "最可执行的方向是验证钴SPND束位与束宽的可区分性。发文价值取决于独立实验和误差边界，当前证据不支持宣称全新方法。",
+    "opportunities": [
+      {
+        "title": "面向束位监测的钴SPND阵列联合标定与盲测",
+        "research_gap": [
+          "当天研究指出束位和束宽造成相近量级电流变化，尚未解决实测条件下两者的区分。"
+        ],
+        "why_worth_doing": [
+          "该问题直接决定模拟灵敏度能否转化为可用的位置测量。"
+        ],
+        "recommended_work": [
+          "开展束位、束宽、束强独立扫描，建立多路响应模型。",
+          "加入温度和读出变化，以独立参考位置开展盲测并比较单参数标定。",
+          "评估辐照前后误差与噪声，报告失效工况。"
+        ],
+        "paper_contribution": [
+          "可检验的联合标定方法、独立验证数据及适用边界；贡献是否新颖仍需全文对照。"
+        ],
+        "daily_evidence": [
+          "当天钴SPND模拟给出约1%–10%/厘米的信号变化，同时指出束宽干扰及信噪比待研究。"
+        ],
+        "main_risks": [
+          "束位与束宽不可区分；读出噪声超过目标变化；独立参考测量受饱和影响。",
+          "已有相似方法的风险；未获取全文前不能确认相对全部相关工作的新增贡献。"
+        ],
+        "article_type": "探测器方法与实验验证论文",
+        "evidence_papers": [
+          {
+            "title": "Monte Carlo Investigation of SPNDs for the Monitoring of the Position of the ISIS Proton Beam",
+            "doi": "10.1088/1742-6596/3339/1/012021",
+            "url": "https://doi.org/10.1088/1742-6596/3339/1/012021"
+          }
+        ]
+      }
+    ]
+  }
+}
