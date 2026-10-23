@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-10-23",
+  "published_at": "2026-10-23T05:44:32.616692+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近30天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 0,
+    "screened_count": 0,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 0,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 0,
+      "crossref": 0,
+      "semanticscholar": 0,
+      "openalex": 0,
+      "biorxiv": 0
+    },
+    "warnings": [
+      "Europe PMC、Crossref、Semantic Scholar、OpenAlex 和 bioRxiv 五个来源均因 SSL 连接失败未获得结果。",
+      "候选范围已扩展至最近30天；近24小时仅为日级日期近似窗口。",
+      "已检查 review_queue.json、ranked_24h.json 与 ranked_30d.json 的完整列表，均为0篇；不是只检查自动推荐。",
+      "本期为检索失败后的零推荐报告，不能据此断言近期没有相关论文。"
+    ]
+  },
+  "articles": [],
+  "research_ideas": [],
+  "related_work_review": {
+    "status": "no_reliable_judgment",
+    "search_window": "计划以最近5年为主；因无入选论文未执行独立查新",
+    "limitations": [
+      "全部采集来源失败，不能评价近期研究覆盖率。",
+      "没有当天论文锚点，未进行跨探测技术比较或新颖性判断。"
+    ],
+    "reason": "当天最终 articles 为空：复核队列与两份完整 ranked 列表均无候选，五个采集来源均记录 SSL 连接失败。没有可逐篇阅读、核验及评分的论文；零推荐不代表近期没有 SPND 研究。依照全来源失败停止检索及无当天论文的例外规则，本次未开展以入选论文为锚点的独立联网查新，不虚报宽搜或核实数量，不沿用历史结论。"
+  },
+  "publication_opportunities": {
+    "status": "no_reliable_judgment",
+    "overall_judgment": "无当天可核验论文依据，无法可靠提出发文机会。",
+    "reason": "当天最终 articles 为空：复核队列与两份完整 ranked 列表均无候选，五个采集来源均记录 SSL 连接失败。没有可逐篇阅读、核验及评分的论文；零推荐不代表近期没有 SPND 研究。依照全来源失败停止检索及无当天论文的例外规则，本次未开展以入选论文为锚点的独立联网查新，不虚报宽搜或核实数量，不沿用历史结论。"
+  }
+}
