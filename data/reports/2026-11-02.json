@@ -1,0 +1,129 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-11-02",
+  "published_at": "2026-11-01T17:09:47.488863+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近30天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 8043,
+    "screened_count": 3,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 1,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 43,
+      "crossref": 8000
+    },
+    "warnings": [
+      "主要候选来自Crossref；Semantic Scholar/OpenAlex未用于本轮批量初筛，单篇OpenAlex记录用于日期交叉核对。",
+      "候选论文摘要/全文未能从当前可访问接口取得，已将未核实性能字段列入needs_verification。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Characterization of a prototype parallel-plate 238U fission chamber with DD and DT fusion neutron sources",
+      "chinese_title": "采用 DD 与 DT 聚变中子源表征平行板式 238U 裂变室原型",
+      "journal": "Fusion Engineering and Design",
+      "publication_date": "2026-11-01",
+      "doi": "10.1016/j.fusengdes.2026.115988",
+      "url": "https://doi.org/10.1016/j.fusengdes.2026.115988",
+      "article_type": "研究论文",
+      "recommendation_score": 76,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 100,
+        "novelty": 78,
+        "quality": 72,
+        "methodology": 70,
+        "inspiration": 82
+      },
+      "why_worth_reading": "题名直接对应“裂变室+DD/DT聚变中子源”，是本次“聚变中子探测／裂变室”检索中最贴题的近期原型表征工作。",
+      "core_findings": [
+        "Crossref 与 DOI 元数据确认论文研究一种平行板式 238U 裂变室原型。",
+        "题名明确表明该原型分别使用 DD 与 DT 聚变中子源开展表征，因此覆盖2.45 MeV与约14 MeV两类聚变中子场景。",
+        "可公开核验的元数据未提供效率、线性、伽马抑制、计数率或不确定度等定量结果；这些性能结论不能仅凭题名推断，需阅读全文核实。"
+      ],
+      "term_explanations": [
+        {
+          "term": "裂变室",
+          "academic_explanation": "以裂变材料沉积层诱发中子裂变，并收集裂变碎片在气体中的电离信号来测量中子事件或通量的气体探测器。",
+          "plain_explanation": "在腔体里放一层会被中子“打裂”的材料；裂变产生带电碎片，碎片经过气体时留下电信号。"
+        },
+        {
+          "term": "238U裂变材料",
+          "academic_explanation": "以铀-238为中子反应材料的裂变室敏感层；其快中子响应取决于能量相关裂变截面、沉积形态和几何。",
+          "plain_explanation": "把铀-238做成薄薄的敏感层，快中子撞上后可能触发裂变，再把裂变留下的电信号读出来。"
+        },
+        {
+          "term": "DD/DT聚变中子源",
+          "academic_explanation": "DD反应主要产生约2.45 MeV中子，DT反应主要产生约14.1 MeV中子；两者可用于检验探测器在不同聚变中子能区的响应。",
+          "plain_explanation": "DD和DT像两种“已知能量档位”的中子测试灯：前者约2.45 MeV，后者约14.1 MeV。"
+        },
+        {
+          "term": "平行板结构",
+          "academic_explanation": "将裂变材料、电极或收集区域以平行板几何布置，以控制电场、带电裂变碎片收集和气体电离信号形成。",
+          "plain_explanation": "像把几块平行的薄板叠在一起，让裂变碎片在板间气体中产生电荷，再由电极收集。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "可围绕DD与DT两档中子源建立同一裂变室的能区对照表征，并把源强、几何、脉冲计数和背景条件全部记录。"
+        ],
+        "methods": [
+          "优先复现“原型结构—已知聚变中子源—响应曲线—独立通量基准”的闭环；具体效率和响应函数需阅读全文后确定。"
+        ],
+        "key_entities_mechanisms": [
+          "关键变量包括238U敏感层、平行板几何、裂变碎片电离、D-D/D-T中子能量依赖和本底事件。"
+        ],
+        "target_system": [
+          "可迁移到聚变装置中子产额/通量监测以及与SPND、质子反冲、闪烁体或TOF诊断的交叉标定。"
+        ],
+        "future_direction": [
+          "比较裂变室在2.45 MeV与14.1 MeV下的响应函数、线性和伽马混合场稳定性，并用活化箔或另一种可追溯诊断建立独立基准。"
+        ],
+        "paper_potential": [
+          "若补齐源强可追溯性、响应函数、效率/线性、背景扣除和不确定度预算，可形成面向聚变中子监测的器件表征论文。"
+        ],
+        "limitations_validation": [
+          "当前公开可访问证据主要是Crossref/DOI书目信息；作者、全文实验细节、裂变层参数和定量性能必须从出版社全文或作者版本核实。"
+        ]
+      },
+      "top3_reason": "它是当天候选中唯一在题名层面同时明确出现“裂变室”和DD/DT聚变中子源的论文，直接对应本次检索目标。",
+      "tags": [
+        "裂变室",
+        "238U",
+        "聚变中子",
+        "14 MeV中子",
+        "D-T中子",
+        "中子标定"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "Crossref记录的2026-11卷期日期与OpenAlex记录的2026-08-14在线日期存在差异，需以出版社页面确认正式出版日期。",
+        "当前可访问元数据没有摘要或全文，不能确认裂变室气体、几何尺寸、偏压、效率、线性、伽马抑制和不确定度。",
+        "需核实论文是否给出14.1 MeV条件下的绝对响应/通量标定，以及DD与DT结果的可比性。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "在同一平行板裂变室上做DD/DT双能区对照，联合独立通量基准、伽马本底和重复测量，拟合能量依赖响应与不确定度。",
+    "建立裂变室—SPND—质子反冲/闪烁体的交叉标定链，分别比较瞬时计数、积分通量和时间响应，检验混合场下的系统偏差。"
+  ],
+  "related_work_review": {
+    "status": "no_reliable_judgment",
+    "searched_at": "2026-11-02T01:00:00+08:00",
+    "search_window": "围绕裂变室、14–14.1 MeV D-T中子和聚变中子诊断进行了Crossref/DOI/OpenAlex核查；未完成可支撑5–8篇代表工作的独立全文级查新。",
+    "candidate_count": 3,
+    "verified_count": 1,
+    "reason": "本轮只有1篇与“裂变室+DD/DT聚变中子源”直接相关的候选达到人工复核条件；其摘要/全文未能从当前可访问接口取得，无法可靠比较近期工作进展、研究空白或新颖性。已核验的书目信息不足以支持查新结论。"
+  },
+  "publication_opportunities": {
+    "status": "no_reliable_judgment",
+    "overall_judgment": "当天证据仅支持将该论文作为贴题入口，不能据此形成可靠的发文机会判断。",
+    "reason": "缺少当天论文的全文实验参数、定量响应结果和足够独立对照文献；不沿用历史结论，也不作绝对新颖性判断。"
+  }
+}
