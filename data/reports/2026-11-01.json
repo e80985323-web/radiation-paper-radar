@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-11-01",
+  "published_at": "2026-11-01T15:31:43.960099+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近30天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 3412,
+    "screened_count": 0,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 0,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 12,
+      "crossref": 2800,
+      "semanticscholar": 0,
+      "openalex": 0,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "semanticscholar: HTTPError: HTTP Error 429:",
+      "openalex: HTTPError: HTTP Error 429: Too Many Requests",
+      "本轮可用检索源未产生可供人工复核的SPND相关候选；因此不以普通中子探测器、伽马/X射线探测或一般辐射探测论文替代。",
+      "当日最终论文数为0，未形成可锚定的独立相关工作查新或发文判断。"
+    ]
+  },
+  "articles": [],
+  "research_ideas": [],
+  "related_work_review": {
+    "status": "no_reliable_judgment",
+    "searched_at": "2026-11-01T15:30:14+00:00",
+    "search_window": "最近5年为主；因当天无通过人工复核的最终论文，未启动以当天论文为锚点的30–50篇独立宽搜/10–15篇核实流程",
+    "limitations": [
+      "当天最终 articles 为空，缺少可用于锚定比较的SPND论文。",
+      "不能把历史代表论文或普通辐射探测论文充当本次查新的代表性支撑工作。"
+    ],
+    "reason": "当天 review_queue.json 与 ranked_24h.json、ranked_30d.json 均无候选论文（unique_relevant_count=0，screened_count=0）。在没有当天最终入选论文作为锚点且没有可供人工核验的SPND证据时，无法可靠完成规定的独立相关工作查新，故不输出相关工作、新颖性或研究空白判断。"
+  },
+  "publication_opportunities": {
+    "status": "no_reliable_judgment",
+    "reason": "当天没有任何论文通过人工复核并进入 articles，且没有可用于支撑发文判断的当天 evidence_papers；因此不沿用前一天结论，也不提出无证据的发文机会。"
+  }
+}
