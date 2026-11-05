@@ -2,9 +2,16 @@
   "schema_version": 1,
   "title": "Research Paper Daily",
   "description": "面向辐射探测、闪烁体、能谱、成像与信号读出的精选科研文献雷达。",
-  "updated_at": "2026-11-01T17:09:47.488863+00:00",
-  "latest_date": "2026-11-02",
+  "updated_at": "2026-11-05T06:15:23.608084+00:00",
+  "latest_date": "2026-11-05",
   "reports": [
+    {
+      "date": "2026-11-05",
+      "path": "reports/2026-11-05.json",
+      "article_count": 1,
+      "top_score": 81,
+      "window": ""
+    },
     {
       "date": "2026-11-02",
       "path": "reports/2026-11-02.json",
