@@ -1,0 +1,281 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-11-06",
+  "published_at": "2026-11-06T00:21:41.975352+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "近24小时优先，扩大至最近30天（日级近似）",
+    "retrieved_count": 8651,
+    "screened_count": 2,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 1,
+    "threshold": 70,
+    "source_counts": {},
+    "warnings": [
+      "8651为来源记录数，非去重论文数；新候选2篇均经复核。",
+      "Semantic Scholar限流、OpenAlex认证失败，来源覆盖不完整。",
+      "已推送238U裂变室论文不重复推荐。",
+      "另一篇研究中子产额模拟而非探测方法，排除。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Three-dimensional reconstruction of cold fuel shells using down-scattered neutron imaging at the National Ignition Facility",
+      "chinese_title": "利用下散射中子成像重建国家点火装置冷燃料壳的三维结构",
+      "journal": "Physics of Plasmas",
+      "publication_date": "2026-11-02",
+      "doi": "10.1063/5.0344898",
+      "url": "https://doi.org/10.1063/5.0344898",
+      "article_type": "研究论文",
+      "recommendation_score": 81,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 82,
+        "novelty": 77,
+        "quality": 82,
+        "methodology": 84,
+        "inspiration": 78
+      },
+      "why_worth_reading": "直接利用D-T聚变14 MeV中子及其下散射信号比较冷燃料三维重建；不是裂变室论文。",
+      "core_findings": [
+        "从三个近正交视线采集约14 MeV中子图像，从两条赤道视线采集6–12 MeV下散射中子图像。",
+        "利用合成数据及点火实验数据比较二维注量补偿与结合三维初级发射和下散射图像的密度重建。",
+        "摘要报告二维补偿较快，可估计单视角低阶形状和壳层尺寸，但不能可靠表示复杂三维结构。",
+        "摘要报告三维重建可定量捕捉主要不对称；有限视线会产生伪影，不能据此认为所有细节均准确恢复。"
+      ],
+      "term_explanations": [
+        {
+          "term": "氘氚（D-T）聚变与14 MeV中子",
+          "academic_explanation": "氘核与氚核聚变产生氦核及典型能量约14.1 MeV的初级中子。",
+          "plain_explanation": "两种氢同位素反应发出的中子约14 MeV，不是D-D反应典型的2.45 MeV中子。"
+        },
+        {
+          "term": "下散射中子",
+          "academic_explanation": "初级中子与物质相互作用后损失部分能量形成的中子。",
+          "plain_explanation": "高速中子碰到物质后变慢，其变化携带沿途物质的信息。"
+        },
+        {
+          "term": "中子成像与视线",
+          "academic_explanation": "成像系统记录特定方向的中子空间分布；视线为采样方向。",
+          "plain_explanation": "从不同方向给中子发射区域拍投影，每个方向的信息有限。"
+        },
+        {
+          "term": "初级发射与注量",
+          "academic_explanation": "初级发射指聚变直接产生中子；注量是单位面积上入射中子数的量度。",
+          "plain_explanation": "前者是反应刚发出的中子，后者是穿过单位面积的中子多少。"
+        },
+        {
+          "term": "注量补偿",
+          "academic_explanation": "利用初级发射的信息减弱其空间分布对下散射图像的影响。",
+          "plain_explanation": "试着从图像剥离中子源自身亮暗的影响。"
+        },
+        {
+          "term": "三维重建与密度分布",
+          "academic_explanation": "结合多个投影和物理模型估计物体内三维空间密度变化的逆问题。",
+          "plain_explanation": "根据不同方向的影子和物理规律推算内部立体结构。"
+        },
+        {
+          "term": "低阶形状与不对称",
+          "academic_explanation": "低阶形状描述分布的大尺度形变；不对称表示偏离指定的对称状态。",
+          "plain_explanation": "关注整体偏扁或偏长，而不是每个细小褶皱。"
+        },
+        {
+          "term": "合成数据与重建伪影",
+          "academic_explanation": "合成数据由模型生成用于验证；伪影是采样、噪声或模型引入的非真实结构。",
+          "plain_explanation": "用已知答案的模拟图检验算法；伪影是推算出的假细节。"
+        },
+        {
+          "term": "裂变室",
+          "academic_explanation": "收集中子诱发裂变碎片产生的电离信号的探测器。",
+          "plain_explanation": "中子触发腔内材料裂变后记录电信号；该论文未报告使用裂变室。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "用已知结构的合成样例逐步减少视线并量化伪影。"
+        ],
+        "methods": [
+          "在相同条件下比较二维补偿和三维重建误差及计算代价。"
+        ],
+        "key_entities_mechanisms": [
+          "区分约14 MeV初级中子与6–12 MeV下散射中子；探测器细节需查全文。"
+        ],
+        "target_system": [
+          "迁移至聚变诊断前先验证探测器能量响应，不能假定裂变室具备成像能力。"
+        ],
+        "future_direction": [
+          "研究视线、能量响应和源强不确定度对重建的共同影响。"
+        ],
+        "paper_potential": [
+          "若在公开基准及独立实验中验证稳定性改善，可形成方法学论文；创新性需进一步查新。"
+        ],
+        "limitations_validation": [
+          "目前依据元数据摘要而非全文；标定、样本量及完整误差需核实。"
+        ]
+      },
+      "top3_reason": "本期唯一直接处理D-T聚变14 MeV中子观测的入选论文，提供互补诊断线索。",
+      "tags": [
+        "D-T聚变",
+        "14 MeV中子",
+        "下散射中子",
+        "中子成像",
+        "三维重建"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "摘要未提供探测器材料、绝对标定、完整不确定度和样本量。",
+        "Crossref卷期日期为2026-11-01，队列日期为2026-11-02；具体上线日期需核实。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "构建14 MeV初级与6–12 MeV下散射信号的合成基准，检验视线数及响应误差对三维重建的影响，并用独立数据验证。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-11-06T08:15:00+08:00",
+    "search_window": "独立查询Crossref，2021-01-01至2026-11-06；8组各取前5条，去重并剔除当天锚点后33条，核验13条元数据，依据可用摘要比较。",
+    "candidate_count": 33,
+    "verified_count": 13,
+    "limitations": [
+      "非穷尽检索；部分记录仅有题录无摘要。闪烁体和SPND论文不一定研究聚变或14 MeV；辐照可靠性及带电粒子成像尚缺足够可比原始证据，需扩检全文。"
+    ],
+    "themes": [
+      {
+        "title": "聚变中子成像、能谱与半导体",
+        "related_work_status": [
+          "已有下散射合成数据、14 MeV能谱重建和D-T金刚石测量研究。"
+        ],
+        "today_increment": [
+          "当日论文比较二维补偿与三维冷燃料重建，结合合成与点火实验数据；不证明该类方法首创。"
+        ],
+        "research_gap": [
+          "有限视线、能量响应和标定误差耦合后的可辨识性需针对目标系统验证。"
+        ],
+        "secondary_judgment": [
+          "建模、能谱和金刚石测量为互补基准，不能直接替代空间成像。"
+        ],
+        "paper_angle": [
+          "为特定聚变装置构建联合能量响应与有限视线的重建基准。"
+        ],
+        "minimum_validation": [
+          "提供已知真值仿真、视线消融、独立实验对照与不确定度传播。"
+        ],
+        "novelty_risk": [
+          "已有快速合成数据及谱重建研究；需进一步核查全文和会议论文。"
+        ],
+        "confidence": "中等；无摘要文献仅据题录描述。",
+        "representative_works": [
+          {
+            "title": "An ultra-fast method for generating synthetic down-scattered neutron data for inertial confinement fusion implosions",
+            "doi": "10.1063/5.0309367",
+            "url": "https://api.crossref.org/works/10.1063%2F5.0309367",
+            "relation": "摘要报告合成中子图像、活化和能谱数据；直接方法对照。"
+          },
+          {
+            "title": "Fabrication of a single-crystal diamond neutron detector and its application in 14.1 MeV neutron detection in deuterium–tritium fusion experiments",
+            "doi": "10.1088/2058-6272/acb48a",
+            "url": "https://api.crossref.org/works/10.1088%2F2058-6272%2Facb48a",
+            "relation": "摘要报告D-T中子金刚石测量；是半导体能谱参照，不是成像重建。"
+          },
+          {
+            "title": "Reconstruction of neutron spectrum emitted by portable 14 MeV neutron generator by a combination of different methods",
+            "doi": "10.1016/j.fusengdes.2023.114129",
+            "url": "https://api.crossref.org/works/10.1016%2Fj.fusengdes.2023.114129",
+            "relation": "14 MeV中子源能谱重建题录参照；无摘要，不推断性能。"
+          }
+        ]
+      },
+      {
+        "title": "闪烁体读出与SPND补偿",
+        "related_work_status": [
+          "已有闪烁体伽马/中子区分、阵列读出及反应堆SPND灵敏度和延迟补偿研究。"
+        ],
+        "today_increment": [
+          "当日论文指出有限视线问题；未展示这些器件或SPND的聚变实验。"
+        ],
+        "research_gap": [
+          "相关方案在14 MeV场、伽马背景及辐照后的适用性尚未证实。"
+        ],
+        "secondary_judgment": [
+          "热中子SPND和普通中子闪烁体仅提供方法线索，不能混同D-T探测性能。"
+        ],
+        "paper_angle": [
+          "在目标中子场比较信号稳定性与背景抑制，不宣称直接移植。"
+        ],
+        "minimum_validation": [
+          "明确粒子能谱、标定场、读出链、温度及剂量，开展独立测量和辐照前后对比。"
+        ],
+        "novelty_risk": [
+          "读出与补偿均有先例，改变材料或环境本身不足以证明创新。"
+        ],
+        "confidence": "中低；跨体系方法关联未验证14 MeV适用性。",
+        "representative_works": [
+          {
+            "title": "A Compact Dual Gamma Neutron Detector Based on NaI(Tl+Li) Scintillator Readout with SiPM",
+            "doi": "10.3390/cryst12081077",
+            "url": "https://api.crossref.org/works/10.3390%2Fcryst12081077",
+            "relation": "摘要报告伽马/中子闪烁体与硅光电倍增器读出；不能认定14 MeV聚变性能。"
+          },
+          {
+            "title": "Design and optimization of readout method for scintillator-based multi-neutron detector array",
+            "doi": "10.1088/1748-0221/20/12/p12025",
+            "url": "https://api.crossref.org/works/10.1088%2F1748-0221%2F20%2F12%2Fp12025",
+            "relation": "塑料闪烁体多中子阵列读出；不是聚变验证。"
+          },
+          {
+            "title": "Study of neutron sensitivity for vanadium self-powered neutron detector in nuclear reactors",
+            "doi": "10.1063/5.0154279",
+            "url": "https://api.crossref.org/works/10.1063%2F5.0154279",
+            "relation": "反应堆钒SPND热中子灵敏度，不代表14 MeV响应。"
+          },
+          {
+            "title": "The signal compensation method for the neutron flux in the measurement system using self-powered neutron detector",
+            "doi": "10.1063/5.0174453",
+            "url": "https://api.crossref.org/works/10.1063%2F5.0174453",
+            "relation": "反应堆SPND延迟信号补偿综述，仅提供读出背景。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "有限视线重建不确定度值得研究；仅一篇当日锚点及有限摘要查新，不足以保证创新性或投稿层级。",
+    "opportunities": [
+      {
+        "title": "有限视线聚变中子重建误差基准",
+        "research_gap": [
+          "响应误差和视线不足共同作用时的可信范围需量化。"
+        ],
+        "why_worth_doing": [
+          "当日摘要指出有限视线伪影；已有快速合成数据工作提供背景。"
+        ],
+        "recommended_work": [
+          "使用已知真值结构，改变视线数、计数噪声及响应，并以独立实验检验。"
+        ],
+        "paper_contribution": [
+          "报告可复用误差指标、失效边界和改进条件，不预设优势。"
+        ],
+        "daily_evidence": [
+          "当日研究比较二维与三维重建并指出有限视线伪影。"
+        ],
+        "main_risks": [
+          "已有相关合成及重建研究；缺独立实验和完整响应时不能声称实用优势。"
+        ],
+        "article_type": "方法学与验证研究",
+        "evidence_papers": [
+          {
+            "title": "Three-dimensional reconstruction of cold fuel shells using down-scattered neutron imaging at the National Ignition Facility",
+            "doi": "10.1063/5.0344898",
+            "url": "https://api.crossref.org/works/10.1063%2F5.0344898"
+          }
+        ]
+      }
+    ]
+  }
+}
