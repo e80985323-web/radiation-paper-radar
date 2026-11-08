@@ -1,0 +1,388 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-11-08",
+  "published_at": "2026-11-08T05:16:04.355933+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近30天（因近24小时高分候选不足5篇而扩大）",
+    "retrieved_count": 8636,
+    "screened_count": 4,
+    "preliminary_recommended_count": 4,
+    "final_recommended_count": 2,
+    "threshold": 70,
+    "source_counts": {
+      "europepmc": 36,
+      "crossref": 8000,
+      "semanticscholar": 0,
+      "openalex": 0,
+      "biorxiv": 600
+    },
+    "warnings": [
+      "semanticscholar: HTTPError: HTTP Error 429:",
+      "openalex: HTTPError: HTTP Error 401: Unauthorized",
+      "检索窗口：近24小时无候选，已扩展至最近30天；初筛4篇，人工复核推荐2篇。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Development of a multi-channel diamond detector array for pulsed deuterium–tritium fusion neutron diagnostics",
+      "chinese_title": "用于脉冲氘氚聚变中子诊断的多通道金刚石探测器阵列研制",
+      "journal": "Review of Scientific Instruments",
+      "publication_date": "2026-11-06",
+      "doi": "10.1063/5.0348654",
+      "url": "https://doi.org/10.1063/5.0348654",
+      "article_type": "研究论文（会议专题）",
+      "recommendation_score": 85,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 94,
+        "novelty": 78,
+        "quality": 78,
+        "methodology": 80,
+        "inspiration": 84
+      },
+      "why_worth_reading": "直接针对脉冲D-T中子，结合阵列和前置放大器测量时间过程与能谱。",
+      "core_findings": [
+        "作者为Polaris聚变原型研制64通道金刚石探测器阵列。",
+        "目标是在每次约100微秒至1毫秒的中子脉冲中获得足够计数，测量反应率时间过程和中子能谱。",
+        "论文报告阵列设计、前置放大器选择和中子源表征。",
+        "摘要未提供能量分辨率、效率与标定误差。"
+      ],
+      "term_explanations": [
+        {
+          "term": "氘氚聚变中子",
+          "academic_explanation": "氘核与氚核聚变产生近14 MeV中子，实际能量受源及散射影响。",
+          "plain_explanation": "两种氢同位素结合后释放高能中子，实测能量不会完全相同。"
+        },
+        {
+          "term": "金刚石探测器",
+          "academic_explanation": "带电粒子在金刚石产生可收集电荷，进而转换成电信号。",
+          "plain_explanation": "粒子在金刚石中留下可记录的电荷。"
+        },
+        {
+          "term": "碳-12(n,α)铍-9反应",
+          "academic_explanation": "中子与碳核反应产生带电粒子，其能量沉积可提供中子能量信息。",
+          "plain_explanation": "中子撞击碳核产生可记录的带电碎片。"
+        },
+        {
+          "term": "能谱与计数统计",
+          "academic_explanation": "能谱描述能量分布；有限计数导致统计不确定度。",
+          "plain_explanation": "将事件按能量分组，事件太少时数字起伏更大。"
+        },
+        {
+          "term": "前置放大器与多通道读出",
+          "academic_explanation": "前者处理微弱探测信号，后者分别记录多个探测单元。",
+          "plain_explanation": "每个探头连接灵敏的信号处理与记录通道。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "分别设计D-D和D-T参考源对照实验。"
+        ],
+        "methods": [
+          "测量各通道能量标定和效率一致性。"
+        ],
+        "key_entities_mechanisms": [
+          "区分碳核反应产物与其他响应。"
+        ],
+        "target_system": [
+          "D-D约2.45 MeV与D-T约14 MeV不能等同。"
+        ],
+        "future_direction": [
+          "研究高计数率堆积及辐照后漂移。"
+        ],
+        "paper_potential": [
+          "多强度和剂量下的可复现数据可支撑仪器论文。"
+        ],
+        "limitations_validation": [
+          "具体效率、分辨率和现场实验结果需全文核实。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "D-T",
+        "金刚石",
+        "多通道",
+        "能谱"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "仅核验摘要；完整性能参数和不确定度需核查全文。"
+      ]
+    },
+    {
+      "title": "Upgrades to the National Ignition Facility neutron time-of-flight diagnostic for operation at yields greater than 10 MJ",
+      "chinese_title": "国家点火装置中子飞行时间诊断升级：面向超过10 MJ的聚变产额",
+      "journal": "Review of Scientific Instruments",
+      "publication_date": "2026-11-06",
+      "doi": "10.1063/5.0350490",
+      "url": "https://doi.org/10.1063/5.0350490",
+      "article_type": "研究论文（会议专题）",
+      "recommendation_score": 84,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 90,
+        "novelty": 78,
+        "quality": 80,
+        "methodology": 80,
+        "inspiration": 83
+      },
+      "why_worth_reading": "展示高产额14 MeV中子动态范围和读出稳定化工程方案。",
+      "core_findings": [
+        "研究高聚变产额下飞行时间诊断的线性和背景问题。",
+        "每条测线使用四片可插入银衰减片，14 MeV中子衰减约2至20倍。",
+        "选择银兼顾伽马透射，以保留用于热点速度测量的伽马峰。",
+        "石英切伦科夫探测器采用齐纳二极管稳定微通道板至阳极电压，作者报告其响应在较大增益范围内稳定。"
+      ],
+      "term_explanations": [
+        {
+          "term": "中子飞行时间",
+          "academic_explanation": "由已知飞行距离和到达时间推断中子速度与能量。",
+          "plain_explanation": "记录中子跑过固定距离所需时间，以推算能量。"
+        },
+        {
+          "term": "衰减与准直",
+          "academic_explanation": "衰减器降低透射通量，准直限制粒子传播方向。",
+          "plain_explanation": "材料减少进入仪器的中子，通道限制其来向。"
+        },
+        {
+          "term": "切伦科夫探测器",
+          "academic_explanation": "记录带电粒子在介质中超过光相速度时产生的光。",
+          "plain_explanation": "粒子在介质产生短促光信号，由光电器件记录。"
+        },
+        {
+          "term": "微通道板及齐纳二极管",
+          "academic_explanation": "微通道板通过电子倍增增强信号，齐纳二极管可稳定电压。",
+          "plain_explanation": "一个增强小信号，另一个帮助保持电压稳定。"
+        },
+        {
+          "term": "仪器响应和线性",
+          "academic_explanation": "仪器响应描述测量系统改变信号的方式；线性是输出与输入成比例的范围。",
+          "plain_explanation": "仪器会改变信号形状，信号太强也可能不再按比例输出。"
+        },
+        {
+          "term": "伽马峰",
+          "academic_explanation": "高能光子产生的时间信号峰可用于诊断时间参考。",
+          "plain_explanation": "先到达的光子产生一个时间标记。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "在不同源强和衰减片组合下测量响应与背景。"
+        ],
+        "methods": [
+          "标定响应函数、线性范围及透射能量依赖。"
+        ],
+        "key_entities_mechanisms": [
+          "分离银透射、伽马背景和增益影响。"
+        ],
+        "target_system": [
+          "适合脉冲D-T诊断，不能直接等同稳态裂变室。"
+        ],
+        "future_direction": [
+          "探索裂变室和飞行时间交叉标定。"
+        ],
+        "paper_potential": [
+          "完整不确定度和独立验证可支持方法论文。"
+        ],
+        "limitations_validation": [
+          "摘要未提供所有未来产额条件下的实测结果。"
+        ]
+      },
+      "top3_reason": "",
+      "tags": [
+        "飞行时间",
+        "14 MeV",
+        "D-T",
+        "高通量"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "仅核验摘要；完整性能参数和不确定度需核查全文。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "分别标定D-D和D-T下阵列通道并与裂变室比对。",
+    "评估高通量飞行时间与裂变室互校的不确定度。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-11-08 Asia/Shanghai",
+    "search_window": "2021-01-01至2026-11-08为主，另补2014和2018年基础研究",
+    "candidate_count": 49,
+    "verified_count": 10,
+    "limitations": [
+      "Crossref五组查询得到49条去重候选，另搜索出版商、大学库和PubMed。核对10篇关联工作的题名、年份、DOI或原文及可用摘要，展示7篇；部分出版商限制全文。成像、伽马和带电粒子为邻域检索，非穷尽综述。"
+    ],
+    "themes": [
+      {
+        "title": "金刚石能谱、阵列读出及辐照可靠性",
+        "related_work_status": [
+          "已有D-D/D-T能谱、JET装置诊断及14 MeV响应稳定性研究。"
+        ],
+        "today_increment": [
+          "今日论文报告针对脉冲装置的64通道阵列和前置放大器设计，摘要未证明其优于已有系统。"
+        ],
+        "research_gap": [
+          "公开摘要尚不足以判断多通道标定一致性、脉冲堆积和长期辐照漂移是否在同一条件下完整解决。"
+        ],
+        "secondary_judgment": [
+          "多通道本身不足以证明新颖性，需逐项比较已有阵列和JET系统。"
+        ],
+        "paper_angle": [
+          "研究14 MeV高瞬时通量下通道一致性及辐照前后响应。"
+        ],
+        "minimum_validation": [
+          "分别标定D-D和D-T，给出独立参考、误差预算、脉冲计数率和累计注量。"
+        ],
+        "novelty_risk": [
+          "探测器及测谱已有先例，需进一步核查相近阵列及跨剂量研究。"
+        ],
+        "confidence": "中：摘要及代表工作已核，非穷尽综述。",
+        "representative_works": [
+          {
+            "title": "Simultaneous measurement of energy spectrum and fluence of neutrons using a diamond detector",
+            "doi": "10.1038/s41598-022-16235-x",
+            "url": "https://www.nature.com/articles/s41598-022-16235-x",
+            "relation": "测量D-D和14.2 MeV D-T，含响应矩阵和通量；不是64通道阵列。"
+          },
+          {
+            "title": "Fabrication of a single-crystal diamond neutron detector and its application in 14.1 MeV neutron detection in deuterium–tritium fusion experiments",
+            "doi": "10.1088/2058-6272/acb48a",
+            "url": "https://pst.hfcas.ac.cn/en/article/doi/10.1088/2058-6272/acb48a",
+            "relation": "14.1 MeV D-T金刚石探测器研制与测量基线。"
+          },
+          {
+            "title": "The single crystal diamond-based diagnostic suite of the JET tokamak for 14 MeV neutron counting and spectroscopy measurements in DT plasmas",
+            "doi": "10.1088/1741-4326/ad0a49",
+            "url": "https://research.lu.lv/en/publications/the-single-crystal-diamond-based-diagnostic-suite-of-the-jet-toka/",
+            "relation": "JET装置14 MeV计数、能谱及标定实践。"
+          },
+          {
+            "title": "Response function stability of single crystal diamond detectors to 14 MeV neutrons",
+            "doi": "10.1063/1.4891056",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/25430252/",
+            "relation": "经典14 MeV辐照及响应稳定性基线，不能推断今日阵列寿命。"
+          }
+        ]
+      },
+      {
+        "title": "裂变室与飞行时间标定及宽动态范围",
+        "related_work_status": [
+          "裂变室D-D/D-T响应、切伦科夫读出背景和闪烁体谱仪均已有研究。"
+        ],
+        "today_increment": [
+          "今日NIF论文对约14 MeV采用银衰减及稳定读出；应区分设计承诺与完整实测覆盖。"
+        ],
+        "research_gap": [
+          "尚需针对特定装置量化脉冲高通量及散射场中双链路互校误差。"
+        ],
+        "secondary_judgment": [
+          "互校是可检验方案，并非已证实的未解决共性问题。"
+        ],
+        "paper_angle": [
+          "分离源强、散射及电子学误差，建立双链路交叉标定。"
+        ],
+        "minimum_validation": [
+          "报告D-D与D-T源谱、绝对通量溯源、线性、背景和联合不确定度。"
+        ],
+        "novelty_risk": [
+          "已有大量标定工作，须用具体工况及误差控制证明增量。"
+        ],
+        "confidence": "中：部分出版社限制全文。",
+        "representative_works": [
+          {
+            "title": "Progress in the development of radiation detectors for fusion neutron source A-FNS",
+            "doi": "10.1016/j.fusengdes.2025.115214",
+            "url": "https://doi.org/10.1016/j.fusengdes.2025.115214",
+            "relation": "闪烁体与金刚石D-D/D-T谱仪；A-FNS本身为宽能谱，不能等同14 MeV。"
+          },
+          {
+            "title": "Characterization of a prototype parallel-plate 238U fission chamber with DD and DT fusion neutron sources",
+            "doi": "10.1016/j.fusengdes.2026.115988",
+            "url": "https://arxiv.org/abs/2608.07466",
+            "relation": "D-D及D-T裂变室响应、线性和屏蔽；已推送，不作今日新论文。"
+          },
+          {
+            "title": "Uncertainty analysis of response functions and γ-backgrounds on Tion and t0 measurements from Cherenkov neutron detectors at the National Ignition Facility (NIF)",
+            "doi": "10.1063/1.5038816",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30399962/",
+            "relation": "经典切伦科夫飞行时间响应及伽马背景不确定度基线。"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "存在有条件的方法学机会；需独立实验及更完整的相似工作排查，不能仅据摘要断言新颖性。",
+    "opportunities": [
+      {
+        "title": "脉冲D-T金刚石阵列的计数率与辐照可靠性",
+        "research_gap": [
+          "强脉冲和累积辐照下多通道联合误差需针对装置量化。"
+        ],
+        "why_worth_doing": [
+          "今日阵列面向脉冲时间过程和能谱，但摘要未给长期性能。"
+        ],
+        "recommended_work": [
+          "分别用D-D、D-T源校准，改变脉冲强度和累计注量并比较通道与参考仪器。"
+        ],
+        "paper_contribution": [
+          "提供可复现的通道一致性、响应漂移及不确定度数据。"
+        ],
+        "daily_evidence": [
+          "今日64通道阵列论文提供工程切入点。"
+        ],
+        "main_risks": [
+          "堆积、源谱散射、照射成本及既有阵列研究降低增量。"
+        ],
+        "article_type": "仪器方法及实验验证",
+        "evidence_papers": [
+          {
+            "title": "Development of a multi-channel diamond detector array for pulsed deuterium–tritium fusion neutron diagnostics",
+            "doi": "10.1063/5.0348654",
+            "url": "https://doi.org/10.1063/5.0348654"
+          }
+        ]
+      },
+      {
+        "title": "高通量下裂变室与飞行时间双链路互校",
+        "research_gap": [
+          "特定脉冲工况中两系统的联合误差和能量依赖有待实测。"
+        ],
+        "why_worth_doing": [
+          "今日论文展示高产额测量的衰减和读出稳定化需求。"
+        ],
+        "recommended_work": [
+          "分别测量D-D和D-T源谱，比对两种仪器，构建背景和传输误差预算。"
+        ],
+        "paper_contribution": [
+          "给出跨动态范围的溯源交叉标定及适用边界。"
+        ],
+        "daily_evidence": [
+          "今日NIF飞行时间升级论文提供高产额场景。"
+        ],
+        "main_risks": [
+          "响应不匹配、光子背景、源强溯源及既有工作。"
+        ],
+        "article_type": "诊断标定方法",
+        "evidence_papers": [
+          {
+            "title": "Upgrades to the National Ignition Facility neutron time-of-flight diagnostic for operation at yields greater than 10 MJ",
+            "doi": "10.1063/5.0350490",
+            "url": "https://doi.org/10.1063/5.0350490"
+          }
+        ]
+      }
+    ]
+  }
+}
