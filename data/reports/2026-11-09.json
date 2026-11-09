@@ -1,0 +1,476 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-11-09",
+  "published_at": "2026-11-09T07:33:25.930045+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "最近30天",
+    "retrieved_count": 8636,
+    "screened_count": 4,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 3,
+    "threshold": 70,
+    "source_counts": {},
+    "warnings": [
+      "Semantic Scholar返回429；OpenAlex返回401。",
+      "排除密集等离子体焦点产额模拟：重点非探测器或标定。",
+      "本期无符合条件的新裂变室或SPND论文。"
+    ]
+  },
+  "articles": [
+    {
+      "title": "Development of a multi-channel diamond detector array for pulsed deuterium–tritium fusion neutron diagnostics",
+      "chinese_title": "用于脉冲氘氚聚变中子诊断的多通道金刚石探测器阵列研制",
+      "journal": "Review of Scientific Instruments",
+      "publication_date": "2026-11-06",
+      "doi": "10.1063/5.0348654",
+      "url": "https://doi.org/10.1063/5.0348654",
+      "article_type": "研究论文",
+      "recommendation_score": 86,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 95,
+        "novelty": 77,
+        "quality": 78,
+        "methodology": 82,
+        "inspiration": 87
+      },
+      "why_worth_reading": "64通道金刚石阵列面向脉冲D-T中子计时与能谱，可与裂变室诊断互补。",
+      "core_findings": [
+        "为Polaris聚变原型装置设计64通道金刚石探测器阵列。",
+        "目标是在每次约100微秒至1毫秒的中子脉冲中获得足够的能谱计数，同时测量反应率时间变化。",
+        "论文介绍阵列设计、前置放大器选择和中子源表征；摘要未给出具体标定结果。",
+        "单晶金刚石中碳-12与中子的反应可用于快中子能谱测量；不能仅凭摘要认定全部设计指标已经实现。"
+      ],
+      "term_explanations": [
+        {
+          "term": "D-T聚变中子",
+          "academic_explanation": "氘与氚聚变产生的中子，静止反应物近似下能量约14.1 MeV，实际分布受等离子体运动等影响。",
+          "plain_explanation": "氘和氚结合时飞出的高能中子，能量并非总是完全一样。"
+        },
+        {
+          "term": "单晶金刚石探测器及碳-12(n,α)铍-9反应",
+          "academic_explanation": "中子与金刚石中碳-12发生核反应，产生带电粒子及电荷信号，可用于中子能谱分析。",
+          "plain_explanation": "中子撞击晶体内的碳后产生电信号，可据此推算中子能量。"
+        },
+        {
+          "term": "多通道阵列和前置放大器",
+          "academic_explanation": "多个探测单元并行采集；前置放大器将微弱电荷信号转换为适合后级处理的信号。",
+          "plain_explanation": "多只探头同时工作，每一路先用电子线路处理微弱信号。"
+        },
+        {
+          "term": "能谱和计数统计",
+          "academic_explanation": "能谱描述中子数量随能量的分布；有限事件数会造成统计不确定度。",
+          "plain_explanation": "能谱像按能量分组的清单，样本太少时结果更不稳定。"
+        },
+        {
+          "term": "脉冲与反应率",
+          "academic_explanation": "脉冲指有限时段内的中子发射；反应率是单位时间内的核反应次数。",
+          "plain_explanation": "中子一阵阵放出；反应率表示每秒发生多少次反应。"
+        },
+        {
+          "term": "裂变室",
+          "academic_explanation": "利用中子诱发裂变材料产生带电碎片并收集气体电离信号的探测器。",
+          "plain_explanation": "让中子触发少量裂变材料产生电信号来监测中子。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "在已知脉冲强度和时宽下比较通道一致性。"
+        ],
+        "methods": [
+          "比较并行读出在信号重叠和统计精度上的权衡。"
+        ],
+        "key_entities_mechanisms": [
+          "关注碳核反应信号和前置放大器噪声。"
+        ],
+        "target_system": [
+          "与裂变室在相同D-T中子场下比较时间响应和积分结果。"
+        ],
+        "future_direction": [
+          "研究强脉冲下多探测器互补测量。"
+        ],
+        "paper_potential": [
+          "补充可复现的交叉标定和不确定度后再评估系统比较的发表价值。"
+        ],
+        "limitations_validation": [
+          "需查全文确认源能量、标定精度、通道一致性、辐照寿命及是否来自实际聚变放电。"
+        ]
+      },
+      "top3_reason": "直接针对D-T脉冲、能谱及阵列读出。",
+      "tags": [
+        "D-T中子",
+        "金刚石探测器",
+        "能谱",
+        "多通道读出"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "摘要未给出效率、能量分辨率和绝对通量标定数值。"
+      ]
+    },
+    {
+      "title": "Upgrades to the National Ignition Facility neutron time-of-flight diagnostic for operation at yields greater than 10 MJ",
+      "chinese_title": "国家点火装置中子飞行时间诊断升级：面向超过10 MJ的聚变能量产额",
+      "journal": "Review of Scientific Instruments",
+      "publication_date": "2026-11-06",
+      "doi": "10.1063/5.0350490",
+      "url": "https://doi.org/10.1063/5.0350490",
+      "article_type": "研究论文",
+      "recommendation_score": 85,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 91,
+        "novelty": 78,
+        "quality": 80,
+        "methodology": 84,
+        "inspiration": 84
+      },
+      "why_worth_reading": "聚焦14 MeV中子高产额下的衰减、读出稳定性与背景控制。",
+      "core_findings": [
+        "论文描述两项面向更高聚变能量产额的中子飞行时间诊断升级。",
+        "银衰减器降低准直束线中子通量；摘要称对14 MeV中子提供约2至20倍衰减，并保留用于速度测量的伽马峰。",
+        "石英切伦科夫探测器中的微通道板光电倍增管采用稳压二极管维持板至阳极加速电压，以稳定不同增益下的响应。",
+        "摘要论证未来产额的设计目标；预测运行范围不等同于已验证现场性能。"
+      ],
+      "term_explanations": [
+        {
+          "term": "中子飞行时间诊断",
+          "academic_explanation": "利用中子从源到探测器的飞行时间与能量之间的关系，测量时间和能量分布。",
+          "plain_explanation": "测量中子跑过固定距离用了多久，推算它跑得有多快。"
+        },
+        {
+          "term": "14 MeV D-T中子",
+          "academic_explanation": "氘氚聚变产生的主中子能量约14.1 MeV，实际分布受源运动和散射影响。",
+          "plain_explanation": "氘氚聚变放出的高能中子约14兆电子伏，并非绝对固定的能量线。"
+        },
+        {
+          "term": "中子通量与衰减器",
+          "academic_explanation": "通量表征单位面积单位时间通过的中子数量；衰减器通过相互作用减少透射中子。",
+          "plain_explanation": "通量像每秒穿过窗口的中子数；衰减器像过滤板，但不同能量受到的作用可能不同。"
+        },
+        {
+          "term": "伽马峰与背景",
+          "academic_explanation": "伽马峰是记录中与伽马射线相关的时间信号；背景是目标信号之外的响应。",
+          "plain_explanation": "伽马闪光可提供时间参考，背景会干扰对中子信号的辨认。"
+        },
+        {
+          "term": "切伦科夫探测器和微通道板光电倍增管",
+          "academic_explanation": "带电粒子在介质中满足条件时产生切伦科夫光，倍增管利用微通道板放大光电子信号。",
+          "plain_explanation": "粒子经过透明材料产生微弱光，光电器件将其转换并放大为电信号。"
+        },
+        {
+          "term": "仪器响应函数与增益",
+          "academic_explanation": "响应函数描述仪器对输入的输出；增益表示输出相对于输入的放大程度。",
+          "plain_explanation": "瞬间信号经过仪器会被拉宽或放大，响应函数描述这种变化。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "分别扫描衰减器设置与增益，测量时间响应和背景。"
+        ],
+        "methods": [
+          "独立表征各增益下的仪器响应函数。"
+        ],
+        "key_entities_mechanisms": [
+          "关注银对中子与伽马透射的差异和高信号读出非线性。"
+        ],
+        "target_system": [
+          "为高通量裂变室设计可切换强度的参考测量链。"
+        ],
+        "future_direction": [
+          "研究强脉冲下多诊断链交叉标定。"
+        ],
+        "paper_potential": [
+          "系统量化动态范围与不确定度后可形成仪器方法论文。"
+        ],
+        "limitations_validation": [
+          "需核对衰减量测量方法、能谱依赖及未来产额下实测情况。"
+        ]
+      },
+      "top3_reason": "以具体硬件应对14 MeV高强度中子与读出限制。",
+      "tags": [
+        "14MeV中子",
+        "飞行时间",
+        "读出",
+        "衰减"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "10 MJ指聚变能量产额而非中子能量；最高设计产额下实测性能需核实。"
+      ]
+    },
+    {
+      "title": "Three-dimensional reconstruction of cold fuel shells using down-scattered neutron imaging at the National Ignition Facility",
+      "chinese_title": "利用国家点火装置下散射中子成像重建冷燃料壳的三维结构",
+      "journal": "Physics of Plasmas",
+      "publication_date": "2026-11-02",
+      "doi": "10.1063/5.0344898",
+      "url": "https://doi.org/10.1063/5.0344898",
+      "article_type": "研究论文",
+      "recommendation_score": 78,
+      "score_status": "evidence_reviewed",
+      "evidence_level": "",
+      "full_text_reviewed": false,
+      "component_scores": {
+        "relevance": 78,
+        "novelty": 77,
+        "quality": 80,
+        "methodology": 80,
+        "inspiration": 70
+      },
+      "why_worth_reading": "展示14 MeV主中子与下散射中子成像的互补，也明确有限视角重建限制。",
+      "core_findings": [
+        "系统使用约14 MeV主中子图像及6–12 MeV下散射中子图像研究氘氚燃料分布。",
+        "研究比较二维注量补偿图像和三维密度重建，并用合成与点火实验数据评估。",
+        "二维方法可用于低阶形状和尺寸分析，但不足以可靠表示复杂三维结构。",
+        "三维重建可定量捕获主要不对称，但视角有限会造成伪影。"
+      ],
+      "term_explanations": [
+        {
+          "term": "主中子与下散射中子",
+          "academic_explanation": "D-T主中子初始能量约14.1 MeV；与物质散射并损失能量后进入较低能量区间。",
+          "plain_explanation": "中子刚产生时能量较高，与燃料碰撞后有些变慢，可利用变化观察燃料。"
+        },
+        {
+          "term": "中子成像与三维重建",
+          "academic_explanation": "中子成像记录空间分布；三维重建通过多视角观测及模型推断体内结构。",
+          "plain_explanation": "从不同方向记录中子图，再利用模型推测内部立体形状。"
+        },
+        {
+          "term": "冷燃料壳与惯性约束聚变",
+          "academic_explanation": "惯性约束聚变通过快速压缩燃料触发聚变；冷燃料壳是热点周围较冷而高密度的燃料区域。",
+          "plain_explanation": "短时间把燃料球压紧点燃，外面相对冷的燃料层会影响发出的中子。"
+        },
+        {
+          "term": "注量补偿与伪影",
+          "academic_explanation": "注量补偿旨在减弱入射中子空间分布对图像的影响；伪影是重建中不对应真实结构的特征。",
+          "plain_explanation": "先考虑照亮各处的中子多少不同；视角不够时图中也可能出现假结构。"
+        }
+      ],
+      "research_inspiration": {
+        "experimental_design": [
+          "设计可控不对称模型，比较不同视角组合的重建偏差。"
+        ],
+        "methods": [
+          "以合成数据和实测数据共同检验空间重建。"
+        ],
+        "key_entities_mechanisms": [
+          "区分主中子和燃料散射后不同能段信号。"
+        ],
+        "target_system": [
+          "为裂变室积分信号与能谱或成像系统互补提供背景，不把裂变室当成成像器件。"
+        ],
+        "future_direction": [
+          "评估独立探测器约束对有限视角重建的帮助。"
+        ],
+        "paper_potential": [
+          "结合真实交叉验证而非仅增加重建算法复杂度。"
+        ],
+        "limitations_validation": [
+          "有限视角、模型假设和图像背景影响密度重建。"
+        ]
+      },
+      "top3_reason": "扩展中子成像视野，但与裂变室结构关联较间接。",
+      "tags": [
+        "D-T中子",
+        "中子成像",
+        "下散射",
+        "三维重建"
+      ],
+      "strong_recommendation": false,
+      "strong_recommendation_reasons": [],
+      "needs_verification": [
+        "成像结果具体不确定度和视角设置需查全文。"
+      ]
+    }
+  ],
+  "research_ideas": [
+    "在可追溯14 MeV D-T源下比较裂变室与金刚石阵列的响应与不确定度。"
+  ],
+  "related_work_review": {
+    "status": "evidence_reviewed",
+    "searched_at": "2026-11-09 15:25 +08:00",
+    "search_window": "2021-11-09至2026-11-09为主；兼查D-D、相关读出与辐照可靠性",
+    "candidate_count": 40,
+    "verified_count": 10,
+    "limitations": [
+      "候选数为独立Crossref四组查询各10条原始记录，含重复及弱相关项；辅以出版商、PubMed、机构存档和公开预印本检索。核实数指进一步核对题名、年份、来源和摘要或全文的10项，不表示穷尽检索。",
+      "本次不是系统综述；部分网页权限受限。",
+      "SPND未获得足以比较当日入选论文的新证据；不推断SPND可直接用于14 MeV场。",
+      "一般快中子、下散射能段及D-D约2.45 MeV不能混同D-T主中子约14.1 MeV。"
+    ],
+    "themes": [
+      {
+        "title": "金刚石、裂变室与带电粒子交叉标定",
+        "related_work_status": [
+          "既有工作在14.1 MeV中子场表征单晶金刚石，也对ITER中子相机、裂变室互校和辐照退化进行设计与测试；SiC伴随α粒子测量用于D-T源产额。"
+        ],
+        "today_increment": [
+          "当天阵列论文侧重64通道、短脉冲统计与前置放大器设计；摘要未给出绝对交叉标定精度。"
+        ],
+        "research_gap": [
+          "同一脉冲D-T场中多探测链共同不确定度和随辐照剂量漂移值得特定装置实测，不断言尚无人研究。"
+        ],
+        "secondary_judgment": [
+          "器件和交叉标定已有基础；切口应放在特定脉冲条件下的量化一致性。"
+        ],
+        "paper_angle": [
+          "脉冲条件下多诊断通量与时间响应一致性。"
+        ],
+        "minimum_validation": [
+          "可溯源源强、14 MeV能谱、通道一致性、计数率扫描及剂量前后对比，并报告完整不确定度。"
+        ],
+        "novelty_risk": [
+          "已有金刚石能谱、ITER互校和伴随粒子方法；仅组合器件不足以证明创新。"
+        ],
+        "confidence": "中；基于公开摘要及ITER开放全文，非穷尽查新。",
+        "representative_works": [
+          {
+            "title": "Fabrication of a single-crystal diamond neutron detector and its application in 14.1 MeV neutron detection in deuterium–tritium fusion experiments",
+            "doi": "10.1088/2058-6272/acb48a",
+            "url": "https://pst.hfcas.ac.cn/en/article/doi/10.1088/2058-6272/acb48a",
+            "relation": "单晶金刚石直接测量14.1 MeV D-T中子的既有基线"
+          },
+          {
+            "title": "Simultaneous measurement of energy spectrum and fluence of neutrons using a diamond detector",
+            "doi": "10.1038/s41598-022-16235-x",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35835805/",
+            "relation": "金刚石响应矩阵及14.2 MeV D-T中子能谱和注量测量"
+          },
+          {
+            "title": "Progress of Design and Development for the ITER Radial Neutron Camera",
+            "doi": "10.1007/s10894-022-00333-9",
+            "url": "https://www.diva-portal.org/smash/get/diva2%3A1703687/FULLTEXT01.pdf",
+            "relation": "ITER金刚石辐照、铀-238裂变室14 MeV测试和交叉标定背景"
+          },
+          {
+            "title": "Silicon carbide Schottky diode detector for fusion neutron yields monitoring using associated particle method",
+            "doi": "10.1016/j.measurement.2022.112221",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0263224122014178",
+            "relation": "通过伴随α粒子监测D-T源产额，不是直接中子能谱测量"
+          }
+        ]
+      },
+      {
+        "title": "飞行时间、闪烁体读出与中子成像",
+        "related_work_status": [
+          "NIF既有飞行时间响应函数、闪烁体余辉校正和编码孔径工作分别涉及响应、背景和成像模型。"
+        ],
+        "today_increment": [
+          "当天飞行时间论文提出银衰减及读出升级；成像论文比较多视角重建的能力与限制。"
+        ],
+        "research_gap": [
+          "新硬件条件下响应函数漂移如何传播至散射中子推断，需要特定系统实测。"
+        ],
+        "secondary_judgment": [
+          "衰减器、光电读出和成像算法相关，但文献并未证明跨系统直接可比。"
+        ],
+        "paper_angle": [
+          "端到端标定与不确定度传播。"
+        ],
+        "minimum_validation": [
+          "不同增益和强度下测量响应函数，注入已知信号并独立验证模型。"
+        ],
+        "novelty_risk": [
+          "响应函数、余辉校正和中子编码成像已有论文；需证明超出已有方法的量化改进。"
+        ],
+        "confidence": "中；对照有公开摘要，仍需全文比较实验条件。",
+        "representative_works": [
+          {
+            "title": "Construction and study of instrument response functions for analysis of the National Ignition Facility (NIF) neutron time-of-flight detectors",
+            "doi": "10.1063/5.0101868",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/36461502/",
+            "relation": "飞行时间响应函数构建、尾部校准及系统影响"
+          },
+          {
+            "title": "Impact of afterglow correction uncertainty on down-scattered neutron imaging at the National Ignition Facility",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/42853017/",
+            "relation": "闪烁体余辉校正对下散射中子成像的误差传播"
+          },
+          {
+            "title": "A coded aperture with sub-mean free-path thickness for neutron implosion geometry imaging on inertial confinement fusion and inertial fusion energy experiments",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37916914/",
+            "relation": "聚变中子编码孔径模拟，而非实验性能证明"
+          }
+        ]
+      }
+    ]
+  },
+  "publication_opportunities": {
+    "status": "evidence_reviewed",
+    "overall_judgment": "存在可检验的方法学机会，但本次非穷尽查新不支持绝对新颖性或投稿结果判断。",
+    "opportunities": [
+      {
+        "title": "脉冲D-T场多探测器交叉标定",
+        "research_gap": [
+          "针对特定装置的脉冲强度、读出饱和和长期漂移量化共同不确定度。"
+        ],
+        "why_worth_doing": [
+          "金刚石能谱与裂变室积分信号互补，可减少对单一诊断链的依赖。"
+        ],
+        "recommended_work": [
+          "在14 MeV可溯源场联合测试金刚石阵列、裂变室及独立参考；测量脉宽、通量与剂量依赖。"
+        ],
+        "paper_contribution": [
+          "给出条件明确的跨探测器响应矩阵和误差预算。"
+        ],
+        "daily_evidence": [
+          "当天64通道阵列面向100微秒至1毫秒脉冲；摘要没有证明其已与裂变室完成互校。"
+        ],
+        "main_risks": [
+          "参考源系统误差相关、信号堆积、辐照损伤及先前类似互校工作。"
+        ],
+        "article_type": "仪器方法与实验验证",
+        "evidence_papers": [
+          {
+            "title": "Development of a multi-channel diamond detector array for pulsed deuterium–tritium fusion neutron diagnostics",
+            "doi": "10.1063/5.0348654",
+            "url": "https://doi.org/10.1063/5.0348654"
+          }
+        ]
+      },
+      {
+        "title": "高强度中子诊断响应与成像误差闭环",
+        "research_gap": [
+          "特定系统中衰减与读出响应变化对强信号诊断结果的影响需实测。"
+        ],
+        "why_worth_doing": [
+          "当天两篇论文分别提示高产额读出和有限视角重建的边界。"
+        ],
+        "recommended_work": [
+          "比较多种增益和已知强度下的响应函数，并对重建进行误差传播与独立验证。"
+        ],
+        "paper_contribution": [
+          "建立从测量链变化到诊断结果偏差的可复现评估。"
+        ],
+        "daily_evidence": [
+          "飞行时间论文提出银衰减器和光电读出升级；成像论文报告有限视角伪影。"
+        ],
+        "main_risks": [
+          "两个系统不是同一套硬件；跨系统假设、光学余辉和基准数据不足。"
+        ],
+        "article_type": "诊断方法与不确定度研究",
+        "evidence_papers": [
+          {
+            "title": "Upgrades to the National Ignition Facility neutron time-of-flight diagnostic for operation at yields greater than 10 MJ",
+            "doi": "10.1063/5.0350490",
+            "url": "https://doi.org/10.1063/5.0350490"
+          },
+          {
+            "title": "Three-dimensional reconstruction of cold fuel shells using down-scattered neutron imaging at the National Ignition Facility",
+            "doi": "10.1063/5.0344898",
+            "url": "https://doi.org/10.1063/5.0344898"
+          }
+        ]
+      }
+    ]
+  }
+}
