@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "title": "Research Paper Daily",
+  "date": "2026-11-10",
+  "published_at": "2026-11-10T09:41:14.530863+00:00",
+  "term_explanation_mode": "dual",
+  "metadata": {
+    "window": "",
+    "retrieved_count": 0,
+    "screened_count": 0,
+    "preliminary_recommended_count": 0,
+    "final_recommended_count": 0,
+    "threshold": 70,
+    "source_counts": {},
+    "warnings": [
+      "检索窗口为2026-10-12至2026-11-10；近24小时按日级近似，候选不足时扩展至30天。",
+      "Europe PMC、Crossref、Semantic Scholar、OpenAlex和bioRxiv均连接失败，检索结果、排名列表及复核队列均为空。",
+      "零推荐源于数据源全部失败，不能解释为该窗口没有相关论文；未能逐篇复核或确认领域无新进展。"
+    ]
+  },
+  "articles": [],
+  "research_ideas": [],
+  "related_work_review": {
+    "status": "no_reliable_judgment",
+    "search_window": "未开展：没有当天入选论文作为查新锚点。",
+    "limitations": [
+      "原始检索来源全部连接失败，不能将历史论文当作当天查新结果。"
+    ],
+    "reason": "来源全部连接失败，候选和最终入选论文均为零；缺少当天论文锚点，无法形成可靠的独立相关工作查新判断。"
+  },
+  "publication_opportunities": {
+    "status": "no_reliable_judgment",
+    "reason": "没有经证据复核的当天入选论文，也没有以其为锚点的独立查新，无法提出可靠的发文判断。"
+  }
+}
